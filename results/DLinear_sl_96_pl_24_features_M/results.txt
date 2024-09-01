@@ -1,0 +1,72 @@
+
+Experiment begins at 2024-08-30 21:46:40
+
+
+Experiment begins at 2024-08-30 21:48:20
+
+
+Experiment begins at 2024-08-30 21:51:08
+
+
+Experiment begins at 2024-08-30 21:52:24
+
+
+Experiment begins at 2024-08-30 21:52:52
+
+
+Experiment begins at 2024-08-30 21:53:53
+
+
+Experiment begins at 2024-08-30 21:55:37
+
+
+Experiment begins at 2024-08-30 21:56:51
+
+
+Experiment begins at 2024-08-30 21:59:25
+
+
+Experiment begins at 2024-08-30 21:59:54
+
+
+Experiment begins at 2024-08-30 22:03:17
+
+Model parameters: 4656
+Time per epoch: 0.7 sec.
+Memory usage: Total 6143.5 MB, Allocated 16.5 MB
+
+train scaled -- mse:0.093631, mae:0.22008
+
+Experiment begins at 2024-08-30 22:04:59
+
+Model parameters: 4656
+Time per epoch: 0.5 sec.
+Memory usage: Total 6143.5 MB, Allocated 16.5 MB
+
+train scaled -- mse:0.093631, mae:0.22008
+
+Experiment begins at 2024-08-30 22:06:37
+
+Model parameters: 4656
+Time per epoch: 0.4 sec.
+Memory usage: Total 6143.5 MB, Allocated 16.5 MB
+
+train scaled -- mse:0.093631, mae:0.22008
+train -- mse:0.78323, mae:0.33697, r2: 0.83443
+
+
+Experiment begins at 2024-08-30 22:18:12
+
+Model parameters: 4656
+Time per epoch: 0.5 sec.
+Memory usage: Total 6143.5 MB, Allocated 16.5 MB
+
+train scaled -- mse:0.093631, mae:0.22008
+train -- mse:0.78323, mae:0.33697, r2: 0.83443
+
+val scaled -- mse:0.094847, mae:0.21681
+val -- mse:1.1114, mae:0.36306, r2: 0.63901
+
+test scaled -- mse:0.19437, mae:0.31457
+test -- mse:3.5976, mae:0.77526, r2: 0.17455
+
