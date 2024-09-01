@@ -1,11 +1,15 @@
-import argparse, os, torch, random
+import argparse, os, torch, random, json
 from exp.exp_long_term_forecasting import *
 import numpy as np
 
+def set_random_seed(seed):
+    torch.manual_seed(seed)
+    torch.cuda.manual_seed_all(seed)
+    np.random.seed(seed)
+    random.seed(seed)
+
 def initial_setup(args):
-    random.seed(args.seed)
-    torch.manual_seed(args.seed)
-    np.random.seed(args.seed)
+    set_random_seed(args.seed)
     
     args.use_gpu = True if torch.cuda.is_available() else False
     
@@ -17,7 +21,61 @@ def initial_setup(args):
         
     args.enc_in = args.dec_in = args.c_out = args.n_features
     args.task_name = 'long_term_forecast'
-    
+
+
+def main(args):
+    initial_setup(args)
+
+    print(f'Args in experiment: {args}')
+    if args.itrs == 1:
+        exp = Exp_Long_Term_Forecast(args)
+        if not args.test:
+            print('>>>>>>> start training :>>>>>>>>>>')
+            exp.train()
+
+        print('\n>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<')
+        exp.test(flag='test')
+    else:
+        parent_seed = args.seed
+        np.random.seed(parent_seed)
+        experiment_seeds = np.random.randint(1e3, size=args.itrs)
+        experiment_seeds = [int(seed) for seed in experiment_seeds]
+        args.experiment_seeds = experiment_seeds
+        original_itr = args.itr_no
+        
+        for itr_no in range(1, args.itrs+1):
+            if (original_itr is not None) and original_itr != itr_no: continue
+            
+            args.seed = experiment_seeds[itr_no-1]
+            print(f'\n>>>> itr_no: {itr_no}, seed: {args.seed} <<<<<<')
+            set_random_seed(args.seed)
+            args.itr_no = itr_no
+            
+            exp = Exp_Long_Term_Forecast(args)
+
+            if not args.test:
+                print('>>>>>>> start training :>>>>>>>>>>')
+                exp.train()
+            
+            # print('\n>>>>>>> Evaluate train data :  <<<<<<<<<<<<<<<')
+            # exp.test(load_model=True, flag='train')
+
+            # print('\n>>>>>>> validating :  <<<<<<<<<<<<<<<')
+            # exp.test(flag='val')
+
+            print('\n>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<')
+            exp.test(flag='test')
+           
+        data_name = args.data_path.split('.')[0] 
+        config_filepath = os.path.join(
+            args.result_path, data_name, 
+            stringify_setting(args), 'config.json'
+        )
+        args.seed = parent_seed
+        with open(config_filepath, 'w') as output_file:
+            json.dump(vars(args), output_file, indent=4)
+            
+   
 def get_parser():
     parser = argparse.ArgumentParser(description='Model training')
 
@@ -52,7 +110,6 @@ def get_parser():
     # parser.add_argument('--inverse', action='store_true', help='inverse output data', default=False)
 
     # model define
-    parser.add_argument('--checkpoints', type=str, default='./checkpoints/', help='location of model checkpoints')
     parser.add_argument('--top_k', type=int, default=5, help='for TimesBlock')
     parser.add_argument('--num_kernels', type=int, default=6, help='for Inception')
     # parser.add_argument('--enc_in', type=int, default=7, help='encoder input size')
@@ -77,7 +134,8 @@ def get_parser():
                         help='1: channel dependence 0: channel independence for FreTS model')
     # optimization
     parser.add_argument('--num_workers', type=int, default=10, help='data loader num workers')
-    parser.add_argument('--itr', type=int, default=1, help='experiments times')
+    parser.add_argument('--itrs', type=int, default=1, help='experiments times')
+    parser.add_argument('--itr_no', type=int, default=None, help='experiments number among itrs. 1<= itr_no <= itrs .')
     parser.add_argument('--train_epochs', type=int, default=10, help='train epochs')
     parser.add_argument('--batch_size', type=int, default=32, help='batch size of train input data')
     parser.add_argument('--patience', type=int, default=3, help='early stopping patience')
@@ -103,26 +161,4 @@ def get_parser():
 if __name__ == '__main__':
     parser = get_parser()
     args = parser.parse_args()
-    initial_setup(args)
-    disable_progress = args.disable_progress
-
-    print(f'Args in experiment: {args}')
-
-    exp = Exp_Long_Term_Forecast(args)  # set experiments
-
-    if not args.test:
-        print('>>>>>>> start training :>>>>>>>>>>')
-        exp.train()
-        
-    # exp.dataset_map = {}
-    # args.batch_size = 1
-    # exp.args = args
-    
-    print('\n>>>>>>> Evaluate train data :  <<<<<<<<<<<<<<<')
-    exp.test(load_model=True, flag='train')
-
-    print('\n>>>>>>> validating :  <<<<<<<<<<<<<<<')
-    exp.test(flag='val')
-
-    print('\n>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<')
-    exp.test(flag='test')
+    main(args)

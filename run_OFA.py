@@ -1,5 +1,5 @@
 from data_provider.data_factory import data_provider
-from utils.tools import EarlyStopping, adjust_learning_rate
+from utils.tools import EarlyStopping, adjust_learning_rate, stringify_setting
 from models.OFA import Model as OFA
 
 import numpy as np
@@ -10,6 +10,7 @@ from utils.ofa_utils import *
 
 parser = get_parser()
 args = parser.parse_args()
+args.model = 'OFA'
 
 if args.save_file_name is not None : 
     log_fine_name = args.save_file_name
