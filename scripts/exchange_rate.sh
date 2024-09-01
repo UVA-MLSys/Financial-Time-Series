@@ -12,4 +12,14 @@ python run.py \
     --batch_size 32\
     --train_epochs 10
 
-models=("DLinear" iTransformer MICN PatchTST SegRNN TimeMixer TimesNet)
+models=(DLinear iTransformer MICN PatchTST SegRNN TimeMixer TimesNet)
+
+for model in ${models[@]}
+do 
+echo "Running for model:$model"
+
+python run.py \
+    --n_features 7 \
+    --data_path Exchange_Rate_Report.csv\
+    --model $model
+done

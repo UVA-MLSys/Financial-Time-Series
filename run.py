@@ -131,7 +131,7 @@ def get_parser():
     parser.add_argument('--activation', type=str, default='gelu', help='activation')
     parser.add_argument('--output_attention', action='store_true', help='whether to output attention in ecoder')
     parser.add_argument('--channel_independence', type=int, default=0,
-                        help='1: channel dependence 0: channel independence for FreTS model')
+        help='1: channel dependence 0: channel independence for FreTS model')
     # optimization
     parser.add_argument('--num_workers', type=int, default=10, help='data loader num workers')
     parser.add_argument('--itrs', type=int, default=1, help='experiments times')

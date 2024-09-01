@@ -1,6 +1,6 @@
 import os
 import torch
-from models import Transformer, DLinear, MICN, Crossformer, OFA, CALF
+from models import Transformer, DLinear, MICN, Crossformer, OFA, CALF, SegRNN, iTransformer, TimeMixer, PatchTST, TimesNet
 from data_provider.data_factory import *
 from utils.tools import stringify_setting
 
@@ -10,8 +10,13 @@ class Exp_Basic(object):
         'DLinear': DLinear,
         'MICN': MICN,
         'Crossformer': Crossformer,
+        'iTransformer': iTransformer,
+        'TimeMixer': TimeMixer,
+        'SegRNN': SegRNN,
+        'PatchTST': PatchTST,
+        'TimesNet': TimesNet,
         'CALF': CALF,
-        'OFA': OFA
+        'OFA': OFA,
     }
     
     def __init__(self, args):
