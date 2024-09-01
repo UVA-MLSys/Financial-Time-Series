@@ -10,6 +10,35 @@ from tqdm import tqdm
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
 from utils.metrics import calculate_metrics
 
+def stringify_setting(args, complete=False):
+    if not complete:
+        setting = f"{args.model}_sl_{args.seq_len}_pl_{args.pred_len}"
+        if args.des:
+            setting += '_' + args.des
+            
+        return setting
+    
+    setting = '{}_{}_{}_{}_ft{}_sl{}_ll{}_pl{}_dm{}_nh{}_el{}_dl{}_df{}_fc{}_eb{}_dt{}'.format(
+        args.task_name,
+        args.model,
+        args.data_path.split('.')[0],
+        args.data,
+        args.features,
+        args.seq_len,
+        args.label_len,
+        args.pred_len,
+        args.d_model,
+        args.n_heads,
+        args.e_layers,
+        args.d_layers,
+        args.d_ff,
+        args.factor,
+        args.embed,
+        args.distil
+    )
+    
+    return setting
+
 def align_predictions(
     ground_truth:DataFrame,
     predictions, data_set:Dataset_Custom,

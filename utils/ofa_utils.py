@@ -35,10 +35,6 @@ def initial_setup(args):
     args.freq = 'a' # yearly frequency
     return device_address
 
-def stringify_setting(args):
-    setting = f"OFA_{args.model_id}_sl_{args.seq_len}_pl_{args.pred_len}_features_{args.features}"
-    return setting
-
 def get_parser():
 
     parser = argparse.ArgumentParser(description='OFA_LLM')
