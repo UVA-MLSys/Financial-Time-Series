@@ -32,7 +32,6 @@ def initial_setup(args):
         
     # args.enc_in = args.dec_in = args.c_out = args.n_features
     args.task_name = 'long_term_forecast'
-    args.freq = 'a' # yearly frequency
     return device_address
 
 def get_parser():
@@ -48,23 +47,31 @@ def get_parser():
     parser.add_argument('--test', action='store_true', help='test the model')
 
     parser.add_argument('--root_path', type=str, default='./data')
-    parser.add_argument('--data_path', type=str, default='Merged.csv')
+    parser.add_argument('--data_path', type=str, default='Exchange_Rate_Report.csv')
     parser.add_argument('--data', type=str, default='custom')
-    parser.add_argument('--features', type=str, default='S', choices=['M', 'S', 'MS'],)
-    parser.add_argument('--freq',default='a')
+    parser.add_argument('--features', type=str, default='M', choices=['M', 'S', 'MS'],)
+    parser.add_argument('--n_features', type=int, required=True, help='Number of input features')
+    parser.add_argument(
+        '--freq', type=str, default='d', choices=['s', 't', 'h', 'd', 'b', 'w', 'm'],
+        help='freq for time features encoding, options:[s:secondly, t:minutely, h:hourly, d:daily, b:business days, w:weekly, m:monthly], you can also use more detailed freq like 15min or 3h'
+    )
     parser.add_argument('--target', type=str, default='OFFER_BALANCE')
     parser.add_argument('--embed', type=str, default='timeF')
     parser.add_argument('--percent', type=int, default=10)
     parser.add_argument('--all', type=int, default=0)
 
-    parser.add_argument('--seq_len', type=int, default=5)
-    parser.add_argument('--pred_len', type=int, default=1)
-    parser.add_argument('--label_len', type=int, default=3)
+    parser.add_argument('--seq_len', type=int, default=96)
+    parser.add_argument('--pred_len', type=int, default=48)
+    parser.add_argument('--label_len', type=int, default=24)
 
     parser.add_argument('--decay_fac', type=float, default=0.75)
     parser.add_argument('--learning_rate', type=float, default=1e-3)
+    parser.add_argument('--des', type=str, default=None, help='exp description')
     parser.add_argument('--batch_size', type=int, default=16)
     parser.add_argument('--num_workers', type=int, default=0)
+    parser.add_argument('--itrs', type=int, default=1, help='experiments times')
+    parser.add_argument('--itr_no', type=int, default=None, help='experiments number among itrs. 1<= itr_no <= itrs .')
+    
     parser.add_argument('--train_epochs', type=int, default=10)
     parser.add_argument('--lradj', type=str, default='type1')
     parser.add_argument('--patience', type=int, default=3)
