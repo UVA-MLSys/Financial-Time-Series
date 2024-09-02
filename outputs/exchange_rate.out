@@ -1,0 +1,371 @@
+Running for model:DLinear
+Args in experiment: Namespace(test=False, model='DLinear', seed=2024, result_path='results', disable_progress=True, root_path='./data', data_path='Exchange_Rate_Report.csv', features='M', n_features=7, target='OFFER_BALANCE', freq='d', no_scale=False, seq_len=96, label_len=48, pred_len=24, top_k=5, num_kernels=6, d_model=64, n_heads=4, e_layers=2, d_layers=1, d_ff=128, moving_avg=3, factor=1, distil=True, dropout=0.1, embed='timeF', activation='gelu', output_attention=False, channel_independence=0, num_workers=10, itrs=3, itr_no=None, train_epochs=10, batch_size=32, patience=3, learning_rate=0.001, des=None, loss='MSE', lradj='type1', gpu=0, use_multi_gpu=False, devices='0,1,2,3', p_hidden_dims=[128, 128], p_hidden_layers=2, dry_run=False, use_gpu=True, enc_in=7, dec_in=7, c_out=7, task_name='long_term_forecast')
+
+>>>> itr_no: 1, seed: 648 <<<<<<
+Use GPU: cuda:0
+Experiments will be saved in results/Exchange_Rate_Report/DLinear_sl_96_pl_24/1
+
+Experiment begins at 2024-09-01 21:20:01
+
+>>>>>>> start training :>>>>>>>>>>
+train 1861
+val 225
+Epoch: 1 | Time: 1.25 s | Train Loss: 3.3607 Vali Loss: 1.6295
+Validation loss decreased (inf --> 1.629468).  Saving model ...
+Epoch: 2 | Time: 1.17 s | Train Loss: 2.8117 Vali Loss: 1.3871
+Validation loss decreased (1.629468 --> 1.387083).  Saving model ...
+Epoch: 3 | Time: 1.18 s | Train Loss: 2.6704 Vali Loss: 1.2614
+Validation loss decreased (1.387083 --> 1.261366).  Saving model ...
+Epoch: 4 | Time: 1.18 s | Train Loss: 2.5938 Vali Loss: 1.2198
+Validation loss decreased (1.261366 --> 1.219792).  Saving model ...
+Epoch: 5 | Time: 1.18 s | Train Loss: 2.5507 Vali Loss: 1.1877
+Validation loss decreased (1.219792 --> 1.187739).  Saving model ...
+Epoch: 6 | Time: 1.13 s | Train Loss: 2.6003 Vali Loss: 1.1805
+Validation loss decreased (1.187739 --> 1.180464).  Saving model ...
+Epoch: 7 | Time: 1.13 s | Train Loss: 2.5032 Vali Loss: 1.1193
+Validation loss decreased (1.180464 --> 1.119326).  Saving model ...
+Epoch: 8 | Time: 1.13 s | Train Loss: 2.4722 Vali Loss: 1.143
+EarlyStopping counter: 1 out of 3
+Epoch: 9 | Time: 1.14 s | Train Loss: 2.4481 Vali Loss: 1.1162
+Validation loss decreased (1.119326 --> 1.116151).  Saving model ...
+Epoch: 10 | Time: 1.14 s | Train Loss: 2.4387 Vali Loss: 1.0952
+Validation loss decreased (1.116151 --> 1.095234).  Saving model ...
+
+Training completed at 2024-09-01 21:20:15.
+Model parameters: 4656
+Total memory: 11004.5 MB
+Allocated memory: 16.4 MB
+Max allocated memory: 17.0 MB
+Time per epoch: 1.3 sec.
+Memory usage: Available 11004.5 MB, Allocated 16.4 MB
+
+Loading model from results/Exchange_Rate_Report/DLinear_sl_96_pl_24/1/checkpoint.pth
+
+>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<
+test 224
+Preds and Trues shape: (224, 24, 7) (224, 24, 7)
+test scaled -- mse:0.92199, mae:0.70497
+Upscaling data and removing negatives...
+test -- mse:1.0785, mae:0.32914, rmsle: 0.0087499 smape 0.84894
+
+
+>>>> itr_no: 2, seed: 506 <<<<<<
+Use GPU: cuda:0
+Experiments will be saved in results/Exchange_Rate_Report/DLinear_sl_96_pl_24/2
+
+Experiment begins at 2024-09-01 21:20:15
+
+>>>>>>> start training :>>>>>>>>>>
+train 1861
+val 225
+Epoch: 1 | Time: 1.12 s | Train Loss: 3.3834 Vali Loss: 1.6249
+Validation loss decreased (inf --> 1.624923).  Saving model ...
+Epoch: 2 | Time: 1.15 s | Train Loss: 2.8694 Vali Loss: 1.4143
+Validation loss decreased (1.624923 --> 1.414339).  Saving model ...
+Epoch: 3 | Time: 1.07 s | Train Loss: 2.656 Vali Loss: 1.2823
+Validation loss decreased (1.414339 --> 1.282295).  Saving model ...
+Epoch: 4 | Time: 1.07 s | Train Loss: 2.6479 Vali Loss: 1.2533
+Validation loss decreased (1.282295 --> 1.253251).  Saving model ...
+Epoch: 5 | Time: 1.11 s | Train Loss: 2.6014 Vali Loss: 1.1943
+Validation loss decreased (1.253251 --> 1.194266).  Saving model ...
+Epoch: 6 | Time: 1.13 s | Train Loss: 2.5135 Vali Loss: 1.1435
+Validation loss decreased (1.194266 --> 1.143489).  Saving model ...
+Epoch: 7 | Time: 1.14 s | Train Loss: 2.4942 Vali Loss: 1.1351
+Validation loss decreased (1.143489 --> 1.135107).  Saving model ...
+Epoch: 8 | Time: 1.14 s | Train Loss: 2.4605 Vali Loss: 1.1305
+Validation loss decreased (1.135107 --> 1.130519).  Saving model ...
+Epoch: 9 | Time: 1.13 s | Train Loss: 2.4458 Vali Loss: 1.107
+Validation loss decreased (1.130519 --> 1.106990).  Saving model ...
+Epoch: 10 | Time: 1.14 s | Train Loss: 2.4311 Vali Loss: 1.0968
+Validation loss decreased (1.106990 --> 1.096768).  Saving model ...
+
+Training completed at 2024-09-01 21:20:28.
+Model parameters: 4656
+Total memory: 11004.5 MB
+Allocated memory: 16.4 MB
+Max allocated memory: 17.0 MB
+Time per epoch: 1.2 sec.
+Memory usage: Available 11004.5 MB, Allocated 16.4 MB
+
+Loading model from results/Exchange_Rate_Report/DLinear_sl_96_pl_24/2/checkpoint.pth
+
+>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<
+test 224
+Preds and Trues shape: (224, 24, 7) (224, 24, 7)
+test scaled -- mse:0.91482, mae:0.70208
+Upscaling data and removing negatives...
+test -- mse:1.0622, mae:0.32857, rmsle: 0.0087127 smape 0.84758
+
+
+>>>> itr_no: 3, seed: 608 <<<<<<
+Use GPU: cuda:0
+Experiments will be saved in results/Exchange_Rate_Report/DLinear_sl_96_pl_24/3
+
+Experiment begins at 2024-09-01 21:20:28
+
+>>>>>>> start training :>>>>>>>>>>
+train 1861
+val 225
+Epoch: 1 | Time: 1.12 s | Train Loss: 3.3359 Vali Loss: 1.5886
+Validation loss decreased (inf --> 1.588649).  Saving model ...
+Epoch: 2 | Time: 1.13 s | Train Loss: 2.7892 Vali Loss: 1.381
+Validation loss decreased (1.588649 --> 1.380981).  Saving model ...
+Epoch: 3 | Time: 1.16 s | Train Loss: 2.6681 Vali Loss: 1.2871
+Validation loss decreased (1.380981 --> 1.287077).  Saving model ...
+Epoch: 4 | Time: 1.13 s | Train Loss: 2.5909 Vali Loss: 1.2207
+Validation loss decreased (1.287077 --> 1.220731).  Saving model ...
+Epoch: 5 | Time: 1.14 s | Train Loss: 2.5627 Vali Loss: 1.1808
+Validation loss decreased (1.220731 --> 1.180849).  Saving model ...
+Epoch: 6 | Time: 1.14 s | Train Loss: 2.5199 Vali Loss: 1.145
+Validation loss decreased (1.180849 --> 1.145040).  Saving model ...
+Epoch: 7 | Time: 1.13 s | Train Loss: 2.4832 Vali Loss: 1.1653
+EarlyStopping counter: 1 out of 3
+Epoch: 8 | Time: 1.13 s | Train Loss: 2.4728 Vali Loss: 1.1187
+Validation loss decreased (1.145040 --> 1.118697).  Saving model ...
+Epoch: 9 | Time: 1.06 s | Train Loss: 2.4743 Vali Loss: 1.0971
+Validation loss decreased (1.118697 --> 1.097125).  Saving model ...
+Epoch: 10 | Time: 1.06 s | Train Loss: 2.43 Vali Loss: 1.0623
+Validation loss decreased (1.097125 --> 1.062311).  Saving model ...
+
+Training completed at 2024-09-01 21:20:40.
+Model parameters: 4656
+Total memory: 11004.5 MB
+Allocated memory: 16.4 MB
+Max allocated memory: 17.0 MB
+Time per epoch: 1.2 sec.
+Memory usage: Available 11004.5 MB, Allocated 16.4 MB
+
+Loading model from results/Exchange_Rate_Report/DLinear_sl_96_pl_24/3/checkpoint.pth
+
+>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<
+test 224
+Preds and Trues shape: (224, 24, 7) (224, 24, 7)
+test scaled -- mse:0.91732, mae:0.69954
+Upscaling data and removing negatives...
+test -- mse:1.044, mae:0.32341, rmsle: 0.0086802 smape 0.84382
+
+Running for model:iTransformer
+Args in experiment: Namespace(test=False, model='iTransformer', seed=2024, result_path='results', disable_progress=True, root_path='./data', data_path='Exchange_Rate_Report.csv', features='M', n_features=7, target='OFFER_BALANCE', freq='d', no_scale=False, seq_len=96, label_len=48, pred_len=24, top_k=5, num_kernels=6, d_model=64, n_heads=4, e_layers=2, d_layers=1, d_ff=128, moving_avg=3, factor=1, distil=True, dropout=0.1, embed='timeF', activation='gelu', output_attention=False, channel_independence=0, num_workers=10, itrs=3, itr_no=None, train_epochs=10, batch_size=32, patience=3, learning_rate=0.001, des=None, loss='MSE', lradj='type1', gpu=0, use_multi_gpu=False, devices='0,1,2,3', p_hidden_dims=[128, 128], p_hidden_layers=2, dry_run=False, use_gpu=True, enc_in=7, dec_in=7, c_out=7, task_name='long_term_forecast')
+
+>>>> itr_no: 1, seed: 648 <<<<<<
+Use GPU: cuda:0
+Experiments will be saved in results/Exchange_Rate_Report/iTransformer_sl_96_pl_24/1
+
+Experiment begins at 2024-09-01 21:20:53
+
+>>>>>>> start training :>>>>>>>>>>
+train 1861
+val 225
+Epoch: 1 | Time: 1.75 s | Train Loss: 2.9816 Vali Loss: 1.2873
+Validation loss decreased (inf --> 1.287251).  Saving model ...
+Epoch: 2 | Time: 1.47 s | Train Loss: 2.433 Vali Loss: 1.3016
+EarlyStopping counter: 1 out of 3
+Epoch: 3 | Time: 1.47 s | Train Loss: 2.3853 Vali Loss: 1.3464
+EarlyStopping counter: 2 out of 3
+Epoch: 4 | Time: 1.51 s | Train Loss: 2.1169 Vali Loss: 1.3201
+EarlyStopping counter: 3 out of 3
+Early stopping
+
+Training completed at 2024-09-01 21:21:00.
+Model parameters: 74840
+Total memory: 11004.5 MB
+Allocated memory: 17.5 MB
+Max allocated memory: 145.6 MB
+Time per epoch: 1.8 sec.
+Memory usage: Available 11004.5 MB, Allocated 17.5 MB
+
+Loading model from results/Exchange_Rate_Report/iTransformer_sl_96_pl_24/1/checkpoint.pth
+
+>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<
+test 224
+Preds and Trues shape: (224, 24, 7) (224, 24, 7)
+test scaled -- mse:1.16, mae:0.80616
+Upscaling data and removing negatives...
+test -- mse:1.4622, mae:0.38525, rmsle: 0.010068 smape 0.97795
+
+
+>>>> itr_no: 2, seed: 506 <<<<<<
+Use GPU: cuda:0
+Experiments will be saved in results/Exchange_Rate_Report/iTransformer_sl_96_pl_24/2
+
+Experiment begins at 2024-09-01 21:21:01
+
+>>>>>>> start training :>>>>>>>>>>
+train 1861
+val 225
+Epoch: 1 | Time: 1.5 s | Train Loss: 3.0672 Vali Loss: 1.204
+Validation loss decreased (inf --> 1.203988).  Saving model ...
+Epoch: 2 | Time: 1.52 s | Train Loss: 2.448 Vali Loss: 1.2393
+EarlyStopping counter: 1 out of 3
+Epoch: 3 | Time: 1.5 s | Train Loss: 2.2717 Vali Loss: 1.322
+EarlyStopping counter: 2 out of 3
+Epoch: 4 | Time: 1.49 s | Train Loss: 2.1223 Vali Loss: 1.3273
+EarlyStopping counter: 3 out of 3
+Early stopping
+
+Training completed at 2024-09-01 21:21:07.
+Model parameters: 74840
+Total memory: 11004.5 MB
+Allocated memory: 17.5 MB
+Max allocated memory: 145.6 MB
+Time per epoch: 1.6 sec.
+Memory usage: Available 11004.5 MB, Allocated 17.5 MB
+
+Loading model from results/Exchange_Rate_Report/iTransformer_sl_96_pl_24/2/checkpoint.pth
+
+>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<
+test 224
+Preds and Trues shape: (224, 24, 7) (224, 24, 7)
+test scaled -- mse:1.0107, mae:0.73819
+Upscaling data and removing negatives...
+test -- mse:1.067, mae:0.32883, rmsle: 0.0089594 smape 0.89142
+
+
+>>>> itr_no: 3, seed: 608 <<<<<<
+Use GPU: cuda:0
+Experiments will be saved in results/Exchange_Rate_Report/iTransformer_sl_96_pl_24/3
+
+Experiment begins at 2024-09-01 21:21:08
+
+>>>>>>> start training :>>>>>>>>>>
+train 1861
+val 225
+Epoch: 1 | Time: 1.5 s | Train Loss: 3.0378 Vali Loss: 1.2227
+Validation loss decreased (inf --> 1.222744).  Saving model ...
+Epoch: 2 | Time: 1.52 s | Train Loss: 2.4396 Vali Loss: 1.2135
+Validation loss decreased (1.222744 --> 1.213489).  Saving model ...
+Epoch: 3 | Time: 1.46 s | Train Loss: 2.26 Vali Loss: 1.4092
+EarlyStopping counter: 1 out of 3
+Epoch: 4 | Time: 1.48 s | Train Loss: 2.1482 Vali Loss: 1.4257
+EarlyStopping counter: 2 out of 3
+Epoch: 5 | Time: 1.48 s | Train Loss: 2.003 Vali Loss: 1.4385
+EarlyStopping counter: 3 out of 3
+Early stopping
+
+Training completed at 2024-09-01 21:21:15.
+Model parameters: 74840
+Total memory: 11004.5 MB
+Allocated memory: 17.5 MB
+Max allocated memory: 145.6 MB
+Time per epoch: 1.6 sec.
+Memory usage: Available 11004.5 MB, Allocated 17.5 MB
+
+Loading model from results/Exchange_Rate_Report/iTransformer_sl_96_pl_24/3/checkpoint.pth
+
+>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<
+test 224
+Preds and Trues shape: (224, 24, 7) (224, 24, 7)
+test scaled -- mse:1.0162, mae:0.7547
+Upscaling data and removing negatives...
+test -- mse:1.2045, mae:0.3599, rmsle: 0.0092978 smape 0.91853
+
+Running for model:PatchTST
+Args in experiment: Namespace(test=False, model='PatchTST', seed=2024, result_path='results', disable_progress=True, root_path='./data', data_path='Exchange_Rate_Report.csv', features='M', n_features=7, target='OFFER_BALANCE', freq='d', no_scale=False, seq_len=96, label_len=48, pred_len=24, top_k=5, num_kernels=6, d_model=64, n_heads=4, e_layers=2, d_layers=1, d_ff=128, moving_avg=3, factor=1, distil=True, dropout=0.1, embed='timeF', activation='gelu', output_attention=False, channel_independence=0, num_workers=10, itrs=3, itr_no=None, train_epochs=10, batch_size=32, patience=3, learning_rate=0.001, des=None, loss='MSE', lradj='type1', gpu=0, use_multi_gpu=False, devices='0,1,2,3', p_hidden_dims=[128, 128], p_hidden_layers=2, dry_run=False, use_gpu=True, enc_in=7, dec_in=7, c_out=7, task_name='long_term_forecast')
+
+>>>> itr_no: 1, seed: 648 <<<<<<
+Use GPU: cuda:0
+Experiments will be saved in results/Exchange_Rate_Report/PatchTST_sl_96_pl_24/1
+
+Experiment begins at 2024-09-01 21:21:21
+
+>>>>>>> start training :>>>>>>>>>>
+train 1861
+val 225
+Epoch: 1 | Time: 1.78 s | Train Loss: 2.8809 Vali Loss: 1.1954
+Validation loss decreased (inf --> 1.195380).  Saving model ...
+Epoch: 2 | Time: 1.52 s | Train Loss: 2.6348 Vali Loss: 1.1978
+EarlyStopping counter: 1 out of 3
+Epoch: 3 | Time: 1.51 s | Train Loss: 2.6005 Vali Loss: 1.0995
+Validation loss decreased (1.195380 --> 1.099464).  Saving model ...
+Epoch: 4 | Time: 1.5 s | Train Loss: 2.5951 Vali Loss: 1.1112
+EarlyStopping counter: 1 out of 3
+Epoch: 5 | Time: 1.51 s | Train Loss: 2.5731 Vali Loss: 1.1167
+EarlyStopping counter: 2 out of 3
+Epoch: 6 | Time: 1.5 s | Train Loss: 2.5195 Vali Loss: 1.1563
+EarlyStopping counter: 3 out of 3
+Early stopping
+
+Training completed at 2024-09-01 21:21:31.
+Model parameters: 86552
+Total memory: 11004.5 MB
+Allocated memory: 18.9 MB
+Max allocated memory: 177.0 MB
+Time per epoch: 1.8 sec.
+Memory usage: Available 11004.5 MB, Allocated 18.9 MB
+
+Loading model from results/Exchange_Rate_Report/PatchTST_sl_96_pl_24/1/checkpoint.pth
+
+>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<
+test 224
+Preds and Trues shape: (224, 24, 7) (224, 24, 7)
+test scaled -- mse:0.89235, mae:0.70061
+Upscaling data and removing negatives...
+test -- mse:1.1391, mae:0.36536, rmsle: 0.0088346 smape 0.85479
+
+
+>>>> itr_no: 2, seed: 506 <<<<<<
+Use GPU: cuda:0
+Experiments will be saved in results/Exchange_Rate_Report/PatchTST_sl_96_pl_24/2
+
+Experiment begins at 2024-09-01 21:21:32
+
+>>>>>>> start training :>>>>>>>>>>
+train 1861
+val 225
+Epoch: 1 | Time: 1.48 s | Train Loss: 2.8682 Vali Loss: 1.2007
+Validation loss decreased (inf --> 1.200695).  Saving model ...
+Epoch: 2 | Time: 1.5 s | Train Loss: 2.6891 Vali Loss: 1.1248
+Validation loss decreased (1.200695 --> 1.124809).  Saving model ...
+Epoch: 3 | Time: 1.5 s | Train Loss: 2.6166 Vali Loss: 1.164
+EarlyStopping counter: 1 out of 3
+Epoch: 4 | Time: 1.51 s | Train Loss: 2.5737 Vali Loss: 1.1681
+EarlyStopping counter: 2 out of 3
+Epoch: 5 | Time: 1.5 s | Train Loss: 2.5307 Vali Loss: 1.1098
+Validation loss decreased (1.124809 --> 1.109779).  Saving model ...
+Epoch: 6 | Time: 1.51 s | Train Loss: 2.6197 Vali Loss: 1.1065
+Validation loss decreased (1.109779 --> 1.106485).  Saving model ...
+Epoch: 7 | Time: 1.5 s | Train Loss: 2.5049 Vali Loss: 1.116
+EarlyStopping counter: 1 out of 3
+Epoch: 8 | Time: 1.52 s | Train Loss: 2.4939 Vali Loss: 1.115
+EarlyStopping counter: 2 out of 3
+Epoch: 9 | Time: 1.51 s | Train Loss: 2.4824 Vali Loss: 1.113
+EarlyStopping counter: 3 out of 3
+Early stopping
+
+Training completed at 2024-09-01 21:21:46.
+Model parameters: 86552
+Total memory: 11004.5 MB
+Allocated memory: 18.9 MB
+Max allocated memory: 177.0 MB
+Time per epoch: 1.6 sec.
+Memory usage: Available 11004.5 MB, Allocated 18.9 MB
+
+Loading model from results/Exchange_Rate_Report/PatchTST_sl_96_pl_24/2/checkpoint.pth
+
+>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<
+test 224
+Preds and Trues shape: (224, 24, 7) (224, 24, 7)
+test scaled -- mse:0.93163, mae:0.7159
+Upscaling data and removing negatives...
+test -- mse:1.1731, mae:0.36703, rmsle: 0.0089768 smape 0.86529
+
+
+>>>> itr_no: 3, seed: 608 <<<<<<
+Use GPU: cuda:0
+Experiments will be saved in results/Exchange_Rate_Report/PatchTST_sl_96_pl_24/3
+
+Experiment begins at 2024-09-01 21:21:47
+
+>>>>>>> start training :>>>>>>>>>>
+train 1861
+val 225
+Epoch: 1 | Time: 1.54 s | Train Loss: 2.9188 Vali Loss: 1.0683
+Validation loss decreased (inf --> 1.068309).  Saving model ...
+Epoch: 2 | Time: 1.56 s | Train Loss: 2.624 Vali Loss: 1.202
+EarlyStopping counter: 1 out of 3
+Epoch: 3 | Time: 1.56 s | Train Loss: 2.6566 Vali Loss: 1.1506
+EarlyStopping counter: 2 out of 3
+_features=7, target='OFFER_BALANCE', freq='d', no_scale=False, seq_len=96, label_len=48, pred_len=24, top_k=5, num_kernels=6, d_model=64, n_heads=4, e_layers=2, d_layers=1, d_ff=128, moving_avg=3, factor=1, distil=True, dropout=0.1, embed='timeF', activation='gelu', output_attention=False, channel_independence=0, num_workers=10, itrs=3, itr_no=None, train_epochs=10, batch_size=32, patience=3, learning_rate=0.001, des=None, loss='MSE', lradj='type1', gpu=0, use_multi_gpu=False, devices='0,1,2,3', p_hidden_dims=[128, 128], p_hidden_layers=2, dry_run=False, use_gpu=True, enc_in=7, dec_in=7, c_out=7, task_name='long_term_forecast')
+
+>>>> itr_no: 1, seed: 648 <<<<<<
+Usslurmstepd: error: *** JOB 159410 ON cheetah02 CANCELLED AT 2024-09-01T21:33:22 ***

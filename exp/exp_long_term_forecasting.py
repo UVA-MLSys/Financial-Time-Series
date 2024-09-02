@@ -286,6 +286,7 @@ class Exp_Long_Term_Forecast(Exp_Basic):
         # this line handles different size of batch. E.g. last batch can be < batch_size.
         preds = np.concatenate(preds, axis=0)
         trues = np.concatenate(trues, axis=0)
+        data_name = self.args.data_path.split('.')[0]
 
         print('Preds and Trues shape:', preds.shape, trues.shape)
         if evaluate:
@@ -295,7 +296,7 @@ class Exp_Long_Term_Forecast(Exp_Basic):
             
             # dump results in the global file
             with open("result_long_term_forecast.txt", 'a') as f:
-                f.write(self.setting + "  " + flag + " scaled\n")
+                f.write(data_name + " " + self.setting + "  " + flag + " scaled\n")
                 f.write(f'mae:{mae:.5g}, rmse:{rmse:.5g}, mse:{mse:.5g}\n\n')
 
             # dump results in the respective result folder
@@ -321,7 +322,7 @@ class Exp_Long_Term_Forecast(Exp_Basic):
             
             # dump results in the global file
             with open("result_long_term_forecast.txt", 'a') as f:
-                f.write(self.setting + "  " + flag + "\n")
+                f.write(data_name + " " + self.setting + "  " + flag + "\n")
                 f.write(f'mae:{mae:.5g}, rmse:{rmse:.5g}, mse:{mse:.5g}, rmsle {rmsle:0.5g} smape {smape:0.5g}\n\n')
 
             # dump results in the respective result folder

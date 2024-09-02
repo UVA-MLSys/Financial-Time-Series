@@ -24,6 +24,6 @@ echo "Running for model:$model"
 python run.py \
     --n_features 7 \
     --data_path Exchange_Rate_Report.csv\
-    --model $model --disable_progress
+    --model $model --disable_progress --itrs 3
 
 done
