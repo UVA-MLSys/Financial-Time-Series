@@ -236,7 +236,7 @@ class Exp_Long_Term_Forecast(Exp_Basic):
         # print(torch.cuda.memory_summary())
         
         self.log(f"Time per epoch: {time_per_epoch:.1f} sec.")
-        self.log(f"Memory usage: Available {total_memory:.1f} MB, Allocated {allocated_memory:.1f} MB\n")
+        self.log(f"Memory usage: Available {total_memory:.1f} MB, Allocated {allocated_memory:.1f} MB, Max allocated {max_allocated_memory:.1f} MB\n")
     
     def test(
         self, load_model:bool=False, flag='test', 

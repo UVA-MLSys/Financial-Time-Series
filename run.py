@@ -130,7 +130,7 @@ def get_parser():
                         help='time features encoding, options:[timeF, fixed, learned]')
     parser.add_argument('--activation', type=str, default='gelu', help='activation')
     parser.add_argument('--output_attention', action='store_true', help='whether to output attention in ecoder')
-    parser.add_argument('--channel_independence', type=int, default=0,
+    parser.add_argument('--channel_independence', type=int, default=1,
         help='1: channel dependence 0: channel independence for FreTS model')
     parser.add_argument('--decomp_method', type=str, default='moving_avg',
                         help='method of series decompsition, only support moving_avg or dft_decomp')
