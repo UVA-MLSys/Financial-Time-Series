@@ -84,6 +84,9 @@ class Exp_Long_Term_Forecast(Exp_Basic):
             self.model.text_proj.eval()
             
             criterion = nn.MSELoss()
+        elif self.args.model == 'OFA':
+            self.model.in_layer.eval()
+            self.model.out_layer.eval()
         else:
             self.model.eval()
         f_dim = -1 if self.args.features == 'MS' else 0
@@ -130,6 +133,9 @@ class Exp_Long_Term_Forecast(Exp_Basic):
             self.model.out_layer.train()
             self.model.time_proj.train()
             self.model.text_proj.train()
+        elif self.args.model == 'OFA':
+            self.model.in_layer.train()
+            self.model.out_layer.train()
         else: 
             self.model.train()
             
@@ -257,8 +263,6 @@ class Exp_Long_Term_Forecast(Exp_Basic):
 
         preds = []
         trues = []
-        preds_upscaled = []
-        trues_upscaled = []
         f_dim = -1 if self.args.features == 'MS' else 0
 
         self.model.eval()
