@@ -9,8 +9,6 @@ def set_random_seed(seed):
     random.seed(seed)
 
 def initial_setup(args):
-    set_random_seed(args.seed)
-    
     args.use_gpu = True if torch.cuda.is_available() else False
     
     if args.use_gpu and args.use_multi_gpu:
@@ -25,6 +23,7 @@ def initial_setup(args):
 
 def main(args):
     initial_setup(args)
+    set_random_seed(args.seed)
 
     print(f'Args in experiment: {args}')
     if args.itrs == 1:
@@ -154,7 +153,6 @@ def get_parser():
     parser.add_argument('--lradj', type=str, default='type1', help='adjust learning rate')
 
     # GPU
-    # parser.add_argument('--no_gpu', action='store_true', help='do not use gpu.')
     parser.add_argument('--gpu', type=int, default=0, help='gpu')
     parser.add_argument('--use_multi_gpu', action='store_true', help='use multiple gpus', default=False)
     parser.add_argument('--devices', type=str, default='0,1,2,3', help='device ids of multile gpus')

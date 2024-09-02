@@ -1,31 +1,72 @@
 import torch, argparse
 from exp.exp_long_term_forecasting import *
-import random
+import random, json
 import numpy as np
+from run import set_random_seed, initial_setup
 
-def initial_setup(args):
-    random.seed(args.seed)
-    torch.manual_seed(args.seed)
-    np.random.seed(args.seed)
-    
-    args.use_gpu = True if torch.cuda.is_available() else False
-    
-    if args.use_gpu and args.use_multi_gpu:
-        args.devices = args.devices.replace(' ', '')
-        device_ids = args.devices.split(',')
-        args.device_ids = [int(id_) for id_ in device_ids]
-        args.gpu = args.device_ids[0]
+def main(args):
+    initial_setup(args)
+    set_random_seed(args.seed)
+
+    print(f'Args in experiment: {args}')
+    if args.itrs == 1:
+        exp = Exp_Long_Term_Forecast(args)
+        if not args.test:
+            print('>>>>>>> start training :>>>>>>>>>>')
+            exp.train()
+
+        print('\n>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<')
+        exp.test(flag='test')
+    else:
+        parent_seed = args.seed
+        np.random.seed(parent_seed)
+        experiment_seeds = np.random.randint(1e3, size=args.itrs)
+        experiment_seeds = [int(seed) for seed in experiment_seeds]
+        args.experiment_seeds = experiment_seeds
+        original_itr = args.itr_no
         
-    # args.enc_in = args.dec_in = args.c_out = args.n_features
-    args.task_name = 'long_term_forecast'
-    args.model = 'CALF'
+        for itr_no in range(1, args.itrs+1):
+            if (original_itr is not None) and original_itr != itr_no: continue
+            
+            args.seed = experiment_seeds[itr_no-1]
+            print(f'\n>>>> itr_no: {itr_no}, seed: {args.seed} <<<<<<')
+            set_random_seed(args.seed)
+            args.itr_no = itr_no
+            
+            exp = Exp_Long_Term_Forecast(args)
+
+            if not args.test:
+                print('>>>>>>> start training :>>>>>>>>>>')
+                exp.train()
+            
+            # print('\n>>>>>>> Evaluate train data :  <<<<<<<<<<<<<<<')
+            # exp.test(load_model=True, flag='train')
+
+            # print('\n>>>>>>> validating :  <<<<<<<<<<<<<<<')
+            # exp.test(flag='val')
+
+            print('\n>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<')
+            exp.test(flag='test')
+           
+        data_name = args.data_path.split('.')[0] 
+        config_filepath = os.path.join(
+            args.result_path, data_name, 
+            stringify_setting(args), 'config.json'
+        )
+        args.seed = parent_seed
+        with open(config_filepath, 'w') as output_file:
+            json.dump(vars(args), output_file, indent=4)
     
 def get_parser():
     parser = argparse.ArgumentParser(description='Model training')
 
     # basic config
     parser.add_argument('--test', action='store_true', help='test the model')
-    # parser.add_argument('--model_id', type=str, required=True, default='test', help='model id')
+    parser.add_argument(
+        '--model_id', default='ori', choices=['ori', 'dropAttn_keepWE', 
+        'randomInit', 'llm_to_trsf', 'llm_to_attn']
+    )
+    parser.add_argument('--model', type=str, default='CALF',choices=['CALF'])
     parser.add_argument('--seed', type=int, default=2024, help='random seed')
     parser.add_argument('--result_path', type=str, default='results', help='result output folder')
     parser.add_argument('--features', type=str, default='M', choices=['M', 'S', 'MS'],
@@ -102,12 +143,7 @@ def get_parser():
     parser.add_argument('--p_hidden_layers', type=int, default=2, help='number of hidden layers in projector')
     parser.add_argument('--dry_run', action='store_true', help='run only one batch for test')
     
-    # methods
-    parser.add_argument(
-        '--model_id', default='ori', choices=['ori', 'dropAttn_keepWE', 
-        'randomInit', 'llm_to_trsf', 'llm_to_attn']
-    )
-    
+    # the rest here is CALF related arguments
     # self
     parser.add_argument('--tmax', type=int, default=20)
     parser.add_argument('--cos', type=int, default=1)
@@ -146,30 +182,6 @@ def get_parser():
     parser.add_argument('--bootstrap_eval',required=False , type=int, default=0)
     
     return parser
-
-def main(args):
-    initial_setup(args)
-
-    print(f'Args in experiment: {args}')
-
-    exp = Exp_Long_Term_Forecast(args)  # set experiments
-
-    if not args.test:
-        print('>>>>>>> start training :>>>>>>>>>>')
-        exp.train()
-        
-    exp.dataset_map = {}
-    args.batch_size = 1
-    exp.args = args
-    
-    # print('\n>>>>>>> Evaluate train data :  <<<<<<<<<<<<<<<')
-    # exp.test(load_model=True, flag='train')
-
-    print('\n>>>>>>> validating :  <<<<<<<<<<<<<<<')
-    exp.test(flag='val')
-
-    print('\n>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<')
-    exp.test(flag='test')
 
 if __name__ == '__main__':
     parser = get_parser()

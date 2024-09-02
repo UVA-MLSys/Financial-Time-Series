@@ -46,7 +46,7 @@ class Exp_Basic(object):
 
     def _build_model(self):
         Model = self.model_dict[self.args.model].Model
-        if self.args.model == 'CALF':
+        if self.args.model in ['CALF', 'OFA']:
             model = Model(self.args, self.device).float()
         else: model = Model(self.args).float()
 

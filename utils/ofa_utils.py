@@ -42,6 +42,7 @@ def get_parser():
         '--model_id', default='ori', choices=['ori', 'removeLLM', 
         'randomInit', 'llm_to_trsf', 'llm_to_attn']
     )
+    parser.add_argument('--model', type=str, default='OFA', choices=['OFA'])
     parser.add_argument('--seed', type=int, default=2024, help='random seed')
     parser.add_argument('--result_path', type=str, default='results', help='result output folder')
     parser.add_argument('--test', action='store_true', help='test the model')
@@ -100,9 +101,13 @@ def get_parser():
     parser.add_argument('--cos', type=int, default=0)
     parser.add_argument('--train_ratio', type=float, default=1.0 , required=False)
     parser.add_argument('--save_file_name', type=str, default=None)
-    parser.add_argument('--gpu_loc', type=int, default=0)
     parser.add_argument('--n_scale', type=float, default=-1)
     parser.add_argument('--method', type=str, default='')
+    
+    # GPU
+    parser.add_argument('--gpu', type=int, default=0, help='gpu')
+    parser.add_argument('--use_multi_gpu', action='store_true', help='use multiple gpus', default=False)
+    parser.add_argument('--devices', type=str, default='0,1,2,3', help='device ids of multile gpus')
 
     parser.add_argument('--no_scale', action='store_true', help='do not scale the dataset')
     parser.add_argument('--disable_progress', action='store_true', help='do not show progress bar')
