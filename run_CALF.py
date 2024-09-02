@@ -19,7 +19,6 @@ def initial_setup(args):
     # args.enc_in = args.dec_in = args.c_out = args.n_features
     args.task_name = 'long_term_forecast'
     args.model = 'CALF'
-    args.freq = 'a' # yearly frequency
     
 def get_parser():
     parser = argparse.ArgumentParser(description='Model training')
@@ -29,17 +28,18 @@ def get_parser():
     # parser.add_argument('--model_id', type=str, required=True, default='test', help='model id')
     parser.add_argument('--seed', type=int, default=2024, help='random seed')
     parser.add_argument('--result_path', type=str, default='results', help='result output folder')
-    parser.add_argument('--features', type=str, default='S', choices=['M', 'S', 'MS'],
+    parser.add_argument('--features', type=str, default='M', choices=['M', 'S', 'MS'],
         help='forecasting task; M: multivariate predict multivariate, S: univariate predict univariate, MS: multivariate predict univariate')
+    parser.add_argument('--n_features', type=int, required=True, help='Number of input features')
     parser.add_argument('--disable_progress', action='store_true', help='do not show progress bar')
 
     # data loader
     parser.add_argument('--root_path', type=str, default='./data', help='root path of the data file')
-    parser.add_argument('--data_path', type=str, default='Merged.csv', help='data file')
+    parser.add_argument('--data_path', type=str, default='Exchange_Rate_Report.csv', help='data file')
     # parser.add_argument('--n_features', type=int, required=True, help='Number of encoder input features')
     # parser.add_argument('--group_id', type=str, default='GROUP_ID', help='group id for multi-time series')
     parser.add_argument('--target', type=str, default='OFFER_BALANCE', help='target feature in S or MS task')
-    parser.add_argument('--freq', type=str, default='y',
+    parser.add_argument('--freq', type=str, default='d',
         help='freq for time features encoding, options:[s:secondly, t:minutely, h:hourly, d:daily, b:business days, w:weekly, m:monthly], you can also use more detailed freq like 15min or 3h')
     parser.add_argument('--no_scale', action='store_true', help='do not scale the dataset')
 
@@ -51,7 +51,6 @@ def get_parser():
     # parser.add_argument('--inverse', action='store_true', help='inverse output data', default=False)
 
     # model define
-    parser.add_argument('--checkpoints', type=str, default='./checkpoints/', help='location of model checkpoints')
     parser.add_argument('--top_k', type=int, default=5, help='for TimesBlock')
     parser.add_argument('--num_kernels', type=int, default=6, help='for Inception')
     # parser.add_argument('--enc_in', type=int, default=7, help='encoder input size')
@@ -72,11 +71,12 @@ def get_parser():
                         help='time features encoding, options:[timeF, fixed, learned]')
     parser.add_argument('--activation', type=str, default='gelu', help='activation')
     parser.add_argument('--output_attention', action='store_true', help='whether to output attention in encoder')
-    parser.add_argument('--channel_independence', type=int, default=0,
+    parser.add_argument('--channel_independence', type=int, default=1,
                         help='1: channel dependence 0: channel independence for FreTS model')
     # optimization
     parser.add_argument('--num_workers', type=int, default=10, help='data loader num workers')
-    parser.add_argument('--itr', type=int, default=1, help='experiments times')
+    parser.add_argument('--itrs', type=int, default=1, help='experiments times')
+    parser.add_argument('--itr_no', type=int, default=None, help='experiments number among itrs. 1<= itr_no <= itrs .')
     parser.add_argument('--train_epochs', type=int, default=10, help='train epochs')
     parser.add_argument('--batch_size', type=int, default=32, help='batch size of train input data')
     parser.add_argument('--patience', type=int, default=3, help='early stopping patience')
@@ -147,11 +147,8 @@ def get_parser():
     
     return parser
 
-if __name__ == '__main__':
-    parser = get_parser()
-    args = parser.parse_args()
+def main(args):
     initial_setup(args)
-    disable_progress = args.disable_progress
 
     print(f'Args in experiment: {args}')
 
@@ -165,11 +162,18 @@ if __name__ == '__main__':
     args.batch_size = 1
     exp.args = args
     
-    print('\n>>>>>>> Evaluate train data :  <<<<<<<<<<<<<<<')
-    exp.test(load_model=True, flag='train')
+    # print('\n>>>>>>> Evaluate train data :  <<<<<<<<<<<<<<<')
+    # exp.test(load_model=True, flag='train')
 
     print('\n>>>>>>> validating :  <<<<<<<<<<<<<<<')
     exp.test(flag='val')
 
     print('\n>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<')
     exp.test(flag='test')
+
+if __name__ == '__main__':
+    parser = get_parser()
+    args = parser.parse_args()
+    main(args)
+
+

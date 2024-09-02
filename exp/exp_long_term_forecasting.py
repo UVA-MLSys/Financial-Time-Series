@@ -80,6 +80,8 @@ class Exp_Long_Term_Forecast(Exp_Basic):
             self.model.out_layer.eval()
             self.model.time_proj.eval()
             self.model.text_proj.eval()
+            
+            criterion = nn.MSELoss()
         else:
             self.model.eval()
         f_dim = -1 if self.args.features == 'MS' else 0
