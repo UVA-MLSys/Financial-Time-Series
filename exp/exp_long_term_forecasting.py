@@ -56,12 +56,14 @@ class Exp_Long_Term_Forecast(Exp_Basic):
                 self.args.features, 
                 self.args.pred_len
             )
+        elif self.args.model == 'OFA':
+            criterion = nn.L1Loss()
         else: criterion = nn.MSELoss()
         
         return criterion
     
     def _select_lr_scheduler(self, optimizer):
-        if self.args.model == 'CALF':
+        if self.args.model in ['CALF', 'OFA']:
             return torch.optim.lr_scheduler.CosineAnnealingLR(
                 optimizer, T_max=self.args.tmax, 
                 eta_min=1e-8, verbose=True
@@ -105,6 +107,8 @@ class Exp_Long_Term_Forecast(Exp_Basic):
                 
                 if self.args.model == 'CALF':
                     outputs = self.model(batch_x)['outputs_time']
+                elif self.args.model == 'OFA':
+                    outputs = self.model(batch_x)
                 else:
                     outputs = self.model(batch_x, batch_x_mark, dec_inp, batch_y_mark)
                     if self.args.output_attention:
@@ -175,13 +179,15 @@ class Exp_Long_Term_Forecast(Exp_Basic):
                     [batch_y[:, :self.args.label_len, :], dec_inp], dim=1
                 ).float().to(self.device)
 
-                if self.args.model == 'CALF':
+                if self.args.model in ['CALF', 'OFA']:
                     outputs = self.model(batch_x)
                 else:
                     outputs = self.model(batch_x, batch_x_mark, dec_inp, batch_y_mark)
                     if self.args.output_attention:
                         outputs = outputs[0]
-
+                        
+                # only CALF model has dictionary output
+                if self.args.model != 'CALF':
                     outputs = outputs[:, -self.args.pred_len:, f_dim:]
                     batch_y = batch_y[:, -self.args.pred_len:, f_dim:].to(self.device)
 
@@ -274,6 +280,8 @@ class Exp_Long_Term_Forecast(Exp_Basic):
                 if self.args.model == 'CALF':
                     outputs = self.model(batch_x)
                     outputs = outputs['outputs_time']
+                elif self.args.model == 'OFA':
+                    outputs = self.model(batch_x)
                 else:
                     outputs = self.model(batch_x, batch_x_mark, dec_inp, batch_y_mark)
                     

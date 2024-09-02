@@ -15,6 +15,9 @@ def stringify_setting(args, complete=False):
         setting = f"{args.model}_sl_{args.seq_len}_pl_{args.pred_len}"
         if args.des:
             setting += '_' + args.des
+        
+        if 'model_id' in args:
+            setting += '_id_' + args.model_id
             
         return setting
     
