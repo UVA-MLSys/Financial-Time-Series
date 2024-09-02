@@ -1,0 +1,66 @@
+Exchange_Rate_Report DLinear_sl_96_pl_24  test scaled
+mae:0.70497, rmse:0.9602, mse:0.92199
+
+Exchange_Rate_Report DLinear_sl_96_pl_24  test
+mae:0.32914, rmse:1.0385, mse:1.0785, rmsle 0.0087499 smape 0.84894
+
+Exchange_Rate_Report DLinear_sl_96_pl_24  test scaled
+mae:0.70208, rmse:0.95646, mse:0.91482
+
+Exchange_Rate_Report DLinear_sl_96_pl_24  test
+mae:0.32857, rmse:1.0306, mse:1.0622, rmsle 0.0087127 smape 0.84758
+
+Exchange_Rate_Report DLinear_sl_96_pl_24  test scaled
+mae:0.69954, rmse:0.95777, mse:0.91732
+
+Exchange_Rate_Report DLinear_sl_96_pl_24  test
+mae:0.32341, rmse:1.0218, mse:1.044, rmsle 0.0086802 smape 0.84382
+
+Exchange_Rate_Report iTransformer_sl_96_pl_24  test scaled
+mae:0.80616, rmse:1.077, mse:1.16
+
+Exchange_Rate_Report iTransformer_sl_96_pl_24  test
+mae:0.38525, rmse:1.2092, mse:1.4622, rmsle 0.010068 smape 0.97795
+
+Exchange_Rate_Report iTransformer_sl_96_pl_24  test scaled
+mae:0.73819, rmse:1.0054, mse:1.0107
+
+Exchange_Rate_Report iTransformer_sl_96_pl_24  test
+mae:0.32883, rmse:1.0329, mse:1.067, rmsle 0.0089594 smape 0.89142
+
+Exchange_Rate_Report iTransformer_sl_96_pl_24  test scaled
+mae:0.7547, rmse:1.0081, mse:1.0162
+
+Exchange_Rate_Report iTransformer_sl_96_pl_24  test
+mae:0.3599, rmse:1.0975, mse:1.2045, rmsle 0.0092978 smape 0.91853
+
+Exchange_Rate_Report PatchTST_sl_96_pl_24  test scaled
+mae:0.70061, rmse:0.94464, mse:0.89235
+
+Exchange_Rate_Report PatchTST_sl_96_pl_24  test
+mae:0.36536, rmse:1.0673, mse:1.1391, rmsle 0.0088346 smape 0.85479
+
+Exchange_Rate_Report PatchTST_sl_96_pl_24  test scaled
+mae:0.7159, rmse:0.96521, mse:0.93163
+
+Exchange_Rate_Report PatchTST_sl_96_pl_24  test
+mae:0.36703, rmse:1.0831, mse:1.1731, rmsle 0.0089768 smape 0.86529
+
+Exchange_Rate_Report PatchTST_sl_96_pl_24  test scaled
+mae:0.72221, rmse:1.0014, mse:1.0027
+
+Exchange_Rate_Report PatchTST_sl_96_pl_24  test
+mae:0.32558, rmse:1.0209, mse:1.0422, rmsle 0.0088833 smape 0.87503
+
+Exchange_Rate_Report TimesNet_sl_96_pl_24  test scaled
+mae:0.91907, rmse:1.1778, mse:1.3873
+
+Exchange_Rate_Report TimesNet_sl_96_pl_24  test
+mae:0.49371, rmse:1.5074, mse:2.2724, rmsle 0.012279 smape 1.1507
+
+Exchange_Rate_Report TimesNet_sl_96_pl_24  test scaled
+mae:1.0691, rmse:1.4279, mse:2.0389
+
+Exchange_Rate_Report TimesNet_sl_96_pl_24  test
+mae:0.53187, rmse:1.6231, mse:2.6345, rmsle 0.013445 smape 1.2752
+

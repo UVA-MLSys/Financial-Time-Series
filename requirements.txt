@@ -1,12 +1,11 @@
 matplotlib
 numpy
 pandas
-# psycopg2
 pyunpack
-reformer-pytorch
 scikit-learn
 sympy
 tqdm
 einops
 transformers
+peft
 # install pytorch and cuda following readme
