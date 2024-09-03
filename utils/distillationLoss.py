@@ -62,9 +62,9 @@ class DistillationLoss(nn.Module):
         else:
             feature_loss = 0 
             
-        # batch_y = batch_y[:, -self.pred_len:, self.f_dim:]
-        # outputs_time = outputs_time[:, -self.pred_len:, self.f_dim:]
-        # outputs_text = outputs_text[:, -self.pred_len:, self.f_dim:]
+        batch_y = batch_y[:, -self.pred_len:, self.f_dim:]
+        outputs_time = outputs_time[:, -self.pred_len:, self.f_dim:]
+        outputs_text = outputs_text[:, -self.pred_len:, self.f_dim:]
 
         # 2----------------输出层的教师-学生损失
         logits_loss = self.logits_loss(outputs_time, outputs_text)
