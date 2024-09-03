@@ -640,3 +640,147 @@ mae:1.2284, rmse:1.7565, mse:3.0852
 MSFT OFA_sl_96_pl_48_id_ori  test
 mae:1.3071e+06, rmse:4.1511e+06, mse:1.7232e+13, rmsle 0.16982 smape 9.4987
 
+Natural_Gas DLinear_sl_96_pl_24  test scaled
+mae:1.0325, rmse:1.354, mse:1.8334
+
+Natural_Gas DLinear_sl_96_pl_24  test
+mae:7859, rmse:21963, mse:4.8236e+08, rmsle 0.39311 smape 19.276
+
+Natural_Gas DLinear_sl_96_pl_24  test scaled
+mae:1.0123, rmse:1.3364, mse:1.7858
+
+Natural_Gas DLinear_sl_96_pl_24  test
+mae:7870.4, rmse:22036, mse:4.8557e+08, rmsle 0.39173 smape 18.803
+
+Natural_Gas DLinear_sl_96_pl_24  test scaled
+mae:1.0182, rmse:1.3395, mse:1.7941
+
+Natural_Gas DLinear_sl_96_pl_24  test
+mae:7993.8, rmse:22368, mse:5.0032e+08, rmsle 0.39217 smape 19.03
+
+Natural_Gas PatchTST_sl_96_pl_24  test scaled
+mae:1.0283, rmse:1.4105, mse:1.9894
+
+Natural_Gas PatchTST_sl_96_pl_24  test
+mae:7642.5, rmse:21574, mse:4.6543e+08, rmsle 0.38394 smape 19.11
+
+Natural_Gas PatchTST_sl_96_pl_24  test scaled
+mae:1.0317, rmse:1.4117, mse:1.9928
+
+Natural_Gas PatchTST_sl_96_pl_24  test
+mae:7868.7, rmse:22324, mse:4.9835e+08, rmsle 0.3853 smape 18.82
+
+Natural_Gas PatchTST_sl_96_pl_24  test scaled
+mae:1.0807, rmse:1.4432, mse:2.0827
+
+Natural_Gas PatchTST_sl_96_pl_24  test
+mae:7805.7, rmse:22150, mse:4.9062e+08, rmsle 0.39658 smape 19.861
+
+Natural_Gas TimesNet_sl_96_pl_24  test scaled
+mae:1.1188, rmse:1.4584, mse:2.1269
+
+Natural_Gas TimesNet_sl_96_pl_24  test
+mae:7833.4, rmse:22328, mse:4.9854e+08, rmsle 0.39495 smape 20.595
+
+Natural_Gas TimesNet_sl_96_pl_24  test scaled
+mae:1.0222, rmse:1.3565, mse:1.84
+
+Natural_Gas TimesNet_sl_96_pl_24  test
+mae:8105, rmse:24040, mse:5.7792e+08, rmsle 0.42227 smape 18.868
+
+Natural_Gas TimesNet_sl_96_pl_24  test scaled
+mae:1.0554, rmse:1.3578, mse:1.8437
+
+Natural_Gas TimesNet_sl_96_pl_24  test
+mae:7751.6, rmse:22346, mse:4.9933e+08, rmsle 0.38696 smape 19.683
+
+Natural_Gas iTransformer_sl_96_pl_24  test scaled
+mae:0.98683, rmse:1.314, mse:1.7267
+
+Natural_Gas iTransformer_sl_96_pl_24  test
+mae:8789.1, rmse:24764, mse:6.1325e+08, rmsle 0.41628 smape 18.666
+
+Natural_Gas iTransformer_sl_96_pl_24  test scaled
+mae:0.99615, rmse:1.3393, mse:1.7937
+
+Natural_Gas iTransformer_sl_96_pl_24  test
+mae:8625.4, rmse:24264, mse:5.8876e+08, rmsle 0.40882 smape 18.775
+
+Natural_Gas iTransformer_sl_96_pl_24  test scaled
+mae:1.0771, rmse:1.38, mse:1.9045
+
+Natural_Gas iTransformer_sl_96_pl_24  test
+mae:8555, rmse:24283, mse:5.8967e+08, rmsle 0.41518 smape 20.503
+
+Natural_Gas MICN_sl_96_pl_24  test scaled
+mae:0.96713, rmse:1.3069, mse:1.7079
+
+Natural_Gas MICN_sl_96_pl_24  test
+mae:6953.3, rmse:19564, mse:3.8273e+08, rmsle 0.46829 smape 18.136
+
+Natural_Gas MICN_sl_96_pl_24  test scaled
+mae:1.0118, rmse:1.3367, mse:1.7867
+
+Natural_Gas MICN_sl_96_pl_24  test
+mae:7219.4, rmse:20367, mse:4.1483e+08, rmsle 0.45689 smape 18.925
+
+Natural_Gas MICN_sl_96_pl_24  test scaled
+mae:0.99071, rmse:1.3289, mse:1.766
+
+Natural_Gas MICN_sl_96_pl_24  test
+mae:7110.6, rmse:20188, mse:4.0756e+08, rmsle 0.40481 smape 18.326
+
+Natural_Gas TimeMixer_sl_96_pl_24  test scaled
+mae:1.0997, rmse:1.4615, mse:2.1361
+
+Natural_Gas TimeMixer_sl_96_pl_24  test
+mae:8221, rmse:23839, mse:5.6832e+08, rmsle 0.42464 smape 20.079
+
+Natural_Gas TimeMixer_sl_96_pl_24  test scaled
+mae:1.1354, rmse:1.5148, mse:2.2947
+
+Natural_Gas TimeMixer_sl_96_pl_24  test
+mae:8706.9, rmse:25321, mse:6.4116e+08, rmsle 0.43406 smape 20.554
+
+Natural_Gas TimeMixer_sl_96_pl_24  test scaled
+mae:1.0823, rmse:1.4381, mse:2.0681
+
+Natural_Gas TimeMixer_sl_96_pl_24  test
+mae:8470.3, rmse:24378, mse:5.9427e+08, rmsle 0.42457 smape 19.856
+
+Natural_Gas CALF_sl_96_pl_24_id_ori  test scaled
+mae:1.1054, rmse:1.4243, mse:2.0287
+
+Natural_Gas CALF_sl_96_pl_24_id_ori  test
+mae:9717.9, rmse:27443, mse:7.5309e+08, rmsle 0.43465 smape 21.736
+
+Natural_Gas CALF_sl_96_pl_24_id_ori  test scaled
+mae:1.0092, rmse:1.349, mse:1.8199
+
+Natural_Gas CALF_sl_96_pl_24_id_ori  test
+mae:9777.1, rmse:27903, mse:7.7858e+08, rmsle 0.43015 smape 20.531
+
+Natural_Gas CALF_sl_96_pl_24_id_ori  test scaled
+mae:1.0081, rmse:1.3494, mse:1.8208
+
+Natural_Gas CALF_sl_96_pl_24_id_ori  test
+mae:9688.4, rmse:28053, mse:7.8697e+08, rmsle 0.42709 smape 19.728
+
+Natural_Gas OFA_sl_96_pl_48_id_ori  test scaled
+mae:1.3118, rmse:1.6753, mse:2.8065
+
+Natural_Gas OFA_sl_96_pl_48_id_ori  test
+mae:8174.2, rmse:23546, mse:5.5442e+08, rmsle 0.54919 smape 24.516
+
+Natural_Gas OFA_sl_96_pl_48_id_ori  test scaled
+mae:1.3639, rmse:1.7457, mse:3.0475
+
+Natural_Gas OFA_sl_96_pl_48_id_ori  test
+mae:7746.7, rmse:22033, mse:4.8547e+08, rmsle 0.4203 smape 23.942
+
+Natural_Gas OFA_sl_96_pl_48_id_ori  test scaled
+mae:1.3058, rmse:1.6807, mse:2.8248
+
+Natural_Gas OFA_sl_96_pl_48_id_ori  test
+mae:8310.7, rmse:23658, mse:5.5972e+08, rmsle 0.40938 smape 23.514
+
