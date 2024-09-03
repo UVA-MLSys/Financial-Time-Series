@@ -51,4 +51,4 @@ python run_OFA.py\
     --n_features $n_features \
     --data_path $data_path\
     --itrs $itrs\
-    --model_id ori
+    --model_id ori --batch_size 16

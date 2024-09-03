@@ -784,3 +784,39 @@ mae:1.3058, rmse:1.6807, mse:2.8248
 Natural_Gas OFA_sl_96_pl_48_id_ori  test
 mae:8310.7, rmse:23658, mse:5.5972e+08, rmsle 0.40938 smape 23.514
 
+Apple OFA_sl_96_pl_48_id_ori  test scaled
+mae:1.3149, rmse:1.7463, mse:3.0495
+
+Apple OFA_sl_96_pl_48_id_ori  test
+mae:3.7658e+06, rmse:1.3357e+07, mse:1.7842e+14, rmsle 0.18762 smape 10.527
+
+Apple OFA_sl_96_pl_48_id_ori  test scaled
+mae:1.894, rmse:2.5049, mse:6.2746
+
+Apple OFA_sl_96_pl_48_id_ori  test
+mae:3.7172e+06, rmse:1.3591e+07, mse:1.8473e+14, rmsle 0.24699 smape 13.258
+
+Apple OFA_sl_96_pl_48_id_ori  test scaled
+mae:1.4157, rmse:1.856, mse:3.4448
+
+Apple OFA_sl_96_pl_48_id_ori  test
+mae:3.6959e+06, rmse:1.3448e+07, mse:1.8086e+14, rmsle 0.19442 smape 11.087
+
+Exchange_Rate_Report OFA_sl_96_pl_48_id_ori  test scaled
+mae:0.9005, rmse:1.2224, mse:1.4942
+
+Exchange_Rate_Report OFA_sl_96_pl_48_id_ori  test
+mae:0.45429, rmse:1.3984, mse:1.9556, rmsle 0.01183 smape 1.1395
+
+Exchange_Rate_Report OFA_sl_96_pl_48_id_ori  test scaled
+mae:0.87454, rmse:1.1969, mse:1.4325
+
+Exchange_Rate_Report OFA_sl_96_pl_48_id_ori  test
+mae:0.41603, rmse:1.2901, mse:1.6643, rmsle 0.011368 smape 1.1145
+
+Exchange_Rate_Report OFA_sl_96_pl_48_id_ori  test scaled
+mae:0.915, rmse:1.2382, mse:1.533
+
+Exchange_Rate_Report OFA_sl_96_pl_48_id_ori  test
+mae:0.4453, rmse:1.3704, mse:1.8781, rmsle 0.011868 smape 1.1681
+
