@@ -47,8 +47,9 @@ class Dataset_Custom(Dataset):
         # some files have $ in values
         object_columns = df_raw.select_dtypes(include=['object']).columns
         df_raw[object_columns] = df_raw[object_columns].apply(
-            lambda x: x.str.replace(r'$', '', regex=True)
+            lambda x: x.str.replace('$', '')
         )
+        df_raw = df_raw.fillna(method='ffill').fillna(method='bfill')
 
         '''
         df_raw.columns: ['date', ...(other features), target feature]

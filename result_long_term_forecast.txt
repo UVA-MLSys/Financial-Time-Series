@@ -118,3 +118,129 @@ mae:0.78055, rmse:1.0117, mse:1.0235
 Exchange_Rate_Report CALF_sl_96_pl_24_id_ori  test
 mae:0.37976, rmse:1.1036, mse:1.218, rmsle 0.0095361 smape 0.97495
 
+Apple DLinear_sl_96_pl_24  test scaled
+mae:0.96065, rmse:1.2541, mse:1.5728
+
+Apple DLinear_sl_96_pl_24  test
+mae:4.1128e+06, rmse:1.3767e+07, mse:1.8953e+14, rmsle 0.18561 smape 9.5292
+
+Apple DLinear_sl_96_pl_24  test scaled
+mae:0.95703, rmse:1.2549, mse:1.5749
+
+Apple DLinear_sl_96_pl_24  test
+mae:4.139e+06, rmse:1.386e+07, mse:1.9211e+14, rmsle 0.18677 smape 9.5357
+
+Apple DLinear_sl_96_pl_24  test scaled
+mae:0.96412, rmse:1.2579, mse:1.5823
+
+Apple DLinear_sl_96_pl_24  test
+mae:4.0882e+06, rmse:1.3696e+07, mse:1.8759e+14, rmsle 0.18485 smape 9.5186
+
+Apple PatchTST_sl_96_pl_24  test scaled
+mae:1.0416, rmse:1.3897, mse:1.9312
+
+Apple PatchTST_sl_96_pl_24  test
+mae:3.5495e+06, rmse:1.2556e+07, mse:1.5765e+14, rmsle 0.17176 smape 9.2825
+
+Apple PatchTST_sl_96_pl_24  test scaled
+mae:1.0592, rmse:1.4387, mse:2.0698
+
+Apple PatchTST_sl_96_pl_24  test
+mae:3.4442e+06, rmse:1.2458e+07, mse:1.5521e+14, rmsle 0.17466 smape 9.3682
+
+Apple PatchTST_sl_96_pl_24  test scaled
+mae:1.043, rmse:1.4356, mse:2.061
+
+Apple PatchTST_sl_96_pl_24  test
+mae:3.2569e+06, rmse:1.2023e+07, mse:1.4456e+14, rmsle 0.16583 smape 8.9782
+
+Apple TimesNet_sl_96_pl_24  test scaled
+mae:1.0502, rmse:1.3674, mse:1.8698
+
+Apple TimesNet_sl_96_pl_24  test
+mae:3.1253e+06, rmse:1.1924e+07, mse:1.4218e+14, rmsle 0.16001 smape 8.8547
+
+Apple TimesNet_sl_96_pl_24  test scaled
+mae:0.94372, rmse:1.2577, mse:1.5818
+
+Apple TimesNet_sl_96_pl_24  test
+mae:3.1563e+06, rmse:1.2097e+07, mse:1.4635e+14, rmsle 0.16182 smape 8.3856
+
+Apple TimesNet_sl_96_pl_24  test scaled
+mae:1.0235, rmse:1.3431, mse:1.8038
+
+Apple TimesNet_sl_96_pl_24  test
+mae:3.1636e+06, rmse:1.2229e+07, mse:1.4955e+14, rmsle 0.16482 smape 8.8535
+
+Apple iTransformer_sl_96_pl_24  test scaled
+mae:1.0558, rmse:1.358, mse:1.8441
+
+Apple iTransformer_sl_96_pl_24  test
+mae:3.9545e+06, rmse:1.3472e+07, mse:1.8148e+14, rmsle 0.19381 smape 10.041
+
+Apple iTransformer_sl_96_pl_24  test scaled
+mae:1.0754, rmse:1.3723, mse:1.8833
+
+Apple iTransformer_sl_96_pl_24  test
+mae:4.3876e+06, rmse:1.4268e+07, mse:2.0357e+14, rmsle 0.20413 smape 10.577
+
+Apple iTransformer_sl_96_pl_24  test scaled
+mae:1.1551, rmse:1.445, mse:2.088
+
+Apple iTransformer_sl_96_pl_24  test
+mae:4.4331e+06, rmse:1.4341e+07, mse:2.0567e+14, rmsle 0.2028 smape 10.912
+
+Apple MICN_sl_96_pl_24  test scaled
+mae:0.90948, rmse:1.228, mse:1.508
+
+Apple MICN_sl_96_pl_24  test
+mae:3.5943e+06, rmse:1.2497e+07, mse:1.5617e+14, rmsle 0.16863 smape 8.8131
+
+Apple MICN_sl_96_pl_24  test scaled
+mae:0.90952, rmse:1.2426, mse:1.5441
+
+Apple MICN_sl_96_pl_24  test
+mae:3.5523e+06, rmse:1.2442e+07, mse:1.5479e+14, rmsle 0.16769 smape 8.7637
+
+Apple MICN_sl_96_pl_24  test scaled
+mae:0.88214, rmse:1.1905, mse:1.4173
+
+Apple MICN_sl_96_pl_24  test
+mae:3.5967e+06, rmse:1.2519e+07, mse:1.5673e+14, rmsle 0.16815 smape 8.6736
+
+Apple TimeMixer_sl_96_pl_24  test scaled
+mae:1.1027, rmse:1.4381, mse:2.0683
+
+Apple TimeMixer_sl_96_pl_24  test
+mae:3.5224e+06, rmse:1.2575e+07, mse:1.5813e+14, rmsle 0.17511 smape 9.6523
+
+Apple TimeMixer_sl_96_pl_24  test scaled
+mae:1.0708, rmse:1.3952, mse:1.9466
+
+Apple TimeMixer_sl_96_pl_24  test
+mae:3.6048e+06, rmse:1.2795e+07, mse:1.6371e+14, rmsle 0.1793 smape 9.6644
+
+Apple TimeMixer_sl_96_pl_24  test scaled
+mae:0.9974, rmse:1.3044, mse:1.7015
+
+Apple TimeMixer_sl_96_pl_24  test
+mae:3.6404e+06, rmse:1.2965e+07, mse:1.6809e+14, rmsle 0.17946 smape 9.3422
+
+Apple CALF_sl_96_pl_24_id_ori  test scaled
+mae:1.0929, rmse:1.397, mse:1.9517
+
+Apple CALF_sl_96_pl_24_id_ori  test
+mae:4.5033e+06, rmse:1.4782e+07, mse:2.1852e+14, rmsle 0.19888 smape 10.409
+
+Apple CALF_sl_96_pl_24_id_ori  test scaled
+mae:0.95558, rmse:1.2472, mse:1.5556
+
+Apple CALF_sl_96_pl_24_id_ori  test
+mae:4.0985e+06, rmse:1.4133e+07, mse:1.9973e+14, rmsle 0.19135 smape 9.534
+
+Apple CALF_sl_96_pl_24_id_ori  test scaled
+mae:1.0666, rmse:1.3692, mse:1.8747
+
+Apple CALF_sl_96_pl_24_id_ori  test
+mae:4.574e+06, rmse:1.5151e+07, mse:2.2955e+14, rmsle 0.20637 smape 10.478
+

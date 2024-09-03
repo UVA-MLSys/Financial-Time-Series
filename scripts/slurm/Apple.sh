@@ -1,5 +1,22 @@
+#!/usr/bin/env bash
+#SBATCH --job-name="Apple"
+#SBATCH --output=outputs/Apple.out
+#SBATCH --partition=gpu
+#SBATCH --time=1:00:00
+#SBATCH --gres=gpu:1
+#---SBATCH --nodelist=lynx01
+#SBATCH --mem=16GB
+
+source /etc/profile.d/modules.sh
+source ~/.bashrc
+
+module load cuda-toolkit cudnn-8.9.5_cuda12.x anaconda3
+
+conda deactivate
+conda activate ml
+
 models=(DLinear PatchTST TimesNet iTransformer)
-data_path=Gold.csv
+data_path=Apple.csv
 n_features=5
 itrs=3
 
