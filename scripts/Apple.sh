@@ -33,8 +33,8 @@ python run_CALF.py\
     --itrs $itrs\
     --model_id ori
 
-python run_OFA.py\
-    --n_features $n_features \
-    --data_path $data_path\
-    --itrs $itrs\
-    --model_id ori
+# python run_OFA.py\
+#     --n_features $n_features \
+#     --data_path $data_path\
+#     --itrs $itrs\
+#     --model_id ori
