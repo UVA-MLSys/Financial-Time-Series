@@ -388,3 +388,111 @@ mae:0.81359, rmse:0.98168, mse:0.96369
 Crude_Oil OFA_sl_96_pl_48_id_ori  test
 mae:17283, rmse:48297, mse:2.3326e+09, rmsle 0.53412 smape 13.233
 
+Gold DLinear_sl_96_pl_24  test scaled
+mae:1.0441, rmse:1.5496, mse:2.4014
+
+Gold DLinear_sl_96_pl_24  test
+mae:10621, rmse:29265, mse:8.5646e+08, rmsle 0.14738 smape 7.2545
+
+Gold DLinear_sl_96_pl_24  test scaled
+mae:1.0525, rmse:1.5588, mse:2.4298
+
+Gold DLinear_sl_96_pl_24  test
+mae:10546, rmse:29057, mse:8.4431e+08, rmsle 0.14655 smape 7.2504
+
+Gold DLinear_sl_96_pl_24  test scaled
+mae:1.0397, rmse:1.5456, mse:2.3888
+
+Gold DLinear_sl_96_pl_24  test
+mae:10456, rmse:28764, mse:8.2735e+08, rmsle 0.14524 smape 7.1649
+
+Gold PatchTST_sl_96_pl_24  test scaled
+mae:1.0981, rmse:1.6091, mse:2.5891
+
+Gold PatchTST_sl_96_pl_24  test
+mae:11325, rmse:31784, mse:1.0102e+09, rmsle 0.16413 smape 7.829
+
+Gold PatchTST_sl_96_pl_24  test scaled
+mae:1.0454, rmse:1.5345, mse:2.3548
+
+Gold PatchTST_sl_96_pl_24  test
+mae:10905, rmse:30244, mse:9.1469e+08, rmsle 0.15132 smape 7.3399
+
+Gold PatchTST_sl_96_pl_24  test scaled
+mae:1.1193, rmse:1.6101, mse:2.5926
+
+Gold PatchTST_sl_96_pl_24  test
+mae:11590, rmse:32590, mse:1.0621e+09, rmsle 0.17553 smape 8.1887
+
+Gold TimesNet_sl_96_pl_24  test scaled
+mae:1.0631, rmse:1.5394, mse:2.3697
+
+Gold TimesNet_sl_96_pl_24  test
+mae:9670.6, rmse:27300, mse:7.453e+08, rmsle 0.13949 smape 7.099
+
+Gold TimesNet_sl_96_pl_24  test scaled
+mae:1.0678, rmse:1.5392, mse:2.3692
+
+Gold TimesNet_sl_96_pl_24  test
+mae:9669, rmse:27091, mse:7.3392e+08, rmsle 0.13976 smape 7.241
+
+Gold TimesNet_sl_96_pl_24  test scaled
+mae:1.1307, rmse:1.6293, mse:2.6546
+
+Gold TimesNet_sl_96_pl_24  test
+mae:9633.5, rmse:27065, mse:7.3249e+08, rmsle 0.13964 smape 7.2867
+
+Gold iTransformer_sl_96_pl_24  test scaled
+mae:1.1041, rmse:1.6116, mse:2.5971
+
+Gold iTransformer_sl_96_pl_24  test
+mae:12101, rmse:33185, mse:1.1012e+09, rmsle 0.16692 smape 8.1005
+
+Gold iTransformer_sl_96_pl_24  test scaled
+mae:1.0834, rmse:1.5337, mse:2.3522
+
+Gold iTransformer_sl_96_pl_24  test
+mae:11907, rmse:32856, mse:1.0795e+09, rmsle 0.16499 smape 7.9925
+
+Gold iTransformer_sl_96_pl_24  test scaled
+mae:1.0859, rmse:1.5437, mse:2.3831
+
+Gold iTransformer_sl_96_pl_24  test
+mae:12610, rmse:35014, mse:1.226e+09, rmsle 0.1776 smape 8.3397
+
+Gold CALF_sl_96_pl_24_id_ori  test scaled
+mae:1.193, rmse:1.6646, mse:2.771
+
+Gold CALF_sl_96_pl_24_id_ori  test
+mae:10993, rmse:29822, mse:8.8934e+08, rmsle 0.15441 smape 8.0726
+
+Gold CALF_sl_96_pl_24_id_ori  test scaled
+mae:1.1533, rmse:1.6066, mse:2.5813
+
+Gold CALF_sl_96_pl_24_id_ori  test
+mae:12822, rmse:34764, mse:1.2085e+09, rmsle 0.17689 smape 8.6838
+
+Gold CALF_sl_96_pl_24_id_ori  test scaled
+mae:1.157, rmse:1.5876, mse:2.5205
+
+Gold CALF_sl_96_pl_24_id_ori  test
+mae:12581, rmse:33933, mse:1.1515e+09, rmsle 0.18819 smape 8.8871
+
+Gold OFA_sl_96_pl_48_id_ori  test scaled
+mae:1.4847, rmse:2.1129, mse:4.4642
+
+Gold OFA_sl_96_pl_48_id_ori  test
+mae:13012, rmse:36707, mse:1.3474e+09, rmsle 0.34555 smape 9.8665
+
+Gold OFA_sl_96_pl_48_id_ori  test scaled
+mae:1.4473, rmse:2.1353, mse:4.5595
+
+Gold OFA_sl_96_pl_48_id_ori  test
+mae:11295, rmse:32013, mse:1.0249e+09, rmsle 0.16821 smape 8.6283
+
+Gold OFA_sl_96_pl_48_id_ori  test scaled
+mae:1.4937, rmse:2.1738, mse:4.7254
+
+Gold OFA_sl_96_pl_48_id_ori  test
+mae:11749, rmse:32824, mse:1.0774e+09, rmsle 0.19201 smape 9.1689
+
