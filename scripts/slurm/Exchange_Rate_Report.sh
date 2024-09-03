@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 #SBATCH --job-name="exchange_rate"
-#SBATCH --output=outputs/exchange_rate.out
+#SBATCH --output=outputs/exchange_rate2.out
 #SBATCH --partition=gpu
-#SBATCH --time=10:00:00
+#SBATCH --time=5:00:00
 #SBATCH --gres=gpu:1
 #---SBATCH --nodelist=lynx01
-#SBATCH --mem=16GB
+#SBATCH --mem=32GB
 
 source /etc/profile.d/modules.sh
 source ~/.bashrc

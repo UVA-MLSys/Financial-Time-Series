@@ -10,6 +10,8 @@ def set_random_seed(seed):
 
 def initial_setup(args):
     args.use_gpu = True if torch.cuda.is_available() else False
+    if args.use_gpu:
+        print(torch.cuda.get_device_name(0))
     
     if args.use_gpu and args.use_multi_gpu:
         args.devices = args.devices.replace(' ', '')

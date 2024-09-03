@@ -64,3 +64,57 @@ mae:1.0691, rmse:1.4279, mse:2.0389
 Exchange_Rate_Report TimesNet_sl_96_pl_24  test
 mae:0.53187, rmse:1.6231, mse:2.6345, rmsle 0.013445 smape 1.2752
 
+Exchange_Rate_Report MICN_sl_96_pl_24  test scaled
+mae:0.75018, rmse:0.98428, mse:0.96881
+
+Exchange_Rate_Report MICN_sl_96_pl_24  test
+mae:0.37113, rmse:1.1203, mse:1.2551, rmsle 0.0093557 smape 0.91685
+
+Exchange_Rate_Report MICN_sl_96_pl_24  test scaled
+mae:0.77447, rmse:1.0218, mse:1.044
+
+Exchange_Rate_Report MICN_sl_96_pl_24  test
+mae:0.36454, rmse:1.0999, mse:1.2097, rmsle 0.0095682 smape 0.94479
+
+Exchange_Rate_Report MICN_sl_96_pl_24  test scaled
+mae:0.75278, rmse:0.98879, mse:0.97771
+
+Exchange_Rate_Report MICN_sl_96_pl_24  test
+mae:0.36918, rmse:1.1196, mse:1.2534, rmsle 0.0093929 smape 0.92177
+
+Exchange_Rate_Report TimeMixer_sl_96_pl_24  test scaled
+mae:0.72597, rmse:0.98085, mse:0.96206
+
+Exchange_Rate_Report TimeMixer_sl_96_pl_24  test
+mae:0.31912, rmse:1.0084, mse:1.0169, rmsle 0.0089135 smape 0.88748
+
+Exchange_Rate_Report TimeMixer_sl_96_pl_24  test scaled
+mae:0.71354, rmse:0.96825, mse:0.93752
+
+Exchange_Rate_Report TimeMixer_sl_96_pl_24  test
+mae:0.33336, rmse:1.0344, mse:1.0701, rmsle 0.0088486 smape 0.8655
+
+Exchange_Rate_Report TimeMixer_sl_96_pl_24  test scaled
+mae:0.71504, rmse:0.96866, mse:0.9383
+
+Exchange_Rate_Report TimeMixer_sl_96_pl_24  test
+mae:0.32408, rmse:1.0194, mse:1.0392, rmsle 0.008751 smape 0.8636
+
+Exchange_Rate_Report CALF_sl_96_pl_24_id_ori  test scaled
+mae:0.8573, rmse:1.1119, mse:1.2364
+
+Exchange_Rate_Report CALF_sl_96_pl_24_id_ori  test
+mae:0.37796, rmse:1.1463, mse:1.3139, rmsle 0.010276 smape 1.069
+
+Exchange_Rate_Report CALF_sl_96_pl_24_id_ori  test scaled
+mae:0.80492, rmse:1.0707, mse:1.1464
+
+Exchange_Rate_Report CALF_sl_96_pl_24_id_ori  test
+mae:0.35943, rmse:1.127, mse:1.2701, rmsle 0.0099152 smape 0.99195
+
+Exchange_Rate_Report CALF_sl_96_pl_24_id_ori  test scaled
+mae:0.78055, rmse:1.0117, mse:1.0235
+
+Exchange_Rate_Report CALF_sl_96_pl_24_id_ori  test
+mae:0.37976, rmse:1.1036, mse:1.218, rmsle 0.0095361 smape 0.97495
+
