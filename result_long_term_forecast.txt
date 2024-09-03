@@ -244,3 +244,147 @@ mae:1.0666, rmse:1.3692, mse:1.8747
 Apple CALF_sl_96_pl_24_id_ori  test
 mae:4.574e+06, rmse:1.5151e+07, mse:2.2955e+14, rmsle 0.20637 smape 10.478
 
+Crude_Oil DLinear_sl_96_pl_24  test scaled
+mae:0.771, rmse:1.0285, mse:1.0578
+
+Crude_Oil DLinear_sl_96_pl_24  test
+mae:13771, rmse:39364, mse:1.5495e+09, rmsle 0.29276 smape 10.302
+
+Crude_Oil DLinear_sl_96_pl_24  test scaled
+mae:0.78369, rmse:1.0472, mse:1.0966
+
+Crude_Oil DLinear_sl_96_pl_24  test
+mae:13799, rmse:39491, mse:1.5595e+09, rmsle 0.29727 smape 10.366
+
+Crude_Oil DLinear_sl_96_pl_24  test scaled
+mae:0.78774, rmse:1.0467, mse:1.0956
+
+Crude_Oil DLinear_sl_96_pl_24  test
+mae:13735, rmse:39258, mse:1.5412e+09, rmsle 0.29454 smape 10.397
+
+Crude_Oil PatchTST_sl_96_pl_24  test scaled
+mae:0.79288, rmse:1.0698, mse:1.1445
+
+Crude_Oil PatchTST_sl_96_pl_24  test
+mae:14394, rmse:42282, mse:1.7877e+09, rmsle 0.32071 smape 10.656
+
+Crude_Oil PatchTST_sl_96_pl_24  test scaled
+mae:0.76206, rmse:1.0443, mse:1.0906
+
+Crude_Oil PatchTST_sl_96_pl_24  test
+mae:14825, rmse:42787, mse:1.8307e+09, rmsle 0.30878 smape 10.617
+
+Crude_Oil PatchTST_sl_96_pl_24  test scaled
+mae:0.72761, rmse:0.95721, mse:0.91624
+
+Crude_Oil PatchTST_sl_96_pl_24  test
+mae:14593, rmse:41878, mse:1.7538e+09, rmsle 0.29836 smape 10.5
+
+Crude_Oil TimesNet_sl_96_pl_24  test scaled
+mae:0.87218, rmse:1.1058, mse:1.2228
+
+Crude_Oil TimesNet_sl_96_pl_24  test
+mae:14216, rmse:41174, mse:1.6953e+09, rmsle 0.31235 smape 11.323
+
+Crude_Oil TimesNet_sl_96_pl_24  test scaled
+mae:0.75436, rmse:1.072, mse:1.1492
+
+Crude_Oil TimesNet_sl_96_pl_24  test
+mae:14883, rmse:44473, mse:1.9778e+09, rmsle 0.32254 smape 10.523
+
+Crude_Oil TimesNet_sl_96_pl_24  test scaled
+mae:0.82001, rmse:1.0965, mse:1.2023
+
+Crude_Oil TimesNet_sl_96_pl_24  test
+mae:14602, rmse:43511, mse:1.8932e+09, rmsle 0.32706 smape 10.986
+
+Crude_Oil iTransformer_sl_96_pl_24  test scaled
+mae:0.78032, rmse:1.0414, mse:1.0845
+
+Crude_Oil iTransformer_sl_96_pl_24  test
+mae:15175, rmse:43290, mse:1.8741e+09, rmsle 0.31284 smape 10.839
+
+Crude_Oil iTransformer_sl_96_pl_24  test scaled
+mae:0.90878, rmse:1.2703, mse:1.6138
+
+Crude_Oil iTransformer_sl_96_pl_24  test
+mae:14475, rmse:41956, mse:1.7603e+09, rmsle 0.31141 smape 11.564
+
+Crude_Oil iTransformer_sl_96_pl_24  test scaled
+mae:0.79255, rmse:1.0199, mse:1.0403
+
+Crude_Oil iTransformer_sl_96_pl_24  test
+mae:15132, rmse:43394, mse:1.8831e+09, rmsle 0.31563 smape 10.916
+
+Crude_Oil MICN_sl_96_pl_24  test scaled
+mae:0.71167, rmse:0.95864, mse:0.91899
+
+Crude_Oil MICN_sl_96_pl_24  test
+mae:12448, rmse:35909, mse:1.2894e+09, rmsle 0.26479 smape 9.5827
+
+Crude_Oil MICN_sl_96_pl_24  test scaled
+mae:0.71337, rmse:0.95966, mse:0.92095
+
+Crude_Oil MICN_sl_96_pl_24  test
+mae:12722, rmse:36503, mse:1.3325e+09, rmsle 0.27722 smape 9.6782
+
+Crude_Oil MICN_sl_96_pl_24  test scaled
+mae:0.72262, rmse:0.98144, mse:0.96322
+
+Crude_Oil MICN_sl_96_pl_24  test
+mae:13336, rmse:37717, mse:1.4226e+09, rmsle 0.28515 smape 9.9731
+
+Crude_Oil TimeMixer_sl_96_pl_24  test scaled
+mae:0.88253, rmse:1.211, mse:1.4666
+
+Crude_Oil TimeMixer_sl_96_pl_24  test
+mae:13594, rmse:39086, mse:1.5277e+09, rmsle 0.29974 smape 11.12
+
+Crude_Oil TimeMixer_sl_96_pl_24  test scaled
+mae:0.96168, rmse:1.3721, mse:1.8827
+
+Crude_Oil TimeMixer_sl_96_pl_24  test
+mae:13878, rmse:40056, mse:1.6045e+09, rmsle 0.30661 smape 11.507
+
+Crude_Oil TimeMixer_sl_96_pl_24  test scaled
+mae:0.95112, rmse:1.2573, mse:1.5807
+
+Crude_Oil TimeMixer_sl_96_pl_24  test
+mae:13621, rmse:39433, mse:1.555e+09, rmsle 0.30304 smape 11.68
+
+Crude_Oil CALF_sl_96_pl_24_id_ori  test scaled
+mae:0.89398, rmse:1.1437, mse:1.3081
+
+Crude_Oil CALF_sl_96_pl_24_id_ori  test
+mae:18847, rmse:56269, mse:3.1662e+09, rmsle 0.37212 smape 12.163
+
+Crude_Oil CALF_sl_96_pl_24_id_ori  test scaled
+mae:0.86372, rmse:1.1266, mse:1.2692
+
+Crude_Oil CALF_sl_96_pl_24_id_ori  test
+mae:16701, rmse:50989, mse:2.5999e+09, rmsle 0.35646 smape 11.472
+
+Crude_Oil CALF_sl_96_pl_24_id_ori  test scaled
+mae:0.88607, rmse:1.1297, mse:1.2762
+
+Crude_Oil CALF_sl_96_pl_24_id_ori  test
+mae:17963, rmse:53840, mse:2.8988e+09, rmsle 0.36256 smape 11.983
+
+Crude_Oil OFA_sl_96_pl_48_id_ori  test scaled
+mae:0.81002, rmse:1.0151, mse:1.0305
+
+Crude_Oil OFA_sl_96_pl_48_id_ori  test
+mae:14548, rmse:41711, mse:1.7398e+09, rmsle 0.34598 smape 11.697
+
+Crude_Oil OFA_sl_96_pl_48_id_ori  test scaled
+mae:1.1411, rmse:1.4632, mse:2.141
+
+Crude_Oil OFA_sl_96_pl_48_id_ori  test
+mae:13314, rmse:37861, mse:1.4334e+09, rmsle 0.29977 smape 13.28
+
+Crude_Oil OFA_sl_96_pl_48_id_ori  test scaled
+mae:0.81359, rmse:0.98168, mse:0.96369
+
+Crude_Oil OFA_sl_96_pl_48_id_ori  test
+mae:17283, rmse:48297, mse:2.3326e+09, rmsle 0.53412 smape 13.233
+
