@@ -1,196 +1,146 @@
-import torch
-from accelerate import Accelerator, DeepSpeedPlugin
-from accelerate import DistributedDataParallelKwargs
-from torch import nn, optim
-from torch.optim import lr_scheduler
-from tqdm import tqdm
-
-from models import TimeLLM
-
-from data_provider.data_factory import data_provider
-import time
+from utils.tools import stringify_setting
+from exp.exp_long_term_forecasting import *
 import numpy as np
-import os
+import torch, os, time, warnings, json, argparse
+warnings.filterwarnings('ignore')
 
-os.environ['CURL_CA_BUNDLE'] = ''
-os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "max_split_size_mb:64"
+from run import set_random_seed, initial_setup
 
-from utils.tools import EarlyStopping, adjust_learning_rate, load_content
-from utils.timeLLM_utils import *
+def load_content(args):
+    df = pd.read_csv(os.path.join(args.root_path, 'prompt_bank.csv'))
+    data_name = args.data_path.split('.')[0] 
+    content = df[df['data']==data_name]['prompt'].values[0]
+    return content
 
-parser = get_parser()
-args = parser.parse_args()
-ddp_kwargs = DistributedDataParallelKwargs(find_unused_parameters=True)
-deepspeed_plugin = DeepSpeedPlugin(hf_ds_config='./utils/ds_config_zero2.json')
-accelerator = Accelerator(kwargs_handlers=[ddp_kwargs], deepspeed_plugin=deepspeed_plugin)
-
-for ii in range(1):
-    # setting record of experiments
-    setting = stringify_args(args)
-    path = os.path.join(args.checkpoints,
-                        setting + '-' + args.model_comment)  # unique checkpoint saving path
-    if os.path.exists(os.path.join(path ,'checkpoint' )):
-        if accelerator.is_local_main_process: print(setting, ' has done!!!')
-        # exit()
-        
-    train_data, train_loader = data_provider(args, 'train')
-    vali_data, vali_loader = data_provider(args, 'val')
-    
-    
+def main(args):
+    initial_setup(args)
+    set_random_seed(args.seed)
     args.content = load_content(args)
 
-    if accelerator.is_local_main_process: print(setting + '-' + args.model_comment )
-    model = TimeLLM.Model(args).float()
-            
-    if accelerator.is_local_main_process:
-        if args.count_hyper:
-            path = './count/'+ args.model_id
-            time_beg = time.time()
-            total_params = sum(p.numel() for p in model.parameters() )
-            print(f"Total number of parameters: {total_params}")
-            
-    if not os.path.exists(path) and accelerator.is_local_main_process:
-        os.makedirs(path)
-        print('learning_rate is ' , args.learning_rate)
-        print('path is ' , path )
-    time_now = time.time()
+    print(f'Args in experiment: {args}')
+    if args.itrs == 1:
+        exp = Exp_Long_Term_Forecast(args)
+        if not args.test:
+            print('>>>>>>> start training :>>>>>>>>>>')
+            exp.train()
 
-    train_steps = len(train_loader)
-    early_stopping = EarlyStopping(accelerator=accelerator, patience=args.patience)
-    
-    trained_parameters = []
-    for p in model.parameters():
-        if p.requires_grad is True:
-            trained_parameters.append(p)
-
-    model_optim = optim.Adam(trained_parameters, lr=args.learning_rate)
-
-    if args.lradj == 'COS':
-        scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(model_optim, T_max=20, eta_min=1e-8)
+        print('\n>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<')
+        exp.test(flag='test')
     else:
-        scheduler = lr_scheduler.OneCycleLR(optimizer=model_optim,
-                                            steps_per_epoch=train_steps,
-                                            pct_start=args.pct_start,
-                                            epochs=args.train_epochs,
-                                            max_lr=args.learning_rate)
-
-    criterion = nn.MSELoss()
-    criterion = nn.L1Loss()
-    mae_metric = nn.L1Loss()
-    
-    train_loader, vali_loader, test_loader, model, model_optim, scheduler = accelerator.prepare(
-        train_loader, vali_loader, test_loader, model, model_optim, scheduler)
-
-    if args.use_amp:
-        scaler = torch.cuda.amp.GradScaler()
-    
-    maes , mses =[] , [] 
-    min_mae= 1000
-    min_mse= 1000
-    for epoch in range(args.train_epochs):
-        iter_count = 0
-        train_loss = []
-
-        model.train()
-        epoch_time = time.time()
-        for i, (batch_x, batch_y, batch_x_mark, batch_y_mark) in tqdm(enumerate(train_loader) , disable=True ):
-            iter_count += 1
-            model_optim.zero_grad()
+        parent_seed = args.seed
+        np.random.seed(parent_seed)
+        experiment_seeds = np.random.randint(1e3, size=args.itrs)
+        experiment_seeds = [int(seed) for seed in experiment_seeds]
+        args.experiment_seeds = experiment_seeds
+        original_itr = args.itr_no
+        
+        for itr_no in range(1, args.itrs+1):
+            if (original_itr is not None) and original_itr != itr_no: continue
             
-            batch_x = batch_x.float().to(accelerator.device)
-            batch_y = batch_y.float().to(accelerator.device)
-            batch_x_mark = batch_x_mark.float().to(accelerator.device)
-            batch_y_mark = batch_y_mark.float().to(accelerator.device)
+            args.seed = experiment_seeds[itr_no-1]
+            print(f'\n>>>> itr_no: {itr_no}, seed: {args.seed} <<<<<<')
+            set_random_seed(args.seed)
+            args.itr_no = itr_no
+            
+            exp = Exp_Long_Term_Forecast(args)
 
-            # decoder input
-            dec_inp = torch.zeros_like(batch_y[:, -args.pred_len:, :]).float().to(
-                accelerator.device)
-            dec_inp = torch.cat([batch_y[:, :args.label_len, :], dec_inp], dim=1).float().to(
-                accelerator.device)
+            if not args.test:
+                print('>>>>>>> start training :>>>>>>>>>>')
+                exp.train()
+            
+            # print('\n>>>>>>> Evaluate train data :  <<<<<<<<<<<<<<<')
+            # exp.test(load_model=True, flag='train')
 
-            # encoder - decoder
-            if args.use_amp:
-                with torch.cuda.amp.autocast():
-                    if args.output_attention:
-                        outputs = model(batch_x, batch_x_mark, dec_inp, batch_y_mark)[0]
-                    else:
-                        outputs = model(batch_x, batch_x_mark, dec_inp, batch_y_mark)
+            # print('\n>>>>>>> validating :  <<<<<<<<<<<<<<<')
+            # exp.test(flag='val')
 
-                    f_dim = -1 if args.features == 'MS' else 0
-                    outputs = outputs[:, -args.pred_len:, f_dim:]
-                    batch_y = batch_y[:, -args.pred_len:, f_dim:].to(accelerator.device)
-                    loss = criterion(outputs, batch_y)
-                    train_loss.append(loss.item())
-            else:
-                if args.output_attention:
-                    outputs = model(batch_x, batch_x_mark, dec_inp, batch_y_mark)[0]
-                else:
-                    outputs = model(batch_x, batch_x_mark, dec_inp, batch_y_mark)
-                    
-                f_dim = -1 if args.features == 'MS' else 0
-                outputs = outputs[:, -args.pred_len:, f_dim:]
-                batch_y = batch_y[:, -args.pred_len:, f_dim:]
-                loss = criterion(outputs, batch_y)
-                train_loss.append(loss.item())
+            print('\n>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<')
+            exp.test(flag='test')
+           
+        data_name = args.data_path.split('.')[0] 
+        config_filepath = os.path.join(
+            args.result_path, data_name, 
+            stringify_setting(args), 'config.json'
+        )
+        args.seed = parent_seed
+        with open(config_filepath, 'w') as output_file:
+            json.dump(vars(args), output_file, indent=4)
+            
+def get_parser():
 
-            if (i + 1) % 100 == 0:
-                accelerator.print(
-                    "\titers: {0}, epoch: {1} | loss: {2:.7f}".format(i + 1, epoch + 1, loss.item()))
-                speed = (time.time() - time_now) / iter_count
-                left_time = speed * ((args.train_epochs - epoch) * train_steps - i)
-                accelerator.print('\tspeed: {:.4f}s/iter; left time: {:.4f}s'.format(speed, left_time))
-                iter_count = 0
-                time_now = time.time()
+    parser = argparse.ArgumentParser(description='TimeLLM')
 
-            if args.use_amp:
-                scaler.scale(loss).backward()
-                scaler.step(model_optim)
-                scaler.update()
-            else:
-                accelerator.backward(loss)
-                model_optim.step()
+    parser.add_argument(
+        '--model_id', default='ori', choices=['ori', 'removeLLM', 
+        'randomInit', 'llm_to_trsf', 'llm_to_attn']
+    )
+    parser.add_argument('--model', type=str, default='TimeLLM', choices=['TimeLLM'])
+    parser.add_argument('--seed', type=int, default=2024, help='random seed')
+    parser.add_argument('--result_path', type=str, default='results', help='result output folder')
+    parser.add_argument('--test', action='store_true', help='test the model')
 
-            if args.lradj == 'TST':
-                adjust_learning_rate(accelerator, model_optim, scheduler, epoch + 1, args, printout=False)
-                scheduler.step()
+    parser.add_argument('--root_path', type=str, default='./data')
+    parser.add_argument('--data_path', type=str, default='Exchange_Rate_Report.csv')
+    parser.add_argument('--data', type=str, default='custom')
+    parser.add_argument('--features', type=str, default='M', choices=['M', 'S', 'MS'],)
+    parser.add_argument('--n_features', type=int, required=True, help='Number of input features')
+    parser.add_argument(
+        '--freq', type=str, default='d', choices=['s', 't', 'h', 'd', 'b', 'w', 'm'],
+        help='freq for time features encoding, options:[s:secondly, t:minutely, h:hourly, d:daily, b:business days, w:weekly, m:monthly], you can also use more detailed freq like 15min or 3h'
+    )
+    parser.add_argument('--target', type=str, default='OFFER_BALANCE')
+    parser.add_argument('--embed', type=str, default='timeF')
+    parser.add_argument('--percent', type=int, default=10)
 
-        accelerator.print("Epoch: {} cost time: {}".format(epoch + 1, time.time() - epoch_time))
-        train_loss = np.average(train_loss)
-        vali_loss, vali_mae_loss , _ = vali(args, accelerator, model, vali_data, vali_loader, criterion, mae_metric)
-        
-        test_data, test_loader = data_provider(args, 'test')
-        test_loss, test_mae_loss , test_mse_loss= vali(args, accelerator, model, test_data, test_loader, criterion, mae_metric)
-        
-        maes.append(test_mae_loss)
-        mses.append(test_mse_loss)
-        
-        accelerator.print(
-            "Epoch: {0} | Train Loss: {1:.7f} Vali Loss: {2:.7f} Test Loss: {3:.7f} MAE Loss: {4:.7f}".format(
-                epoch + 1, train_loss, vali_loss, test_loss, test_mae_loss))
-        
-        early_stopping(vali_loss, model, path)
-        if early_stopping.early_stop:
-            accelerator.print("Early stopping")
-            break
+    parser.add_argument('--seq_len', type=int, default=96)
+    parser.add_argument('--pred_len', type=int, default=48)
+    parser.add_argument('--label_len', type=int, default=24)
 
-        if args.lradj != 'TST':
-            if args.lradj == 'COS':
-                scheduler.step()
-                accelerator.print("lr = {:.10f}".format(model_optim.param_groups[0]['lr']))
-            else:
-                if epoch == 0:
-                    args.learning_rate = model_optim.param_groups[0]['lr']
-                    accelerator.print("lr = {:.10f}".format(model_optim.param_groups[0]['lr']))
-                adjust_learning_rate(accelerator, model_optim, scheduler, epoch + 1, args, printout=True)
-        else:
-            accelerator.print('Updating learning rate to {}'.format(scheduler.get_last_lr()[0]))
+    parser.add_argument('--learning_rate', type=float, default=1e-3)
+    parser.add_argument('--des', type=str, default=None, help='exp description')
+    parser.add_argument('--batch_size', type=int, default=32)
+    parser.add_argument('--num_workers', type=int, default=0)
+    parser.add_argument('--itrs', type=int, default=1, help='experiments times')
+    parser.add_argument('--itr_no', type=int, default=None, help='experiments number among itrs. 1<= itr_no <= itrs .')
     
-    if accelerator.is_local_main_process:
-        
-        if args.count_hyper:
-            with open('hyper_count.txt' , 'a') as f : 
-                f.write(args.model_id+' -- itCosts:{}:modelSize:{}:\n'.format(time.time() - time_beg , total_params) )
-        else:
-            with open( args.model_comment+'.txt' , 'a') as f : 
-                f.write(args.model_id +'\n')
-                f.write("Epoch:{} mae:{} mse:{}\n".format(epoch , round(np.min(maes) , 4 ) , round(np.min(mses) , 4 ) ))
+    parser.add_argument('--train_epochs', type=int, default=10)
+    parser.add_argument('--lradj', type=str, default='type1')
+    parser.add_argument('--patience', type=int, default=3)
+    
+    parser.add_argument('--e_layers', type=int, default=3)
+    parser.add_argument('--d_model', type=int, default=768)
+    parser.add_argument('--n_heads', type=int, default=4)
+    parser.add_argument('--d_ff', type=int, default=128)
+    parser.add_argument('--dropout', type=float, default=0.1)
+    parser.add_argument('--enc_in', type=int, default=1)
+    parser.add_argument('--c_out', type=int, default=1)
+    parser.add_argument('--output_attention', action='store_true', help='whether to output attention in encoder')
+    
+    parser.add_argument('--patch_len', type=int, default=16, help='patch length')
+    parser.add_argument('--stride', type=int, default=8, help='stride')
+    parser.add_argument('--prompt_domain', type=int, default=1, help='')
+    parser.add_argument(
+        '--llm_model', type=str, default='LLAMA', help='LLM model',
+        choices=['LLAMA', 'GPT2', 'BERT']) # 
+    parser.add_argument('--llm_dim', type=int, default='4096', help='LLM model dimension')# LLama7b:4096; GPT2-small:768; BERT-base:768
+    parser.add_argument('--llm_layers', type=int, default=6)
+    
+    parser.add_argument('--tmax', type=int, default=20)
+    parser.add_argument('--cos', type=int, default=0)
+    
+    # GPU
+    parser.add_argument('--gpu', type=int, default=0, help='gpu')
+    parser.add_argument('--use_multi_gpu', action='store_true', help='use multiple gpus', default=False)
+    parser.add_argument('--devices', type=str, default='0,1,2,3', help='device ids of multile gpus')
+
+    parser.add_argument('--no_scale', action='store_true', help='do not scale the dataset')
+    parser.add_argument('--disable_progress', action='store_true', help='do not show progress bar')
+    parser.add_argument('--dry_run', action='store_true', help='run only one batch for test')
+    parser.add_argument('--overwrite', action='store_true', help='overwrite the result folder')
+    
+    return parser
+
+if __name__ == '__main__':
+    parser = get_parser()
+    args = parser.parse_args()
+    main(args)
