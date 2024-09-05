@@ -38,3 +38,10 @@ python run_OFA.py\
     --data_path $data_path\
     --itrs $itrs\
     --model_id ori
+
+python run_TimeLLM.py\
+    --n_features $n_features \
+    --data_path $data_path \
+    --llm_model GPT2 --llm_dim 768 \
+    --batch_size 16 --itrs $itrs\
+    --model_id ori
