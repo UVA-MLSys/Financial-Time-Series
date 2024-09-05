@@ -1,21 +1,24 @@
-from data_provider.data_loader import Dataset_Custom
+from data_provider.data_loader import Dataset_Custom, MultiTimeSeries
 from torch.utils.data import DataLoader
+from typing import Union
 
 def data_provider(
     args, flag:str
-) -> tuple[Dataset_Custom, DataLoader]:    
+) -> tuple[Union[Dataset_Custom, MultiTimeSeries], DataLoader]:    
     shuffle_flag = flag == 'train'
     drop_last = False
     
-    data_set = Dataset_Custom(
-        args, flag=flag
-    )
-    print(flag, len(data_set))
+    if args.data_path == 'Financial_Aid.csv':
+        dataset = MultiTimeSeries(args, flag=flag)
+    else:
+        dataset = Dataset_Custom(args, flag=flag)
+    
+    print(flag, len(dataset))
     data_loader = DataLoader(
-        data_set,
+        dataset,
         batch_size=args.batch_size,
         shuffle=shuffle_flag,
         drop_last=drop_last
     )
     
-    return data_set, data_loader
+    return dataset, data_loader
