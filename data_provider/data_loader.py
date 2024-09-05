@@ -71,6 +71,10 @@ class Dataset_Custom(Dataset):
         border2s = [num_train, num_train + num_vali, len(df_raw)]
         border1 = border1s[self.set_type]
         border2 = border2s[self.set_type]
+        
+        if self.set_type == 0:
+            percent = self.args.percent
+            border1 = (border2 - self.seq_len-border1) * percent//100 + border1
 
         # features
         if self.features == 'M' or self.features == 'MS':
