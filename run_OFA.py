@@ -72,7 +72,6 @@ def get_parser():
 
     parser.add_argument('--gpt_layers', type=int, default=6)
     parser.add_argument('--is_gpt', type=int, default=1)
-    parser.add_argument('--d_model', type=int, default=768)
     parser.add_argument('--dropout', type=float, default=0.1)
 
     parser.add_argument('--patch_size', type=int, default=16)
@@ -84,8 +83,6 @@ def get_parser():
     parser.add_argument('--max_len', type=int, default=-1)
     parser.add_argument('--hid_dim', type=int, default=16)
     parser.add_argument('--tmax', type=int, default=20)
-
-    parser.add_argument('--cos', type=int, default=1)
     parser.add_argument('--n_scale', type=float, default=-1)
     
     return parser

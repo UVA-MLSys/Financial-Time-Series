@@ -76,9 +76,11 @@ class Dataset_Custom(Dataset):
         border1 = border1s[self.set_type]
         border2 = border2s[self.set_type]
 
-        if self.set_type == 0:
+        if self.set_type == 0 and self.args.percent <100:
             percent = self.args.percent
-            border1 = (border2 - self.seq_len-border1) * percent//100 + border1
+            length = border2 - self.seq_len - self.pred_len - border1
+            print(f'Taking {percent}% of {length}.')
+            border1 = length * (100-percent)//100 + border1
 
         # features
         if self.features == 'M' or self.features == 'MS':
@@ -191,18 +193,23 @@ class MultiTimeSeries(Dataset):
         if self.set_type == 0:
             print('Minimum year ', min_year)
             print(f"Split years:\n \
-                Train: {years[train_start: train_end] + min_year}\n \
-                Validation: {years[train_end:val_end] + min_year}\n \
-                Test: {years[val_end:test_end] + min_year}\n")
+                Train: {[y+min_year for y in years[train_start: train_end]]}\n \
+                Validation: {[y+min_year for y in years[train_end: val_end]]}\n \
+                Test: {[y+min_year for y in years[val_end: test_end]]}\n")
         
+        # Set borders
         border1s = [0, train_end - self.seq_len, val_end - self.seq_len]
         border2s = [train_end, val_end, test_end]
         
-        self.border1 = years[border1s[self.set_type]]
-        self.border2 = years[border2s[self.set_type]-1]
+        border1 = years[border1s[self.set_type]]
+        border2 = years[border2s[self.set_type]-1]
         
-        # df_raw, selected_columns = self.scale_data(df_raw)
+        if self.set_type == 0:
+            percent = self.args.percent
+            border1 = (border2 - self.seq_len-border1) * (100-percent)//100 + border1
+        self.border1, self.border2 = border1, border2
         
+        # filter out data
         df_data = df_raw[
             (df_raw[time_col]>=self.border1) & (df_raw[time_col]<=self.border2)
         ].copy().reset_index(drop=True)

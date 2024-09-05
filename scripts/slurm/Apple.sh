@@ -45,7 +45,7 @@ python run.py\
     --factor 3 --channel_independence 1 --itrs $itrs
 
 python run_CALF.py\
-    --n_features $n_features \
+    --n_features $n_features --d_model 768\
     --data_path $data_path\
     --itrs $itrs\
     --model_id ori
@@ -53,5 +53,5 @@ python run_CALF.py\
 python run_OFA.py\
     --n_features $n_features \
     --data_path $data_path\
-    --itrs $itrs\
+    --itrs $itrs --d_model 768\
     --model_id ori
