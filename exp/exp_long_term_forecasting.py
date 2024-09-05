@@ -320,8 +320,8 @@ class Exp_Long_Term_Forecast(Exp_Basic):
         print("Upscaling data and removing negatives...")
     
         for i in range(preds.shape[0]):
-            date = test_data.index.loc[i, 'date']
-            scaler = test_data.scaler[date]
+            # date = test_data.index.loc[i, 'date']
+            scaler = test_data.scaler[i]
             preds[i] = test_data.inverse_transform(scaler, preds[i])
             trues[i] = test_data.inverse_transform(scaler, trues[i])
     
