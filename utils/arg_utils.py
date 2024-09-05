@@ -89,5 +89,5 @@ def get_basic_parser(
         parser.add_argument('--p_hidden_layers', type=int, default=2, help='number of hidden layers in projector')
         
     parser.add_argument('--dry_run', action='store_true', help='run only one batch for test')
-    parser.add_argument('--percent', type=int, default=100, help='sample percent for training, 0<= percent <= 100')
+    parser.add_argument('--percent', type=int, default=100, help='Percent of recent examples to keep for training, 0<= percent <= 100')
     return parser

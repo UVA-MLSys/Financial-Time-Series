@@ -78,7 +78,7 @@ class Dataset_Custom(Dataset):
 
         if self.set_type == 0:
             percent = self.args.percent
-            border1 = (border2 - self.seq_len-border1) * percent//100 + border1
+            border1 = (border2 - self.seq_len-border1) * (100 - percent)//100 + border1
 
         # features
         if self.features == 'M' or self.features == 'MS':
