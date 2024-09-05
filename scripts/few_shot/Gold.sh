@@ -10,7 +10,7 @@ echo "Running for model:$model"
 python run.py \
     --n_features $n_features \
     --data_path $data_path\
-    --model $model --itrs $itrs
+    --model $model --itrs $itrs --disable_progress
 done
 
 # MICN requires label_len to be equal to seq_len
@@ -25,23 +25,23 @@ python run.py\
     --down_sampling_layers 3 --down_sampling_window 2\
     --d_model 16 --d_ff 32 --label_len 0 \
     --down_sampling_method avg --e_layers 3 \
-    --factor 3 --channel_independence 1 --itrs $itrs
+    --factor 3 --channel_independence 1 --itrs $itrs --disable_progress
 
 python run_CALF.py\
     --n_features $n_features --d_model 768\
     --data_path $data_path\
-    --itrs $itrs\
+    --itrs $itrs --disable_progress\
     --model_id ori
 
 python run_OFA.py\
     --n_features $n_features \
     --data_path $data_path\
-    --itrs $itrs --d_model 768\
+    --itrs $itrs --disable_progress --d_model 768\
     --model_id ori
 
 python run_TimeLLM.py\
     --n_features $n_features --d_model 16\
     --data_path $data_path \
     --llm_model GPT2 --llm_dim 768 \
-    --batch_size 16 --itrs $itrs\
+    --batch_size 16 --itrs $itrs --disable_progress\
     --model_id ori

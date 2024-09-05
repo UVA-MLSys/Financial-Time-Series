@@ -73,9 +73,7 @@ def get_parser():
     parser.add_argument('--logits_loss', type=str, default='l1', help='logits loss function')
     
     # the rest here is CALF related arguments
-    # self
     parser.add_argument('--tmax', type=int, default=20)
-    parser.add_argument('--cos', type=int, default=1)
 
     # lora
     parser.add_argument('--r', type=int, default=8)
@@ -95,13 +93,9 @@ def get_parser():
     
     # Save Result in this file 
     parser.add_argument('--log_fine_name', type=str, default='CALF_result.txt')
-    
-    # Save Result in this file 
-    # parser.add_argument('--log_fine_name',required=True , type=str, default='')
 
     # Add nosise to wordEmb or Posi
     parser.add_argument('--noise_scale',required=False , type=float, default=-100)
-    
     parser.add_argument('--bootstrap_eval',required=False , type=int, default=0)
     
     return parser

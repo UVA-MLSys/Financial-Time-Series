@@ -18,6 +18,8 @@ def stringify_setting(args, complete=False):
         
         if 'model_id' in args:
             setting += '_id_' + args.model_id
+        if args.percent != 100:
+            setting += f'_p_{args.percent}'
             
         return setting
     
