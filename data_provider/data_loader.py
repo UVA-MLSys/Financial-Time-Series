@@ -11,7 +11,8 @@ warnings.filterwarnings('ignore')
 
 class Dataset_Custom(Dataset):
     def __init__(
-        self, args, flag='train', time_column='Date'
+        self, args, flag='train', 
+        time_column='Date'
     ):
         # size [seq_len, label_len, pred_len]
         self.args = args
@@ -34,6 +35,9 @@ class Dataset_Custom(Dataset):
         self.data_path = args.data_path
         self.time_column = time_column
         self.scaler = {}
+        self.percent = args.percent
+        assert 0<=self.percent<=100, f'Error: percent {self.percent} is not within [0, 100].'
+        
         self.__read_data__()
 
     def __read_data__(self):
@@ -71,6 +75,10 @@ class Dataset_Custom(Dataset):
         border2s = [num_train, num_train + num_vali, len(df_raw)]
         border1 = border1s[self.set_type]
         border2 = border2s[self.set_type]
+        
+        if self.set_type == 0:
+            border2 = (border2 - self.seq_len) * self.percent // 100 + self.seq_len
+
         
         if self.set_type == 0:
             percent = self.args.percent

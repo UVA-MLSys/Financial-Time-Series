@@ -65,7 +65,10 @@ class Model(nn.Module):
         
         if configs.is_gpt:
             if configs.pretrain:
-                self.gpt2 = GPT2Model.from_pretrained('gpt2', attn_implementation="eager", output_hidden_states=True)  # loads a pretrained GPT-2 base model
+                self.gpt2 = GPT2Model.from_pretrained(
+                    'gpt2', attn_implementation="eager", 
+                    output_hidden_states=True
+                )  # loads a pretrained GPT-2 base model
             else:
                 print("------------------no pretrain------------------")
                 self.gpt2 = GPT2Model(GPT2Config())

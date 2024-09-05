@@ -80,18 +80,17 @@ class Model(nn.Module):
         
         if 'ori' in self.model_id :
             if configs.llm_model == 'LLAMA':
-                pass
                 # self.llama_config = LlamaConfig.from_pretrained('/mnt/alps/modelhub/pretrained_model/LLaMA/7B_hf/')
-                # self.llama_config = LlamaConfig.from_pretrained('huggyllama/llama-7b')
-                self.llama_config = LlamaConfig.from_pretrained(self.llama_model_path)
+                self.llama_config = LlamaConfig.from_pretrained('huggyllama/llama-7b')
+                # self.llama_config = LlamaConfig.from_pretrained(self.llama_model_path)
                 self.llama_config.num_hidden_layers = configs.llm_layers
                 self.llama_config.output_attentions = True
                 self.llama_config.output_hidden_states = True
                 try:   
                     self.llm_model = LlamaModel.from_pretrained(
                         # "/mnt/alps/modelhub/pretrained_model/LLaMA/7B_hf/",
-                        # 'huggyllama/llama-7b',
-                        self.llama_model_path, 
+                        'huggyllama/llama-7b',
+                        # self.llama_model_path, 
                         trust_remote_code=True,
                         local_files_only=True,
                         config=self.llama_config,
@@ -125,7 +124,7 @@ class Model(nn.Module):
                         local_files_only=True,
                         config=self.gpt2_config,
                     )
-                except EnvironmentError:  # downloads model from HF is not already done
+                except AttributeError:  # downloads model from HF is not already done
                     print("Local model files not found. Attempting to download...")
                     self.llm_model = GPT2Model.from_pretrained(
                         'openai-community/gpt2',
@@ -205,7 +204,7 @@ class Model(nn.Module):
             self.reprogramming_layer = ReprogrammingLayer(configs.d_model, configs.n_heads, self.d_ff, self.d_llm)
             
         self.patch_embedding = PatchEmbedding(
-            configs.d_model, self.patch_len, self.stride, configs.dropout)
+            configs.d_model, self.patch_len, self.stride, self.stride, configs.dropout)
             
         self.patch_nums = int((configs.seq_len - self.patch_len) / self.stride + 2)
         self.head_nf = self.d_ff * self.patch_nums
@@ -252,7 +251,7 @@ class Model(nn.Module):
         if  "removeLLM" in self.model_id : 
             x_enc = x_enc.reshape(B, N, T)
             # torch.Size([14, 64, 32])
-            dec_out, n_vars = self.patch_embedding(x_enc.to(torch.bfloat16))
+            dec_out, n_vars = self.patch_embedding(x_enc.to(torch.float))
             dec_out = torch.reshape(
                 dec_out, (B, n_vars, -1)).contiguous()
 
@@ -267,7 +266,7 @@ class Model(nn.Module):
         elif 'llm_to_trsf' in self.model_id:
             x_enc = x_enc.reshape(B, N, T)
             # print('1', x_enc.shape) torch.Size([14, 512, 1])    
-            enc_out, n_vars = self.patch_embedding(x_enc.to(torch.bfloat16))
+            enc_out, n_vars = self.patch_embedding(x_enc.to(torch.float))
             # torch.Size([14, 64, 32])
             dec_out = self.basic_trsf(enc_out)
             # dec_out = self.llm_model(inputs_embeds=llama_enc_out).last_hidden_state
@@ -286,7 +285,7 @@ class Model(nn.Module):
         elif 'llm_to_attn' in self.model_id :
             x_enc = x_enc.reshape(B, N, T)
             # print('1', x_enc.shape) torch.Size([14, 512, 1])    
-            enc_out, n_vars = self.patch_embedding(x_enc.to(torch.bfloat16))
+            enc_out, n_vars = self.patch_embedding(x_enc.to(torch.float))
             # prompt_embeddings.shape              enc_out.shape
             dec_out , _ = self.basic_attn(enc_out  , enc_out , enc_out  )
             # dec_out = self.llm_model(inputs_embeds=llama_enc_out).last_hidden_state
@@ -337,7 +336,7 @@ class Model(nn.Module):
             source_embeddings = self.mapping_layer(self.word_embeddings.permute(1, 0)).permute(1, 0)
             
             x_enc = x_enc.permute(0, 2, 1).contiguous()
-            enc_out, n_vars = self.patch_embedding(x_enc.to(torch.bfloat16))
+            enc_out, n_vars = self.patch_embedding(x_enc.to(torch.float))
             enc_out = self.reprogramming_layer(enc_out, source_embeddings, source_embeddings)
             llama_enc_out = torch.cat([prompt_embeddings, enc_out], dim=1)
             dec_out = self.llm_model(inputs_embeds=llama_enc_out).last_hidden_state
