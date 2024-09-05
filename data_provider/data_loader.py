@@ -78,17 +78,6 @@ class Dataset_Custom(Dataset):
             df_data = df_raw[cols_data]
         elif self.features == 'S':
             df_data = df_raw[[self.target]]
-
-        # if self.scale:
-        #     train_data = df_data[border1s[0]:border2s[0]]
-            
-        #     self.scaler = StandardScaler()
-        #     self.scaler.fit(train_data.values)
-        #     data = self.scaler.transform(
-        #         df_data[border1:border2].values
-        #     )
-        # else:
-        #     data = df_data[border1:border2].values
         
         self.index = df_stamp = df_raw[['date']][border1:border2].reset_index(drop=True)
         df_stamp['date'] = pd.to_datetime(df_stamp.date)
@@ -122,8 +111,7 @@ class Dataset_Custom(Dataset):
 
             seq_x = scaler.transform(seq_x) 
             seq_y = scaler.transform(seq_y)
-            first_date = self.index.loc[s_begin, 'date']
-            self.scaler[first_date] = scaler
+            self.scaler[index] = scaler
         
         return seq_x, seq_y, seq_x_mark, seq_y_mark
 
