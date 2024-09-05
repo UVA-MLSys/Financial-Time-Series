@@ -81,9 +81,10 @@ def get_parser():
     parser.add_argument('--stride', type=int, default=8, help='stride')
     parser.add_argument('--prompt_domain', type=int, default=1, help='')
     parser.add_argument(
-        '--llm_model', type=str, default='LLAMA', help='LLM model',
+        '--llm_model', type=str, default='GPT2', help='LLM model',
         choices=['LLAMA', 'GPT2', 'BERT']) # 
-    parser.add_argument('--llm_dim', type=int, default='4096', help='LLM model dimension. LLama7b:4096; GPT2-small:768; BERT-base:768')
+    parser.add_argument('--llm_dim', type=int, default='768', 
+        help='LLM model dimension. LLama7b:4096; GPT2-small:768; BERT-base:768')
     parser.add_argument('--llm_layers', type=int, default=6)
     
     return parser

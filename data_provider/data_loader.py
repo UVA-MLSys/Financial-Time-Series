@@ -206,7 +206,7 @@ class MultiTimeSeries(Dataset):
         
         if self.set_type == 0:
             percent = self.args.percent
-            border1 = (border2 - self.seq_len-border1) * (100-percent)//100 + border1
+            border1 = (border2 - self.seq_len - self.pred_len - border1) * (100-percent)//100 + border1
         self.border1, self.border2 = border1, border2
         
         # filter out data

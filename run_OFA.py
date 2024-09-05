@@ -72,7 +72,6 @@ def get_parser():
 
     parser.add_argument('--gpt_layers', type=int, default=6)
     parser.add_argument('--is_gpt', type=int, default=1)
-    parser.add_argument('--dropout', type=float, default=0.1)
 
     parser.add_argument('--patch_size', type=int, default=16)
     parser.add_argument('--kernel_size', type=int, default=25)

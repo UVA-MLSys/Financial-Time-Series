@@ -42,6 +42,5 @@ python run_OFA.py\
 python run_TimeLLM.py\
     --n_features $n_features --d_model 16\
     --data_path $data_path \
-    --llm_model GPT2 --llm_dim 768 \
     --batch_size 16 --itrs $itrs --disable_progress\
     --model_id ori
