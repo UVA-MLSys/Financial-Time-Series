@@ -1,0 +1,10 @@
+
+Experiment begins at 2024-09-05 13:20:53
+
+Model parameters: 133397864
+Time per epoch: 9.6 sec.
+Memory usage: Available 11004.5 MB, Allocated 1126.6 MB, Max allocated 6467.5 MB
+
+test scaled -- mse:1.4272, mae:0.89739
+test -- mse:2.481e+09, mae:17325, rmsle: 0.34129 smape 12.117
+
