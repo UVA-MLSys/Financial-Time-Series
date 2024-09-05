@@ -8,3 +8,13 @@ Memory usage: Available 11004.5 MB, Allocated 16.4 MB, Max allocated 16.8 MB
 test scaled -- mse:1.5728, mae:0.96065
 test -- mse:1.8953e+14, mae:4.1128e+06, rmsle: 0.18561 smape 9.5292
 
+
+Experiment begins at 2024-09-05 13:23:33
+
+Model parameters: 4656
+Time per epoch: 2.8 sec.
+Memory usage: Available 12182.8 MB, Allocated 16.4 MB, Max allocated 16.8 MB
+
+test scaled -- mse:1.5728, mae:0.96065
+test -- mse:1.8953e+14, mae:4.1128e+06, rmsle: 0.18561 smape 9.5292
+

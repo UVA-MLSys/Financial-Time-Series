@@ -147,6 +147,7 @@ class Scale(nn.Module):
 class Model(nn.Module):
     """
     CALF (Orignal name: LLaTA): Aligning LLMs for Time Series Forecasting via Cross-modal Fine-Tuning. 
+    Updated title: Taming Pre-trained LLMs for Generalised Time Series Forecasting via Cross-modal Knowledge Distillation
     
     arxiv: https://arxiv.org/abs/2403.07300
     
