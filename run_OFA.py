@@ -2,6 +2,7 @@ from data_provider.data_factory import data_provider
 from utils.tools import EarlyStopping, adjust_learning_rate, stringify_setting
 from exp.exp_long_term_forecasting import *
 import numpy as np
+from utils.arg_utils import get_basic_parser
 import torch, os, time, warnings, json, argparse
 warnings.filterwarnings('ignore')
 
@@ -61,80 +62,31 @@ def main(args):
             json.dump(vars(args), output_file, indent=4)
             
 def get_parser():
-
-    parser = argparse.ArgumentParser(description='OFA_LLM')
-
+    parser = get_basic_parser("OFA LLM")
+    
     parser.add_argument(
         '--model_id', default='ori', choices=['ori', 'removeLLM', 
         'randomInit', 'llm_to_trsf', 'llm_to_attn']
     )
     parser.add_argument('--model', type=str, default='OFA', choices=['OFA'])
-    parser.add_argument('--seed', type=int, default=2024, help='random seed')
-    parser.add_argument('--result_path', type=str, default='results', help='result output folder')
-    parser.add_argument('--test', action='store_true', help='test the model')
 
-    parser.add_argument('--root_path', type=str, default='./data')
-    parser.add_argument('--data_path', type=str, default='Exchange_Rate_Report.csv')
-    parser.add_argument('--data', type=str, default='custom')
-    parser.add_argument('--features', type=str, default='M', choices=['M', 'S', 'MS'],)
-    parser.add_argument('--n_features', type=int, required=True, help='Number of input features')
-    parser.add_argument(
-        '--freq', type=str, default='d', choices=['s', 't', 'h', 'd', 'b', 'w', 'm'],
-        help='freq for time features encoding, options:[s:secondly, t:minutely, h:hourly, d:daily, b:business days, w:weekly, m:monthly], you can also use more detailed freq like 15min or 3h'
-    )
-    parser.add_argument('--target', type=str, default='OFFER_BALANCE')
-    parser.add_argument('--embed', type=str, default='timeF')
-    parser.add_argument('--percent', type=int, default=10)
-    parser.add_argument('--all', type=int, default=0)
-
-    parser.add_argument('--seq_len', type=int, default=96)
-    parser.add_argument('--pred_len', type=int, default=48)
-    parser.add_argument('--label_len', type=int, default=24)
-
-    parser.add_argument('--decay_fac', type=float, default=0.75)
-    parser.add_argument('--learning_rate', type=float, default=1e-3)
-    parser.add_argument('--des', type=str, default=None, help='exp description')
-    parser.add_argument('--batch_size', type=int, default=32)
-    parser.add_argument('--num_workers', type=int, default=0)
-    parser.add_argument('--itrs', type=int, default=1, help='experiments times')
-    parser.add_argument('--itr_no', type=int, default=None, help='experiments number among itrs. 1<= itr_no <= itrs .')
-    
-    parser.add_argument('--train_epochs', type=int, default=10)
-    parser.add_argument('--lradj', type=str, default='type1')
-    parser.add_argument('--patience', type=int, default=3)
-
-    parser.add_argument('--gpt_layers', type=int, default=3)
+    parser.add_argument('--gpt_layers', type=int, default=6)
     parser.add_argument('--is_gpt', type=int, default=1)
-    parser.add_argument('--e_layers', type=int, default=3)
     parser.add_argument('--d_model', type=int, default=768)
-    parser.add_argument('--n_heads', type=int, default=4)
-    parser.add_argument('--d_ff', type=int, default=128)
     parser.add_argument('--dropout', type=float, default=0.1)
-    parser.add_argument('--enc_in', type=int, default=1)
-    parser.add_argument('--c_out', type=int, default=1)
-    parser.add_argument('--patch_size', type=int, default=2)
-    parser.add_argument('--kernel_size', type=int, default=3)
+
+    parser.add_argument('--patch_size', type=int, default=16)
+    parser.add_argument('--kernel_size', type=int, default=25)
 
     parser.add_argument('--pretrain', type=int, default=1)
     parser.add_argument('--freeze', type=int, default=1)
-    parser.add_argument('--stride', type=int, default=1)
+    parser.add_argument('--stride', type=int, default=8)
     parser.add_argument('--max_len', type=int, default=-1)
     parser.add_argument('--hid_dim', type=int, default=16)
     parser.add_argument('--tmax', type=int, default=20)
 
-    parser.add_argument('--cos', type=int, default=0)
-    parser.add_argument('--train_ratio', type=float, default=1.0 , required=False)
+    parser.add_argument('--cos', type=int, default=1)
     parser.add_argument('--n_scale', type=float, default=-1)
-    
-    # GPU
-    parser.add_argument('--gpu', type=int, default=0, help='gpu')
-    parser.add_argument('--use_multi_gpu', action='store_true', help='use multiple gpus', default=False)
-    parser.add_argument('--devices', type=str, default='0,1,2,3', help='device ids of multile gpus')
-
-    parser.add_argument('--no_scale', action='store_true', help='do not scale the dataset')
-    parser.add_argument('--disable_progress', action='store_true', help='do not show progress bar')
-    parser.add_argument('--dry_run', action='store_true', help='run only one batch for test')
-    parser.add_argument('--overwrite', action='store_true', help='overwrite the result folder')
     
     return parser
 
