@@ -204,9 +204,19 @@ class MultiTimeSeries(Dataset):
         border1 = years[border1s[self.set_type]]
         border2 = years[border2s[self.set_type]-1]
         
-        if self.set_type == 0:
+        if self.set_type == 0 and self.args.percent < 100:
             percent = self.args.percent
-            border1 = (border2 - self.seq_len - self.pred_len - border1) * (100-percent)//100 + border1
+            length = border2 - self.seq_len - self.pred_len - border1
+            if length < 100:
+                print(f'Warning: Length {length} is less than 100. Chosing by groups.')
+                groups = df_raw[self.group_id].unique()
+                choice_size = len(groups) * percent//100
+                chosen_groups = np.random.choice(groups, choice_size, replace=False)
+                df_raw = df_raw[df_raw[self.group_id].isin(chosen_groups)]
+                print(f'Selected {len(chosen_groups)} groups among {len(groups)}.')
+            else:
+                border1 = length * (100-percent)//100 + border1
+                
         self.border1, self.border2 = border1, border2
         
         # filter out data
@@ -227,7 +237,8 @@ class MultiTimeSeries(Dataset):
         ranges, data, data_stamp = [], [], []
         
         for identifier, df in tqdm(
-            df.groupby(self.group_id), desc='Preparing data'
+            df.groupby(self.group_id), desc='Preparing data',
+            disable=self.args.disable_progress
         ):
             num_entries = len(df)
             if num_entries < time_steps: continue

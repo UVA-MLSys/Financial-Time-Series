@@ -1,0 +1,797 @@
+Running for model:DLinear
+NVIDIA H100 80GB HBM3
+Args in experiment: Namespace(test=False, seed=2024, result_path='results', disable_progress=True, root_path='./data', data_path='Financial_Aid.csv', features='MS', n_features=4, target='OFFER_BALANCE', freq='d', no_scale=False, seq_len=5, label_len=3, pred_len=1, top_k=5, num_kernels=6, d_model=64, n_heads=4, e_layers=2, d_layers=1, d_ff=128, moving_avg=3, factor=1, dropout=0.1, embed='timeF', activation='gelu', output_attention=False, channel_independence=1, decomp_method='moving_avg', use_norm=1, down_sampling_layers=0, down_sampling_window=1, down_sampling_method=None, seg_len=48, num_workers=10, itrs=3, itr_no=None, train_epochs=10, batch_size=32, patience=3, learning_rate=0.001, des=None, loss='MSE', lradj='type1', gpu=0, use_multi_gpu=False, devices='0,1,2,3', p_hidden_dims=[128, 128], p_hidden_layers=2, dry_run=False, percent=100, model='DLinear', use_gpu=True, enc_in=4, dec_in=4, c_out=4, task_name='long_term_forecast')
+
+>>>> itr_no: 1, seed: 648 <<<<<<
+Use GPU: cuda:0
+Experiments will be saved in results/Financial_Aid/DLinear_sl_5_pl_1/1
+
+Experiment begins at 2024-09-06 00:57:58
+
+>>>>>>> start training :>>>>>>>>>>
+Minimum year  2015
+Split years:
+                 Train: [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022]
+                 Validation: [2023]
+                 Test: [2024]
+
+Scaling data.
+Categoricals or ID: [].
+Numericals: ['INST_NEED', 'FUNDED_PARTY', 'TOTAL_PARTY'].
+Time column Date, target OFFER_BALANCE.
+
+val 29126
+	iters: 1000 | loss: 2.8587
+	speed: 0.01829s/iter; left time: 481.2s
+	iters: 2000 | loss: 1.6033e+07
+	speed: 0.01541s/iter; left time: 389.9s
+Epoch: 1 | Time: 57.2 s | Train Loss: 1.8668e+07 Vali Loss: 4.2484e+07
+Validation loss decreased (inf --> 42484268.000000).  Saving model ...
+	iters: 1000 | loss: 6.4718e+07
+	speed: 0.04108s/iter; left time: 968.7s
+	iters: 2000 | loss: 1.0117e+08
+	speed: 0.01624s/iter; left time: 366.6s
+Epoch: 2 | Time: 57.9 s | Train Loss: 5.235e+07 Vali Loss: 1.171e+08
+EarlyStopping counter: 1 out of 3
+	iters: 1000 | loss: 1.0929e+08
+	speed: 0.04161s/iter; left time: 867.4s
+	iters: 2000 | loss: 7.8194e+06
+	speed: 0.01601s/iter; left time: 317.8s
+Epoch: 3 | Time: 57.3 s | Train Loss: 1.8685e+07 Vali Loss: 4.2473e+07
+Validation loss decreased (42484268.000000 --> 42472996.000000).  Saving model ...
+	iters: 1000 | loss: 6.6428e+06
+	speed: 0.04137s/iter; left time: 749.5s
+	iters: 2000 | loss: 3.2276e+06
+	speed: 0.01593s/iter; left time: 272.6s
+Epoch: 4 | Time: 57.1 s | Train Loss: 5.3868e+07 Vali Loss: 1.206e+08
+EarlyStopping counter: 1 out of 3
+	iters: 1000 | loss: 3.8002e+05
+	speed: 0.04132s/iter; left time: 635.8s
+	iters: 2000 | loss: 1.2813e+07
+	speed: 0.01594s/iter; left time: 229.3s
+Epoch: 5 | Time: 57.1 s | Train Loss: 1.8672e+07 Vali Loss: 4.2463e+07
+Validation loss decreased (42472996.000000 --> 42462760.000000).  Saving model ...
+	iters: 1000 | loss: 3.5646e+06
+	speed: 0.04132s/iter; left time: 522.9s
+	iters: 2000 | loss: 1.472e+07
+	speed: 0.01595s/iter; left time: 185.9s
+Epoch: 6 | Time: 57.1 s | Train Loss: 5.433e+07 Vali Loss: 1.2204e+08
+EarlyStopping counter: 1 out of 3
+	iters: 1000 | loss: 1.9975e+05
+	speed: 0.04137s/iter; left time: 410.6s
+	iters: 2000 | loss: 3.7872e+05
+	speed: 0.01593s/iter; left time: 142.2s
+Epoch: 7 | Time: 57.1 s | Train Loss: 1.8665e+07 Vali Loss: 4.2453e+07
+Validation loss decreased (42462760.000000 --> 42452768.000000).  Saving model ...
+	iters: 1000 | loss: 1.369e+07
+	speed: 0.04134s/iter; left time: 297.4s
+	iters: 2000 | loss: 1.4561e+07
+	speed: 0.01593s/iter; left time: 98.68s
+Epoch: 8 | Time: 57.2 s | Train Loss: 5.4622e+07 Vali Loss: 1.2256e+08
+EarlyStopping counter: 1 out of 3
+	iters: 1000 | loss: 2.4736e+07
+	speed: 0.04144s/iter; left time: 185s
+	iters: 2000 | loss: 1.0096e+07
+	speed: 0.016s/iter; left time: 55.39s
+Epoch: 9 | Time: 57.3 s | Train Loss: 1.8663e+07 Vali Loss: 4.2442e+07
+Validation loss decreased (42452768.000000 --> 42442172.000000).  Saving model ...
+	iters: 1000 | loss: 1.8386e+07
+	speed: 0.04136s/iter; left time: 71.63s
+	iters: 2000 | loss: 3.1616e+07
+	speed: 0.01592s/iter; left time: 11.65s
+Epoch: 10 | Time: 57.1 s | Train Loss: 5.4573e+07 Vali Loss: 1.222e+08
+EarlyStopping counter: 1 out of 3
+
+Training completed at 2024-09-06 01:08:15.
+Model parameters: 12
+Total memory: 80995.1 MB
+Allocated memory: 64.0 MB
+Max allocated memory: 64.0 MB
+Time per epoch: 2.5 sec.
+Memory usage: Available 80995.1 MB, Allocated 64.0 MB, Max allocated 64.0 MB
+
+Loading model from results/Financial_Aid/DLinear_sl_5_pl_1/1/checkpoint.pth
+
+>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<
+Scaling data.
+
+test 29126
+Preds and Trues shape: (29126, 1) (29126, 1)
+test scaled -- mse:2.8541e+07, mae:794.13
+Upscaling data and removing negatives...
+test -- mse:1.5664e+11, mae:1.3594e+05, rmsle: 8.1273 smape 189.77
+
+
+>>>> itr_no: 2, seed: 506 <<<<<<
+Use GPU: cuda:0
+Experiments will be saved in results/Financial_Aid/DLinear_sl_5_pl_1/2
+
+Experiment begins at 2024-09-06 01:08:41
+
+>>>>>>> start training :>>>>>>>>>>
+Minimum year  2015
+Split years:
+                 Train: [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022]
+                 Validation: [2023]
+                 Test: [2024]
+
+Scaling data.
+Categoricals or ID: [].
+Numericals: ['INST_NEED', 'FUNDED_PARTY', 'TOTAL_PARTY'].
+Time column Date, target OFFER_BALANCE.
+
+train 87378
+Scaling data.
+
+val 29126
+	iters: 1000 | loss: 4.1934e+06
+	speed: 0.01546s/iter; left time: 406.7s
+	iters: 2000 | loss: 3.9599e+05
+	speed: 0.01546s/iter; left time: 391.2s
+Epoch: 1 | Time: 55.6 s | Train Loss: 1.8666e+07 Vali Loss: 4.2483e+07
+Validation loss decreased (inf --> 42482552.000000).  Saving model ...
+	iters: 1000 | loss: 1.2954e+07
+	speed: 0.04106s/iter; left time: 968.3s
+	iters: 2000 | loss: 5.0327e+07
+	speed: 0.01616s/iter; left time: 365s
+Epoch: 2 | Time: 57.8 s | Train Loss: 5.2225e+07 Vali Loss: 1.1704e+08
+EarlyStopping counter: 1 out of 3
+	iters: 1000 | loss: 1.4437e+08
+	speed: 0.04177s/iter; left time: 870.9s
+	iters: 2000 | loss: 98.522
+	speed: 0.01612s/iter; left time: 319.9s
+Epoch: 3 | Time: 57.7 s | Train Loss: 1.8683e+07 Vali Loss: 4.2471e+07
+Validation loss decreased (42482552.000000 --> 42471432.000000).  Saving model ...
+	iters: 1000 | loss: 1.4615e+06
+	speed: 0.04166s/iter; left time: 754.8s
+	iters: 2000 | loss: 3.1375e+07
+	speed: 0.01598s/iter; left time: 273.6s
+Epoch: 4 | Time: 57.4 s | Train Loss: 5.3944e+07 Vali Loss: 1.2095e+08
+EarlyStopping counter: 1 out of 3
+	iters: 1000 | loss: 4.028e+07
+	speed: 0.04155s/iter; left time: 639.3s
+	iters: 2000 | loss: 2160.8
+	speed: 0.01602s/iter; left time: 230.5s
+Epoch: 5 | Time: 57.4 s | Train Loss: 1.8671e+07 Vali Loss: 4.2461e+07
+Validation loss decreased (42471432.000000 --> 42461172.000000).  Saving model ...
+	iters: 1000 | loss: 1.0501e+07
+	speed: 0.04172s/iter; left time: 528s
+	iters: 2000 | loss: 9.2213e+07
+	speed: 0.01612s/iter; left time: 187.8s
+Epoch: 6 | Time: 57.7 s | Train Loss: 5.443e+07 Vali Loss: 1.2225e+08
+EarlyStopping counter: 1 out of 3
+	iters: 1000 | loss: 1.3687e+07
+	speed: 0.04161s/iter; left time: 413s
+	iters: 2000 | loss: 393.56
+	speed: 0.01599s/iter; left time: 142.7s
+Epoch: 7 | Time: 57.3 s | Train Loss: 1.8673e+07 Vali Loss: 4.2451e+07
+Validation loss decreased (42461172.000000 --> 42451148.000000).  Saving model ...
+	iters: 1000 | loss: 1.0613e+08
+	speed: 0.04155s/iter; left time: 298.9s
+	iters: 2000 | loss: 4.3182e+07
+	speed: 0.01598s/iter; left time: 98.96s
+Epoch: 8 | Time: 57.4 s | Train Loss: 5.4477e+07 Vali Loss: 1.2278e+08
+EarlyStopping counter: 1 out of 3
+	iters: 1000 | loss: 2.8259e+06
+	speed: 0.04161s/iter; left time: 185.7s
+	iters: 2000 | loss: 3.7892e+05
+	speed: 0.01605s/iter; left time: 55.59s
+Epoch: 9 | Time: 57.5 s | Train Loss: 1.8663e+07 Vali Loss: 4.2441e+07
+Validation loss decreased (42451148.000000 --> 42440692.000000).  Saving model ...
+	iters: 1000 | loss: 3.1891e+06
+	speed: 0.04162s/iter; left time: 72.09s
+	iters: 2000 | loss: 2.569e+07
+	speed: 0.01599s/iter; left time: 11.71s
+Epoch: 10 | Time: 57.4 s | Train Loss: 5.4521e+07 Vali Loss: 1.2266e+08
+EarlyStopping counter: 1 out of 3
+
+Training completed at 2024-09-06 01:18:56.
+Model parameters: 12
+Total memory: 80995.1 MB
+Allocated memory: 64.0 MB
+Max allocated memory: 64.0 MB
+Time per epoch: 2.6 sec.
+Memory usage: Available 80995.1 MB, Allocated 64.0 MB, Max allocated 64.0 MB
+
+Loading model from results/Financial_Aid/DLinear_sl_5_pl_1/2/checkpoint.pth
+
+>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<
+Scaling data.
+
+test 29126
+Preds and Trues shape: (29126, 1) (29126, 1)
+test scaled -- mse:2.8539e+07, mae:794.8
+Upscaling data and removing negatives...
+test -- mse:1.6483e+11, mae:1.3973e+05, rmsle: 8.1494 smape 189.96
+
+
+>>>> itr_no: 3, seed: 608 <<<<<<
+Use GPU: cuda:0
+Experiments will be saved in results/Financial_Aid/DLinear_sl_5_pl_1/3
+
+Experiment begins at 2024-09-06 01:19:22
+
+>>>>>>> start training :>>>>>>>>>>
+Minimum year  2015
+Split years:
+                 Train: [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022]
+                 Validation: [2023]
+                 Test: [2024]
+
+Scaling data.
+Categoricals or ID: [].
+Numericals: ['INST_NEED', 'FUNDED_PARTY', 'TOTAL_PARTY'].
+Time column Date, target OFFER_BALANCE.
+
+train 87378
+Scaling data.
+
+val 29126
+	iters: 1000 | loss: 3.1038e+07
+	speed: 0.0154s/iter; left time: 405.3s
+	iters: 2000 | loss: 7.5696e+05
+	speed: 0.01541s/iter; left time: 390s
+Epoch: 1 | Time: 55.5 s | Train Loss: 1.8667e+07 Vali Loss: 4.2484e+07
+Validation loss decreased (inf --> 42483624.000000).  Saving model ...
+	iters: 1000 | loss: 5.8473e+06
+	speed: 0.04092s/iter; left time: 964.8s
+	iters: 2000 | loss: 2.9517e+06
+	speed: 0.01605s/iter; left time: 362.5s
+Epoch: 2 | Time: 57.6 s | Train Loss: 5.2067e+07 Vali Loss: 1.166e+08
+EarlyStopping counter: 1 out of 3
+	iters: 1000 | loss: 69635
+	speed: 0.04163s/iter; left time: 868s
+	iters: 2000 | loss: 2.1442e+05
+	speed: 0.01612s/iter; left time: 320s
+Epoch: 3 | Time: 57.6 s | Train Loss: 1.8681e+07 Vali Loss: 4.2472e+07
+Validation loss decreased (42483624.000000 --> 42472448.000000).  Saving model ...
+	iters: 1000 | loss: 5.9301e+07
+	speed: 0.04155s/iter; left time: 752.8s
+	iters: 2000 | loss: 1.6705e+08
+	speed: 0.01597s/iter; left time: 273.3s
+Epoch: 4 | Time: 57.3 s | Train Loss: 5.3959e+07 Vali Loss: 1.2128e+08
+EarlyStopping counter: 1 out of 3
+	iters: 1000 | loss: 6.0037e+06
+	speed: 0.04152s/iter; left time: 638.9s
+	iters: 2000 | loss: 8.3796e+07
+	speed: 0.01602s/iter; left time: 230.5s
+Epoch: 5 | Time: 57.4 s | Train Loss: 1.8672e+07 Vali Loss: 4.2462e+07
+Validation loss decreased (42472448.000000 --> 42462100.000000).  Saving model ...
+	iters: 1000 | loss: 7.3172e+07
+	speed: 0.04151s/iter; left time: 525.4s
+	iters: 2000 | loss: 4.3524e+07
+	speed: 0.01599s/iter; left time: 186.4s
+Epoch: 6 | Time: 57.3 s | Train Loss: 5.4529e+07 Vali Loss: 1.2241e+08
+EarlyStopping counter: 1 out of 3
+	iters: 1000 | loss: 4241.6
+	speed: 0.04142s/iter; left time: 411.1s
+	iters: 2000 | loss: 2.6369e+07
+	speed: 0.01596s/iter; left time: 142.5s
+Epoch: 7 | Time: 57.3 s | Train Loss: 1.8665e+07 Vali Loss: 4.2452e+07
+Validation loss decreased (42462100.000000 --> 42451756.000000).  Saving model ...
+	iters: 1000 | loss: 1.2252e+07
+	speed: 0.04156s/iter; left time: 299s
+	iters: 2000 | loss: 3.4215e+07
+	speed: 0.016s/iter; left time: 99.11s
+Epoch: 8 | Time: 57.4 s | Train Loss: 5.4559e+07 Vali Loss: 1.2234e+08
+EarlyStopping counter: 1 out of 3
+	iters: 1000 | loss: 1.0033e+06
+	speed: 0.04157s/iter; left time: 185.5s
+	iters: 2000 | loss: 2.7406e+07
+	speed: 0.01599s/iter; left time: 55.37s
+Epoch: 9 | Time: 57.4 s | Train Loss: 1.8663e+07 Vali Loss: 4.2441e+07
+Validation loss decreased (42451756.000000 --> 42441432.000000).  Saving model ...
+	iters: 1000 | loss: 1.379e+07
+	speed: 0.04151s/iter; left time: 71.9s
+	iters: 2000 | loss: 2.1032e+07
+	speed: 0.01599s/iter; left time: 11.7s
+Epoch: 10 | Time: 57.3 s | Train Loss: 5.4554e+07 Vali Loss: 1.2241e+08
+EarlyStopping counter: 1 out of 3
+
+Training completed at 2024-09-06 01:29:34.
+Model parameters: 12
+Total memory: 80995.1 MB
+Allocated memory: 64.0 MB
+Max allocated memory: 64.0 MB
+Time per epoch: 2.6 sec.
+Memory usage: Available 80995.1 MB, Allocated 64.0 MB, Max allocated 64.0 MB
+
+Loading model from results/Financial_Aid/DLinear_sl_5_pl_1/3/checkpoint.pth
+
+>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<
+Scaling data.
+
+test 29126
+Preds and Trues shape: (29126, 1) (29126, 1)
+test scaled -- mse:2.854e+07, mae:794.49
+Upscaling data and removing negatives...
+test -- mse:1.6266e+11, mae:1.3819e+05, rmsle: 8.1392 smape 189.89
+
+Running for model:PatchTST
+NVIDIA H100 80GB HBM3
+Args in experiment: Namespace(test=False, seed=2024, result_path='results', disable_progress=True, root_path='./data', data_path='Financial_Aid.csv', features='MS', n_features=4, target='OFFER_BALANCE', freq='d', no_scale=False, seq_len=5, label_len=3, pred_len=1, top_k=5, num_kernels=6, d_model=64, n_heads=4, e_layers=2, d_layers=1, d_ff=128, moving_avg=3, factor=1, dropout=0.1, embed='timeF', activation='gelu', output_attention=False, channel_independence=1, decomp_method='moving_avg', use_norm=1, down_sampling_layers=0, down_sampling_window=1, down_sampling_method=None, seg_len=48, num_workers=10, itrs=3, itr_no=None, train_epochs=10, batch_size=32, patience=3, learning_rate=0.001, des=None, loss='MSE', lradj='type1', gpu=0, use_multi_gpu=False, devices='0,1,2,3', p_hidden_dims=[128, 128], p_hidden_layers=2, dry_run=False, percent=100, model='PatchTST', use_gpu=True, enc_in=4, dec_in=4, c_out=4, task_name='long_term_forecast')
+
+>>>> itr_no: 1, seed: 648 <<<<<<
+Use GPU: cuda:0
+Experiments will be saved in results/Financial_Aid/PatchTST_sl_5_pl_1/1
+
+Experiment begins at 2024-09-06 01:30:18
+
+>>>>>>> start training :>>>>>>>>>>
+Minimum year  2015
+Split years:
+                 Train: [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022]
+                 Validation: [2023]
+                 Test: [2024]
+
+Scaling data.
+Categoricals or ID: [].
+Numericals: ['INST_NEED', 'FUNDED_PARTY', 'TOTAL_PARTY'].
+Time column Date, target OFFER_BALANCE.
+ 
+train 87378
+Scaling data.
+
+val 29126
+Traceback (most recent call last):
+  File "/u/mi3se/projects/Financial-Time-Series/run.py", line 87, in <module>
+    main(args)
+  File "/u/mi3se/projects/Financial-Time-Series/run.py", line 60, in main
+    exp.train()
+  File "/u/mi3se/projects/Financial-Time-Series/exp/exp_long_term_forecasting.py", line 191, in train
+    outputs = self.model(batch_x, batch_x_mark, dec_inp, batch_y_mark)
+  File "/u/mi3se/anaconda3/envs/ml/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/u/mi3se/anaconda3/envs/ml/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/u/mi3se/projects/Financial-Time-Series/models/PatchTST.py", line 215, in forward
+    dec_out = self.forecast(x_enc, x_mark_enc, x_dec, x_mark_dec)
+  File "/u/mi3se/projects/Financial-Time-Series/models/PatchTST.py", line 93, in forecast
+    enc_out, n_vars = self.patch_embedding(x_enc)
+  File "/u/mi3se/anaconda3/envs/ml/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/u/mi3se/anaconda3/envs/ml/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/u/mi3se/projects/Financial-Time-Series/layers/Embed.py", line 186, in forward
+    x = x.unfold(dimension=-1, size=self.patch_len, step=self.stride)
+RuntimeError: maximum size for tensor at dimension 2 is 13 but size is 16
+Running for model:TimesNet
+NVIDIA H100 80GB HBM3
+Args in experiment: Namespace(test=False, seed=2024, result_path='results', disable_progress=True, root_path='./data', data_path='Financial_Aid.csv', features='MS', n_features=4, target='OFFER_BALANCE', freq='d', no_scale=False, seq_len=5, label_len=3, pred_len=1, top_k=5, num_kernels=6, d_model=64, n_heads=4, e_layers=2, d_layers=1, d_ff=128, moving_avg=3, factor=1, dropout=0.1, embed='timeF', activation='gelu', output_attention=False, channel_independence=1, decomp_method='moving_avg', use_norm=1, down_sampling_layers=0, down_sampling_window=1, down_sampling_method=None, seg_len=48, num_workers=10, itrs=3, itr_no=None, train_epochs=10, batch_size=32, patience=3, learning_rate=0.001, des=None, loss='MSE', lradj='type1', gpu=0, use_multi_gpu=False, devices='0,1,2,3', p_hidden_dims=[128, 128], p_hidden_layers=2, dry_run=False, percent=100, model='TimesNet', use_gpu=True, enc_in=4, dec_in=4, c_out=4, task_name='long_term_forecast')
+
+>>>> itr_no: 1, seed: 648 <<<<<<
+Use GPU: cuda:0
+Experiments will be saved in results/Financial_Aid/TimesNet_sl_5_pl_1/1
+
+Experiment begins at 2024-09-06 01:31:09
+
+>>>>>>> start training :>>>>>>>>>>
+Minimum year  2015
+Split years:
+                 Train: [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022]
+                 Validation: [2023]
+                 Test: [2024]
+
+Scaling data.
+Categoricals or ID: [].
+Numericals: ['INST_NEED', 'FUNDED_PARTY', 'TOTAL_PARTY'].
+Time column Date, target OFFER_BALANCE.
+
+train 87378
+Scaling data.
+
+val 29126
+Traceback (most recent call last):
+  File "/u/mi3se/projects/Financial-Time-Series/run.py", line 87, in <module>
+    main(args)
+  File "/u/mi3se/projects/Financial-Time-Series/run.py", line 60, in main
+    exp.train()
+  File "/u/mi3se/projects/Financial-Time-Series/exp/exp_long_term_forecasting.py", line 191, in train
+    outputs = self.model(batch_x, batch_x_mark, dec_inp, batch_y_mark)
+  File "/u/mi3se/anaconda3/envs/ml/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/u/mi3se/anaconda3/envs/ml/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/u/mi3se/projects/Financial-Time-Series/models/TimesNet.py", line 203, in forward
+    dec_out = self.forecast(x_enc, x_mark_enc, x_dec, x_mark_dec)
+  File "/u/mi3se/projects/Financial-Time-Series/models/TimesNet.py", line 112, in forecast
+    enc_out = self.enc_embedding(x_enc, x_mark_enc)  # [B,T,C]
+  File "/u/mi3se/anaconda3/envs/ml/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/u/mi3se/anaconda3/envs/ml/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/u/mi3se/projects/Financial-Time-Series/layers/Embed.py", line 125, in forward
+    x) + self.temporal_embedding(x_mark) + self.position_embedding(x)
+  File "/u/mi3se/anaconda3/envs/ml/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/u/mi3se/anaconda3/envs/ml/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/u/mi3se/projects/Financial-Time-Series/layers/Embed.py", line 106, in forward
+    return self.embed(x)
+  File "/u/mi3se/anaconda3/envs/ml/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/u/mi3se/anaconda3/envs/ml/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/u/mi3se/anaconda3/envs/ml/lib/python3.10/site-packages/torch/nn/modules/linear.py", line 116, in forward
+    return F.linear(input, self.weight, self.bias)
+RuntimeError: mat1 and mat2 shapes cannot be multiplied (160x1 and 3x64)
+Running for model:iTransformer
+NVIDIA H100 80GB HBM3
+Args in experiment: Namespace(test=False, seed=2024, result_path='results', disable_progress=True, root_path='./data', data_path='Financial_Aid.csv', features='MS', n_features=4, target='OFFER_BALANCE', freq='d', no_scale=False, seq_len=5, label_len=3, pred_len=1, top_k=5, num_kernels=6, d_model=64, n_heads=4, e_layers=2, d_layers=1, d_ff=128, moving_avg=3, factor=1, dropout=0.1, embed='timeF', activation='gelu', output_attention=False, channel_independence=1, decomp_method='moving_avg', use_norm=1, down_sampling_layers=0, down_sampling_window=1, down_sampling_method=None, seg_len=48, num_workers=10, itrs=3, itr_no=None, train_epochs=10, batch_size=32, patience=3, learning_rate=0.001, des=None, loss='MSE', lradj='type1', gpu=0, use_multi_gpu=False, devices='0,1,2,3', p_hidden_dims=[128, 128], p_hidden_layers=2, dry_run=False, percent=100, model='iTransformer', use_gpu=True, enc_in=4, dec_in=4, c_out=4, task_name='long_term_forecast')
+
+>>>> itr_no: 1, seed: 648 <<<<<<
+Use GPU: cuda:0
+Experiments will be saved in results/Financial_Aid/iTransformer_sl_5_pl_1/1
+
+Experiment begins at 2024-09-06 01:32:07
+
+>>>>>>> start training :>>>>>>>>>>
+Minimum year  2015
+Split years:
+                 Train: [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022]
+                 Validation: [2023]
+                 Test: [2024]
+
+Scaling data.
+Categoricals or ID: [].
+Numericals: ['INST_NEED', 'FUNDED_PARTY', 'TOTAL_PARTY'].
+Time column Date, target OFFER_BALANCE.
+
+train 87378
+Scaling data.
+
+val 29126
+	iters: 1000 | loss: 1.7511e+06
+	speed: 0.03268s/iter; left time: 859.8s
+	iters: 2000 | loss: 4.0624e+05
+	speed: 0.03247s/iter; left time: 821.9s
+Epoch: 1 | Time: 107 s | Train Loss: 1.8671e+07 Vali Loss: 4.249e+07
+Validation loss decreased (inf --> 42490212.000000).  Saving model ...
+	iters: 1000 | loss: 1.9409e+07
+	speed: 0.07795s/iter; left time: 1838s
+	iters: 2000 | loss: 8.6723e+06
+	speed: 0.03362s/iter; left time: 759.1s
+Epoch: 2 | Time: 106 s | Train Loss: 5.7381e+07 Vali Loss: 1.1853e+08
+EarlyStopping counter: 1 out of 3
+	iters: 1000 | loss: 9.4808e+06
+	speed: 0.06631s/iter; left time: 1382s
+	iters: 2000 | loss: 5.4231e+07
+	speed: 0.03039s/iter; left time: 603.3s
+Epoch: 3 | Time: 97.7 s | Train Loss: 1.8687e+07 Vali Loss: 4.249e+07
+EarlyStopping counter: 2 out of 3
+	iters: 1000 | loss: 1.9893e+07
+	speed: 0.06661s/iter; left time: 1207s
+	iters: 2000 | loss: 5.032e+07
+	speed: 0.02495s/iter; left time: 427.1s
+Epoch: 4 | Time: 87.4 s | Train Loss: 5.5875e+07 Vali Loss: 1.2264e+08
+EarlyStopping counter: 3 out of 3
+Early stopping
+
+Training completed at 2024-09-06 01:39:28.
+Model parameters: 67521
+Total memory: 80995.1 MB
+Allocated memory: 65.1 MB
+Max allocated memory: 193.8 MB
+Time per epoch: 8.7 sec.
+Memory usage: Available 80995.1 MB, Allocated 65.1 MB, Max allocated 193.8 MB
+
+Loading model from results/Financial_Aid/iTransformer_sl_5_pl_1/1/checkpoint.pth
+
+>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<
+Scaling data.
+
+test 29126
+Preds and Trues shape: (29126, 1) (29126, 1)
+test scaled -- mse:2.858e+07, mae:773.15
+Upscaling data and removing negatives...
+test -- mse:1.0355e+10, mae:14759, rmsle: 5.6721 smape 178.12
+
+
+>>>> itr_no: 2, seed: 506 <<<<<<
+Use GPU: cuda:0
+Experiments will be saved in results/Financial_Aid/iTransformer_sl_5_pl_1/2
+
+Experiment begins at 2024-09-06 01:39:55
+
+>>>>>>> start training :>>>>>>>>>>
+Minimum year  2015
+Split years:
+                 Train: [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022]
+                 Validation: [2023]
+                 Test: [2024]
+
+Scaling data.
+Categoricals or ID: [].
+Numericals: ['INST_NEED', 'FUNDED_PARTY', 'TOTAL_PARTY'].
+Time column Date, target OFFER_BALANCE.
+
+train 87378
+Scaling data.
+
+val 29126
+	iters: 1000 | loss: 31249
+	speed: 0.02193s/iter; left time: 576.9s
+	iters: 2000 | loss: 10553
+	speed: 0.02215s/iter; left time: 560.5s
+Epoch: 1 | Time: 74.2 s | Train Loss: 1.8671e+07 Vali Loss: 4.249e+07
+Validation loss decreased (inf --> 42490284.000000).  Saving model ...
+	iters: 1000 | loss: 6.0879e+07
+	speed: 0.05528s/iter; left time: 1304s
+	iters: 2000 | loss: 2.0107e+07
+	speed: 0.02636s/iter; left time: 595.1s
+Epoch: 2 | Time: 82.1 s | Train Loss: 5.7526e+07 Vali Loss: 1.1814e+08
+EarlyStopping counter: 1 out of 3
+	iters: 1000 | loss: 6.7327e+06
+	speed: 0.05338s/iter; left time: 1113s
+	iters: 2000 | loss: 1.5586e+08
+	speed: 0.02235s/iter; left time: 443.6s
+Epoch: 3 | Time: 75.6 s | Train Loss: 1.8712e+07 Vali Loss: 4.249e+07
+EarlyStopping counter: 2 out of 3
+	iters: 1000 | loss: 1.6795e+07
+	speed: 0.05331s/iter; left time: 965.8s
+	iters: 2000 | loss: 1.7394e+07
+	speed: 0.02231s/iter; left time: 381.9s
+Epoch: 4 | Time: 84 s | Train Loss: 5.498e+07 Vali Loss: 1.2277e+08
+EarlyStopping counter: 3 out of 3
+Early stopping
+
+Training completed at 2024-09-06 01:45:51.
+Model parameters: 67521
+Total memory: 80995.1 MB
+Allocated memory: 65.1 MB
+Max allocated memory: 193.8 MB
+Time per epoch: 9.8 sec.
+Memory usage: Available 80995.1 MB, Allocated 65.1 MB, Max allocated 193.8 MB
+
+Loading model from results/Financial_Aid/iTransformer_sl_5_pl_1/2/checkpoint.pth
+
+>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<
+Scaling data.
+
+test 29126
+Preds and Trues shape: (29126, 1) (29126, 1)
+test scaled -- mse:2.858e+07, mae:773.94
+Upscaling data and removing negatives...
+test -- mse:4.2134e+10, mae:24317, rmsle: 5.743 smape 181.81
+
+
+>>>> itr_no: 3, seed: 608 <<<<<<
+Use GPU: cuda:0
+Experiments will be saved in results/Financial_Aid/iTransformer_sl_5_pl_1/3
+
+Experiment begins at 2024-09-06 01:46:17
+
+>>>>>>> start training :>>>>>>>>>>
+Minimum year  2015
+Split years:
+                 Train: [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022]
+                 Validation: [2023]
+                 Test: [2024]
+
+Scaling data.
+Categoricals or ID: [].
+Numericals: ['INST_NEED', 'FUNDED_PARTY', 'TOTAL_PARTY'].
+Time column Date, target OFFER_BALANCE.
+
+train 87378
+Scaling data.
+
+val 29126
+	iters: 1000 | loss: 1.2672e+07
+	speed: 0.02188s/iter; left time: 575.6s
+	iters: 2000 | loss: 1.6437e+06
+	speed: 0.02203s/iter; left time: 557.5s
+Epoch: 1 | Time: 73.9 s | Train Loss: 1.8668e+07 Vali Loss: 4.249e+07
+Validation loss decreased (inf --> 42489524.000000).  Saving model ...
+	iters: 1000 | loss: 1.4455e+07
+	speed: 0.05614s/iter; left time: 1324s
+	iters: 2000 | loss: 2.9154e+08
+	speed: 0.02247s/iter; left time: 507.4s
+Epoch: 2 | Time: 79.3 s | Train Loss: 1.0053e+09 Vali Loss: 2.6121e+08
+EarlyStopping counter: 1 out of 3
+	iters: 1000 | loss: 1.7284e+07
+	speed: 0.05334s/iter; left time: 1112s
+	iters: 2000 | loss: 1.4146e+06
+	speed: 0.02459s/iter; left time: 488.1s
+Epoch: 3 | Time: 80.9 s | Train Loss: 1.8701e+07 Vali Loss: 4.2491e+07
+EarlyStopping counter: 2 out of 3
+	iters: 1000 | loss: 9.3915e+07
+	speed: 0.06366s/iter; left time: 1153s
+	iters: 2000 | loss: 1.4284e+07
+	speed: 0.02685s/iter; left time: 459.7s
+Epoch: 4 | Time: 87.1 s | Train Loss: 1.1228e+08 Vali Loss: 2.2062e+08
+EarlyStopping counter: 3 out of 3
+Early stopping
+
+Training completed at 2024-09-06 01:52:18.
+Model parameters: 67521
+Total memory: 80995.1 MB
+Allocated memory: 65.1 MB
+Max allocated memory: 193.8 MB
+Time per epoch: 7.7 sec.
+Memory usage: Available 80995.1 MB, Allocated 65.1 MB, Max allocated 193.8 MB
+
+Loading model from results/Financial_Aid/iTransformer_sl_5_pl_1/3/checkpoint.pth
+
+>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<
+Scaling data.
+
+test 29126
+Preds and Trues shape: (29126, 1) (29126, 1)
+test scaled -- mse:2.858e+07, mae:773.04
+Upscaling data and removing negatives...
+test -- mse:4.8382e+09, mae:12021, rmsle: 5.995 smape 173.28
+
+NVIDIA H100 80GB HBM3
+Args in experiment: Namespace(test=False, seed=2024, result_path='results', disable_progress=True, root_path='./data', data_path='Financial_Aid.csv', features='MS', n_features=4, target='OFFER_BALANCE', freq='d', no_scale=False, seq_len=5, label_len=5, pred_len=1, top_k=5, num_kernels=6, d_model=64, n_heads=4, e_layers=2, d_layers=1, d_ff=128, moving_avg=3, factor=1, dropout=0.1, embed='timeF', activation='gelu', output_attention=False, channel_independence=1, decomp_method='moving_avg', use_norm=1, down_sampling_layers=0, down_sampling_window=1, down_sampling_method=None, seg_len=48, num_workers=10, itrs=3, itr_no=None, train_epochs=10, batch_size=32, patience=3, learning_rate=0.001, des=None, loss='MSE', lradj='type1', gpu=0, use_multi_gpu=False, devices='0,1,2,3', p_hidden_dims=[128, 128], p_hidden_layers=2, dry_run=False, percent=100, model='MICN', use_gpu=True, enc_in=4, dec_in=4, c_out=4, task_name='long_term_forecast')
+
+>>>> itr_no: 1, seed: 648 <<<<<<
+Use GPU: cuda:0
+Experiments will be saved in results/Financial_Aid/MICN_sl_5_pl_1/1
+
+Experiment begins at 2024-09-06 01:52:54
+
+>>>>>>> start training :>>>>>>>>>>
+Minimum year  2015
+Split years:
+                 Train: [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022]
+                 Validation: [2023]
+                 Test: [2024]
+
+Scaling data.
+Categoricals or ID: [].
+Numericals: ['INST_NEED', 'FUNDED_PARTY', 'TOTAL_PARTY'].
+Time column Date, target OFFER_BALANCE.
+
+train 87378
+Scaling data.
+
+val 29126
+Traceback (most recent call last):
+  File "/u/mi3se/projects/Financial-Time-Series/run.py", line 87, in <module>
+    main(args)
+  File "/u/mi3se/projects/Financial-Time-Series/run.py", line 60, in main
+    exp.train()
+  File "/u/mi3se/projects/Financial-Time-Series/exp/exp_long_term_forecasting.py", line 191, in train
+    outputs = self.model(batch_x, batch_x_mark, dec_inp, batch_y_mark)
+  File "/u/mi3se/anaconda3/envs/ml/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/u/mi3se/anaconda3/envs/ml/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/u/mi3se/projects/Financial-Time-Series/models/MICN.py", line 163, in forward
+    dec_out = self.forecast(x_enc, x_mark_enc, x_dec, x_mark_dec)
+  File "/u/mi3se/projects/Financial-Time-Series/models/MICN.py", line 157, in forecast
+    dec_out = self.dec_embedding(seasonal_init_dec, x_mark_dec)
+  File "/u/mi3se/anaconda3/envs/ml/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/u/mi3se/anaconda3/envs/ml/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/u/mi3se/projects/Financial-Time-Series/layers/Embed.py", line 125, in forward
+    x) + self.temporal_embedding(x_mark) + self.position_embedding(x)
+  File "/u/mi3se/anaconda3/envs/ml/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/u/mi3se/anaconda3/envs/ml/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/u/mi3se/projects/Financial-Time-Series/layers/Embed.py", line 106, in forward
+    return self.embed(x)
+  File "/u/mi3se/anaconda3/envs/ml/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/u/mi3se/anaconda3/envs/ml/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/u/mi3se/anaconda3/envs/ml/lib/python3.10/site-packages/torch/nn/modules/linear.py", line 116, in forward
+    return F.linear(input, self.weight, self.bias)
+RuntimeError: mat1 and mat2 shapes cannot be multiplied (192x1 and 3x64)
+NVIDIA H100 80GB HBM3
+Args in experiment: Namespace(test=False, seed=2024, result_path='results', disable_progress=True, root_path='./data', data_path='Financial_Aid.csv', features='MS', n_features=4, target='OFFER_BALANCE', freq='d', no_scale=False, seq_len=5, label_len=0, pred_len=1, top_k=5, num_kernels=6, d_model=16, n_heads=4, e_layers=3, d_layers=1, d_ff=32, moving_avg=3, factor=3, dropout=0.1, embed='timeF', activation='gelu', output_attention=False, channel_independence=1, decomp_method='moving_avg', use_norm=1, down_sampling_layers=3, down_sampling_window=2, down_sampling_method='avg', seg_len=48, num_workers=10, itrs=3, itr_no=None, train_epochs=10, batch_size=32, patience=3, learning_rate=0.001, des=None, loss='MSE', lradj='type1', gpu=0, use_multi_gpu=False, devices='0,1,2,3', p_hidden_dims=[128, 128], p_hidden_layers=2, dry_run=False, percent=100, model='TimeMixer', use_gpu=True, enc_in=4, dec_in=4, c_out=4, task_name='long_term_forecast')
+
+>>>> itr_no: 1, seed: 648 <<<<<<
+Use GPU: cuda:0
+Experiments will be saved in results/Financial_Aid/TimeMixer_sl_5_pl_1/1
+
+Experiment begins at 2024-09-06 01:53:45
+
+>>>>>>> start training :>>>>>>>>>>
+Minimum year  2015
+Split years:
+                 Train: [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022]
+                 Validation: [2023]
+                 Test: [2024]
+
+Scaling data.
+Categoricals or ID: [].
+Numericals: ['INST_NEED', 'FUNDED_PARTY', 'TOTAL_PARTY'].
+Time column Date, target OFFER_BALANCE.
+
+train 87378
+Scaling data.
+
+val 29126
+Traceback (most recent call last):
+  File "/u/mi3se/projects/Financial-Time-Series/run.py", line 87, in <module>
+    main(args)
+  File "/u/mi3se/projects/Financial-Time-Series/run.py", line 60, in main
+    exp.train()
+  File "/u/mi3se/projects/Financial-Time-Series/exp/exp_long_term_forecasting.py", line 191, in train
+    outputs = self.model(batch_x, batch_x_mark, dec_inp, batch_y_mark)
+  File "/u/mi3se/anaconda3/envs/ml/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/u/mi3se/anaconda3/envs/ml/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/u/mi3se/projects/Financial-Time-Series/models/TimeMixer.py", line 501, in forward
+    dec_out = self.forecast(x_enc, x_mark_enc, x_dec, x_mark_dec)
+  File "/u/mi3se/projects/Financial-Time-Series/models/TimeMixer.py", line 331, in forecast
+    x_enc, x_mark_enc = self.__multi_scale_process_inputs(x_enc, x_mark_enc)
+  File "/u/mi3se/projects/Financial-Time-Series/models/TimeMixer.py", line 315, in __multi_scale_process_inputs
+    x_enc_sampling = down_pool(x_enc_ori)
+  File "/u/mi3se/anaconda3/envs/ml/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/u/mi3se/anaconda3/envs/ml/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/u/mi3se/anaconda3/envs/ml/lib/python3.10/site-packages/torch/nn/modules/pooling.py", line 555, in forward
+    return F.avg_pool1d(
+RuntimeError: Given input size: (4x1x1). Calculated output size: (4x1x0). Output size is too small
+NVIDIA H100 80GB HBM3
+Args in experiment: Namespace(test=False, seed=2024, result_path='results', disable_progress=True, root_path='./data', data_path='Financial_Aid.csv', features='MS', n_features=4, target='OFFER_BALANCE', freq='d', no_scale=False, seq_len=5, label_len=3, pred_len=1, top_k=5, num_kernels=6, d_model=64, n_heads=4, e_layers=2, d_layers=1, d_ff=128, moving_avg=3, factor=1, dropout=0.1, embed='timeF', activation='gelu', output_attention=False, num_workers=10, itrs=3, itr_no=None, train_epochs=10, batch_size=32, patience=3, learning_rate=0.001, des=None, loss='MSE', lradj='type1', gpu=0, use_multi_gpu=False, devices='0,1,2,3', dry_run=False, percent=100, model_id='ori', model='CALF', task_loss='l1', distill_loss='l1', logits_loss='l1', tmax=20, r=8, lora_alpha=32, lora_dropout=0.1, word_embedding_path='./utils/wte_pca_500.pt', task_w=1.0, feature_w=0.01, logits_w=1.0, gpt_layers=6, log_fine_name='CALF_result.txt', noise_scale=-100, bootstrap_eval=0, use_gpu=True, enc_in=4, dec_in=4, c_out=4, task_name='long_term_forecast')
+
+>>>> itr_no: 1, seed: 648 <<<<<<
+Use GPU: cuda:0
+model_id  ori
+Traceback (most recent call last):
+  File "/u/mi3se/projects/Financial-Time-Series/run_CALF.py", line 106, in <module>
+    main(args)
+  File "/u/mi3se/projects/Financial-Time-Series/run_CALF.py", line 37, in main
+    exp = Exp_Long_Term_Forecast(args)
+  File "/u/mi3se/projects/Financial-Time-Series/exp/exp_long_term_forecasting.py", line 20, in __init__
+    super(Exp_Long_Term_Forecast, self).__init__(args)
+  File "/u/mi3se/projects/Financial-Time-Series/exp/exp_basic.py", line 26, in __init__
+    self.model = self._build_model().to(self.device)
+  File "/u/mi3se/projects/Financial-Time-Series/exp/exp_basic.py", line 51, in _build_model
+    model = Model(self.args, self.device).float()
+  File "/u/mi3se/projects/Financial-Time-Series/models/CALF.py", line 227, in __init__
+    self.in_layer = Encoder_PCA(configs.seq_len, word_embedding, hidden_dim=configs.d_model)
+  File "/u/mi3se/projects/Financial-Time-Series/models/CALF.py", line 23, in __init__
+    encoder_layer = nn.TransformerEncoderLayer(d_model=hidden_dim, nhead=num_heads)
+  File "/u/mi3se/anaconda3/envs/ml/lib/python3.10/site-packages/torch/nn/modules/transformer.py", line 589, in __init__
+    self.self_attn = MultiheadAttention(d_model, nhead, dropout=dropout,
+  File "/u/mi3se/anaconda3/envs/ml/lib/python3.10/site-packages/torch/nn/modules/activation.py", line 1011, in __init__
+    assert self.head_dim * num_heads == self.embed_dim, "embed_dim must be divisible by num_heads"
+AssertionError: embed_dim must be divisible by num_heads
+NVIDIA H100 80GB HBM3
+Args in experiment: Namespace(test=False, seed=2024, result_path='results', disable_progress=True, root_path='./data', data_path='Financial_Aid.csv', features='MS', n_features=4, target='OFFER_BALANCE', freq='d', no_scale=False, seq_len=5, label_len=3, pred_len=1, top_k=5, num_kernels=6, d_model=768, n_heads=4, e_layers=2, d_layers=1, d_ff=128, moving_avg=3, factor=1, dropout=0.1, embed='timeF', activation='gelu', output_attention=False, num_workers=10, itrs=3, itr_no=None, train_epochs=10, batch_size=32, patience=3, learning_rate=0.001, des=None, loss='MSE', lradj='type1', gpu=0, use_multi_gpu=False, devices='0,1,2,3', dry_run=False, percent=100, model_id='ori', model='OFA', gpt_layers=6, is_gpt=1, patch_size=16, kernel_size=25, pretrain=1, freeze=1, stride=8, max_len=-1, hid_dim=16, tmax=20, n_scale=-1, use_gpu=True, enc_in=4, dec_in=4, c_out=4, task_name='long_term_forecast')
+
+>>>> itr_no: 1, seed: 648 <<<<<<
+Use GPU: cuda:0
+Experiments will be saved in results/Financial_Aid/OFA_sl_5_pl_1_id_ori/1
+
+Experiment begins at 2024-09-06 01:54:52
+
+>>>>>>> start training :>>>>>>>>>>
+Minimum year  2015
+Split years:
+                 Train: [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022]
+                 Validation: [2023]
+                 Test: [2024]
+
+Scaling data.
+Categoricals or ID: [].
+Numericals: ['INST_NEED', 'FUNDED_PARTY', 'TOTAL_PARTY'].
+Time column Date, target OFFER_BALANCE.
+
+train 87378
+Scaling data.
+
+val 29126
+Traceback (most recent call last):
+  File "/u/mi3se/projects/Financial-Time-Series/run_OFA.py", line 92, in <module>
+    main(args)
+  File "/u/mi3se/projects/Financial-Time-Series/run_OFA.py", line 44, in main
+    exp.train()
+  File "/u/mi3se/projects/Financial-Time-Series/exp/exp_long_term_forecasting.py", line 189, in train
+    outputs = self.model(batch_x)
+  File "/u/mi3se/anaconda3/envs/ml/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1532, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/u/mi3se/anaconda3/envs/ml/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1541, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/u/mi3se/projects/Financial-Time-Series/models/OFA.py", line 155, in forward
+    x = x.unfold(dimension=-1, size=self.patch_size, step=self.stride)
+RuntimeError: maximum size for tensor at dimension 2 is 13 but size is 16

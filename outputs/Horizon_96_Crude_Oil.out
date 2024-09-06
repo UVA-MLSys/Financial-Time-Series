@@ -1,0 +1,957 @@
+Running for model:DLinear
+NVIDIA A16
+Args in experiment: Namespace(test=False, seed=2024, result_path='results', disable_progress=True, root_path='./data', data_path='Crude_Oil.csv', features='M', n_features=5, target='OT', freq='d', no_scale=False, seq_len=96, label_len=48, pred_len=96, top_k=5, num_kernels=6, d_model=64, n_heads=4, e_layers=2, d_layers=1, d_ff=128, moving_avg=3, factor=1, dropout=0.1, embed='timeF', activation='gelu', output_attention=False, channel_independence=1, decomp_method='moving_avg', use_norm=1, down_sampling_layers=0, down_sampling_window=1, down_sampling_method=None, seg_len=48, num_workers=10, itrs=3, itr_no=None, train_epochs=10, batch_size=32, patience=3, learning_rate=0.001, des=None, loss='MSE', lradj='type1', gpu=0, use_multi_gpu=False, devices='0,1,2,3', p_hidden_dims=[128, 128], p_hidden_layers=2, dry_run=False, percent=100, model='DLinear', use_gpu=True, enc_in=5, dec_in=5, c_out=5, task_name='long_term_forecast')
+
+>>>> itr_no: 1, seed: 648 <<<<<<
+Use GPU: cuda:0
+Experiments will be saved in results/Crude_Oil/DLinear_sl_96_pl_96/1
+
+Experiment begins at 2024-09-06 09:33:27
+
+>>>>>>> start training :>>>>>>>>>>
+train 1832
+val 159
+Epoch: 1 | Time: 1.79 s | Train Loss: 8.9348 Vali Loss: 1.3172
+Validation loss decreased (inf --> 1.317151).  Saving model ...
+Epoch: 2 | Time: 0.689 s | Train Loss: 8.5506 Vali Loss: 1.5743
+EarlyStopping counter: 1 out of 3
+Epoch: 3 | Time: 0.686 s | Train Loss: 8.4812 Vali Loss: 1.5501
+EarlyStopping counter: 2 out of 3
+Epoch: 4 | Time: 0.685 s | Train Loss: 8.2491 Vali Loss: 1.566
+EarlyStopping counter: 3 out of 3
+Early stopping
+
+Training completed at 2024-09-06 09:33:31.
+Model parameters: 18624
+Total memory: 14878.2 MB
+Allocated memory: 16.6 MB
+Max allocated memory: 17.3 MB
+Time per epoch: 1.2 sec.
+Memory usage: Available 14878.2 MB, Allocated 16.6 MB, Max allocated 17.3 MB
+
+Loading model from results/Crude_Oil/DLinear_sl_96_pl_96/1/checkpoint.pth
+
+>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<
+test 157
+Preds and Trues shape: (157, 96, 5) (157, 96, 5)
+test scaled -- mse:1.2659, mae:0.9293
+Upscaling data and removing negatives...
+test -- mse:2.0701e+09, mae:14668, rmsle: 0.35355 smape 12.771
+
+
+>>>> itr_no: 2, seed: 506 <<<<<<
+Use GPU: cuda:0
+Experiments will be saved in results/Crude_Oil/DLinear_sl_96_pl_96/2
+
+Experiment begins at 2024-09-06 09:33:32
+
+>>>>>>> start training :>>>>>>>>>>
+train 1832
+val 159
+Epoch: 1 | Time: 0.674 s | Train Loss: 9.033 Vali Loss: 1.4388
+Validation loss decreased (inf --> 1.438793).  Saving model ...
+Epoch: 2 | Time: 0.684 s | Train Loss: 8.507 Vali Loss: 1.4455
+EarlyStopping counter: 1 out of 3
+Epoch: 3 | Time: 0.682 s | Train Loss: 8.389 Vali Loss: 1.5663
+EarlyStopping counter: 2 out of 3
+Epoch: 4 | Time: 0.688 s | Train Loss: 8.2794 Vali Loss: 1.5783
+EarlyStopping counter: 3 out of 3
+Early stopping
+
+Training completed at 2024-09-06 09:33:35.
+Model parameters: 18624
+Total memory: 14878.2 MB
+Allocated memory: 16.6 MB
+Max allocated memory: 17.3 MB
+Time per epoch: 0.7 sec.
+Memory usage: Available 14878.2 MB, Allocated 16.6 MB, Max allocated 17.3 MB
+
+Loading model from results/Crude_Oil/DLinear_sl_96_pl_96/2/checkpoint.pth
+
+>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<
+test 157
+Preds and Trues shape: (157, 96, 5) (157, 96, 5)
+test scaled -- mse:1.0936, mae:0.85661
+Upscaling data and removing negatives...
+test -- mse:2.101e+09, mae:14793, rmsle: 0.35295 smape 12.218
+
+
+>>>> itr_no: 3, seed: 608 <<<<<<
+Use GPU: cuda:0
+Experiments will be saved in results/Crude_Oil/DLinear_sl_96_pl_96/3
+
+Experiment begins at 2024-09-06 09:33:35
+
+>>>>>>> start training :>>>>>>>>>>
+train 1832
+val 159
+Epoch: 1 | Time: 0.669 s | Train Loss: 9.0187 Vali Loss: 1.3974
+Validation loss decreased (inf --> 1.397389).  Saving model ...
+Epoch: 2 | Time: 0.684 s | Train Loss: 8.45 Vali Loss: 1.599
+EarlyStopping counter: 1 out of 3
+Epoch: 3 | Time: 0.682 s | Train Loss: 8.3895 Vali Loss: 1.6341
+EarlyStopping counter: 2 out of 3
+Epoch: 4 | Time: 0.684 s | Train Loss: 8.2309 Vali Loss: 1.6312
+EarlyStopping counter: 3 out of 3
+Early stopping
+
+Training completed at 2024-09-06 09:33:38.
+Model parameters: 18624
+Total memory: 14878.2 MB
+Allocated memory: 16.6 MB
+Max allocated memory: 17.3 MB
+Time per epoch: 0.7 sec.
+Memory usage: Available 14878.2 MB, Allocated 16.6 MB, Max allocated 17.3 MB
+
+Loading model from results/Crude_Oil/DLinear_sl_96_pl_96/3/checkpoint.pth
+
+>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<
+test 157
+Preds and Trues shape: (157, 96, 5) (157, 96, 5)
+test scaled -- mse:1.159, mae:0.88299
+Upscaling data and removing negatives...
+test -- mse:2.1045e+09, mae:14787, rmsle: 0.35413 smape 12.436
+
+Running for model:PatchTST
+NVIDIA A16
+Args in experiment: Namespace(test=False, seed=2024, result_path='results', disable_progress=True, root_path='./data', data_path='Crude_Oil.csv', features='M', n_features=5, target='OT', freq='d', no_scale=False, seq_len=96, label_len=48, pred_len=96, top_k=5, num_kernels=6, d_model=64, n_heads=4, e_layers=2, d_layers=1, d_ff=128, moving_avg=3, factor=1, dropout=0.1, embed='timeF', activation='gelu', output_attention=False, channel_independence=1, decomp_method='moving_avg', use_norm=1, down_sampling_layers=0, down_sampling_window=1, down_sampling_method=None, seg_len=48, num_workers=10, itrs=3, itr_no=None, train_epochs=10, batch_size=32, patience=3, learning_rate=0.001, des=None, loss='MSE', lradj='type1', gpu=0, use_multi_gpu=False, devices='0,1,2,3', p_hidden_dims=[128, 128], p_hidden_layers=2, dry_run=False, percent=100, model='PatchTST', use_gpu=True, enc_in=5, dec_in=5, c_out=5, task_name='long_term_forecast')
+
+>>>> itr_no: 1, seed: 648 <<<<<<
+Use GPU: cuda:0
+Experiments will be saved in results/Crude_Oil/PatchTST_sl_96_pl_96/1
+
+Experiment begins at 2024-09-06 09:33:43
+
+>>>>>>> start training :>>>>>>>>>>
+train 1832
+val 159
+Epoch: 1 | Time: 6.27 s | Train Loss: 8.4944 Vali Loss: 2.4337
+Validation loss decreased (inf --> 2.433678).  Saving model ...
+Epoch: 2 | Time: 1.16 s | Train Loss: 7.5956 Vali Loss: 2.5004
+EarlyStopping counter: 1 out of 3
+Epoch: 3 | Time: 1.2 s | Train Loss: 6.1904 Vali Loss: 2.8621
+EarlyStopping counter: 2 out of 3
+Epoch: 4 | Time: 1.2 s | Train Loss: 5.1393 Vali Loss: 3.2186
+EarlyStopping counter: 3 out of 3
+Early stopping
+
+Training completed at 2024-09-06 09:33:54.
+Model parameters: 141920
+Total memory: 14878.2 MB
+Allocated memory: 19.8 MB
+Max allocated memory: 162.0 MB
+Time per epoch: 2.7 sec.
+Memory usage: Available 14878.2 MB, Allocated 19.8 MB, Max allocated 162.0 MB
+
+Loading model from results/Crude_Oil/PatchTST_sl_96_pl_96/1/checkpoint.pth
+
+>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<
+test 157
+Preds and Trues shape: (157, 96, 5) (157, 96, 5)
+test scaled -- mse:1.7516, mae:0.99864
+Upscaling data and removing negatives...
+test -- mse:2.6447e+09, mae:18236, rmsle: 0.45059 smape 15.039
+
+
+>>>> itr_no: 2, seed: 506 <<<<<<
+Use GPU: cuda:0
+Experiments will be saved in results/Crude_Oil/PatchTST_sl_96_pl_96/2
+
+Experiment begins at 2024-09-06 09:33:54
+
+>>>>>>> start training :>>>>>>>>>>
+train 1832
+val 159
+Epoch: 1 | Time: 1.21 s | Train Loss: 8.5823 Vali Loss: 1.577
+Validation loss decreased (inf --> 1.577041).  Saving model ...
+Epoch: 2 | Time: 1.23 s | Train Loss: 7.7244 Vali Loss: 4.8327
+EarlyStopping counter: 1 out of 3
+Epoch: 3 | Time: 1.25 s | Train Loss: 6.6769 Vali Loss: 4.0326
+EarlyStopping counter: 2 out of 3
+Epoch: 4 | Time: 1.21 s | Train Loss: 5.6134 Vali Loss: 2.7745
+EarlyStopping counter: 3 out of 3
+Early stopping
+
+Training completed at 2024-09-06 09:33:59.
+Model parameters: 141920
+Total memory: 14878.2 MB
+Allocated memory: 19.8 MB
+Max allocated memory: 162.0 MB
+Time per epoch: 1.3 sec.
+Memory usage: Available 14878.2 MB, Allocated 19.8 MB, Max allocated 162.0 MB
+
+Loading model from results/Crude_Oil/PatchTST_sl_96_pl_96/2/checkpoint.pth
+
+>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<
+test 157
+Preds and Trues shape: (157, 96, 5) (157, 96, 5)
+test scaled -- mse:1.3265, mae:0.94259
+Upscaling data and removing negatives...
+test -- mse:3.2362e+09, mae:20833, rmsle: 0.38647 smape 15.852
+
+
+>>>> itr_no: 3, seed: 608 <<<<<<
+Use GPU: cuda:0
+Experiments will be saved in results/Crude_Oil/PatchTST_sl_96_pl_96/3
+
+Experiment begins at 2024-09-06 09:34:00
+
+>>>>>>> start training :>>>>>>>>>>
+train 1832
+val 159
+Epoch: 1 | Time: 1.09 s | Train Loss: 8.4935 Vali Loss: 1.8336
+Validation loss decreased (inf --> 1.833600).  Saving model ...
+Epoch: 2 | Time: 1.12 s | Train Loss: 7.6963 Vali Loss: 2.227
+EarlyStopping counter: 1 out of 3
+Epoch: 3 | Time: 1.15 s | Train Loss: 7.1477 Vali Loss: 2.0764
+EarlyStopping counter: 2 out of 3
+Epoch: 4 | Time: 1.13 s | Train Loss: 5.9268 Vali Loss: 1.9667
+EarlyStopping counter: 3 out of 3
+Early stopping
+
+Training completed at 2024-09-06 09:34:05.
+Model parameters: 141920
+Total memory: 14878.2 MB
+Allocated memory: 19.8 MB
+Max allocated memory: 162.0 MB
+Time per epoch: 1.2 sec.
+Memory usage: Available 14878.2 MB, Allocated 19.8 MB, Max allocated 162.0 MB
+
+Loading model from results/Crude_Oil/PatchTST_sl_96_pl_96/3/checkpoint.pth
+
+>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<
+test 157
+Preds and Trues shape: (157, 96, 5) (157, 96, 5)
+test scaled -- mse:1.5286, mae:0.98879
+Upscaling data and removing negatives...
+test -- mse:2.9103e+09, mae:19325, rmsle: 0.3807 smape 15.322
+
+Running for model:TimesNet
+NVIDIA A16
+Args in experiment: Namespace(test=False, seed=2024, result_path='results', disable_progress=True, root_path='./data', data_path='Crude_Oil.csv', features='M', n_features=5, target='OT', freq='d', no_scale=False, seq_len=96, label_len=48, pred_len=96, top_k=5, num_kernels=6, d_model=64, n_heads=4, e_layers=2, d_layers=1, d_ff=128, moving_avg=3, factor=1, dropout=0.1, embed='timeF', activation='gelu', output_attention=False, channel_independence=1, decomp_method='moving_avg', use_norm=1, down_sampling_layers=0, down_sampling_window=1, down_sampling_method=None, seg_len=48, num_workers=10, itrs=3, itr_no=None, train_epochs=10, batch_size=32, patience=3, learning_rate=0.001, des=None, loss='MSE', lradj='type1', gpu=0, use_multi_gpu=False, devices='0,1,2,3', p_hidden_dims=[128, 128], p_hidden_layers=2, dry_run=False, percent=100, model='TimesNet', use_gpu=True, enc_in=5, dec_in=5, c_out=5, task_name='long_term_forecast')
+
+>>>> itr_no: 1, seed: 648 <<<<<<
+Use GPU: cuda:0
+Experiments will be saved in results/Crude_Oil/TimesNet_sl_96_pl_96/1
+
+Experiment begins at 2024-09-06 09:34:10
+
+>>>>>>> start training :>>>>>>>>>>
+train 1832
+val 159
+Epoch: 1 | Time: 33.9 s | Train Loss: 8.7043 Vali Loss: 2.3137
+Validation loss decreased (inf --> 2.313726).  Saving model ...
+Epoch: 2 | Time: 27.6 s | Train Loss: 8.1469 Vali Loss: 2.5294
+EarlyStopping counter: 1 out of 3
+Epoch: 3 | Time: 27.6 s | Train Loss: 8.2062 Vali Loss: 2.1872
+Validation loss decreased (2.313726 --> 2.187226).  Saving model ...
+Epoch: 4 | Time: 27.1 s | Train Loss: 7.5998 Vali Loss: 2.5036
+EarlyStopping counter: 1 out of 3
+Epoch: 5 | Time: 27.1 s | Train Loss: 6.8309 Vali Loss: 3.6459
+EarlyStopping counter: 2 out of 3
+Epoch: 6 | Time: 26.8 s | Train Loss: 6.0262 Vali Loss: 2.8781
+EarlyStopping counter: 3 out of 3
+Early stopping
+
+Training completed at 2024-09-06 09:37:02.
+Model parameters: 9394181
+Total memory: 14878.2 MB
+Allocated memory: 163.9 MB
+Max allocated memory: 578.6 MB
+Time per epoch: 28.7 sec.
+Memory usage: Available 14878.2 MB, Allocated 163.9 MB, Max allocated 578.6 MB
+
+Loading model from results/Crude_Oil/TimesNet_sl_96_pl_96/1/checkpoint.pth
+
+>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<
+test 157
+Preds and Trues shape: (157, 96, 5) (157, 96, 5)
+test scaled -- mse:2.2015, mae:1.226
+Upscaling data and removing negatives...
+test -- mse:2.3911e+09, mae:15224, rmsle: 0.37603 smape 15.046
+
+
+>>>> itr_no: 2, seed: 506 <<<<<<
+Use GPU: cuda:0
+Experiments will be saved in results/Crude_Oil/TimesNet_sl_96_pl_96/2
+
+Experiment begins at 2024-09-06 09:37:03
+
+>>>>>>> start training :>>>>>>>>>>
+train 1832
+val 159
+Epoch: 1 | Time: 26.8 s | Train Loss: 8.9774 Vali Loss: 1.3375
+Validation loss decreased (inf --> 1.337484).  Saving model ...
+Epoch: 2 | Time: 26.5 s | Train Loss: 7.8858 Vali Loss: 2.5238
+EarlyStopping counter: 1 out of 3
+Epoch: 3 | Time: 26.5 s | Train Loss: 7.0961 Vali Loss: 2.2757
+EarlyStopping counter: 2 out of 3
+Epoch: 4 | Time: 26.6 s | Train Loss: 5.6208 Vali Loss: 2.454
+EarlyStopping counter: 3 out of 3
+Early stopping
+
+Training completed at 2024-09-06 09:38:50.
+Model parameters: 9394181
+Total memory: 14878.2 MB
+Allocated memory: 168.6 MB
+Max allocated memory: 578.6 MB
+Time per epoch: 26.8 sec.
+Memory usage: Available 14878.2 MB, Allocated 168.6 MB, Max allocated 578.6 MB
+
+Loading model from results/Crude_Oil/TimesNet_sl_96_pl_96/2/checkpoint.pth
+
+>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<
+test 157
+Preds and Trues shape: (157, 96, 5) (157, 96, 5)
+test scaled -- mse:2.0467, mae:1.1996
+Upscaling data and removing negatives...
+test -- mse:2.4094e+09, mae:15165, rmsle: 0.37684 smape 15.052
+
+
+>>>> itr_no: 3, seed: 608 <<<<<<
+Use GPU: cuda:0
+Experiments will be saved in results/Crude_Oil/TimesNet_sl_96_pl_96/3
+
+Experiment begins at 2024-09-06 09:38:52
+
+>>>>>>> start training :>>>>>>>>>>
+train 1832
+val 159
+Epoch: 1 | Time: 27.1 s | Train Loss: 8.6871 Vali Loss: 1.1951
+Validation loss decreased (inf --> 1.195082).  Saving model ...
+Epoch: 2 | Time: 26.1 s | Train Loss: 7.4934 Vali Loss: 1.8446
+EarlyStopping counter: 1 out of 3
+Epoch: 3 | Time: 26.2 s | Train Loss: 6.7089 Vali Loss: 2.8226
+EarlyStopping counter: 2 out of 3
+Epoch: 4 | Time: 26.1 s | Train Loss: 6.6596 Vali Loss: 2.0569
+EarlyStopping counter: 3 out of 3
+Early stopping
+
+Training completed at 2024-09-06 09:40:38.
+Model parameters: 9394181
+Total memory: 14878.2 MB
+Allocated memory: 169.4 MB
+Max allocated memory: 584.4 MB
+Time per epoch: 26.6 sec.
+Memory usage: Available 14878.2 MB, Allocated 169.4 MB, Max allocated 584.4 MB
+
+Loading model from results/Crude_Oil/TimesNet_sl_96_pl_96/3/checkpoint.pth
+
+>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<
+test 157
+Preds and Trues shape: (157, 96, 5) (157, 96, 5)
+test scaled -- mse:2.3352, mae:1.2566
+Upscaling data and removing negatives...
+test -- mse:2.4662e+09, mae:15289, rmsle: 0.37924 smape 15.087
+
+Running for model:iTransformer
+NVIDIA A16
+Args in experiment: Namespace(test=False, seed=2024, result_path='results', disable_progress=True, root_path='./data', data_path='Crude_Oil.csv', features='M', n_features=5, target='OT', freq='d', no_scale=False, seq_len=96, label_len=48, pred_len=96, top_k=5, num_kernels=6, d_model=64, n_heads=4, e_layers=2, d_layers=1, d_ff=128, moving_avg=3, factor=1, dropout=0.1, embed='timeF', activation='gelu', output_attention=False, channel_independence=1, decomp_method='moving_avg', use_norm=1, down_sampling_layers=0, down_sampling_window=1, down_sampling_method=None, seg_len=48, num_workers=10, itrs=3, itr_no=None, train_epochs=10, batch_size=32, patience=3, learning_rate=0.001, des=None, loss='MSE', lradj='type1', gpu=0, use_multi_gpu=False, devices='0,1,2,3', p_hidden_dims=[128, 128], p_hidden_layers=2, dry_run=False, percent=100, model='iTransformer', use_gpu=True, enc_in=5, dec_in=5, c_out=5, task_name='long_term_forecast')
+
+>>>> itr_no: 1, seed: 648 <<<<<<
+Use GPU: cuda:0
+Experiments will be saved in results/Crude_Oil/iTransformer_sl_96_pl_96/1
+
+Experiment begins at 2024-09-06 09:40:45
+
+>>>>>>> start training :>>>>>>>>>>
+train 1832
+val 159
+Epoch: 1 | Time: 1.39 s | Train Loss: 8.8038 Vali Loss: 1.928
+Validation loss decreased (inf --> 1.927955).  Saving model ...
+Epoch: 2 | Time: 1.11 s | Train Loss: 7.7679 Vali Loss: 1.9408
+EarlyStopping counter: 1 out of 3
+Epoch: 3 | Time: 1.11 s | Train Loss: 6.6724 Vali Loss: 3.437
+EarlyStopping counter: 2 out of 3
+Epoch: 4 | Time: 1.12 s | Train Loss: 5.2493 Vali Loss: 2.28
+EarlyStopping counter: 3 out of 3
+Early stopping
+
+Training completed at 2024-09-06 09:40:50.
+Model parameters: 79520
+Total memory: 14878.2 MB
+Allocated memory: 17.6 MB
+Max allocated memory: 149.5 MB
+Time per epoch: 1.4 sec.
+Memory usage: Available 14878.2 MB, Allocated 17.6 MB, Max allocated 149.5 MB
+
+Loading model from results/Crude_Oil/iTransformer_sl_96_pl_96/1/checkpoint.pth
+
+>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<
+test 157
+Preds and Trues shape: (157, 96, 5) (157, 96, 5)
+test scaled -- mse:1.5812, mae:0.99629
+Upscaling data and removing negatives...
+test -- mse:3.8258e+09, mae:21282, rmsle: 0.3931 smape 14.75
+
+
+>>>> itr_no: 2, seed: 506 <<<<<<
+Use GPU: cuda:0
+Experiments will be saved in results/Crude_Oil/iTransformer_sl_96_pl_96/2
+
+Experiment begins at 2024-09-06 09:40:51
+
+>>>>>>> start training :>>>>>>>>>>
+train 1832
+val 159
+Epoch: 1 | Time: 1.12 s | Train Loss: 8.8256 Vali Loss: 1.8708
+Validation loss decreased (inf --> 1.870845).  Saving model ...
+Epoch: 2 | Time: 1.12 s | Train Loss: 7.8443 Vali Loss: 2.1386
+EarlyStopping counter: 1 out of 3
+Epoch: 3 | Time: 1.17 s | Train Loss: 6.8801 Vali Loss: 1.8508
+Validation loss decreased (1.870845 --> 1.850813).  Saving model ...
+Epoch: 4 | Time: 1.12 s | Train Loss: 5.4629 Vali Loss: 2.3318
+EarlyStopping counter: 1 out of 3
+Epoch: 5 | Time: 1.1 s | Train Loss: 4.1778 Vali Loss: 2.5055
+EarlyStopping counter: 2 out of 3
+Epoch: 6 | Time: 1.15 s | Train Loss: 3.5875 Vali Loss: 2.1246
+EarlyStopping counter: 3 out of 3
+Early stopping
+
+Training completed at 2024-09-06 09:40:58.
+Model parameters: 79520
+Total memory: 14878.2 MB
+Allocated memory: 17.6 MB
+Max allocated memory: 149.5 MB
+Time per epoch: 1.2 sec.
+Memory usage: Available 14878.2 MB, Allocated 17.6 MB, Max allocated 149.5 MB
+
+Loading model from results/Crude_Oil/iTransformer_sl_96_pl_96/2/checkpoint.pth
+
+>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<
+test 157
+Preds and Trues shape: (157, 96, 5) (157, 96, 5)
+test scaled -- mse:3.319, mae:1.4583
+Upscaling data and removing negatives...
+test -- mse:3.8721e+09, mae:22378, rmsle: 0.68717 smape 19.875
+
+
+>>>> itr_no: 3, seed: 608 <<<<<<
+Use GPU: cuda:0
+Experiments will be saved in results/Crude_Oil/iTransformer_sl_96_pl_96/3
+
+Experiment begins at 2024-09-06 09:40:58
+
+>>>>>>> start training :>>>>>>>>>>
+train 1832
+val 159
+Epoch: 1 | Time: 1.2 s | Train Loss: 8.8677 Vali Loss: 2.018
+Validation loss decreased (inf --> 2.018002).  Saving model ...
+Epoch: 2 | Time: 1.18 s | Train Loss: 7.7649 Vali Loss: 2.93
+EarlyStopping counter: 1 out of 3
+Epoch: 3 | Time: 1.17 s | Train Loss: 6.5186 Vali Loss: 2.5069
+EarlyStopping counter: 2 out of 3
+Epoch: 4 | Time: 1.18 s | Train Loss: 5.2812 Vali Loss: 2.6504
+EarlyStopping counter: 3 out of 3
+Early stopping
+
+Training completed at 2024-09-06 09:41:03.
+Model parameters: 79520
+Total memory: 14878.2 MB
+Allocated memory: 17.6 MB
+Max allocated memory: 149.5 MB
+Time per epoch: 1.3 sec.
+Memory usage: Available 14878.2 MB, Allocated 17.6 MB, Max allocated 149.5 MB
+
+Loading model from results/Crude_Oil/iTransformer_sl_96_pl_96/3/checkpoint.pth
+
+>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<
+test 157
+Preds and Trues shape: (157, 96, 5) (157, 96, 5)
+test scaled -- mse:1.585, mae:0.99356
+Upscaling data and removing negatives...
+test -- mse:3.7629e+09, mae:21193, rmsle: 0.39017 smape 14.601
+
+NVIDIA A16
+Args in experiment: Namespace(test=False, seed=2024, result_path='results', disable_progress=True, root_path='./data', data_path='Crude_Oil.csv', features='M', n_features=5, target='OT', freq='d', no_scale=False, seq_len=96, label_len=96, pred_len=96, top_k=5, num_kernels=6, d_model=64, n_heads=4, e_layers=2, d_layers=1, d_ff=128, moving_avg=3, factor=1, dropout=0.1, embed='timeF', activation='gelu', output_attention=False, channel_independence=1, decomp_method='moving_avg', use_norm=1, down_sampling_layers=0, down_sampling_window=1, down_sampling_method=None, seg_len=48, num_workers=10, itrs=3, itr_no=None, train_epochs=10, batch_size=32, patience=3, learning_rate=0.001, des=None, loss='MSE', lradj='type1', gpu=0, use_multi_gpu=False, devices='0,1,2,3', p_hidden_dims=[128, 128], p_hidden_layers=2, dry_run=False, percent=100, model='MICN', use_gpu=True, enc_in=5, dec_in=5, c_out=5, task_name='long_term_forecast')
+
+>>>> itr_no: 1, seed: 648 <<<<<<
+Use GPU: cuda:0
+Experiments will be saved in results/Crude_Oil/MICN_sl_96_pl_96/1
+
+Experiment begins at 2024-09-06 09:41:08
+
+>>>>>>> start training :>>>>>>>>>>
+train 1832
+val 159
+Epoch: 1 | Time: 2.65 s | Train Loss: 8.8806 Vali Loss: 1.5074
+Validation loss decreased (inf --> 1.507448).  Saving model ...
+Epoch: 2 | Time: 1.26 s | Train Loss: 8.363 Vali Loss: 1.7256
+EarlyStopping counter: 1 out of 3
+Epoch: 3 | Time: 1.36 s | Train Loss: 8.185 Vali Loss: 1.7731
+EarlyStopping counter: 2 out of 3
+Epoch: 4 | Time: 1.28 s | Train Loss: 7.8156 Vali Loss: 2.0978
+EarlyStopping counter: 3 out of 3
+Early stopping
+
+Training completed at 2024-09-06 09:41:15.
+Model parameters: 405157
+Total memory: 14878.2 MB
+Allocated memory: 23.8 MB
+Max allocated memory: 186.1 MB
+Time per epoch: 1.9 sec.
+Memory usage: Available 14878.2 MB, Allocated 23.8 MB, Max allocated 186.1 MB
+
+Loading model from results/Crude_Oil/MICN_sl_96_pl_96/1/checkpoint.pth
+
+>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<
+test 157
+Preds and Trues shape: (157, 96, 5) (157, 96, 5)
+test scaled -- mse:1.1586, mae:0.87948
+Upscaling data and removing negatives...
+test -- mse:1.3565e+09, mae:13110, rmsle: 0.2947 smape 12.17
+
+
+>>>> itr_no: 2, seed: 506 <<<<<<
+Use GPU: cuda:0
+Experiments will be saved in results/Crude_Oil/MICN_sl_96_pl_96/2
+
+Experiment begins at 2024-09-06 09:41:16
+
+>>>>>>> start training :>>>>>>>>>>
+train 1832
+val 159
+Epoch: 1 | Time: 1.28 s | Train Loss: 8.9764 Vali Loss: 1.6097
+Validation loss decreased (inf --> 1.609732).  Saving model ...
+Epoch: 2 | Time: 1.28 s | Train Loss: 8.2977 Vali Loss: 1.8935
+EarlyStopping counter: 1 out of 3
+Epoch: 3 | Time: 1.27 s | Train Loss: 8.0002 Vali Loss: 3.3178
+EarlyStopping counter: 2 out of 3
+Epoch: 4 | Time: 1.3 s | Train Loss: 7.0817 Vali Loss: 3.0114
+EarlyStopping counter: 3 out of 3
+Early stopping
+
+Training completed at 2024-09-06 09:41:21.
+Model parameters: 405157
+Total memory: 14878.2 MB
+Allocated memory: 23.8 MB
+Max allocated memory: 186.2 MB
+Time per epoch: 1.4 sec.
+Memory usage: Available 14878.2 MB, Allocated 23.8 MB, Max allocated 186.2 MB
+
+Loading model from results/Crude_Oil/MICN_sl_96_pl_96/2/checkpoint.pth
+
+>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<
+test 157
+Preds and Trues shape: (157, 96, 5) (157, 96, 5)
+test scaled -- mse:1.1654, mae:0.86991
+Upscaling data and removing negatives...
+test -- mse:1.3894e+09, mae:13376, rmsle: 0.29226 smape 12.154
+
+
+>>>> itr_no: 3, seed: 608 <<<<<<
+Use GPU: cuda:0
+Experiments will be saved in results/Crude_Oil/MICN_sl_96_pl_96/3
+
+Experiment begins at 2024-09-06 09:41:21
+
+>>>>>>> start training :>>>>>>>>>>
+train 1832
+val 159
+Epoch: 1 | Time: 1.26 s | Train Loss: 8.8847 Vali Loss: 1.5991
+Validation loss decreased (inf --> 1.599100).  Saving model ...
+Epoch: 2 | Time: 1.23 s | Train Loss: 8.4962 Vali Loss: 2.224
+EarlyStopping counter: 1 out of 3
+Epoch: 3 | Time: 1.15 s | Train Loss: 8.4102 Vali Loss: 1.8077
+EarlyStopping counter: 2 out of 3
+Epoch: 4 | Time: 1.13 s | Train Loss: 7.5468 Vali Loss: 2.2318
+EarlyStopping counter: 3 out of 3
+Early stopping
+
+Training completed at 2024-09-06 09:41:26.
+Model parameters: 405157
+Total memory: 14878.2 MB
+Allocated memory: 23.8 MB
+Max allocated memory: 186.2 MB
+Time per epoch: 1.3 sec.
+Memory usage: Available 14878.2 MB, Allocated 23.8 MB, Max allocated 186.2 MB
+
+Loading model from results/Crude_Oil/MICN_sl_96_pl_96/3/checkpoint.pth
+
+>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<
+test 157
+Preds and Trues shape: (157, 96, 5) (157, 96, 5)
+test scaled -- mse:1.2498, mae:0.89348
+Upscaling data and removing negatives...
+test -- mse:1.3594e+09, mae:13112, rmsle: 0.29557 smape 12.327
+
+NVIDIA A16
+Args in experiment: Namespace(test=False, seed=2024, result_path='results', disable_progress=True, root_path='./data', data_path='Crude_Oil.csv', features='M', n_features=5, target='OT', freq='d', no_scale=False, seq_len=96, label_len=0, pred_len=96, top_k=5, num_kernels=6, d_model=16, n_heads=4, e_layers=3, d_layers=1, d_ff=32, moving_avg=3, factor=3, dropout=0.1, embed='timeF', activation='gelu', output_attention=False, channel_independence=1, decomp_method='moving_avg', use_norm=1, down_sampling_layers=3, down_sampling_window=2, down_sampling_method='avg', seg_len=48, num_workers=10, itrs=3, itr_no=None, train_epochs=10, batch_size=32, patience=3, learning_rate=0.001, des=None, loss='MSE', lradj='type1', gpu=0, use_multi_gpu=False, devices='0,1,2,3', p_hidden_dims=[128, 128], p_hidden_layers=2, dry_run=False, percent=100, model='TimeMixer', use_gpu=True, enc_in=5, dec_in=5, c_out=5, task_name='long_term_forecast')
+
+>>>> itr_no: 1, seed: 648 <<<<<<
+Use GPU: cuda:0
+Experiments will be saved in results/Crude_Oil/TimeMixer_sl_96_pl_96/1
+
+Experiment begins at 2024-09-06 09:41:37
+
+>>>>>>> start training :>>>>>>>>>>
+train 1832
+val 159
+Epoch: 1 | Time: 2.8 s | Train Loss: 9.0585 Vali Loss: 1.9319
+Validation loss decreased (inf --> 1.931906).  Saving model ...
+Epoch: 2 | Time: 2.1 s | Train Loss: 7.4941 Vali Loss: 3.0436
+EarlyStopping counter: 1 out of 3
+Epoch: 3 | Time: 2.09 s | Train Loss: 6.2353 Vali Loss: 2.9587
+EarlyStopping counter: 2 out of 3
+Epoch: 4 | Time: 2.05 s | Train Loss: 5.0594 Vali Loss: 2.4703
+EarlyStopping counter: 3 out of 3
+Early stopping
+
+Training completed at 2024-09-06 09:41:48.
+Model parameters: 104289
+Total memory: 14878.2 MB
+Allocated memory: 18.3 MB
+Max allocated memory: 83.1 MB
+Time per epoch: 2.8 sec.
+Memory usage: Available 14878.2 MB, Allocated 18.3 MB, Max allocated 83.1 MB
+
+Loading model from results/Crude_Oil/TimeMixer_sl_96_pl_96/1/checkpoint.pth
+
+>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<
+test 157
+Preds and Trues shape: (157, 96, 5) (157, 96, 5)
+test scaled -- mse:1.3222, mae:0.94176
+Upscaling data and removing negatives...
+test -- mse:2.5537e+09, mae:17367, rmsle: 0.3588 smape 13.866
+
+
+>>>> itr_no: 2, seed: 506 <<<<<<
+Use GPU: cuda:0
+Experiments will be saved in results/Crude_Oil/TimeMixer_sl_96_pl_96/2
+
+Experiment begins at 2024-09-06 09:41:49
+
+>>>>>>> start training :>>>>>>>>>>
+train 1832
+val 159
+Epoch: 1 | Time: 2.07 s | Train Loss: 9.4028 Vali Loss: 3.2256
+Validation loss decreased (inf --> 3.225608).  Saving model ...
+Epoch: 2 | Time: 2.05 s | Train Loss: 7.4327 Vali Loss: 4.193
+EarlyStopping counter: 1 out of 3
+Epoch: 3 | Time: 2.08 s | Train Loss: 5.8769 Vali Loss: 1.9905
+Validation loss decreased (3.225608 --> 1.990514).  Saving model ...
+Epoch: 4 | Time: 2.09 s | Train Loss: 4.2814 Vali Loss: 3.1041
+EarlyStopping counter: 1 out of 3
+Epoch: 5 | Time: 2.08 s | Train Loss: 3.1827 Vali Loss: 2.2618
+EarlyStopping counter: 2 out of 3
+Epoch: 6 | Time: 2.08 s | Train Loss: 2.4702 Vali Loss: 2.7222
+EarlyStopping counter: 3 out of 3
+Early stopping
+
+Training completed at 2024-09-06 09:42:03.
+Model parameters: 104289
+Total memory: 14878.2 MB
+Allocated memory: 18.3 MB
+Max allocated memory: 83.1 MB
+Time per epoch: 2.2 sec.
+Memory usage: Available 14878.2 MB, Allocated 18.3 MB, Max allocated 83.1 MB
+
+Loading model from results/Crude_Oil/TimeMixer_sl_96_pl_96/2/checkpoint.pth
+
+>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<
+test 157
+Preds and Trues shape: (157, 96, 5) (157, 96, 5)
+test scaled -- mse:2.4653, mae:1.2707
+Upscaling data and removing negatives...
+test -- mse:2.6941e+09, mae:17806, rmsle: 0.37184 smape 16.078
+
+
+>>>> itr_no: 3, seed: 608 <<<<<<
+Use GPU: cuda:0
+Experiments will be saved in results/Crude_Oil/TimeMixer_sl_96_pl_96/3
+
+Experiment begins at 2024-09-06 09:42:03
+
+>>>>>>> start training :>>>>>>>>>>
+train 1832
+val 159
+Epoch: 1 | Time: 2.01 s | Train Loss: 9.3097 Vali Loss: 2.2734
+Validation loss decreased (inf --> 2.273374).  Saving model ...
+Epoch: 2 | Time: 2.09 s | Train Loss: 7.7512 Vali Loss: 3.3282
+EarlyStopping counter: 1 out of 3
+Epoch: 3 | Time: 2.1 s | Train Loss: 6.9073 Vali Loss: 3.8295
+EarlyStopping counter: 2 out of 3
+Epoch: 4 | Time: 2.12 s | Train Loss: 5.9654 Vali Loss: 3.7057
+EarlyStopping counter: 3 out of 3
+Early stopping
+
+Training completed at 2024-09-06 09:42:12.
+Model parameters: 104289
+Total memory: 14878.2 MB
+Allocated memory: 18.3 MB
+Max allocated memory: 83.1 MB
+Time per epoch: 2.2 sec.
+Memory usage: Available 14878.2 MB, Allocated 18.3 MB, Max allocated 83.1 MB
+
+Loading model from results/Crude_Oil/TimeMixer_sl_96_pl_96/3/checkpoint.pth
+
+>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<
+test 157
+Preds and Trues shape: (157, 96, 5) (157, 96, 5)
+test scaled -- mse:1.2892, mae:0.88569
+Upscaling data and removing negatives...
+test -- mse:2.6244e+09, mae:16892, rmsle: 0.3688 smape 12.921
+
+NVIDIA A16
+Args in experiment: Namespace(test=False, seed=2024, result_path='results', disable_progress=True, root_path='./data', data_path='Crude_Oil.csv', features='M', n_features=5, target='OT', freq='d', no_scale=False, seq_len=96, label_len=48, pred_len=96, top_k=5, num_kernels=6, d_model=768, n_heads=4, e_layers=2, d_layers=1, d_ff=128, moving_avg=3, factor=1, dropout=0.1, embed='timeF', activation='gelu', output_attention=False, num_workers=10, itrs=3, itr_no=None, train_epochs=10, batch_size=32, patience=3, learning_rate=0.001, des=None, loss='MSE', lradj='type1', gpu=0, use_multi_gpu=False, devices='0,1,2,3', dry_run=False, percent=100, model_id='ori', model='CALF', task_loss='l1', distill_loss='l1', logits_loss='l1', tmax=20, r=8, lora_alpha=32, lora_dropout=0.1, word_embedding_path='./utils/wte_pca_500.pt', task_w=1.0, feature_w=0.01, logits_w=1.0, gpt_layers=6, log_fine_name='CALF_result.txt', noise_scale=-100, bootstrap_eval=0, use_gpu=True, enc_in=5, dec_in=5, c_out=5, task_name='long_term_forecast')
+
+>>>> itr_no: 1, seed: 648 <<<<<<
+Use GPU: cuda:0
+model_id  ori
+Experiments will be saved in results/Crude_Oil/CALF_sl_96_pl_96_id_ori/1
+
+Experiment begins at 2024-09-06 09:42:40
+
+>>>>>>> start training :>>>>>>>>>>
+train 1832
+val 159
+Loss function weights: 1.0 1.0 0.01
+Orig-- ori
+Epoch: 1 | Time: 9.09 s | Train Loss: 2.6354 Vali Loss: 2.5126
+Validation loss decreased (inf --> 2.512634).  Saving model ...
+Epoch: 2 | Time: 6.73 s | Train Loss: 2.4895 Vali Loss: 1.7768
+Validation loss decreased (2.512634 --> 1.776846).  Saving model ...
+Epoch: 3 | Time: 6.71 s | Train Loss: 2.531 Vali Loss: 1.396
+Validation loss decreased (1.776846 --> 1.396014).  Saving model ...
+Epoch: 4 | Time: 6.68 s | Train Loss: 2.8928 Vali Loss: 2.1141
+EarlyStopping counter: 1 out of 3
+Epoch: 5 | Time: 6.69 s | Train Loss: 4.1014 Vali Loss: 1.5721
+EarlyStopping counter: 2 out of 3
+Epoch: 6 | Time: 6.69 s | Train Loss: 4.8624 Vali Loss: 1.7684
+EarlyStopping counter: 3 out of 3
+Early stopping
+
+Training completed at 2024-09-06 09:43:47.
+Model parameters: 180107360
+Total memory: 14878.2 MB
+Allocated memory: 971.2 MB
+Max allocated memory: 1255.5 MB
+Time per epoch: 11.1 sec.
+Memory usage: Available 14878.2 MB, Allocated 971.2 MB, Max allocated 1255.5 MB
+
+Loading model from results/Crude_Oil/CALF_sl_96_pl_96_id_ori/1/llm.pth
+
+>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<
+test 157
+Preds and Trues shape: (157, 96, 5) (157, 96, 5)
+test scaled -- mse:1.8258, mae:1.1061
+Upscaling data and removing negatives...
+test -- mse:4.3756e+09, mae:23869, rmsle: 0.39983 smape 16.327
+
+
+>>>> itr_no: 2, seed: 506 <<<<<<
+Use GPU: cuda:0
+model_id  ori
+Experiments will be saved in results/Crude_Oil/CALF_sl_96_pl_96_id_ori/2
+
+Experiment begins at 2024-09-06 09:43:49
+
+>>>>>>> start training :>>>>>>>>>>
+train 1832
+val 159
+Loss function weights: 1.0 1.0 0.01
+Orig-- ori
+Epoch: 1 | Time: 6.77 s | Train Loss: 2.6315 Vali Loss: 1.7599
+Validation loss decreased (inf --> 1.759906).  Saving model ...
+Epoch: 2 | Time: 6.78 s | Train Loss: 2.366 Vali Loss: 2.0364
+EarlyStopping counter: 1 out of 3
+Epoch: 3 | Time: 6.77 s | Train Loss: 2.463 Vali Loss: 1.881
+EarlyStopping counter: 2 out of 3
+Epoch: 4 | Time: 6.72 s | Train Loss: 2.61 Vali Loss: 2.1654
+EarlyStopping counter: 3 out of 3
+Early stopping
+
+Training completed at 2024-09-06 09:44:23.
+Model parameters: 180107360
+Total memory: 14878.2 MB
+Allocated memory: 972.6 MB
+Max allocated memory: 1662.9 MB
+Time per epoch: 8.6 sec.
+Memory usage: Available 14878.2 MB, Allocated 972.6 MB, Max allocated 1662.9 MB
+
+Loading model from results/Crude_Oil/CALF_sl_96_pl_96_id_ori/2/llm.pth
+
+>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<
+test 157
+Preds and Trues shape: (157, 96, 5) (157, 96, 5)
+test scaled -- mse:1.5739, mae:1.001
+Upscaling data and removing negatives...
+test -- mse:2.8677e+09, mae:17464, rmsle: 0.3796 smape 13.731
+
+
+>>>> itr_no: 3, seed: 608 <<<<<<
+Use GPU: cuda:0
+model_id  ori
+Experiments will be saved in results/Crude_Oil/CALF_sl_96_pl_96_id_ori/3
+
+Experiment begins at 2024-09-06 09:44:25
+
+>>>>>>> start training :>>>>>>>>>>
+train 1832
+val 159
+Loss function weights: 1.0 1.0 0.01
+Orig-- ori
+Epoch: 1 | Time: 6.77 s | Train Loss: 2.6471 Vali Loss: 1.5047
+Validation loss decreased (inf --> 1.504668).  Saving model ...
+Epoch: 2 | Time: 6.76 s | Train Loss: 2.3727 Vali Loss: 2.5364
+EarlyStopping counter: 1 out of 3
+Epoch: 3 | Time: 6.7 s | Train Loss: 3.0757 Vali Loss: 1.4477
+Validation loss decreased (1.504668 --> 1.447694).  Saving model ...
+Epoch: 4 | Time: 6.67 s | Train Loss: 4.4225 Vali Loss: 1.8328
+EarlyStopping counter: 1 out of 3
+Epoch: 5 | Time: 6.67 s | Train Loss: 5.7743 Vali Loss: 2.86
+EarlyStopping counter: 2 out of 3
+Epoch: 6 | Time: 6.7 s | Train Loss: 6.1391 Vali Loss: 2.9139
+EarlyStopping counter: 3 out of 3
+Early stopping
+
+Training completed at 2024-09-06 09:45:20.
+Model parameters: 180107360
+Total memory: 14878.2 MB
+Allocated memory: 972.3 MB
+Max allocated memory: 1662.9 MB
+Time per epoch: 9.2 sec.
+Memory usage: Available 14878.2 MB, Allocated 972.3 MB, Max allocated 1662.9 MB
+
+Loading model from results/Crude_Oil/CALF_sl_96_pl_96_id_ori/3/llm.pth
+
+>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<
+test 157
+Preds and Trues shape: (157, 96, 5) (157, 96, 5)
+test scaled -- mse:1.9778, mae:1.1327
+Upscaling data and removing negatives...
+test -- mse:3.9851e+09, mae:22010, rmsle: 0.39549 smape 15.97
+
+NVIDIA A16
+Args in experiment: Namespace(test=False, seed=2024, result_path='results', disable_progress=True, root_path='./data', data_path='Crude_Oil.csv', features='M', n_features=5, target='OT', freq='d', no_scale=False, seq_len=96, label_len=48, pred_len=96, top_k=5, num_kernels=6, d_model=768, n_heads=4, e_layers=2, d_layers=1, d_ff=128, moving_avg=3, factor=1, dropout=0.1, embed='timeF', activation='gelu', output_attention=False, num_workers=10, itrs=3, itr_no=None, train_epochs=10, batch_size=32, patience=3, learning_rate=0.001, des=None, loss='MSE', lradj='type1', gpu=0, use_multi_gpu=False, devices='0,1,2,3', dry_run=False, percent=100, model_id='ori', model='OFA', gpt_layers=6, is_gpt=1, patch_size=16, kernel_size=25, pretrain=1, freeze=1, stride=8, max_len=-1, hid_dim=16, tmax=20, n_scale=-1, use_gpu=True, enc_in=5, dec_in=5, c_out=5, task_name='long_term_forecast')
+
+>>>> itr_no: 1, seed: 648 <<<<<<
+Use GPU: cuda:0
+Experiments will be saved in results/Crude_Oil/OFA_sl_96_pl_96_id_ori/1
+
+Experiment begins at 2024-09-06 09:45:27
+
+>>>>>>> start training :>>>>>>>>>>
+train 1832
+val 159
+Epoch: 1 | Time: 13 s | Train Loss: 1.745 Vali Loss: 1.1596
+Validation loss decreased (inf --> 1.159612).  Saving model ...
+Epoch: 2 | Time: 12.8 s | Train Loss: 1.6287 Vali Loss: 1.041
+Validation loss decreased (1.159612 --> 1.041050).  Saving model ...
+Epoch: 3 | Time: 12.8 s | Train Loss: 1.5955 Vali Loss: 1.2413
+EarlyStopping counter: 1 out of 3
+Epoch: 4 | Time: 12.9 s | Train Loss: 1.5651 Vali Loss: 1.2223
+EarlyStopping counter: 2 out of 3
+Epoch: 5 | Time: 12.9 s | Train Loss: 1.5049 Vali Loss: 1.2404
+EarlyStopping counter: 3 out of 3
+Early stopping
+
+Training completed at 2024-09-06 09:46:39.
+Model parameters: 82810464
+Total memory: 14878.2 MB
+Allocated memory: 360.0 MB
+Max allocated memory: 1247.9 MB
+Time per epoch: 14.4 sec.
+Memory usage: Available 14878.2 MB, Allocated 360.0 MB, Max allocated 1247.9 MB
+
+Loading model from results/Crude_Oil/OFA_sl_96_pl_96_id_ori/1/llm.pth
+
+>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<
+test 157
+Preds and Trues shape: (157, 96, 5) (157, 96, 5)
+test scaled -- mse:2.2803, mae:1.1325
+Upscaling data and removing negatives...
+test -- mse:1.908e+09, mae:15312, rmsle: 0.32643 smape 14.542
+
+
+>>>> itr_no: 2, seed: 506 <<<<<<
+Use GPU: cuda:0
+Experiments will be saved in results/Crude_Oil/OFA_sl_96_pl_96_id_ori/2
+
+Experiment begins at 2024-09-06 09:46:40
+
+>>>>>>> start training :>>>>>>>>>>
+train 1832
+val 159
+Epoch: 1 | Time: 12.9 s | Train Loss: 1.7387 Vali Loss: 1.1886
+Validation loss decreased (inf --> 1.188584).  Saving model ...
+Epoch: 2 | Time: 12.9 s | Train Loss: 1.6392 Vali Loss: 1.1476
+Validation loss decreased (1.188584 --> 1.147608).  Saving model ...
+Epoch: 3 | Time: 12.8 s | Train Loss: 1.6012 Vali Loss: 1.2608
+EarlyStopping counter: 1 out of 3
+Epoch: 4 | Time: 12.8 s | Train Loss: 1.5546 Vali Loss: 1.147
+Validation loss decreased (1.147608 --> 1.146952).  Saving model ...
+Epoch: 5 | Time: 12.8 s | Train Loss: 1.5152 Vali Loss: 1.0642
+Validation loss decreased (1.146952 --> 1.064156).  Saving model ...
+Epoch: 6 | Time: 12.8 s | Train Loss: 1.4546 Vali Loss: 1.1738
+EarlyStopping counter: 1 out of 3
+Epoch: 7 | Time: 12.8 s | Train Loss: 1.4218 Vali Loss: 1.1704
+EarlyStopping counter: 2 out of 3
+Epoch: 8 | Time: 12.9 s | Train Loss: 1.3628 Vali Loss: 1.2013
+EarlyStopping counter: 3 out of 3
+Early stopping
+
+Training completed at 2024-09-06 09:48:38.
+Model parameters: 82810464
+Total memory: 14878.2 MB
+Allocated memory: 361.6 MB
+Max allocated memory: 1249.2 MB
+Time per epoch: 14.7 sec.
+Memory usage: Available 14878.2 MB, Allocated 361.6 MB, Max allocated 1249.2 MB
+
+Loading model from results/Crude_Oil/OFA_sl_96_pl_96_id_ori/2/llm.pth
+
+>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<
+test 157
+Preds and Trues shape: (157, 96, 5) (157, 96, 5)
+test scaled -- mse:3.153, mae:1.2831
+Upscaling data and removing negatives...
+test -- mse:1.7201e+09, mae:14549, rmsle: 0.343 smape 15.662
+
+
+>>>> itr_no: 3, seed: 608 <<<<<<
+Use GPU: cuda:0
+Experiments will be saved in results/Crude_Oil/OFA_sl_96_pl_96_id_ori/3
+
+Experiment begins at 2024-09-06 09:48:39
+
+>>>>>>> start training :>>>>>>>>>>
+train 1832
+val 159
+Epoch: 1 | Time: 12.9 s | Train Loss: 1.728 Vali Loss: 1.2645
+Validation loss decreased (inf --> 1.264478).  Saving model ...
+Epoch: 2 | Time: 12.8 s | Train Loss: 1.6291 Vali Loss: 1.3242
+EarlyStopping counter: 1 out of 3
+Epoch: 3 | Time: 12.9 s | Train Loss: 1.5913 Vali Loss: 1.1382
+Validation loss decreased (1.264478 --> 1.138243).  Saving model ...
+Epoch: 4 | Time: 12.9 s | Train Loss: 1.5473 Vali Loss: 1.1445
+EarlyStopping counter: 1 out of 3
+Epoch: 5 | Time: 12.9 s | Train Loss: 1.5109 Vali Loss: 1.0903
+Validation loss decreased (1.138243 --> 1.090308).  Saving model ...
+Epoch: 6 | Time: 12.9 s | Train Loss: 1.4737 Vali Loss: 1.0115
+Validation loss decreased (1.090308 --> 1.011487).  Saving model ...
+Epoch: 7 | Time: 12.9 s | Train Loss: 1.4027 Vali Loss: 1.1978
+EarlyStopping counter: 1 out of 3
+Epoch: 8 | Time: 12.9 s | Train Loss: 1.3806 Vali Loss: 1.1946
+EarlyStopping counter: 2 out of 3
+Epoch: 9 | Time: 12.9 s | Train Loss: 1.2983 Vali Loss: 1.3882
+EarlyStopping counter: 3 out of 3
+Early stopping
+
+Training completed at 2024-09-06 09:50:50.
+Model parameters: 82810464
+Total memory: 14878.2 MB
+Allocated memory: 362.9 MB
+Max allocated memory: 1250.9 MB
+Time per epoch: 14.5 sec.
+Memory usage: Available 14878.2 MB, Allocated 362.9 MB, Max allocated 1250.9 MB
+
+Loading model from results/Crude_Oil/OFA_sl_96_pl_96_id_ori/3/llm.pth
+
+>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<
+test 157
+Preds and Trues shape: (157, 96, 5) (157, 96, 5)
+test scaled -- mse:2.9731, mae:1.3133
+Upscaling data and removing negatives...
+test -- mse:1.6708e+09, mae:14209, rmsle: 0.32011 smape 15.543
+

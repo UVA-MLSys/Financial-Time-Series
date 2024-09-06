@@ -1,3 +1,20 @@
+#!/usr/bin/env bash
+#SBATCH --job-name="Financial_Aid"
+#SBATCH --output=outputs/Financial_Aid_fewshot.out
+#SBATCH --partition=gpu
+#SBATCH --time=2:00:00
+#SBATCH --gres=gpu:1
+#---SBATCH --nodelist=lynx01
+#SBATCH --mem=16GB
+
+source /etc/profile.d/modules.sh
+source ~/.bashrc
+
+module load cuda-toolkit cudnn-8.9.5_cuda12.x anaconda3
+
+conda deactivate
+conda activate ml
+
 models=(DLinear PatchTST TimesNet iTransformer)
 data_path=Financial_Aid.csv
 n_features=4
@@ -7,7 +24,6 @@ label_len=3
 pred_len=1
 itrs=3
 target=OFFER_BALANCE
-model=DLinear
 percent=10
 
 for model in ${models[@]}
@@ -54,11 +70,12 @@ python run_OFA.py\
     --itrs $itrs --disable_progress\
     --model_id ori --d_model 768\
     --seq_len $seq_len --label_len $label_len --pred_len $pred_len\
-    --target $target --percent $percent
+    --target $target --percent $percent --patch_size 4 --stride 2
 
 python run_TimeLLM.py\
     --n_features $n_features --d_model 16\
     --data_path $data_path \
     --batch_size 16 --itrs $itrs --disable_progress\
     --seq_len $seq_len --label_len $label_len --pred_len $pred_len\
-    --model_id ori --percent $percent
+    --model_id ori --percent $percent --target $target\
+    --top_k 2 --patch_len 4 --stride 2

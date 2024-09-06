@@ -1,0 +1,28 @@
+
+Experiment begins at 2024-09-06 10:26:18
+
+
+Experiment begins at 2024-09-06 10:27:19
+
+
+Experiment begins at 2024-09-06 10:29:51
+
+
+Experiment begins at 2024-09-06 10:32:11
+
+
+Experiment begins at 2024-09-06 10:33:15
+
+
+Experiment begins at 2024-09-06 10:34:31
+
+
+Experiment begins at 2024-09-06 10:36:01
+
+Model parameters: 133361041
+Time per epoch: 1.9 sec.
+Memory usage: Available 11004.5 MB, Allocated 1125.6 MB, Max allocated 1758.1 MB
+
+
+Experiment begins at 2024-09-06 10:36:54
+

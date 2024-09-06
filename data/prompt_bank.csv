@@ -2,6 +2,7 @@ data,prompt
 Apple,"Apple stock prices. Apple Inc. designs a wide variety of consumer electronic devices.  The company generates roughly 40% of its revenue from the Americas."
 Crude_Oil,"Crude Oil historical price per day in dollars"
 Exchange_Rate_Report,"Currency exchange rate between dollar and other international currencies"
+Financial_Aid,"Financial Aid disbursed to students depending on their instritutional needs is a big factor in their continuing higher study."
 Gold,"Gold historical price per day in dollars"
 MSFT,"Microsoft Corporation stock prices.Microsoft develops and licenses consumer and enterprise software."
 Natural_Gas,"Natural gas historical price per day in dollars"
