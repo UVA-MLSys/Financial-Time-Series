@@ -39,7 +39,7 @@ python run.py \
     --data_path $data_path\
     --model $model --itrs $itrs --disable_progress\
     --seq_len $seq_len --label_len $label_len --pred_len $pred_len\
-    --target $target --percent $percent--top_k $top_k --freq a
+    --target $target --percent $percent --top_k $top_k --freq a
 done
 
 # MICN requires label_len to be equal to seq_len
@@ -56,7 +56,7 @@ python run.py\
     --down_sampling_layers 3 --down_sampling_window 2\
     --d_model 16 --d_ff 32\
     --seq_len $seq_len --label_len 0 --pred_len $pred_len\
-    --down_sampling_method avg --e_layers 3  --freq a\
+    --down_sampling_method avg --e_layers 3 --freq a\
     --factor 3 --channel_independence 1 --itrs $itrs  --features $features\
     --target $target --disable_progress --percent $percent
 
@@ -83,4 +83,4 @@ python run_TimeLLM.py\
     --batch_size 16 --itrs $itrs --disable_progress\
     --seq_len $seq_len --label_len $label_len --pred_len $pred_len\
     --model_id ori --percent $percent --target $target\
-    --top_k 2 --patch_len $patch_len --stride $stride
+    --top_k $top_k --patch_len $patch_len --stride $stride
