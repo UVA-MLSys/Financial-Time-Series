@@ -5170,3 +5170,726 @@ Upscaling data and removing negatives...
 test -- mse:5.8678e+08, mae:8511.7, rmsle: 0.45233 smape 31.519
 
 Running for model:TimesNet
+Tesla P100-PCIE-12GB
+Args in experiment: Namespace(test=False, seed=2024, result_path='results', disable_progress=True, root_path='./data', data_path='Natural_Gas.csv', features='M', n_features=5, target='OT', freq='d', no_scale=False, seq_len=96, label_len=48, pred_len=96, top_k=5, num_kernels=6, d_model=64, n_heads=4, e_layers=2, d_layers=1, d_ff=128, moving_avg=3, factor=1, dropout=0.1, embed='timeF', activation='gelu', output_attention=False, channel_independence=1, decomp_method='moving_avg', use_norm=1, down_sampling_layers=0, down_sampling_window=1, down_sampling_method=None, seg_len=48, num_workers=10, itrs=3, itr_no=None, train_epochs=10, batch_size=32, patience=3, learning_rate=0.001, des=None, loss='MSE', lradj='type1', gpu=0, use_multi_gpu=False, devices='0,1,2,3', p_hidden_dims=[128, 128], p_hidden_layers=2, dry_run=False, percent=100, model='TimesNet', use_gpu=True, enc_in=5, dec_in=5, c_out=5, task_name='long_term_forecast')
+
+>>>> itr_no: 1, seed: 648 <<<<<<
+Use GPU: cuda:0
+Experiments will be saved in results/Natural_Gas/TimesNet_sl_96_pl_96/1
+
+Experiment begins at 2024-09-06 15:51:09
+
+>>>>>>> start training :>>>>>>>>>>
+train 1832
+val 159
+Epoch: 1 | Time: 86.6 s | Train Loss: 7.9901 Vali Loss: 7.4436
+Validation loss decreased (inf --> 7.443564).  Saving model ...
+Epoch: 2 | Time: 120 s | Train Loss: 7.6558 Vali Loss: 6.3197
+Validation loss decreased (7.443564 --> 6.319731).  Saving model ...
+Epoch: 3 | Time: 121 s | Train Loss: 6.8122 Vali Loss: 7.3689
+EarlyStopping counter: 1 out of 3
+Epoch: 4 | Time: 114 s | Train Loss: 6.5995 Vali Loss: 7.1806
+EarlyStopping counter: 2 out of 3
+Epoch: 5 | Time: 114 s | Train Loss: 5.7799 Vali Loss: 7.4262
+EarlyStopping counter: 3 out of 3
+Early stopping
+
+Training completed at 2024-09-06 16:00:27.
+Model parameters: 9394181
+Total memory: 12186.8 MB
+Allocated memory: 166.5 MB
+Max allocated memory: 1803.0 MB
+Time per epoch: 111.7 sec.
+Memory usage: Available 12186.8 MB, Allocated 166.5 MB, Max allocated 1803.0 MB
+
+Loading model from results/Natural_Gas/TimesNet_sl_96_pl_96/1/checkpoint.pth
+
+>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<
+test 157
+Preds and Trues shape: (157, 96, 5) (157, 96, 5)
+test scaled -- mse:6.2743, mae:1.904
+Upscaling data and removing negatives...
+test -- mse:7.0533e+08, mae:9055.8, rmsle: 0.46094 smape 28.56
+
+
+>>>> itr_no: 2, seed: 506 <<<<<<
+Use GPU: cuda:0
+Experiments will be saved in results/Natural_Gas/TimesNet_sl_96_pl_96/2
+
+Experiment begins at 2024-09-06 16:00:34
+
+>>>>>>> start training :>>>>>>>>>>
+train 1832
+val 159
+Epoch: 1 | Time: 101 s | Train Loss: 7.9385 Vali Loss: 6.5589
+Validation loss decreased (inf --> 6.558883).  Saving model ...
+Epoch: 2 | Time: 94.2 s | Train Loss: 7.2406 Vali Loss: 6.8296
+EarlyStopping counter: 1 out of 3
+Epoch: 3 | Time: 88.6 s | Train Loss: 6.9975 Vali Loss: 6.8685
+EarlyStopping counter: 2 out of 3
+Epoch: 4 | Time: 87.7 s | Train Loss: 6.4303 Vali Loss: 6.9598
+EarlyStopping counter: 3 out of 3
+Early stopping
+
+Training completed at 2024-09-06 16:06:46.
+Model parameters: 9394181
+Total memory: 12186.8 MB
+Allocated memory: 169.0 MB
+Max allocated memory: 1811.6 MB
+Time per epoch: 93.1 sec.
+Memory usage: Available 12186.8 MB, Allocated 169.0 MB, Max allocated 1811.6 MB
+
+Loading model from results/Natural_Gas/TimesNet_sl_96_pl_96/2/checkpoint.pth
+
+>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<
+test 157
+Preds and Trues shape: (157, 96, 5) (157, 96, 5)
+test scaled -- mse:7.6712, mae:2.039
+Upscaling data and removing negatives...
+test -- mse:6.8108e+08, mae:8820.2, rmsle: 0.46923 smape 29.445
+
+
+>>>> itr_no: 3, seed: 608 <<<<<<
+Use GPU: cuda:0
+Experiments will be saved in results/Natural_Gas/TimesNet_sl_96_pl_96/3
+
+Experiment begins at 2024-09-06 16:06:50
+
+>>>>>>> start training :>>>>>>>>>>
+train 1832
+val 159
+Epoch: 1 | Time: 94.9 s | Train Loss: 8.0483 Vali Loss: 6.2884
+Validation loss decreased (inf --> 6.288356).  Saving model ...
+Epoch: 2 | Time: 84 s | Train Loss: 7.537 Vali Loss: 6.7117
+EarlyStopping counter: 1 out of 3
+Epoch: 3 | Time: 87.5 s | Train Loss: 7.1075 Vali Loss: 8.6656
+EarlyStopping counter: 2 out of 3
+Epoch: 4 | Time: 81 s | Train Loss: 6.8032 Vali Loss: 7.3228
+EarlyStopping counter: 3 out of 3
+Early stopping
+
+Training completed at 2024-09-06 16:12:38.
+Model parameters: 9394181
+Total memory: 12186.8 MB
+Allocated memory: 167.0 MB
+Max allocated memory: 1813.1 MB
+Time per epoch: 87.1 sec.
+Memory usage: Available 12186.8 MB, Allocated 167.0 MB, Max allocated 1813.1 MB
+
+Loading model from results/Natural_Gas/TimesNet_sl_96_pl_96/3/checkpoint.pth
+
+>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<
+test 157
+Preds and Trues shape: (157, 96, 5) (157, 96, 5)
+test scaled -- mse:6.8241, mae:1.9817
+Upscaling data and removing negatives...
+test -- mse:7.6495e+08, mae:9456.7, rmsle: 0.46951 smape 29.58
+
+Running for model:iTransformer
+Tesla P100-PCIE-12GB
+Args in experiment: Namespace(test=False, seed=2024, result_path='results', disable_progress=True, root_path='./data', data_path='Natural_Gas.csv', features='M', n_features=5, target='OT', freq='d', no_scale=False, seq_len=96, label_len=48, pred_len=96, top_k=5, num_kernels=6, d_model=64, n_heads=4, e_layers=2, d_layers=1, d_ff=128, moving_avg=3, factor=1, dropout=0.1, embed='timeF', activation='gelu', output_attention=False, channel_independence=1, decomp_method='moving_avg', use_norm=1, down_sampling_layers=0, down_sampling_window=1, down_sampling_method=None, seg_len=48, num_workers=10, itrs=3, itr_no=None, train_epochs=10, batch_size=32, patience=3, learning_rate=0.001, des=None, loss='MSE', lradj='type1', gpu=0, use_multi_gpu=False, devices='0,1,2,3', p_hidden_dims=[128, 128], p_hidden_layers=2, dry_run=False, percent=100, model='iTransformer', use_gpu=True, enc_in=5, dec_in=5, c_out=5, task_name='long_term_forecast')
+
+>>>> itr_no: 1, seed: 648 <<<<<<
+Use GPU: cuda:0
+Experiments will be saved in results/Natural_Gas/iTransformer_sl_96_pl_96/1
+
+Experiment begins at 2024-09-06 16:12:49
+
+>>>>>>> start training :>>>>>>>>>>
+train 1832
+val 159
+Epoch: 1 | Time: 2.76 s | Train Loss: 8.2084 Vali Loss: 4.9648
+Validation loss decreased (inf --> 4.964810).  Saving model ...
+Epoch: 2 | Time: 2.67 s | Train Loss: 7.0567 Vali Loss: 5.8117
+EarlyStopping counter: 1 out of 3
+Epoch: 3 | Time: 2.5 s | Train Loss: 5.4829 Vali Loss: 8.9204
+EarlyStopping counter: 2 out of 3
+Epoch: 4 | Time: 2.5 s | Train Loss: 4.6591 Vali Loss: 7.8218
+EarlyStopping counter: 3 out of 3
+Early stopping
+
+Training completed at 2024-09-06 16:13:01.
+Model parameters: 79520
+Total memory: 12186.8 MB
+Allocated memory: 17.6 MB
+Max allocated memory: 20.8 MB
+Time per epoch: 3.0 sec.
+Memory usage: Available 12186.8 MB, Allocated 17.6 MB, Max allocated 20.8 MB
+
+Loading model from results/Natural_Gas/iTransformer_sl_96_pl_96/1/checkpoint.pth
+
+>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<
+test 157
+Preds and Trues shape: (157, 96, 5) (157, 96, 5)
+test scaled -- mse:5.6512, mae:1.7986
+Upscaling data and removing negatives...
+test -- mse:9.9358e+08, mae:10968, rmsle: 0.47785 smape 27.862
+
+
+>>>> itr_no: 2, seed: 506 <<<<<<
+Use GPU: cuda:0
+Experiments will be saved in results/Natural_Gas/iTransformer_sl_96_pl_96/2
+
+Experiment begins at 2024-09-06 16:13:02
+
+>>>>>>> start training :>>>>>>>>>>
+train 1832
+val 159
+Epoch: 1 | Time: 2.41 s | Train Loss: 8.294 Vali Loss: 4.9514
+Validation loss decreased (inf --> 4.951443).  Saving model ...
+Epoch: 2 | Time: 2.39 s | Train Loss: 7.0889 Vali Loss: 6.7123
+EarlyStopping counter: 1 out of 3
+Epoch: 3 | Time: 2.4 s | Train Loss: 5.605 Vali Loss: 9.6332
+EarlyStopping counter: 2 out of 3
+Epoch: 4 | Time: 2.39 s | Train Loss: 4.7555 Vali Loss: 8.5273
+EarlyStopping counter: 3 out of 3
+Early stopping
+
+Training completed at 2024-09-06 16:13:12.
+Model parameters: 79520
+Total memory: 12186.8 MB
+Allocated memory: 17.6 MB
+Max allocated memory: 20.8 MB
+Time per epoch: 2.5 sec.
+Memory usage: Available 12186.8 MB, Allocated 17.6 MB, Max allocated 20.8 MB
+
+Loading model from results/Natural_Gas/iTransformer_sl_96_pl_96/2/checkpoint.pth
+
+>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<
+test 157
+Preds and Trues shape: (157, 96, 5) (157, 96, 5)
+test scaled -- mse:6.3811, mae:1.9303
+Upscaling data and removing negatives...
+test -- mse:1.1173e+09, mae:11947, rmsle: 0.50021 smape 30.408
+
+
+>>>> itr_no: 3, seed: 608 <<<<<<
+Use GPU: cuda:0
+Experiments will be saved in results/Natural_Gas/iTransformer_sl_96_pl_96/3
+
+Experiment begins at 2024-09-06 16:13:13
+
+>>>>>>> start training :>>>>>>>>>>
+train 1832
+val 159
+Epoch: 1 | Time: 1.82 s | Train Loss: 8.34 Vali Loss: 4.9201
+Validation loss decreased (inf --> 4.920084).  Saving model ...
+Epoch: 2 | Time: 2.38 s | Train Loss: 7.0264 Vali Loss: 6.3345
+EarlyStopping counter: 1 out of 3
+Epoch: 3 | Time: 2.37 s | Train Loss: 5.6264 Vali Loss: 7.7875
+EarlyStopping counter: 2 out of 3
+Epoch: 4 | Time: 2.37 s | Train Loss: 4.8677 Vali Loss: 7.24
+EarlyStopping counter: 3 out of 3
+Early stopping
+
+Training completed at 2024-09-06 16:13:22.
+Model parameters: 79520
+Total memory: 12186.8 MB
+Allocated memory: 17.6 MB
+Max allocated memory: 20.8 MB
+Time per epoch: 2.3 sec.
+Memory usage: Available 12186.8 MB, Allocated 17.6 MB, Max allocated 20.8 MB
+
+Loading model from results/Natural_Gas/iTransformer_sl_96_pl_96/3/checkpoint.pth
+
+>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<
+test 157
+Preds and Trues shape: (157, 96, 5) (157, 96, 5)
+test scaled -- mse:5.7031, mae:1.8135
+Upscaling data and removing negatives...
+test -- mse:8.6874e+08, mae:10291, rmsle: 0.4712 smape 28.112
+
+Tesla P100-PCIE-12GB
+Args in experiment: Namespace(test=False, seed=2024, result_path='results', disable_progress=True, root_path='./data', data_path='Natural_Gas.csv', features='M', n_features=5, target='OT', freq='d', no_scale=False, seq_len=96, label_len=96, pred_len=96, top_k=5, num_kernels=6, d_model=64, n_heads=4, e_layers=2, d_layers=1, d_ff=128, moving_avg=3, factor=1, dropout=0.1, embed='timeF', activation='gelu', output_attention=False, channel_independence=1, decomp_method='moving_avg', use_norm=1, down_sampling_layers=0, down_sampling_window=1, down_sampling_method=None, seg_len=48, num_workers=10, itrs=3, itr_no=None, train_epochs=10, batch_size=32, patience=3, learning_rate=0.001, des=None, loss='MSE', lradj='type1', gpu=0, use_multi_gpu=False, devices='0,1,2,3', p_hidden_dims=[128, 128], p_hidden_layers=2, dry_run=False, percent=100, model='MICN', use_gpu=True, enc_in=5, dec_in=5, c_out=5, task_name='long_term_forecast')
+
+>>>> itr_no: 1, seed: 648 <<<<<<
+Use GPU: cuda:0
+Experiments will be saved in results/Natural_Gas/MICN_sl_96_pl_96/1
+
+Experiment begins at 2024-09-06 16:13:30
+
+>>>>>>> start training :>>>>>>>>>>
+train 1832
+val 159
+Epoch: 1 | Time: 2.33 s | Train Loss: 8.108 Vali Loss: 5.4029
+Validation loss decreased (inf --> 5.402915).  Saving model ...
+Epoch: 2 | Time: 1.78 s | Train Loss: 7.5011 Vali Loss: 5.9773
+EarlyStopping counter: 1 out of 3
+Epoch: 3 | Time: 1.78 s | Train Loss: 6.7407 Vali Loss: 5.2583
+Validation loss decreased (5.402915 --> 5.258260).  Saving model ...
+Epoch: 4 | Time: 1.84 s | Train Loss: 4.8826 Vali Loss: 3.7072
+Validation loss decreased (5.258260 --> 3.707172).  Saving model ...
+Epoch: 5 | Time: 1.86 s | Train Loss: 3.3814 Vali Loss: 2.8074
+Validation loss decreased (3.707172 --> 2.807421).  Saving model ...
+Epoch: 6 | Time: 1.87 s | Train Loss: 2.5779 Vali Loss: 3.7307
+EarlyStopping counter: 1 out of 3
+Epoch: 7 | Time: 1.92 s | Train Loss: 2.1316 Vali Loss: 3.1203
+EarlyStopping counter: 2 out of 3
+Epoch: 8 | Time: 1.79 s | Train Loss: 1.6955 Vali Loss: 3.0219
+EarlyStopping counter: 3 out of 3
+Early stopping
+
+Training completed at 2024-09-06 16:13:47.
+Model parameters: 405157
+Total memory: 12186.8 MB
+Allocated memory: 23.8 MB
+Max allocated memory: 61.1 MB
+Time per epoch: 2.2 sec.
+Memory usage: Available 12186.8 MB, Allocated 23.8 MB, Max allocated 61.1 MB
+
+Loading model from results/Natural_Gas/MICN_sl_96_pl_96/1/checkpoint.pth
+
+>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<
+test 157
+Preds and Trues shape: (157, 96, 5) (157, 96, 5)
+test scaled -- mse:4.6157, mae:1.6879
+Upscaling data and removing negatives...
+test -- mse:4.4935e+08, mae:7325.1, rmsle: 0.42624 smape 31.768
+
+
+>>>> itr_no: 2, seed: 506 <<<<<<
+Use GPU: cuda:0
+Experiments will be saved in results/Natural_Gas/MICN_sl_96_pl_96/2
+
+Experiment begins at 2024-09-06 16:13:48
+
+>>>>>>> start training :>>>>>>>>>>
+train 1832
+val 159
+Epoch: 1 | Time: 1.82 s | Train Loss: 8.2607 Vali Loss: 5.8309
+Validation loss decreased (inf --> 5.830935).  Saving model ...
+Epoch: 2 | Time: 1.91 s | Train Loss: 7.5749 Vali Loss: 6.7909
+EarlyStopping counter: 1 out of 3
+Epoch: 3 | Time: 1.78 s | Train Loss: 6.8537 Vali Loss: 6.6524
+EarlyStopping counter: 2 out of 3
+Epoch: 4 | Time: 1.85 s | Train Loss: 5.0724 Vali Loss: 4.2961
+Validation loss decreased (5.830935 --> 4.296070).  Saving model ...
+Epoch: 5 | Time: 1.79 s | Train Loss: 4.5457 Vali Loss: 3.8921
+Validation loss decreased (4.296070 --> 3.892108).  Saving model ...
+Epoch: 6 | Time: 1.8 s | Train Loss: 4.2296 Vali Loss: 4.167
+EarlyStopping counter: 1 out of 3
+Epoch: 7 | Time: 1.8 s | Train Loss: 3.8517 Vali Loss: 3.5217
+Validation loss decreased (3.892108 --> 3.521741).  Saving model ...
+Epoch: 8 | Time: 1.8 s | Train Loss: 3.6237 Vali Loss: 3.3757
+Validation loss decreased (3.521741 --> 3.375683).  Saving model ...
+Epoch: 9 | Time: 1.8 s | Train Loss: 3.3847 Vali Loss: 3.6165
+EarlyStopping counter: 1 out of 3
+Epoch: 10 | Time: 2.02 s | Train Loss: 3.2324 Vali Loss: 3.455
+EarlyStopping counter: 2 out of 3
+
+Training completed at 2024-09-06 16:14:07.
+Model parameters: 405157
+Total memory: 12186.8 MB
+Allocated memory: 23.8 MB
+Max allocated memory: 61.2 MB
+Time per epoch: 2.0 sec.
+Memory usage: Available 12186.8 MB, Allocated 23.8 MB, Max allocated 61.2 MB
+
+Loading model from results/Natural_Gas/MICN_sl_96_pl_96/2/checkpoint.pth
+
+>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<
+test 157
+Preds and Trues shape: (157, 96, 5) (157, 96, 5)
+test scaled -- mse:3.9349, mae:1.5806
+Upscaling data and removing negatives...
+test -- mse:4.5748e+08, mae:7468.4, rmsle: 0.4266 smape 31.164
+
+
+>>>> itr_no: 3, seed: 608 <<<<<<
+Use GPU: cuda:0
+Experiments will be saved in results/Natural_Gas/MICN_sl_96_pl_96/3
+
+Experiment begins at 2024-09-06 16:14:08
+
+>>>>>>> start training :>>>>>>>>>>
+train 1832
+val 159
+Epoch: 1 | Time: 1.82 s | Train Loss: 8.0876 Vali Loss: 6.2003
+Validation loss decreased (inf --> 6.200263).  Saving model ...
+Epoch: 2 | Time: 1.82 s | Train Loss: 7.396 Vali Loss: 5.8212
+Validation loss decreased (6.200263 --> 5.821205).  Saving model ...
+Epoch: 3 | Time: 1.81 s | Train Loss: 6.2536 Vali Loss: 3.4746
+Validation loss decreased (5.821205 --> 3.474558).  Saving model ...
+Epoch: 4 | Time: 2.36 s | Train Loss: 4.3633 Vali Loss: 4.1593
+EarlyStopping counter: 1 out of 3
+Epoch: 5 | Time: 2.47 s | Train Loss: 2.9326 Vali Loss: 3.0238
+Validation loss decreased (3.474558 --> 3.023841).  Saving model ...
+Epoch: 6 | Time: 2.47 s | Train Loss: 2.2887 Vali Loss: 3.6433
+EarlyStopping counter: 1 out of 3
+Epoch: 7 | Time: 2.56 s | Train Loss: 1.8641 Vali Loss: 3.5935
+EarlyStopping counter: 2 out of 3
+Epoch: 8 | Time: 2.48 s | Train Loss: 1.5412 Vali Loss: 3.3094
+EarlyStopping counter: 3 out of 3
+Early stopping
+
+Training completed at 2024-09-06 16:14:27.
+Model parameters: 405157
+Total memory: 12186.8 MB
+Allocated memory: 23.8 MB
+Max allocated memory: 61.2 MB
+Time per epoch: 2.4 sec.
+Memory usage: Available 12186.8 MB, Allocated 23.8 MB, Max allocated 61.2 MB
+
+Loading model from results/Natural_Gas/MICN_sl_96_pl_96/3/checkpoint.pth
+
+>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<
+test 157
+Preds and Trues shape: (157, 96, 5) (157, 96, 5)
+test scaled -- mse:3.6829, mae:1.5519
+Upscaling data and removing negatives...
+test -- mse:4.5073e+08, mae:7417.2, rmsle: 0.41101 smape 28.523
+
+Tesla P100-PCIE-12GB
+Args in experiment: Namespace(test=False, seed=2024, result_path='results', disable_progress=True, root_path='./data', data_path='Natural_Gas.csv', features='M', n_features=5, target='OT', freq='d', no_scale=False, seq_len=96, label_len=0, pred_len=96, top_k=5, num_kernels=6, d_model=16, n_heads=4, e_layers=3, d_layers=1, d_ff=32, moving_avg=3, factor=3, dropout=0.1, embed='timeF', activation='gelu', output_attention=False, channel_independence=1, decomp_method='moving_avg', use_norm=1, down_sampling_layers=3, down_sampling_window=2, down_sampling_method='avg', seg_len=48, num_workers=10, itrs=3, itr_no=None, train_epochs=10, batch_size=32, patience=3, learning_rate=0.001, des=None, loss='MSE', lradj='type1', gpu=0, use_multi_gpu=False, devices='0,1,2,3', p_hidden_dims=[128, 128], p_hidden_layers=2, dry_run=False, percent=100, model='TimeMixer', use_gpu=True, enc_in=5, dec_in=5, c_out=5, task_name='long_term_forecast')
+
+>>>> itr_no: 1, seed: 648 <<<<<<
+Use GPU: cuda:0
+Experiments will be saved in results/Natural_Gas/TimeMixer_sl_96_pl_96/1
+
+Experiment begins at 2024-09-06 16:14:36
+
+>>>>>>> start training :>>>>>>>>>>
+train 1832
+val 159
+Epoch: 1 | Time: 5.31 s | Train Loss: 8.1564 Vali Loss: 9.0806
+Validation loss decreased (inf --> 9.080597).  Saving model ...
+Epoch: 2 | Time: 5.23 s | Train Loss: 6.5542 Vali Loss: 12.754
+EarlyStopping counter: 1 out of 3
+Epoch: 3 | Time: 5.25 s | Train Loss: 5.5874 Vali Loss: 15.069
+EarlyStopping counter: 2 out of 3
+Epoch: 4 | Time: 4.77 s | Train Loss: 4.7021 Vali Loss: 13.17
+EarlyStopping counter: 3 out of 3
+Early stopping
+
+Training completed at 2024-09-06 16:14:58.
+Model parameters: 104289
+Total memory: 12186.8 MB
+Allocated memory: 18.3 MB
+Max allocated memory: 83.1 MB
+Time per epoch: 5.5 sec.
+Memory usage: Available 12186.8 MB, Allocated 18.3 MB, Max allocated 83.1 MB
+
+Loading model from results/Natural_Gas/TimeMixer_sl_96_pl_96/1/checkpoint.pth
+
+>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<
+test 157
+Preds and Trues shape: (157, 96, 5) (157, 96, 5)
+test scaled -- mse:9.1357, mae:2.3245
+Upscaling data and removing negatives...
+test -- mse:7.4138e+08, mae:9359.7, rmsle: 0.49609 smape 35.63
+
+
+>>>> itr_no: 2, seed: 506 <<<<<<
+Use GPU: cuda:0
+Experiments will be saved in results/Natural_Gas/TimeMixer_sl_96_pl_96/2
+
+Experiment begins at 2024-09-06 16:14:58
+
+>>>>>>> start training :>>>>>>>>>>
+train 1832
+val 159
+Epoch: 1 | Time: 5.41 s | Train Loss: 8.6525 Vali Loss: 7.4808
+Validation loss decreased (inf --> 7.480778).  Saving model ...
+Epoch: 2 | Time: 5.18 s | Train Loss: 6.7024 Vali Loss: 9.788
+EarlyStopping counter: 1 out of 3
+Epoch: 3 | Time: 5.05 s | Train Loss: 5.726 Vali Loss: 9.4166
+EarlyStopping counter: 2 out of 3
+Epoch: 4 | Time: 5.3 s | Train Loss: 4.9131 Vali Loss: 11.175
+EarlyStopping counter: 3 out of 3
+Early stopping
+
+Training completed at 2024-09-06 16:15:20.
+Model parameters: 104289
+Total memory: 12186.8 MB
+Allocated memory: 18.3 MB
+Max allocated memory: 83.1 MB
+Time per epoch: 5.4 sec.
+Memory usage: Available 12186.8 MB, Allocated 18.3 MB, Max allocated 83.1 MB
+
+Loading model from results/Natural_Gas/TimeMixer_sl_96_pl_96/2/checkpoint.pth
+
+>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<
+test 157
+Preds and Trues shape: (157, 96, 5) (157, 96, 5)
+test scaled -- mse:7.5086, mae:2.0949
+Upscaling data and removing negatives...
+test -- mse:7.58e+08, mae:9354.2, rmsle: 0.4805 smape 31.404
+
+
+>>>> itr_no: 3, seed: 608 <<<<<<
+Use GPU: cuda:0
+Experiments will be saved in results/Natural_Gas/TimeMixer_sl_96_pl_96/3
+
+Experiment begins at 2024-09-06 16:15:21
+
+>>>>>>> start training :>>>>>>>>>>
+train 1832
+val 159
+Epoch: 1 | Time: 3.63 s | Train Loss: 8.531 Vali Loss: 5.9403
+Validation loss decreased (inf --> 5.940323).  Saving model ...
+Epoch: 2 | Time: 4.03 s | Train Loss: 6.9475 Vali Loss: 11.396
+EarlyStopping counter: 1 out of 3
+Epoch: 3 | Time: 4.89 s | Train Loss: 5.8108 Vali Loss: 13.605
+EarlyStopping counter: 2 out of 3
+Epoch: 4 | Time: 5.02 s | Train Loss: 4.8292 Vali Loss: 15.844
+EarlyStopping counter: 3 out of 3
+Early stopping
+
+Training completed at 2024-09-06 16:15:39.
+Model parameters: 104289
+Total memory: 12186.8 MB
+Allocated memory: 18.3 MB
+Max allocated memory: 83.1 MB
+Time per epoch: 4.5 sec.
+Memory usage: Available 12186.8 MB, Allocated 18.3 MB, Max allocated 83.1 MB
+
+Loading model from results/Natural_Gas/TimeMixer_sl_96_pl_96/3/checkpoint.pth
+
+>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<
+test 157
+Preds and Trues shape: (157, 96, 5) (157, 96, 5)
+test scaled -- mse:6.705, mae:1.977
+Upscaling data and removing negatives...
+test -- mse:7.4511e+08, mae:9239.9, rmsle: 0.47682 smape 30.214
+
+Tesla P100-PCIE-12GB
+Args in experiment: Namespace(test=False, seed=2024, result_path='results', disable_progress=True, root_path='./data', data_path='Natural_Gas.csv', features='M', n_features=5, target='OT', freq='d', no_scale=False, seq_len=96, label_len=48, pred_len=96, top_k=5, num_kernels=6, d_model=768, n_heads=4, e_layers=2, d_layers=1, d_ff=128, moving_avg=3, factor=1, dropout=0.1, embed='timeF', activation='gelu', output_attention=False, num_workers=10, itrs=3, itr_no=None, train_epochs=10, batch_size=32, patience=3, learning_rate=0.001, des=None, loss='MSE', lradj='type1', gpu=0, use_multi_gpu=False, devices='0,1,2,3', dry_run=False, percent=100, model_id='ori', model='CALF', task_loss='l1', distill_loss='l1', logits_loss='l1', tmax=20, r=8, lora_alpha=32, lora_dropout=0.1, word_embedding_path='./utils/wte_pca_500.pt', task_w=1.0, feature_w=0.01, logits_w=1.0, gpt_layers=6, log_fine_name='CALF_result.txt', noise_scale=-100, bootstrap_eval=0, use_gpu=True, enc_in=5, dec_in=5, c_out=5, task_name='long_term_forecast')
+
+>>>> itr_no: 1, seed: 648 <<<<<<
+Use GPU: cuda:0
+model_id  ori
+Experiments will be saved in results/Natural_Gas/CALF_sl_96_pl_96_id_ori/1
+
+Experiment begins at 2024-09-06 16:15:48
+
+>>>>>>> start training :>>>>>>>>>>
+train 1832
+val 159
+Loss function weights: 1.0 1.0 0.01
+Orig-- ori
+Epoch: 1 | Time: 4.66 s | Train Loss: 2.6253 Vali Loss: 5.3739
+Validation loss decreased (inf --> 5.373944).  Saving model ...
+Epoch: 2 | Time: 5.67 s | Train Loss: 2.3766 Vali Loss: 4.8132
+Validation loss decreased (5.373944 --> 4.813157).  Saving model ...
+Epoch: 3 | Time: 5.55 s | Train Loss: 3.0766 Vali Loss: 4.1064
+Validation loss decreased (4.813157 --> 4.106359).  Saving model ...
+Epoch: 4 | Time: 6.05 s | Train Loss: 3.1554 Vali Loss: 4.4898
+EarlyStopping counter: 1 out of 3
+Epoch: 5 | Time: 4.48 s | Train Loss: 4.1762 Vali Loss: 4.9534
+EarlyStopping counter: 2 out of 3
+Epoch: 6 | Time: 3.9 s | Train Loss: 4.2223 Vali Loss: 4.7395
+EarlyStopping counter: 3 out of 3
+Early stopping
+
+Training completed at 2024-09-06 16:16:44.
+Model parameters: 180107360
+Total memory: 12186.8 MB
+Allocated memory: 971.2 MB
+Max allocated memory: 1255.5 MB
+Time per epoch: 9.4 sec.
+Memory usage: Available 12186.8 MB, Allocated 971.2 MB, Max allocated 1255.5 MB
+
+Loading model from results/Natural_Gas/CALF_sl_96_pl_96_id_ori/1/llm.pth
+
+>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<
+test 157
+Preds and Trues shape: (157, 96, 5) (157, 96, 5)
+test scaled -- mse:4.7597, mae:1.6847
+Upscaling data and removing negatives...
+test -- mse:8.7471e+08, mae:10376, rmsle: 0.45831 smape 27.685
+
+
+>>>> itr_no: 2, seed: 506 <<<<<<
+Use GPU: cuda:0
+model_id  ori
+Experiments will be saved in results/Natural_Gas/CALF_sl_96_pl_96_id_ori/2
+
+Experiment begins at 2024-09-06 16:16:46
+
+>>>>>>> start training :>>>>>>>>>>
+train 1832
+val 159
+Loss function weights: 1.0 1.0 0.01
+Orig-- ori
+Epoch: 1 | Time: 5.66 s | Train Loss: 2.5607 Vali Loss: 4.488
+Validation loss decreased (inf --> 4.488003).  Saving model ...
+Epoch: 2 | Time: 5.49 s | Train Loss: 2.4766 Vali Loss: 4.2732
+Validation loss decreased (4.488003 --> 4.273221).  Saving model ...
+Epoch: 3 | Time: 5.72 s | Train Loss: 2.5893 Vali Loss: 4.4509
+EarlyStopping counter: 1 out of 3
+Epoch: 4 | Time: 5.81 s | Train Loss: 3.172 Vali Loss: 4.2973
+EarlyStopping counter: 2 out of 3
+Epoch: 5 | Time: 5.42 s | Train Loss: 4.0687 Vali Loss: 5.1547
+EarlyStopping counter: 3 out of 3
+Early stopping
+
+Training completed at 2024-09-06 16:17:30.
+Model parameters: 180107360
+Total memory: 12186.8 MB
+Allocated memory: 972.6 MB
+Max allocated memory: 1662.9 MB
+Time per epoch: 8.9 sec.
+Memory usage: Available 12186.8 MB, Allocated 972.6 MB, Max allocated 1662.9 MB
+
+Loading model from results/Natural_Gas/CALF_sl_96_pl_96_id_ori/2/llm.pth
+
+>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<
+test 157
+Preds and Trues shape: (157, 96, 5) (157, 96, 5)
+test scaled -- mse:5.0479, mae:1.7314
+Upscaling data and removing negatives...
+test -- mse:9.0069e+08, mae:10587, rmsle: 0.46177 smape 28.47
+
+
+>>>> itr_no: 3, seed: 608 <<<<<<
+Use GPU: cuda:0
+model_id  ori
+Experiments will be saved in results/Natural_Gas/CALF_sl_96_pl_96_id_ori/3
+
+Experiment begins at 2024-09-06 16:17:32
+
+>>>>>>> start training :>>>>>>>>>>
+train 1832
+val 159
+Loss function weights: 1.0 1.0 0.01
+Orig-- ori
+Epoch: 1 | Time: 5.63 s | Train Loss: 2.5532 Vali Loss: 3.4893
+Validation loss decreased (inf --> 3.489314).  Saving model ...
+Epoch: 2 | Time: 5.86 s | Train Loss: 2.2784 Vali Loss: 3.6974
+EarlyStopping counter: 1 out of 3
+Epoch: 3 | Time: 6.06 s | Train Loss: 3.2549 Vali Loss: 4.2119
+EarlyStopping counter: 2 out of 3
+Epoch: 4 | Time: 5.54 s | Train Loss: 3.534 Vali Loss: 4.7784
+EarlyStopping counter: 3 out of 3
+Early stopping
+
+Training completed at 2024-09-06 16:18:03.
+Model parameters: 180107360
+Total memory: 12186.8 MB
+Allocated memory: 972.3 MB
+Max allocated memory: 1662.9 MB
+Time per epoch: 7.8 sec.
+Memory usage: Available 12186.8 MB, Allocated 972.3 MB, Max allocated 1662.9 MB
+
+Loading model from results/Natural_Gas/CALF_sl_96_pl_96_id_ori/3/llm.pth
+
+>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<
+test 157
+Preds and Trues shape: (157, 96, 5) (157, 96, 5)
+test scaled -- mse:4.3837, mae:1.6565
+Upscaling data and removing negatives...
+test -- mse:9.3245e+08, mae:10819, rmsle: 0.45573 smape 28.733
+
+Tesla P100-PCIE-12GB
+Args in experiment: Namespace(test=False, seed=2024, result_path='results', disable_progress=True, root_path='./data', data_path='Natural_Gas.csv', features='M', n_features=5, target='OT', freq='d', no_scale=False, seq_len=96, label_len=48, pred_len=96, top_k=5, num_kernels=6, d_model=768, n_heads=4, e_layers=2, d_layers=1, d_ff=128, moving_avg=3, factor=1, dropout=0.1, embed='timeF', activation='gelu', output_attention=False, num_workers=10, itrs=3, itr_no=None, train_epochs=10, batch_size=32, patience=3, learning_rate=0.001, des=None, loss='MSE', lradj='type1', gpu=0, use_multi_gpu=False, devices='0,1,2,3', dry_run=False, percent=100, model_id='ori', model='OFA', gpt_layers=6, is_gpt=1, patch_size=16, kernel_size=25, pretrain=1, freeze=1, stride=8, max_len=-1, hid_dim=16, tmax=20, n_scale=-1, use_gpu=True, enc_in=5, dec_in=5, c_out=5, task_name='long_term_forecast')
+
+>>>> itr_no: 1, seed: 648 <<<<<<
+Use GPU: cuda:0
+Experiments will be saved in results/Natural_Gas/OFA_sl_96_pl_96_id_ori/1
+
+Experiment begins at 2024-09-06 16:18:12
+
+>>>>>>> start training :>>>>>>>>>>
+train 1832
+val 159
+Epoch: 1 | Time: 5.84 s | Train Loss: 1.7569 Vali Loss: 1.5151
+Validation loss decreased (inf --> 1.515146).  Saving model ...
+Epoch: 2 | Time: 6.86 s | Train Loss: 1.6574 Vali Loss: 1.6127
+EarlyStopping counter: 1 out of 3
+Epoch: 3 | Time: 9.13 s | Train Loss: 1.5945 Vali Loss: 1.6501
+EarlyStopping counter: 2 out of 3
+Epoch: 4 | Time: 11 s | Train Loss: 1.5551 Vali Loss: 1.8384
+EarlyStopping counter: 3 out of 3
+Early stopping
+
+Training completed at 2024-09-06 16:18:51.
+Model parameters: 82810464
+Total memory: 12186.8 MB
+Allocated memory: 360.0 MB
+Max allocated memory: 1247.9 MB
+Time per epoch: 9.6 sec.
+Memory usage: Available 12186.8 MB, Allocated 360.0 MB, Max allocated 1247.9 MB
+
+Loading model from results/Natural_Gas/OFA_sl_96_pl_96_id_ori/1/llm.pth
+
+>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<
+test 157
+Preds and Trues shape: (157, 96, 5) (157, 96, 5)
+test scaled -- mse:5.3623, mae:1.7889
+Upscaling data and removing negatives...
+test -- mse:5.1888e+08, mae:8069, rmsle: 0.42616 smape 28.995
+
+
+>>>> itr_no: 2, seed: 506 <<<<<<
+Use GPU: cuda:0
+Experiments will be saved in results/Natural_Gas/OFA_sl_96_pl_96_id_ori/2
+
+Experiment begins at 2024-09-06 16:18:52
+
+>>>>>>> start training :>>>>>>>>>>
+train 1832
+val 159
+Epoch: 1 | Time: 11.8 s | Train Loss: 1.7387 Vali Loss: 1.5565
+Validation loss decreased (inf --> 1.556467).  Saving model ...
+Epoch: 2 | Time: 9.21 s | Train Loss: 1.6454 Vali Loss: 1.5886
+EarlyStopping counter: 1 out of 3
+Epoch: 3 | Time: 14.5 s | Train Loss: 1.6107 Vali Loss: 1.6228
+EarlyStopping counter: 2 out of 3
+Epoch: 4 | Time: 11.7 s | Train Loss: 1.5839 Vali Loss: 1.7389
+EarlyStopping counter: 3 out of 3
+Early stopping
+
+Training completed at 2024-09-06 16:19:44.
+Model parameters: 82810464
+Total memory: 12186.8 MB
+Allocated memory: 361.6 MB
+Max allocated memory: 1249.2 MB
+Time per epoch: 12.8 sec.
+Memory usage: Available 12186.8 MB, Allocated 361.6 MB, Max allocated 1249.2 MB
+
+Loading model from results/Natural_Gas/OFA_sl_96_pl_96_id_ori/2/llm.pth
+
+>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<
+test 157
+Preds and Trues shape: (157, 96, 5) (157, 96, 5)
+test scaled -- mse:5.5776, mae:1.8164
+Upscaling data and removing negatives...
+test -- mse:5.1334e+08, mae:8025.4, rmsle: 0.43095 smape 29.43
+
+
+>>>> itr_no: 3, seed: 608 <<<<<<
+Use GPU: cuda:0
+Experiments will be saved in results/Natural_Gas/OFA_sl_96_pl_96_id_ori/3
+
+Experiment begins at 2024-09-06 16:19:45
+
+>>>>>>> start training :>>>>>>>>>>
+train 1832
+val 159
+Epoch: 1 | Time: 12.7 s | Train Loss: 1.767 Vali Loss: 1.4664
+Validation loss decreased (inf --> 1.466391).  Saving model ...
+Epoch: 2 | Time: 10.9 s | Train Loss: 1.6679 Vali Loss: 1.7549
+EarlyStopping counter: 1 out of 3
+Epoch: 3 | Time: 11.9 s | Train Loss: 1.6193 Vali Loss: 1.5788
+EarlyStopping counter: 2 out of 3
+Epoch: 4 | Time: 12.6 s | Train Loss: 1.5823 Vali Loss: 1.8238
+EarlyStopping counter: 3 out of 3
+Early stopping
+
+Training completed at 2024-09-06 16:20:37.
+Model parameters: 82810464
+Total memory: 12186.8 MB
+Allocated memory: 362.9 MB
+Max allocated memory: 1250.9 MB
+Time per epoch: 13.1 sec.
+Memory usage: Available 12186.8 MB, Allocated 362.9 MB, Max allocated 1250.9 MB
+
+Loading model from results/Natural_Gas/OFA_sl_96_pl_96_id_ori/3/llm.pth
+
+>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<
+test 157
+Preds and Trues shape: (157, 96, 5) (157, 96, 5)
+test scaled -- mse:5.0468, mae:1.7403
+Upscaling data and removing negatives...
+test -- mse:5.3874e+08, mae:8203.8, rmsle: 0.42238 smape 28.605
+
