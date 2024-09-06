@@ -26,7 +26,7 @@ echo "Running for model:$model"
 
 python run.py \
     --n_features $n_features \
-    --data_path $data_path\
+    --data_path $data_path --disable_progress\
     --model $model --itrs $itrs
 done
 
@@ -42,16 +42,16 @@ python run.py\
     --down_sampling_layers 3 --down_sampling_window 2\
     --d_model 16 --d_ff 32 --label_len 0 \
     --down_sampling_method avg --e_layers 3 \
-    --factor 3 --channel_independence 1 --itrs $itrs
+    --factor 3 --channel_independence 1 --itrs $itrs --disable_progress
 
 python run_CALF.py\
     --n_features $n_features --d_model 768\
     --data_path $data_path\
-    --itrs $itrs\
+    --itrs $itrs --disable_progress\
     --model_id ori
 
 python run_OFA.py\
     --n_features $n_features \
     --data_path $data_path\
     --itrs $itrs --d_model 768\
-    --model_id ori
+    --model_id ori --disable_progress

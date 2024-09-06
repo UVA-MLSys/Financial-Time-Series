@@ -2524,3 +2524,1521 @@ mae:0.74785, rmse:0.98461, mse:0.96946
 SPX500 TimeMixer_sl_96_pl_24  test
 mae:110.83, rmse:139.05, mse:19334, rmsle 0.028564 smape 2.2671
 
+Apple DLinear_sl_96_pl_48  test scaled
+mae:1.4253, rmse:1.832, mse:3.3564
+
+Apple DLinear_sl_96_pl_48  test
+mae:4.1554e+06, rmse:1.3968e+07, mse:1.9509e+14, rmsle 0.19616 smape 11.372
+
+Apple DLinear_sl_96_pl_48  test scaled
+mae:1.3912, rmse:1.7964, mse:3.2271
+
+Apple DLinear_sl_96_pl_48  test
+mae:4.1719e+06, rmse:1.4057e+07, mse:1.9761e+14, rmsle 0.19627 smape 11.228
+
+Apple DLinear_sl_96_pl_48  test scaled
+mae:1.3727, rmse:1.7716, mse:3.1385
+
+Apple DLinear_sl_96_pl_48  test
+mae:4.0941e+06, rmse:1.3822e+07, mse:1.9105e+14, rmsle 0.19342 smape 11.082
+
+Apple PatchTST_sl_96_pl_48  test scaled
+mae:1.5474, rmse:2.0336, mse:4.1354
+
+Apple PatchTST_sl_96_pl_48  test
+mae:3.5693e+06, rmse:1.3199e+07, mse:1.7421e+14, rmsle 0.19301 smape 11.413
+
+Apple PatchTST_sl_96_pl_48  test scaled
+mae:1.3285, rmse:1.7237, mse:2.9713
+
+Apple PatchTST_sl_96_pl_48  test
+mae:4.1885e+06, rmse:1.4481e+07, mse:2.0971e+14, rmsle 0.20511 smape 11.133
+
+Apple PatchTST_sl_96_pl_48  test scaled
+mae:1.6651, rmse:2.2043, mse:4.8588
+
+Apple PatchTST_sl_96_pl_48  test
+mae:3.632e+06, rmse:1.2974e+07, mse:1.6832e+14, rmsle 0.20215 smape 12.096
+
+Apple TimesNet_sl_96_pl_48  test scaled
+mae:1.5309, rmse:1.9789, mse:3.9161
+
+Apple TimesNet_sl_96_pl_48  test
+mae:3.1239e+06, rmse:1.239e+07, mse:1.5351e+14, rmsle 0.17438 smape 10.735
+
+Apple TimesNet_sl_96_pl_48  test scaled
+mae:1.5919, rmse:2.072, mse:4.2932
+
+Apple TimesNet_sl_96_pl_48  test
+mae:3.1833e+06, rmse:1.2502e+07, mse:1.563e+14, rmsle 0.17894 smape 11.13
+
+Financial_Aid DLinear_sl_5_pl_1  test scaled
+mae:794.13, rmse:5342.3, mse:2.8541e+07
+
+Financial_Aid DLinear_sl_5_pl_1  test
+mae:1.3594e+05, rmse:3.9578e+05, mse:1.5664e+11, rmsle 8.1273 smape 189.77
+
+Apple TimesNet_sl_96_pl_48  test scaled
+mae:1.6235, rmse:2.1272, mse:4.525
+
+Apple TimesNet_sl_96_pl_48  test
+mae:3.1434e+06, rmse:1.2621e+07, mse:1.5929e+14, rmsle 0.17979 smape 11.109
+
+Apple iTransformer_sl_96_pl_48  test scaled
+mae:1.6002, rmse:2.0198, mse:4.0797
+
+Apple iTransformer_sl_96_pl_48  test
+mae:4.3883e+06, rmse:1.4329e+07, mse:2.0532e+14, rmsle 0.22764 smape 12.978
+
+Apple iTransformer_sl_96_pl_48  test scaled
+mae:1.4568, rmse:1.8326, mse:3.3584
+
+Apple iTransformer_sl_96_pl_48  test
+mae:4.632e+06, rmse:1.4773e+07, mse:2.1826e+14, rmsle 0.21594 smape 12.232
+
+Apple iTransformer_sl_96_pl_48  test scaled
+mae:1.5877, rmse:2.0018, mse:4.0074
+
+Apple iTransformer_sl_96_pl_48  test
+mae:4.1751e+06, rmse:1.3935e+07, mse:1.9418e+14, rmsle 0.20623 smape 12.35
+
+Apple MICN_sl_96_pl_48  test scaled
+mae:1.3225, rmse:1.7341, mse:3.007
+
+Apple MICN_sl_96_pl_48  test
+mae:3.476e+06, rmse:1.2447e+07, mse:1.5492e+14, rmsle 0.17327 smape 10.21
+
+Apple MICN_sl_96_pl_48  test scaled
+mae:1.3267, rmse:1.7251, mse:2.976
+
+Apple MICN_sl_96_pl_48  test
+mae:3.4696e+06, rmse:1.2417e+07, mse:1.5419e+14, rmsle 0.17285 smape 10.209
+
+Apple MICN_sl_96_pl_48  test scaled
+mae:1.3076, rmse:1.6972, mse:2.8804
+
+Apple MICN_sl_96_pl_48  test
+mae:3.5552e+06, rmse:1.2492e+07, mse:1.5605e+14, rmsle 0.17431 smape 10.223
+
+Apple TimeMixer_sl_96_pl_48  test scaled
+mae:1.4806, rmse:1.9338, mse:3.7397
+
+Apple TimeMixer_sl_96_pl_48  test
+mae:3.6022e+06, rmse:1.2946e+07, mse:1.6761e+14, rmsle 0.18788 smape 11.213
+
+Apple TimeMixer_sl_96_pl_48  test scaled
+mae:1.4475, rmse:1.8824, mse:3.5434
+
+Apple TimeMixer_sl_96_pl_48  test
+mae:3.6703e+06, rmse:1.3047e+07, mse:1.7023e+14, rmsle 0.18697 smape 11.072
+
+Apple TimeMixer_sl_96_pl_48  test scaled
+mae:1.4506, rmse:1.8959, mse:3.5946
+
+Apple TimeMixer_sl_96_pl_48  test
+mae:3.7743e+06, rmse:1.3281e+07, mse:1.7638e+14, rmsle 0.19198 smape 11.238
+
+Apple CALF_sl_96_pl_48_id_ori  test scaled
+mae:1.516, rmse:1.8774, mse:3.5245
+
+Apple CALF_sl_96_pl_48_id_ori  test
+mae:4.745e+06, rmse:1.4649e+07, mse:2.146e+14, rmsle 0.21255 smape 12.418
+
+Apple CALF_sl_96_pl_48_id_ori  test scaled
+mae:1.6602, rmse:2.0586, mse:4.2377
+
+Apple CALF_sl_96_pl_48_id_ori  test
+mae:4.592e+06, rmse:1.5349e+07, mse:2.3561e+14, rmsle 0.21726 smape 12.797
+
+Apple CALF_sl_96_pl_48_id_ori  test scaled
+mae:1.5835, rmse:1.9733, mse:3.8939
+
+Apple CALF_sl_96_pl_48_id_ori  test
+mae:4.5354e+06, rmse:1.4905e+07, mse:2.2216e+14, rmsle 0.20942 smape 12.293
+
+Apple OFA_sl_96_pl_48_id_ori  test scaled
+mae:1.421, rmse:1.8304, mse:3.3502
+
+Apple OFA_sl_96_pl_48_id_ori  test
+mae:4.1072e+06, rmse:1.3987e+07, mse:1.9565e+14, rmsle 0.19945 smape 11.338
+
+Apple OFA_sl_96_pl_48_id_ori  test scaled
+mae:1.4711, rmse:1.9247, mse:3.7046
+
+Apple OFA_sl_96_pl_48_id_ori  test
+mae:3.7873e+06, rmse:1.3675e+07, mse:1.87e+14, rmsle 0.20858 smape 11.641
+
+Apple OFA_sl_96_pl_48_id_ori  test scaled
+mae:1.4286, rmse:1.869, mse:3.4932
+
+Apple OFA_sl_96_pl_48_id_ori  test
+mae:3.9108e+06, rmse:1.3809e+07, mse:1.907e+14, rmsle 0.20261 smape 11.4
+
+Financial_Aid DLinear_sl_5_pl_1  test scaled
+mae:794.8, rmse:5342.2, mse:2.8539e+07
+
+Financial_Aid DLinear_sl_5_pl_1  test
+mae:1.3973e+05, rmse:4.0599e+05, mse:1.6483e+11, rmsle 8.1494 smape 189.96
+
+Exchange_Rate_Report DLinear_sl_96_pl_48  test scaled
+mae:0.8742, rmse:1.1795, mse:1.3912
+
+Exchange_Rate_Report DLinear_sl_96_pl_48  test
+mae:0.4604, rmse:1.3943, mse:1.944, rmsle 0.011596 smape 1.109
+
+Exchange_Rate_Report DLinear_sl_96_pl_48  test scaled
+mae:0.88726, rmse:1.2008, mse:1.4418
+
+Exchange_Rate_Report DLinear_sl_96_pl_48  test
+mae:0.455, rmse:1.3886, mse:1.9283, rmsle 0.011683 smape 1.1244
+
+Exchange_Rate_Report DLinear_sl_96_pl_48  test scaled
+mae:0.88874, rmse:1.1995, mse:1.4388
+
+Exchange_Rate_Report DLinear_sl_96_pl_48  test
+mae:0.45867, rmse:1.3964, mse:1.95, rmsle 0.011708 smape 1.1267
+
+Exchange_Rate_Report PatchTST_sl_96_pl_48  test scaled
+mae:0.88838, rmse:1.1904, mse:1.4169
+
+Exchange_Rate_Report PatchTST_sl_96_pl_48  test
+mae:0.48827, rmse:1.4617, mse:2.1367, rmsle 0.011924 smape 1.1278
+
+Exchange_Rate_Report PatchTST_sl_96_pl_48  test scaled
+mae:0.90904, rmse:1.2264, mse:1.504
+
+Exchange_Rate_Report PatchTST_sl_96_pl_48  test
+mae:0.45916, rmse:1.4057, mse:1.9761, rmsle 0.011905 smape 1.1532
+
+Exchange_Rate_Report PatchTST_sl_96_pl_48  test scaled
+mae:0.92748, rmse:1.243, mse:1.5452
+
+Exchange_Rate_Report PatchTST_sl_96_pl_48  test
+mae:0.49863, rmse:1.4899, mse:2.2198, rmsle 0.012352 smape 1.1847
+
+Exchange_Rate_Report TimesNet_sl_96_pl_48  test scaled
+mae:1.1341, rmse:1.4455, mse:2.0894
+
+Exchange_Rate_Report TimesNet_sl_96_pl_48  test
+mae:0.59414, rmse:1.8184, mse:3.3067, rmsle 0.015322 smape 1.4564
+
+Exchange_Rate_Report TimesNet_sl_96_pl_48  test scaled
+mae:1.2752, rmse:1.6164, mse:2.6127
+
+Exchange_Rate_Report TimesNet_sl_96_pl_48  test
+mae:0.73717, rmse:2.2271, mse:4.9601, rmsle 0.018116 smape 1.6905
+
+Exchange_Rate_Report TimesNet_sl_96_pl_48  test scaled
+mae:1.448, rmse:1.8051, mse:3.2583
+
+Exchange_Rate_Report TimesNet_sl_96_pl_48  test
+mae:0.76341, rmse:2.3069, mse:5.322, rmsle 0.020232 smape 1.9363
+
+Exchange_Rate_Report iTransformer_sl_96_pl_48  test scaled
+mae:0.95155, rmse:1.2864, mse:1.6549
+
+Exchange_Rate_Report iTransformer_sl_96_pl_48  test
+mae:0.45657, rmse:1.4082, mse:1.9831, rmsle 0.012246 smape 1.2018
+
+Exchange_Rate_Report iTransformer_sl_96_pl_48  test scaled
+mae:0.92522, rmse:1.2524, mse:1.5686
+
+Exchange_Rate_Report iTransformer_sl_96_pl_48  test
+mae:0.4461, rmse:1.3688, mse:1.8735, rmsle 0.011895 smape 1.1863
+
+Exchange_Rate_Report iTransformer_sl_96_pl_48  test scaled
+mae:1.1458, rmse:1.4802, mse:2.1911
+
+Exchange_Rate_Report iTransformer_sl_96_pl_48  test
+mae:0.5663, rmse:1.7383, mse:3.0215, rmsle 0.014831 smape 1.491
+
+Exchange_Rate_Report MICN_sl_96_pl_48  test scaled
+mae:0.92858, rmse:1.211, mse:1.4665
+
+Exchange_Rate_Report MICN_sl_96_pl_48  test
+mae:0.46194, rmse:1.3686, mse:1.8732, rmsle 0.011826 smape 1.1815
+
+Exchange_Rate_Report MICN_sl_96_pl_48  test scaled
+mae:0.95053, rmse:1.2353, mse:1.526
+
+Exchange_Rate_Report MICN_sl_96_pl_48  test
+mae:0.46391, rmse:1.379, mse:1.9017, rmsle 0.012023 smape 1.2057
+
+Exchange_Rate_Report MICN_sl_96_pl_48  test scaled
+mae:0.9947, rmse:1.2914, mse:1.6677
+
+Exchange_Rate_Report MICN_sl_96_pl_48  test
+mae:0.47728, rmse:1.3992, mse:1.9576, rmsle 0.012579 smape 1.287
+
+Exchange_Rate_Report TimeMixer_sl_96_pl_48  test scaled
+mae:0.91162, rmse:1.2318, mse:1.5174
+
+Exchange_Rate_Report TimeMixer_sl_96_pl_48  test
+mae:0.43872, rmse:1.3859, mse:1.9207, rmsle 0.012018 smape 1.1558
+
+Financial_Aid DLinear_sl_5_pl_1  test scaled
+mae:794.49, rmse:5342.3, mse:2.854e+07
+
+Financial_Aid DLinear_sl_5_pl_1  test
+mae:1.3819e+05, rmse:4.0331e+05, mse:1.6266e+11, rmsle 8.1392 smape 189.89
+
+Exchange_Rate_Report TimeMixer_sl_96_pl_48  test scaled
+mae:0.90394, rmse:1.2101, mse:1.4644
+
+Exchange_Rate_Report TimeMixer_sl_96_pl_48  test
+mae:0.45238, rmse:1.3933, mse:1.9412, rmsle 0.011824 smape 1.1463
+
+Exchange_Rate_Report TimeMixer_sl_96_pl_48  test scaled
+mae:0.91741, rmse:1.2347, mse:1.5245
+
+Exchange_Rate_Report TimeMixer_sl_96_pl_48  test
+mae:0.45237, rmse:1.4063, mse:1.9776, rmsle 0.012005 smape 1.164
+
+Exchange_Rate_Report CALF_sl_96_pl_48_id_ori  test scaled
+mae:1.1061, rmse:1.4087, mse:1.9846
+
+Exchange_Rate_Report CALF_sl_96_pl_48_id_ori  test
+mae:0.53267, rmse:1.5259, mse:2.3283, rmsle 0.013408 smape 1.4284
+
+Exchange_Rate_Report CALF_sl_96_pl_48_id_ori  test scaled
+mae:1.004, rmse:1.3212, mse:1.7455
+
+Exchange_Rate_Report CALF_sl_96_pl_48_id_ori  test
+mae:0.51644, rmse:1.4839, mse:2.202, rmsle 0.012929 smape 1.3146
+
+Exchange_Rate_Report CALF_sl_96_pl_48_id_ori  test scaled
+mae:1.0493, rmse:1.3585, mse:1.8454
+
+Exchange_Rate_Report CALF_sl_96_pl_48_id_ori  test
+mae:0.52999, rmse:1.5463, mse:2.391, rmsle 0.013266 smape 1.3553
+
+Exchange_Rate_Report OFA_sl_96_pl_48_id_ori  test scaled
+mae:0.91764, rmse:1.2367, mse:1.5294
+
+Exchange_Rate_Report OFA_sl_96_pl_48_id_ori  test
+mae:0.46067, rmse:1.3898, mse:1.9315, rmsle 0.011882 smape 1.1662
+
+Exchange_Rate_Report OFA_sl_96_pl_48_id_ori  test scaled
+mae:0.93018, rmse:1.2504, mse:1.5634
+
+Exchange_Rate_Report OFA_sl_96_pl_48_id_ori  test
+mae:0.46935, rmse:1.4297, mse:2.0441, rmsle 0.012115 smape 1.1793
+
+Exchange_Rate_Report OFA_sl_96_pl_48_id_ori  test scaled
+mae:0.91075, rmse:1.2168, mse:1.4807
+
+Exchange_Rate_Report OFA_sl_96_pl_48_id_ori  test
+mae:0.47185, rmse:1.406, mse:1.9768, rmsle 0.011854 smape 1.1608
+
+Gold DLinear_sl_96_pl_48  test scaled
+mae:1.394, rmse:2.0807, mse:4.3293
+
+Gold DLinear_sl_96_pl_48  test
+mae:11155, rmse:31253, mse:9.7675e+08, rmsle 0.15796 smape 8.1781
+
+Gold DLinear_sl_96_pl_48  test scaled
+mae:1.3944, rmse:2.0832, mse:4.3398
+
+Gold DLinear_sl_96_pl_48  test
+mae:11190, rmse:31432, mse:9.8798e+08, rmsle 0.1586 smape 8.1954
+
+Gold DLinear_sl_96_pl_48  test scaled
+mae:1.3963, rmse:2.0801, mse:4.3269
+
+Gold DLinear_sl_96_pl_48  test
+mae:11050, rmse:31037, mse:9.6332e+08, rmsle 0.15698 smape 8.1638
+
+Gold PatchTST_sl_96_pl_48  test scaled
+mae:1.6014, rmse:2.2655, mse:5.1324
+
+Gold PatchTST_sl_96_pl_48  test
+mae:12892, rmse:36651, mse:1.3433e+09, rmsle 0.38832 smape 10.178
+
+Gold PatchTST_sl_96_pl_48  test scaled
+mae:1.6684, rmse:2.4276, mse:5.8932
+
+Gold PatchTST_sl_96_pl_48  test
+mae:11731, rmse:33387, mse:1.1147e+09, rmsle 0.30775 smape 9.3172
+
+Gold PatchTST_sl_96_pl_48  test scaled
+mae:1.7258, rmse:2.4474, mse:5.9897
+
+Gold PatchTST_sl_96_pl_48  test
+mae:11605, rmse:33147, mse:1.0987e+09, rmsle 0.26879 smape 9.7802
+
+Gold TimesNet_sl_96_pl_48  test scaled
+mae:1.5709, rmse:2.2516, mse:5.0697
+
+Gold TimesNet_sl_96_pl_48  test
+mae:9933.9, rmse:28289, mse:8.0025e+08, rmsle 0.14798 smape 8.4235
+
+Financial_Aid iTransformer_sl_5_pl_1  test scaled
+mae:773.15, rmse:5346, mse:2.858e+07
+
+Financial_Aid iTransformer_sl_5_pl_1  test
+mae:14759, rmse:1.0176e+05, mse:1.0355e+10, rmsle 5.6721 smape 178.12
+
+Gold TimesNet_sl_96_pl_48  test scaled
+mae:1.4043, rmse:2.0547, mse:4.2219
+
+Gold TimesNet_sl_96_pl_48  test
+mae:9914.8, rmse:28145, mse:7.9214e+08, rmsle 0.14611 smape 7.8459
+
+Financial_Aid iTransformer_sl_5_pl_1  test scaled
+mae:773.94, rmse:5346, mse:2.858e+07
+
+Financial_Aid iTransformer_sl_5_pl_1  test
+mae:24317, rmse:2.0526e+05, mse:4.2134e+10, rmsle 5.743 smape 181.81
+
+Gold TimesNet_sl_96_pl_48  test scaled
+mae:1.5937, rmse:2.3246, mse:5.4036
+
+Gold TimesNet_sl_96_pl_48  test
+mae:9832.5, rmse:27881, mse:7.7738e+08, rmsle 0.1468 smape 8.3125
+
+Gold iTransformer_sl_96_pl_48  test scaled
+mae:1.417, rmse:2.0634, mse:4.2576
+
+Gold iTransformer_sl_96_pl_48  test
+mae:13539, rmse:36989, mse:1.3682e+09, rmsle 0.18334 smape 9.067
+
+Gold iTransformer_sl_96_pl_48  test scaled
+mae:1.4294, rmse:2.0814, mse:4.3324
+
+Gold iTransformer_sl_96_pl_48  test
+mae:13849, rmse:37855, mse:1.433e+09, rmsle 0.1937 smape 9.3939
+
+Gold iTransformer_sl_96_pl_48  test scaled
+mae:1.5446, rmse:2.1542, mse:4.6404
+
+Gold iTransformer_sl_96_pl_48  test
+mae:12617, rmse:35475, mse:1.2585e+09, rmsle 0.23225 smape 9.7015
+
+Gold MICN_sl_96_pl_48  test scaled
+mae:1.3326, rmse:1.954, mse:3.8182
+
+Gold MICN_sl_96_pl_48  test
+mae:10288, rmse:29032, mse:8.4285e+08, rmsle 0.14823 smape 7.7677
+
+Gold MICN_sl_96_pl_48  test scaled
+mae:1.3347, rmse:1.9453, mse:3.7841
+
+Gold MICN_sl_96_pl_48  test
+mae:10339, rmse:29307, mse:8.5892e+08, rmsle 0.15024 smape 7.8364
+
+Gold MICN_sl_96_pl_48  test scaled
+mae:1.3725, rmse:2.0478, mse:4.1936
+
+Gold MICN_sl_96_pl_48  test
+mae:10357, rmse:29487, mse:8.6948e+08, rmsle 0.15223 smape 7.9363
+
+Gold TimeMixer_sl_96_pl_48  test scaled
+mae:1.4083, rmse:2.1165, mse:4.4796
+
+Gold TimeMixer_sl_96_pl_48  test
+mae:11621, rmse:32527, mse:1.058e+09, rmsle 0.1645 smape 8.3755
+
+Gold TimeMixer_sl_96_pl_48  test scaled
+mae:1.3952, rmse:2.0782, mse:4.3187
+
+Gold TimeMixer_sl_96_pl_48  test
+mae:11078, rmse:31089, mse:9.6654e+08, rmsle 0.15944 smape 8.1615
+
+Gold TimeMixer_sl_96_pl_48  test scaled
+mae:1.3765, rmse:2.034, mse:4.137
+
+Gold TimeMixer_sl_96_pl_48  test
+mae:11664, rmse:32544, mse:1.0591e+09, rmsle 0.1635 smape 8.3145
+
+Gold CALF_sl_96_pl_48_id_ori  test scaled
+mae:1.6523, rmse:2.2584, mse:5.1005
+
+Gold CALF_sl_96_pl_48_id_ori  test
+mae:14297, rmse:38951, mse:1.5172e+09, rmsle 0.27853 smape 11.065
+
+Gold CALF_sl_96_pl_48_id_ori  test scaled
+mae:1.4605, rmse:2.0559, mse:4.2268
+
+Gold CALF_sl_96_pl_48_id_ori  test
+mae:14731, rmse:39383, mse:1.551e+09, rmsle 0.19917 smape 9.9151
+
+Financial_Aid iTransformer_sl_5_pl_1  test scaled
+mae:773.04, rmse:5346, mse:2.858e+07
+
+Financial_Aid iTransformer_sl_5_pl_1  test
+mae:12021, rmse:69557, mse:4.8382e+09, rmsle 5.995 smape 173.28
+
+Gold CALF_sl_96_pl_48_id_ori  test scaled
+mae:1.5559, rmse:2.2455, mse:5.0424
+
+Gold CALF_sl_96_pl_48_id_ori  test
+mae:12504, rmse:34020, mse:1.1574e+09, rmsle 0.17897 smape 9.3668
+
+Gold OFA_sl_96_pl_48_id_ori  test scaled
+mae:1.4604, rmse:2.1374, mse:4.5687
+
+Gold OFA_sl_96_pl_48_id_ori  test
+mae:11155, rmse:31639, mse:1.001e+09, rmsle 0.16688 smape 8.6513
+
+Gold OFA_sl_96_pl_48_id_ori  test scaled
+mae:1.5002, rmse:2.1802, mse:4.7533
+
+Gold OFA_sl_96_pl_48_id_ori  test
+mae:11510, rmse:32964, mse:1.0866e+09, rmsle 0.17766 smape 8.9502
+
+Gold OFA_sl_96_pl_48_id_ori  test scaled
+mae:1.4361, rmse:2.1262, mse:4.5208
+
+Gold OFA_sl_96_pl_48_id_ori  test
+mae:11424, rmse:32391, mse:1.0492e+09, rmsle 0.16589 smape 8.5231
+
+Gold TimeLLM_sl_96_pl_48_id_ori  test scaled
+mae:1.4342, rmse:2.1319, mse:4.5452
+
+Gold TimeLLM_sl_96_pl_48_id_ori  test
+mae:12053, rmse:33634, mse:1.1313e+09, rmsle 0.17139 smape 8.6394
+
+Gold TimeLLM_sl_96_pl_48_id_ori  test scaled
+mae:1.4165, rmse:2.0738, mse:4.3007
+
+Gold TimeLLM_sl_96_pl_48_id_ori  test
+mae:12774, rmse:35315, mse:1.2472e+09, rmsle 0.19367 smape 9.2215
+
+Gold TimeLLM_sl_96_pl_48_id_ori  test scaled
+mae:1.4228, rmse:2.0204, mse:4.0819
+
+Gold TimeLLM_sl_96_pl_48_id_ori  test
+mae:11347, rmse:31912, mse:1.0184e+09, rmsle 0.1604 smape 8.4401
+
+MSFT DLinear_sl_96_pl_48  test scaled
+mae:1.1486, rmse:1.6051, mse:2.5764
+
+MSFT DLinear_sl_96_pl_48  test
+mae:1.584e+06, rmse:4.5729e+06, mse:2.0912e+13, rmsle 0.18542 smape 9.8175
+
+MSFT DLinear_sl_96_pl_48  test scaled
+mae:1.1489, rmse:1.6092, mse:2.5895
+
+MSFT DLinear_sl_96_pl_48  test
+mae:1.5691e+06, rmse:4.5543e+06, mse:2.0742e+13, rmsle 0.18458 smape 9.768
+
+MSFT DLinear_sl_96_pl_48  test scaled
+mae:1.1505, rmse:1.6117, mse:2.5977
+
+MSFT DLinear_sl_96_pl_48  test
+mae:1.5802e+06, rmse:4.5732e+06, mse:2.0914e+13, rmsle 0.18519 smape 9.7965
+
+MSFT PatchTST_sl_96_pl_48  test scaled
+mae:1.1236, rmse:1.5451, mse:2.3875
+
+MSFT PatchTST_sl_96_pl_48  test
+mae:1.3901e+06, rmse:4.2809e+06, mse:1.8326e+13, rmsle 0.17311 smape 9.268
+
+MSFT PatchTST_sl_96_pl_48  test scaled
+mae:1.0956, rmse:1.5091, mse:2.2773
+
+MSFT PatchTST_sl_96_pl_48  test
+mae:1.6925e+06, rmse:4.8194e+06, mse:2.3227e+13, rmsle 0.19507 smape 10.036
+
+MSFT PatchTST_sl_96_pl_48  test scaled
+mae:1.2093, rmse:1.728, mse:2.986
+
+MSFT PatchTST_sl_96_pl_48  test
+mae:1.577e+06, rmse:4.8921e+06, mse:2.3933e+13, rmsle 0.1916 smape 9.9438
+
+MSFT TimesNet_sl_96_pl_48  test scaled
+mae:1.1447, rmse:1.606, mse:2.5791
+
+MSFT TimesNet_sl_96_pl_48  test
+mae:1.2244e+06, rmse:3.8364e+06, mse:1.4718e+13, rmsle 0.15662 smape 8.819
+
+MSFT TimesNet_sl_96_pl_48  test scaled
+mae:1.2318, rmse:1.7034, mse:2.9017
+
+MSFT TimesNet_sl_96_pl_48  test
+mae:1.3303e+06, rmse:3.9216e+06, mse:1.5379e+13, rmsle 0.1662 smape 9.5561
+
+MSFT TimesNet_sl_96_pl_48  test scaled
+mae:1.3323, rmse:1.7091, mse:2.9209
+
+MSFT TimesNet_sl_96_pl_48  test
+mae:1.7791e+06, rmse:5.2633e+06, mse:2.7703e+13, rmsle 0.20449 smape 11.223
+
+MSFT iTransformer_sl_96_pl_48  test scaled
+mae:1.3351, rmse:1.8029, mse:3.2504
+
+MSFT iTransformer_sl_96_pl_48  test
+mae:1.4315e+06, rmse:4.4647e+06, mse:1.9934e+13, rmsle 0.18382 smape 10.309
+
+MSFT iTransformer_sl_96_pl_48  test scaled
+mae:1.2148, rmse:1.651, mse:2.7259
+
+MSFT iTransformer_sl_96_pl_48  test
+mae:1.9302e+06, rmse:5.4992e+06, mse:3.0241e+13, rmsle 0.21797 smape 11.163
+
+MSFT iTransformer_sl_96_pl_48  test scaled
+mae:1.2805, rmse:1.7864, mse:3.1912
+
+MSFT iTransformer_sl_96_pl_48  test
+mae:1.5688e+06, rmse:4.8025e+06, mse:2.3064e+13, rmsle 0.19769 smape 10.479
+
+MSFT MICN_sl_96_pl_48  test scaled
+mae:1.0994, rmse:1.5154, mse:2.2965
+
+MSFT MICN_sl_96_pl_48  test
+mae:1.2606e+06, rmse:3.8661e+06, mse:1.4947e+13, rmsle 0.15894 smape 8.829
+
+MSFT MICN_sl_96_pl_48  test scaled
+mae:1.1349, rmse:1.5945, mse:2.5423
+
+MSFT MICN_sl_96_pl_48  test
+mae:1.2568e+06, rmse:3.8688e+06, mse:1.4967e+13, rmsle 0.15957 smape 8.9249
+
+MSFT MICN_sl_96_pl_48  test scaled
+mae:1.0412, rmse:1.4795, mse:2.1889
+
+MSFT MICN_sl_96_pl_48  test
+mae:1.2003e+06, rmse:3.804e+06, mse:1.4471e+13, rmsle 0.15363 smape 8.2935
+
+MSFT TimeMixer_sl_96_pl_48  test scaled
+mae:1.0547, rmse:1.4789, mse:2.1872
+
+MSFT TimeMixer_sl_96_pl_48  test
+mae:1.5009e+06, rmse:4.3536e+06, mse:1.8953e+13, rmsle 0.17754 smape 9.2887
+
+MSFT TimeMixer_sl_96_pl_48  test scaled
+mae:1.1641, rmse:1.621, mse:2.6275
+
+MSFT TimeMixer_sl_96_pl_48  test
+mae:1.458e+06, rmse:4.2946e+06, mse:1.8444e+13, rmsle 0.17641 smape 9.578
+
+MSFT TimeMixer_sl_96_pl_48  test scaled
+mae:1.1305, rmse:1.6278, mse:2.6498
+
+MSFT TimeMixer_sl_96_pl_48  test
+mae:1.2763e+06, rmse:4.0418e+06, mse:1.6336e+13, rmsle 0.16409 smape 8.8308
+
+MSFT CALF_sl_96_pl_48_id_ori  test scaled
+mae:1.2828, rmse:1.8081, mse:3.2692
+
+MSFT CALF_sl_96_pl_48_id_ori  test
+mae:1.2275e+06, rmse:3.9764e+06, mse:1.5811e+13, rmsle 0.1622 smape 9.2756
+
+MSFT CALF_sl_96_pl_48_id_ori  test scaled
+mae:1.3876, rmse:1.927, mse:3.7131
+
+MSFT CALF_sl_96_pl_48_id_ori  test
+mae:1.8456e+06, rmse:5.3415e+06, mse:2.8532e+13, rmsle 0.209 smape 11.325
+
+MSFT CALF_sl_96_pl_48_id_ori  test scaled
+mae:1.2254, rmse:1.7073, mse:2.915
+
+MSFT CALF_sl_96_pl_48_id_ori  test
+mae:1.3596e+06, rmse:4.0827e+06, mse:1.6668e+13, rmsle 0.16806 smape 9.4741
+
+MSFT OFA_sl_96_pl_48_id_ori  test scaled
+mae:1.1086, rmse:1.6214, mse:2.6288
+
+MSFT OFA_sl_96_pl_48_id_ori  test
+mae:1.3844e+06, rmse:4.2005e+06, mse:1.7645e+13, rmsle 0.17144 smape 9.1088
+
+MSFT OFA_sl_96_pl_48_id_ori  test scaled
+mae:1.0955, rmse:1.5945, mse:2.5424
+
+MSFT OFA_sl_96_pl_48_id_ori  test
+mae:1.313e+06, rmse:4.1594e+06, mse:1.7301e+13, rmsle 0.16706 smape 8.7965
+
+MSFT OFA_sl_96_pl_48_id_ori  test scaled
+mae:1.1203, rmse:1.6083, mse:2.5866
+
+MSFT OFA_sl_96_pl_48_id_ori  test
+mae:1.3835e+06, rmse:4.2619e+06, mse:1.8164e+13, rmsle 0.17367 smape 9.1526
+
+MSFT TimeLLM_sl_96_pl_48_id_ori  test scaled
+mae:1.1559, rmse:1.6148, mse:2.6077
+
+MSFT TimeLLM_sl_96_pl_48_id_ori  test
+mae:1.6206e+06, rmse:4.7476e+06, mse:2.254e+13, rmsle 0.18937 smape 9.8491
+
+MSFT TimeLLM_sl_96_pl_48_id_ori  test scaled
+mae:1.1951, rmse:1.6586, mse:2.7511
+
+MSFT TimeLLM_sl_96_pl_48_id_ori  test
+mae:1.5604e+06, rmse:4.7964e+06, mse:2.3006e+13, rmsle 0.18829 smape 9.8197
+
+MSFT TimeLLM_sl_96_pl_48_id_ori  test scaled
+mae:1.1852, rmse:1.6101, mse:2.5923
+
+MSFT TimeLLM_sl_96_pl_48_id_ori  test
+mae:1.7948e+06, rmse:5.0364e+06, mse:2.5365e+13, rmsle 0.2025 smape 10.552
+
+Natural_Gas DLinear_sl_96_pl_48  test scaled
+mae:1.4021, rmse:1.745, mse:3.0452
+
+Natural_Gas DLinear_sl_96_pl_48  test
+mae:8237.3, rmse:23918, mse:5.7205e+08, rmsle 0.43336 smape 24.351
+
+Natural_Gas DLinear_sl_96_pl_48  test scaled
+mae:1.3666, rmse:1.7328, mse:3.0027
+
+Natural_Gas DLinear_sl_96_pl_48  test
+mae:7952.8, rmse:22385, mse:5.0107e+08, rmsle 0.41298 smape 23.406
+
+Natural_Gas DLinear_sl_96_pl_48  test scaled
+mae:1.377, rmse:1.7367, mse:3.0161
+
+Natural_Gas DLinear_sl_96_pl_48  test
+mae:7989.4, rmse:22700, mse:5.1529e+08, rmsle 0.41931 smape 23.612
+
+Natural_Gas PatchTST_sl_96_pl_48  test scaled
+mae:1.4093, rmse:1.8122, mse:3.2841
+
+Natural_Gas PatchTST_sl_96_pl_48  test
+mae:8642, rmse:24419, mse:5.9631e+08, rmsle 0.43124 smape 25.393
+
+Natural_Gas PatchTST_sl_96_pl_48  test scaled
+mae:1.3653, rmse:1.8241, mse:3.3274
+
+Natural_Gas PatchTST_sl_96_pl_48  test
+mae:8729.4, rmse:24507, mse:6.006e+08, rmsle 0.39985 smape 23.682
+
+Natural_Gas PatchTST_sl_96_pl_48  test scaled
+mae:1.4283, rmse:1.9026, mse:3.62
+
+Natural_Gas PatchTST_sl_96_pl_48  test
+mae:8264.1, rmse:23385, mse:5.4684e+08, rmsle 0.39999 smape 24.346
+
+Natural_Gas TimesNet_sl_96_pl_48  test scaled
+mae:1.5183, rmse:1.9019, mse:3.6173
+
+Natural_Gas TimesNet_sl_96_pl_48  test
+mae:8595.3, rmse:25756, mse:6.6336e+08, rmsle 0.45316 smape 26.229
+
+Natural_Gas TimesNet_sl_96_pl_48  test scaled
+mae:1.4248, rmse:1.8536, mse:3.4357
+
+Natural_Gas TimesNet_sl_96_pl_48  test
+mae:8762, rmse:25924, mse:6.7205e+08, rmsle 0.44516 smape 24.232
+
+Natural_Gas TimesNet_sl_96_pl_48  test scaled
+mae:1.2929, rmse:1.6452, mse:2.7068
+
+Natural_Gas TimesNet_sl_96_pl_48  test
+mae:8772.3, rmse:25742, mse:6.6266e+08, rmsle 0.43539 smape 23.232
+
+Natural_Gas iTransformer_sl_96_pl_48  test scaled
+mae:1.3992, rmse:1.7656, mse:3.1172
+
+Natural_Gas iTransformer_sl_96_pl_48  test
+mae:10436, rmse:29453, mse:8.6749e+08, rmsle 0.45476 smape 25.21
+
+Natural_Gas iTransformer_sl_96_pl_48  test scaled
+mae:1.3455, rmse:1.7165, mse:2.9462
+
+Natural_Gas iTransformer_sl_96_pl_48  test
+mae:10224, rmse:28948, mse:8.38e+08, rmsle 0.44753 smape 23.87
+
+Natural_Gas iTransformer_sl_96_pl_48  test scaled
+mae:1.3517, rmse:1.7379, mse:3.0203
+
+Natural_Gas iTransformer_sl_96_pl_48  test
+mae:11096, rmse:31444, mse:9.8875e+08, rmsle 0.45528 smape 23.559
+
+Natural_Gas MICN_sl_96_pl_48  test scaled
+mae:1.3249, rmse:1.7087, mse:2.9197
+
+Natural_Gas MICN_sl_96_pl_48  test
+mae:7412, rmse:21031, mse:4.4229e+08, rmsle 0.39321 smape 22.688
+
+Natural_Gas MICN_sl_96_pl_48  test scaled
+mae:1.3358, rmse:1.7202, mse:2.9592
+
+Natural_Gas MICN_sl_96_pl_48  test
+mae:7407.7, rmse:21117, mse:4.4595e+08, rmsle 0.39022 smape 23.324
+
+Natural_Gas MICN_sl_96_pl_48  test scaled
+mae:1.3734, rmse:1.7591, mse:3.0946
+
+Natural_Gas MICN_sl_96_pl_48  test
+mae:7363.5, rmse:21022, mse:4.4192e+08, rmsle 0.39438 smape 23.785
+
+Natural_Gas TimeMixer_sl_96_pl_48  test scaled
+mae:1.4685, rmse:1.9103, mse:3.6492
+
+Natural_Gas TimeMixer_sl_96_pl_48  test
+mae:9809, rmse:28696, mse:8.2349e+08, rmsle 0.46477 smape 24.775
+
+Natural_Gas TimeMixer_sl_96_pl_48  test scaled
+mae:1.562, rmse:1.991, mse:3.9642
+
+Natural_Gas TimeMixer_sl_96_pl_48  test
+mae:9535.3, rmse:27681, mse:7.6625e+08, rmsle 0.46035 smape 26.499
+
+Natural_Gas TimeMixer_sl_96_pl_48  test scaled
+mae:1.4586, rmse:1.8846, mse:3.5517
+
+Natural_Gas TimeMixer_sl_96_pl_48  test
+mae:8769.7, rmse:25067, mse:6.2836e+08, rmsle 0.43419 smape 25.06
+
+Natural_Gas CALF_sl_96_pl_48_id_ori  test scaled
+mae:1.2873, rmse:1.6445, mse:2.7045
+
+Natural_Gas CALF_sl_96_pl_48_id_ori  test
+mae:10255, rmse:29271, mse:8.5678e+08, rmsle 0.4502 smape 24.056
+
+Natural_Gas CALF_sl_96_pl_48_id_ori  test scaled
+mae:1.3719, rmse:1.7351, mse:3.0107
+
+Natural_Gas CALF_sl_96_pl_48_id_ori  test
+mae:9489.2, rmse:27336, mse:7.4727e+08, rmsle 0.44756 smape 24.574
+
+Natural_Gas CALF_sl_96_pl_48_id_ori  test scaled
+mae:1.3205, rmse:1.6911, mse:2.8599
+
+Natural_Gas CALF_sl_96_pl_48_id_ori  test
+mae:9717.8, rmse:28370, mse:8.0483e+08, rmsle 0.45249 smape 23.739
+
+Natural_Gas OFA_sl_96_pl_48_id_ori  test scaled
+mae:1.3585, rmse:1.7316, mse:2.9984
+
+Natural_Gas OFA_sl_96_pl_48_id_ori  test
+mae:7777, rmse:21963, mse:4.8237e+08, rmsle 0.40678 smape 23.763
+
+Natural_Gas OFA_sl_96_pl_48_id_ori  test scaled
+mae:1.3445, rmse:1.6863, mse:2.8435
+
+Natural_Gas OFA_sl_96_pl_48_id_ori  test
+mae:7994, rmse:22608, mse:5.1112e+08, rmsle 0.40398 smape 24.58
+
+Natural_Gas OFA_sl_96_pl_48_id_ori  test scaled
+mae:1.3006, rmse:1.6775, mse:2.814
+
+Natural_Gas OFA_sl_96_pl_48_id_ori  test
+mae:8159.7, rmse:23050, mse:5.3131e+08, rmsle 0.41849 smape 22.562
+
+Natural_Gas TimeLLM_sl_96_pl_48_id_ori  test scaled
+mae:1.3322, rmse:1.6982, mse:2.8837
+
+Natural_Gas TimeLLM_sl_96_pl_48_id_ori  test
+mae:9416.5, rmse:27110, mse:7.3498e+08, rmsle 0.44301 smape 23.553
+
+Natural_Gas TimeLLM_sl_96_pl_48_id_ori  test scaled
+mae:1.3821, rmse:1.7213, mse:2.9628
+
+Natural_Gas TimeLLM_sl_96_pl_48_id_ori  test
+mae:9968.8, rmse:28170, mse:7.9354e+08, rmsle 0.44821 smape 25.258
+
+Natural_Gas TimeLLM_sl_96_pl_48_id_ori  test scaled
+mae:1.3187, rmse:1.6606, mse:2.7577
+
+Natural_Gas TimeLLM_sl_96_pl_48_id_ori  test
+mae:9372, rmse:26978, mse:7.2779e+08, rmsle 0.44369 smape 24.415
+
+SPX500 DLinear_sl_96_pl_48  test scaled
+mae:1.1643, rmse:1.5218, mse:2.3158
+
+SPX500 DLinear_sl_96_pl_48  test
+mae:167.99, rmse:202.63, mse:41057, rmsle 0.042307 smape 3.4673
+
+SPX500 DLinear_sl_96_pl_48  test scaled
+mae:1.1424, rmse:1.488, mse:2.2143
+
+SPX500 DLinear_sl_96_pl_48  test
+mae:165.81, rmse:200.69, mse:40275, rmsle 0.041803 smape 3.42
+
+SPX500 DLinear_sl_96_pl_48  test scaled
+mae:1.1429, rmse:1.4799, mse:2.1902
+
+SPX500 DLinear_sl_96_pl_48  test
+mae:166.33, rmse:200.63, mse:40253, rmsle 0.041667 smape 3.4263
+
+SPX500 PatchTST_sl_96_pl_48  test scaled
+mae:1.0684, rmse:1.4527, mse:2.1103
+
+SPX500 PatchTST_sl_96_pl_48  test
+mae:153.32, rmse:189.35, mse:35852, rmsle 0.040056 smape 3.1826
+
+SPX500 PatchTST_sl_96_pl_48  test scaled
+mae:1.0705, rmse:1.4666, mse:2.1509
+
+SPX500 PatchTST_sl_96_pl_48  test
+mae:155.28, rmse:196.72, mse:38698, rmsle 0.041628 smape 3.2301
+
+SPX500 PatchTST_sl_96_pl_48  test scaled
+mae:1.0885, rmse:1.3782, mse:1.8994
+
+SPX500 PatchTST_sl_96_pl_48  test
+mae:165.21, rmse:200.12, mse:40048, rmsle 0.041232 smape 3.391
+
+SPX500 TimesNet_sl_96_pl_48  test scaled
+mae:1.1719, rmse:1.5958, mse:2.5466
+
+SPX500 TimesNet_sl_96_pl_48  test
+mae:167.81, rmse:209.78, mse:44007, rmsle 0.044731 smape 3.5024
+
+SPX500 TimesNet_sl_96_pl_48  test scaled
+mae:1.124, rmse:1.4789, mse:2.187
+
+SPX500 TimesNet_sl_96_pl_48  test
+mae:162.85, rmse:199.05, mse:39620, rmsle 0.041765 smape 3.3685
+
+SPX500 TimesNet_sl_96_pl_48  test scaled
+mae:1.0911, rmse:1.4738, mse:2.1722
+
+SPX500 TimesNet_sl_96_pl_48  test
+mae:157.03, rmse:196.61, mse:38656, rmsle 0.041685 smape 3.2624
+
+SPX500 iTransformer_sl_96_pl_48  test scaled
+mae:1.2886, rmse:1.6335, mse:2.6683
+
+SPX500 iTransformer_sl_96_pl_48  test
+mae:205.07, rmse:259.52, mse:67350, rmsle 0.054276 smape 4.2501
+
+SPX500 iTransformer_sl_96_pl_48  test scaled
+mae:1.2357, rmse:1.5816, mse:2.5014
+
+SPX500 iTransformer_sl_96_pl_48  test
+mae:187.66, rmse:231.97, mse:53809, rmsle 0.048742 smape 3.8948
+
+SPX500 iTransformer_sl_96_pl_48  test scaled
+mae:1.2574, rmse:1.6392, mse:2.6868
+
+SPX500 iTransformer_sl_96_pl_48  test
+mae:194.67, rmse:244.39, mse:59727, rmsle 0.051221 smape 4.0288
+
+SPX500 MICN_sl_96_pl_48  test scaled
+mae:0.98533, rmse:1.2477, mse:1.5568
+
+SPX500 MICN_sl_96_pl_48  test
+mae:149.14, rmse:181.56, mse:32964, rmsle 0.037411 smape 3.0461
+
+SPX500 MICN_sl_96_pl_48  test scaled
+mae:1.0069, rmse:1.286, mse:1.6539
+
+SPX500 MICN_sl_96_pl_48  test
+mae:150.84, rmse:183.65, mse:33728, rmsle 0.037955 smape 3.088
+
+SPX500 MICN_sl_96_pl_48  test scaled
+mae:1.0835, rmse:1.3681, mse:1.8718
+
+SPX500 MICN_sl_96_pl_48  test
+mae:166.11, rmse:204.34, mse:41753, rmsle 0.041671 smape 3.3884
+
+SPX500 TimeMixer_sl_96_pl_48  test scaled
+mae:0.89939, rmse:1.2093, mse:1.4624
+
+SPX500 TimeMixer_sl_96_pl_48  test
+mae:132.59, rmse:166.31, mse:27660, rmsle 0.03498 smape 2.7388
+
+SPX500 TimeMixer_sl_96_pl_48  test scaled
+mae:0.98046, rmse:1.2878, mse:1.6585
+
+SPX500 TimeMixer_sl_96_pl_48  test
+mae:143.68, rmse:176.08, mse:31003, rmsle 0.036991 smape 2.9698
+
+SPX500 TimeMixer_sl_96_pl_48  test scaled
+mae:0.9177, rmse:1.1863, mse:1.4073
+
+SPX500 TimeMixer_sl_96_pl_48  test
+mae:138.69, rmse:170.41, mse:29039, rmsle 0.035493 smape 2.8532
+
+SPX500 CALF_sl_96_pl_48_id_ori  test scaled
+mae:1.1266, rmse:1.4583, mse:2.1266
+
+SPX500 CALF_sl_96_pl_48_id_ori  test
+mae:166.93, rmse:206.69, mse:42720, rmsle 0.043431 smape 3.4457
+
+SPX500 CALF_sl_96_pl_48_id_ori  test scaled
+mae:1.0044, rmse:1.3009, mse:1.6922
+
+SPX500 CALF_sl_96_pl_48_id_ori  test
+mae:149.08, rmse:183.34, mse:33612, rmsle 0.038212 smape 3.0631
+
+SPX500 CALF_sl_96_pl_48_id_ori  test scaled
+mae:1.1089, rmse:1.4521, mse:2.1086
+
+SPX500 CALF_sl_96_pl_48_id_ori  test
+mae:160.3, rmse:196.88, mse:38764, rmsle 0.041538 smape 3.3219
+
+SPX500 OFA_sl_96_pl_48_id_ori  test scaled
+mae:0.98361, rmse:1.3336, mse:1.7786
+
+SPX500 OFA_sl_96_pl_48_id_ori  test
+mae:141.7, rmse:176.22, mse:31053, rmsle 0.036973 smape 2.927
+
+SPX500 OFA_sl_96_pl_48_id_ori  test scaled
+mae:0.95358, rmse:1.3176, mse:1.7361
+
+SPX500 OFA_sl_96_pl_48_id_ori  test
+mae:140.92, rmse:183.43, mse:33648, rmsle 0.038355 smape 2.9037
+
+SPX500 OFA_sl_96_pl_48_id_ori  test scaled
+mae:0.87959, rmse:1.1726, mse:1.3751
+
+SPX500 OFA_sl_96_pl_48_id_ori  test
+mae:134.15, rmse:171.85, mse:29532, rmsle 0.035667 smape 2.746
+
+SPX500 TimeLLM_sl_96_pl_48_id_ori  test scaled
+mae:1.1698, rmse:1.5394, mse:2.3698
+
+SPX500 TimeLLM_sl_96_pl_48_id_ori  test
+mae:168.21, rmse:204.34, mse:41755, rmsle 0.042638 smape 3.475
+
+SPX500 TimeLLM_sl_96_pl_48_id_ori  test scaled
+mae:1.0145, rmse:1.2971, mse:1.6824
+
+SPX500 TimeLLM_sl_96_pl_48_id_ori  test
+mae:150.74, rmse:183.3, mse:33600, rmsle 0.038134 smape 3.0972
+
+SPX500 TimeLLM_sl_96_pl_48_id_ori  test scaled
+mae:1.149, rmse:1.4971, mse:2.2413
+
+SPX500 TimeLLM_sl_96_pl_48_id_ori  test
+mae:166.83, rmse:199.49, mse:39795, rmsle 0.041662 smape 3.4413
+
+Apple DLinear_sl_96_pl_96  test scaled
+mae:1.558, rmse:2.0829, mse:4.3385
+
+Apple DLinear_sl_96_pl_96  test
+mae:3.9204e+06, rmse:1.2296e+07, mse:1.5119e+14, rmsle 0.18731 smape 11.497
+
+Apple DLinear_sl_96_pl_96  test scaled
+mae:1.5627, rmse:2.0918, mse:4.3758
+
+Apple DLinear_sl_96_pl_96  test
+mae:3.9139e+06, rmse:1.2288e+07, mse:1.5099e+14, rmsle 0.1874 smape 11.514
+
+Apple DLinear_sl_96_pl_96  test scaled
+mae:1.5942, rmse:2.1351, mse:4.5588
+
+Apple DLinear_sl_96_pl_96  test
+mae:3.9237e+06, rmse:1.2308e+07, mse:1.5149e+14, rmsle 0.18857 smape 11.657
+
+Apple PatchTST_sl_96_pl_96  test scaled
+mae:2.0609, rmse:2.7813, mse:7.7357
+
+Apple PatchTST_sl_96_pl_96  test
+mae:3.5165e+06, rmse:1.299e+07, mse:1.6873e+14, rmsle 0.21226 smape 13.441
+
+Apple PatchTST_sl_96_pl_96  test scaled
+mae:1.758, rmse:2.3792, mse:5.6606
+
+Apple PatchTST_sl_96_pl_96  test
+mae:3.7156e+06, rmse:1.3279e+07, mse:1.7632e+14, rmsle 0.23548 smape 12.689
+
+Apple PatchTST_sl_96_pl_96  test scaled
+mae:1.5331, rmse:2.1017, mse:4.4173
+
+Apple PatchTST_sl_96_pl_96  test
+mae:3.9572e+06, rmse:1.3395e+07, mse:1.7942e+14, rmsle 0.20973 smape 11.866
+
+Apple TimesNet_sl_96_pl_96  test scaled
+mae:2.1669, rmse:2.8773, mse:8.2788
+
+Apple TimesNet_sl_96_pl_96  test
+mae:3.0753e+06, rmse:1.1589e+07, mse:1.3431e+14, rmsle 0.18902 smape 13.199
+
+Apple TimesNet_sl_96_pl_96  test scaled
+mae:1.7614, rmse:2.3111, mse:5.3411
+
+Apple TimesNet_sl_96_pl_96  test
+mae:3.0482e+06, rmse:1.1637e+07, mse:1.3542e+14, rmsle 0.17466 smape 11.375
+
+Apple TimesNet_sl_96_pl_96  test scaled
+mae:1.7204, rmse:2.3151, mse:5.3596
+
+Apple TimesNet_sl_96_pl_96  test
+mae:3.0116e+06, rmse:1.1731e+07, mse:1.3762e+14, rmsle 0.17523 smape 11.116
+
+Apple iTransformer_sl_96_pl_96  test scaled
+mae:1.7112, rmse:2.1631, mse:4.6792
+
+Apple iTransformer_sl_96_pl_96  test
+mae:4.6127e+06, rmse:1.4239e+07, mse:2.0275e+14, rmsle 0.23745 smape 13.586
+
+Apple iTransformer_sl_96_pl_96  test scaled
+mae:1.8079, rmse:2.3225, mse:5.3942
+
+Apple iTransformer_sl_96_pl_96  test
+mae:4.4646e+06, rmse:1.3714e+07, mse:1.8807e+14, rmsle 0.22147 smape 13.493
+
+Apple iTransformer_sl_96_pl_96  test scaled
+mae:1.7845, rmse:2.2791, mse:5.1944
+
+Apple iTransformer_sl_96_pl_96  test
+mae:4.4735e+06, rmse:1.4145e+07, mse:2.0008e+14, rmsle 0.24769 smape 13.928
+
+Apple MICN_sl_96_pl_96  test scaled
+mae:1.4955, rmse:1.9833, mse:3.9334
+
+Apple MICN_sl_96_pl_96  test
+mae:3.2608e+06, rmse:1.1399e+07, mse:1.2994e+14, rmsle 0.1679 smape 10.475
+
+Apple MICN_sl_96_pl_96  test scaled
+mae:1.5369, rmse:2.0349, mse:4.1407
+
+Apple MICN_sl_96_pl_96  test
+mae:3.2e+06, rmse:1.1467e+07, mse:1.3148e+14, rmsle 0.1688 smape 10.578
+
+Apple MICN_sl_96_pl_96  test scaled
+mae:1.447, rmse:1.9263, mse:3.7107
+
+Apple MICN_sl_96_pl_96  test
+mae:3.1735e+06, rmse:1.1504e+07, mse:1.3235e+14, rmsle 0.1664 smape 10.162
+
+Crude_Oil DLinear_sl_96_pl_48  test scaled
+mae:0.83557, rmse:1.0395, mse:1.0805
+
+Crude_Oil DLinear_sl_96_pl_48  test
+mae:14717, rmse:44867, mse:2.013e+09, rmsle 0.34349 smape 11.577
+
+Crude_Oil DLinear_sl_96_pl_48  test scaled
+mae:0.83107, rmse:1.0287, mse:1.0581
+
+Crude_Oil DLinear_sl_96_pl_48  test
+mae:14761, rmse:44804, mse:2.0074e+09, rmsle 0.34247 smape 11.569
+
+Crude_Oil DLinear_sl_96_pl_48  test scaled
+mae:0.83193, rmse:1.0335, mse:1.0681
+
+Crude_Oil DLinear_sl_96_pl_48  test
+mae:14696, rmse:44835, mse:2.0102e+09, rmsle 0.34324 smape 11.54
+
+Crude_Oil DLinear_sl_96_pl_96  test scaled
+mae:0.9293, rmse:1.1251, mse:1.2659
+
+Crude_Oil DLinear_sl_96_pl_96  test
+mae:14668, rmse:45499, mse:2.0701e+09, rmsle 0.35355 smape 12.771
+
+Apple TimeMixer_sl_96_pl_96  test scaled
+mae:1.5757, rmse:2.1152, mse:4.4741
+
+Apple TimeMixer_sl_96_pl_96  test
+mae:3.4582e+06, rmse:1.1682e+07, mse:1.3647e+14, rmsle 0.17682 smape 11.091
+
+Crude_Oil DLinear_sl_96_pl_96  test scaled
+mae:0.85661, rmse:1.0458, mse:1.0936
+
+Crude_Oil DLinear_sl_96_pl_96  test
+mae:14793, rmse:45837, mse:2.101e+09, rmsle 0.35295 smape 12.218
+
+Crude_Oil DLinear_sl_96_pl_96  test scaled
+mae:0.88299, rmse:1.0766, mse:1.159
+
+Crude_Oil DLinear_sl_96_pl_96  test
+mae:14787, rmse:45875, mse:2.1045e+09, rmsle 0.35413 smape 12.436
+
+Crude_Oil PatchTST_sl_96_pl_96  test scaled
+mae:0.99864, rmse:1.3235, mse:1.7516
+
+Crude_Oil PatchTST_sl_96_pl_96  test
+mae:18236, rmse:51427, mse:2.6447e+09, rmsle 0.45059 smape 15.039
+
+Crude_Oil PatchTST_sl_96_pl_48  test scaled
+mae:0.88521, rmse:1.1476, mse:1.3169
+
+Crude_Oil PatchTST_sl_96_pl_48  test
+mae:15140, rmse:43455, mse:1.8883e+09, rmsle 0.32754 smape 12.366
+
+Crude_Oil PatchTST_sl_96_pl_96  test scaled
+mae:0.94259, rmse:1.1517, mse:1.3265
+
+Crude_Oil PatchTST_sl_96_pl_96  test
+mae:20833, rmse:56887, mse:3.2362e+09, rmsle 0.38647 smape 15.852
+
+Crude_Oil PatchTST_sl_96_pl_96  test scaled
+mae:0.98879, rmse:1.2363, mse:1.5286
+
+Crude_Oil PatchTST_sl_96_pl_96  test
+mae:19325, rmse:53948, mse:2.9103e+09, rmsle 0.3807 smape 15.322
+
+Crude_Oil PatchTST_sl_96_pl_48  test scaled
+mae:0.85151, rmse:1.0799, mse:1.1661
+
+Crude_Oil PatchTST_sl_96_pl_48  test
+mae:16802, rmse:46221, mse:2.1364e+09, rmsle 0.34776 smape 12.966
+
+Apple TimeMixer_sl_96_pl_96  test scaled
+mae:1.6597, rmse:2.2838, mse:5.2158
+
+Apple TimeMixer_sl_96_pl_96  test
+mae:3.7154e+06, rmse:1.3088e+07, mse:1.713e+14, rmsle 0.21482 smape 12.295
+
+Crude_Oil PatchTST_sl_96_pl_48  test scaled
+mae:0.99897, rmse:1.3402, mse:1.7962
+
+Crude_Oil PatchTST_sl_96_pl_48  test
+mae:13983, rmse:40936, mse:1.6758e+09, rmsle 0.32351 smape 12.44
+
+Apple TimeMixer_sl_96_pl_96  test scaled
+mae:1.5597, rmse:2.0974, mse:4.3993
+
+Apple TimeMixer_sl_96_pl_96  test
+mae:3.4132e+06, rmse:1.2052e+07, mse:1.4525e+14, rmsle 0.18317 smape 11.102
+
+Financial_Aid OFA_sl_5_pl_1_id_ori  test scaled
+mae:772.42, rmse:5346.1, mse:2.8581e+07
+
+Financial_Aid OFA_sl_5_pl_1_id_ori  test
+mae:7807.2, rmse:56813, mse:3.2278e+09, rmsle 4.4965 smape 106.13
+
+Apple CALF_sl_96_pl_96_id_ori  test scaled
+mae:1.5961, rmse:2.0403, mse:4.1627
+
+Apple CALF_sl_96_pl_96_id_ori  test
+mae:4.0511e+06, rmse:1.2317e+07, mse:1.5171e+14, rmsle 0.18835 smape 11.798
+
+Crude_Oil TimesNet_sl_96_pl_96  test scaled
+mae:1.226, rmse:1.4837, mse:2.2015
+
+Crude_Oil TimesNet_sl_96_pl_96  test
+mae:15224, rmse:48899, mse:2.3911e+09, rmsle 0.37603 smape 15.046
+
+Apple CALF_sl_96_pl_96_id_ori  test scaled
+mae:1.7257, rmse:2.1886, mse:4.7899
+
+Apple CALF_sl_96_pl_96_id_ori  test
+mae:4.1315e+06, rmse:1.2988e+07, mse:1.6869e+14, rmsle 0.1971 smape 12.373
+
+Apple CALF_sl_96_pl_96_id_ori  test scaled
+mae:1.6637, rmse:2.1279, mse:4.5278
+
+Apple CALF_sl_96_pl_96_id_ori  test
+mae:4.4681e+06, rmse:1.3799e+07, mse:1.9041e+14, rmsle 0.20582 smape 12.419
+
+Crude_Oil TimesNet_sl_96_pl_96  test scaled
+mae:1.1996, rmse:1.4306, mse:2.0467
+
+Crude_Oil TimesNet_sl_96_pl_96  test
+mae:15165, rmse:49085, mse:2.4094e+09, rmsle 0.37684 smape 15.052
+
+Crude_Oil TimesNet_sl_96_pl_96  test scaled
+mae:1.2566, rmse:1.5281, mse:2.3352
+
+Crude_Oil TimesNet_sl_96_pl_96  test
+mae:15289, rmse:49661, mse:2.4662e+09, rmsle 0.37924 smape 15.087
+
+Crude_Oil iTransformer_sl_96_pl_96  test scaled
+mae:0.99629, rmse:1.2575, mse:1.5812
+
+Crude_Oil iTransformer_sl_96_pl_96  test
+mae:21282, rmse:61853, mse:3.8258e+09, rmsle 0.3931 smape 14.75
+
+Crude_Oil iTransformer_sl_96_pl_96  test scaled
+mae:1.4583, rmse:1.8218, mse:3.319
+
+Crude_Oil iTransformer_sl_96_pl_96  test
+mae:22378, rmse:62226, mse:3.8721e+09, rmsle 0.68717 smape 19.875
+
+Crude_Oil iTransformer_sl_96_pl_96  test scaled
+mae:0.99356, rmse:1.259, mse:1.585
+
+Crude_Oil iTransformer_sl_96_pl_96  test
+mae:21193, rmse:61343, mse:3.7629e+09, rmsle 0.39017 smape 14.601
+
+Crude_Oil TimesNet_sl_96_pl_48  test scaled
+mae:0.90149, rmse:1.2022, mse:1.4453
+
+Crude_Oil TimesNet_sl_96_pl_48  test
+mae:15315, rmse:47309, mse:2.2381e+09, rmsle 0.35564 smape 12.147
+
+Crude_Oil MICN_sl_96_pl_96  test scaled
+mae:0.87948, rmse:1.0764, mse:1.1586
+
+Crude_Oil MICN_sl_96_pl_96  test
+mae:13110, rmse:36831, mse:1.3565e+09, rmsle 0.2947 smape 12.17
+
+Crude_Oil MICN_sl_96_pl_96  test scaled
+mae:0.86991, rmse:1.0795, mse:1.1654
+
+Crude_Oil MICN_sl_96_pl_96  test
+mae:13376, rmse:37275, mse:1.3894e+09, rmsle 0.29226 smape 12.154
+
+Crude_Oil MICN_sl_96_pl_96  test scaled
+mae:0.89348, rmse:1.1179, mse:1.2498
+
+Crude_Oil MICN_sl_96_pl_96  test
+mae:13112, rmse:36870, mse:1.3594e+09, rmsle 0.29557 smape 12.327
+
+Apple OFA_sl_96_pl_96_id_ori  test scaled
+mae:2.2095, rmse:2.9582, mse:8.7512
+
+Apple OFA_sl_96_pl_96_id_ori  test
+mae:3.2308e+06, rmse:1.1813e+07, mse:1.3954e+14, rmsle 0.19792 smape 13.454
+
+Crude_Oil TimeMixer_sl_96_pl_96  test scaled
+mae:0.94176, rmse:1.1499, mse:1.3222
+
+Crude_Oil TimeMixer_sl_96_pl_96  test
+mae:17367, rmse:50534, mse:2.5537e+09, rmsle 0.3588 smape 13.866
+
+Crude_Oil TimeMixer_sl_96_pl_96  test scaled
+mae:1.2707, rmse:1.5701, mse:2.4653
+
+Crude_Oil TimeMixer_sl_96_pl_96  test
+mae:17806, rmse:51905, mse:2.6941e+09, rmsle 0.37184 smape 16.078
+
+Crude_Oil TimeMixer_sl_96_pl_96  test scaled
+mae:0.88569, rmse:1.1354, mse:1.2892
+
+Crude_Oil TimeMixer_sl_96_pl_96  test
+mae:16892, rmse:51229, mse:2.6244e+09, rmsle 0.3688 smape 12.921
+
+Apple OFA_sl_96_pl_96_id_ori  test scaled
+mae:1.8701, rmse:2.4778, mse:6.1396
+
+Apple OFA_sl_96_pl_96_id_ori  test
+mae:3.2768e+06, rmse:1.171e+07, mse:1.3711e+14, rmsle 0.18526 smape 12.124
+
+Crude_Oil CALF_sl_96_pl_96_id_ori  test scaled
+mae:1.1061, rmse:1.3512, mse:1.8258
+
+Crude_Oil CALF_sl_96_pl_96_id_ori  test
+mae:23869, rmse:66149, mse:4.3756e+09, rmsle 0.39983 smape 16.327
+
+Crude_Oil CALF_sl_96_pl_96_id_ori  test scaled
+mae:1.001, rmse:1.2546, mse:1.5739
+
+Crude_Oil CALF_sl_96_pl_96_id_ori  test
+mae:17464, rmse:53551, mse:2.8677e+09, rmsle 0.3796 smape 13.731
+
+Crude_Oil TimesNet_sl_96_pl_48  test scaled
+mae:1.1677, rmse:1.5024, mse:2.2573
+
+Crude_Oil TimesNet_sl_96_pl_48  test
+mae:15377, rmse:48084, mse:2.3121e+09, rmsle 0.36423 smape 13.785
+
+Apple OFA_sl_96_pl_96_id_ori  test scaled
+mae:1.7907, rmse:2.4192, mse:5.8527
+
+Apple OFA_sl_96_pl_96_id_ori  test
+mae:3.4876e+06, rmse:1.2342e+07, mse:1.5232e+14, rmsle 0.35295 smape 12.361
+
+Crude_Oil CALF_sl_96_pl_96_id_ori  test scaled
+mae:1.1327, rmse:1.4064, mse:1.9778
+
+Crude_Oil CALF_sl_96_pl_96_id_ori  test
+mae:22010, rmse:63128, mse:3.9851e+09, rmsle 0.39549 smape 15.97
+
+Crude_Oil TimesNet_sl_96_pl_48  test scaled
+mae:0.95922, rmse:1.2511, mse:1.5653
+
+Crude_Oil TimesNet_sl_96_pl_48  test
+mae:15359, rmse:47315, mse:2.2387e+09, rmsle 0.35566 smape 12.55
+
+Crude_Oil iTransformer_sl_96_pl_48  test scaled
+mae:0.78245, rmse:1.0124, mse:1.0249
+
+Crude_Oil iTransformer_sl_96_pl_48  test
+mae:19277, rmse:54835, mse:3.0069e+09, rmsle 0.3947 smape 12.703
+
+Crude_Oil iTransformer_sl_96_pl_48  test scaled
+mae:0.85733, rmse:1.1059, mse:1.223
+
+Crude_Oil iTransformer_sl_96_pl_48  test
+mae:18247, rmse:52637, mse:2.7706e+09, rmsle 0.35961 smape 12.7
+
+Crude_Oil OFA_sl_96_pl_96_id_ori  test scaled
+mae:1.1325, rmse:1.5101, mse:2.2803
+
+Crude_Oil OFA_sl_96_pl_96_id_ori  test
+mae:15312, rmse:43681, mse:1.908e+09, rmsle 0.32643 smape 14.542
+
+Crude_Oil iTransformer_sl_96_pl_48  test scaled
+mae:0.99436, rmse:1.2309, mse:1.5151
+
+Crude_Oil iTransformer_sl_96_pl_48  test
+mae:18003, rmse:52295, mse:2.7347e+09, rmsle 0.36225 smape 13.632
+
+Crude_Oil MICN_sl_96_pl_48  test scaled
+mae:0.79354, rmse:0.97461, mse:0.94987
+
+Crude_Oil MICN_sl_96_pl_48  test
+mae:13238, rmse:38060, mse:1.4485e+09, rmsle 0.30309 smape 11.065
+
+Crude_Oil MICN_sl_96_pl_48  test scaled
+mae:0.80446, rmse:1.0227, mse:1.0459
+
+Crude_Oil MICN_sl_96_pl_48  test
+mae:13181, rmse:37478, mse:1.4046e+09, rmsle 0.29194 smape 11.087
+
+Crude_Oil MICN_sl_96_pl_48  test scaled
+mae:0.80994, rmse:1.0007, mse:1.0015
+
+Crude_Oil MICN_sl_96_pl_48  test
+mae:13068, rmse:37376, mse:1.397e+09, rmsle 0.28603 smape 11.21
+
+Crude_Oil TimeMixer_sl_96_pl_48  test scaled
+mae:1.0646, rmse:1.4292, mse:2.0425
+
+Crude_Oil TimeMixer_sl_96_pl_48  test
+mae:14971, rmse:44185, mse:1.9523e+09, rmsle 0.33874 smape 13.026
+
+Crude_Oil OFA_sl_96_pl_96_id_ori  test scaled
+mae:1.2831, rmse:1.7757, mse:3.153
+
+Crude_Oil OFA_sl_96_pl_96_id_ori  test
+mae:14549, rmse:41474, mse:1.7201e+09, rmsle 0.343 smape 15.662
+
+Crude_Oil TimeMixer_sl_96_pl_48  test scaled
+mae:1.1554, rmse:1.4983, mse:2.2449
+
+Crude_Oil TimeMixer_sl_96_pl_48  test
+mae:15272, rmse:45025, mse:2.0273e+09, rmsle 0.34384 smape 13.871
+
+Crude_Oil TimeMixer_sl_96_pl_48  test scaled
+mae:0.88808, rmse:1.1453, mse:1.3116
+
+Crude_Oil TimeMixer_sl_96_pl_48  test
+mae:17260, rmse:51081, mse:2.6093e+09, rmsle 0.35869 smape 12.654
+
+Crude_Oil CALF_sl_96_pl_48_id_ori  test scaled
+mae:1.0317, rmse:1.2824, mse:1.6446
+
+Crude_Oil CALF_sl_96_pl_48_id_ori  test
+mae:19167, rmse:56607, mse:3.2044e+09, rmsle 0.37699 smape 13.994
+
+Crude_Oil CALF_sl_96_pl_48_id_ori  test scaled
+mae:0.81484, rmse:1.0561, mse:1.1154
+
+Crude_Oil CALF_sl_96_pl_48_id_ori  test
+mae:16563, rmse:51061, mse:2.6072e+09, rmsle 0.36461 smape 11.808
+
+Crude_Oil OFA_sl_96_pl_96_id_ori  test scaled
+mae:1.3133, rmse:1.7243, mse:2.9731
+
+Crude_Oil OFA_sl_96_pl_96_id_ori  test
+mae:14209, rmse:40875, mse:1.6708e+09, rmsle 0.32011 smape 15.543
+
+Financial_Aid OFA_sl_5_pl_1_id_ori  test scaled
+mae:772.37, rmse:5346.1, mse:2.8581e+07
+
+Financial_Aid OFA_sl_5_pl_1_id_ori  test
+mae:7334.7, rmse:45791, mse:2.0968e+09, rmsle 4.5051 smape 98.572
+
+Crude_Oil CALF_sl_96_pl_48_id_ori  test scaled
+mae:1.0239, rmse:1.2917, mse:1.6686
+
+Crude_Oil CALF_sl_96_pl_48_id_ori  test
+mae:16953, rmse:52254, mse:2.7304e+09, rmsle 0.37309 smape 13.224
+
+Crude_Oil OFA_sl_96_pl_48_id_ori  test scaled
+mae:0.84039, rmse:1.1017, mse:1.2137
+
+Crude_Oil OFA_sl_96_pl_48_id_ori  test
+mae:13369, rmse:39245, mse:1.5402e+09, rmsle 0.31139 smape 11.406
+
+Crude_Oil OFA_sl_96_pl_48_id_ori  test scaled
+mae:0.99278, rmse:1.298, mse:1.6848
+
+Crude_Oil OFA_sl_96_pl_48_id_ori  test
+mae:13353, rmse:39178, mse:1.5349e+09, rmsle 0.31455 smape 12.548
+
+Crude_Oil OFA_sl_96_pl_48_id_ori  test scaled
+mae:0.75837, rmse:0.96619, mse:0.93353
+
+Crude_Oil OFA_sl_96_pl_48_id_ori  test
+mae:14288, rmse:41843, mse:1.7508e+09, rmsle 0.31564 smape 11.172
+
+Crude_Oil TimeLLM_sl_96_pl_48_id_ori  test scaled
+mae:0.87011, rmse:1.0729, mse:1.151
+
+Crude_Oil TimeLLM_sl_96_pl_48_id_ori  test
+mae:18572, rmse:52748, mse:2.7824e+09, rmsle 0.36373 smape 13.465
+
+Apple TimeLLM_sl_96_pl_96_id_ori  test scaled
+mae:1.5195, rmse:1.983, mse:3.9321
+
+Apple TimeLLM_sl_96_pl_96_id_ori  test
+mae:4.0085e+06, rmse:1.2654e+07, mse:1.6013e+14, rmsle 0.1897 smape 11.39
+
+Crude_Oil TimeLLM_sl_96_pl_48_id_ori  test scaled
+mae:0.83645, rmse:1.0526, mse:1.1081
+
+Crude_Oil TimeLLM_sl_96_pl_48_id_ori  test
+mae:17961, rmse:51640, mse:2.6667e+09, rmsle 0.35355 smape 12.67
+
+Financial_Aid OFA_sl_5_pl_1_id_ori  test scaled
+mae:772.35, rmse:5346.1, mse:2.8581e+07
+
+Financial_Aid OFA_sl_5_pl_1_id_ori  test
+mae:7281.7, rmse:44595, mse:1.9887e+09, rmsle 4.498 smape 99.708
+
+Crude_Oil TimeLLM_sl_96_pl_48_id_ori  test scaled
+mae:0.82859, rmse:1.0404, mse:1.0825
+
+Crude_Oil TimeLLM_sl_96_pl_48_id_ori  test
+mae:16751, rmse:48722, mse:2.3738e+09, rmsle 0.34582 smape 12.434
+
+Crude_Oil TimeLLM_sl_96_pl_96_id_ori  test scaled
+mae:0.84045, rmse:1.0123, mse:1.0248
+
+Crude_Oil TimeLLM_sl_96_pl_96_id_ori  test
+mae:18211, rmse:51916, mse:2.6953e+09, rmsle 0.37047 smape 13.397
+
+Apple TimeLLM_sl_96_pl_96_id_ori  test scaled
+mae:1.6621, rmse:2.2143, mse:4.9029
+
+Apple TimeLLM_sl_96_pl_96_id_ori  test
+mae:3.772e+06, rmse:1.2387e+07, mse:1.5343e+14, rmsle 0.19206 smape 11.879
+
+Crude_Oil TimeLLM_sl_96_pl_96_id_ori  test scaled
+mae:0.99292, rmse:1.182, mse:1.3971
+
+Crude_Oil TimeLLM_sl_96_pl_96_id_ori  test
+mae:17182, rmse:49172, mse:2.4178e+09, rmsle 0.35107 smape 14.228
+
+Financial_Aid DLinear_sl_5_pl_1_p_10  test scaled
+mae:772.86, rmse:5346, mse:2.858e+07
+
+Financial_Aid DLinear_sl_5_pl_1_p_10  test
+mae:9544.5, rmse:74037, mse:5.4815e+09, rmsle 5.9405 smape 170.18
+
+Apple TimeLLM_sl_96_pl_96_id_ori  test scaled
+mae:1.5576, rmse:2.0503, mse:4.2038
+
+Apple TimeLLM_sl_96_pl_96_id_ori  test
+mae:3.8892e+06, rmse:1.2258e+07, mse:1.5027e+14, rmsle 0.18586 smape 11.452
+
+Financial_Aid DLinear_sl_5_pl_1_p_10  test scaled
+mae:773.47, rmse:5345.9, mse:2.8579e+07
+
+Financial_Aid DLinear_sl_5_pl_1_p_10  test
+mae:11814, rmse:68292, mse:4.6638e+09, rmsle 6.3485 smape 168.06
+
+Exchange_Rate_Report DLinear_sl_96_pl_96  test scaled
+mae:0.99405, rmse:1.3262, mse:1.7588
+
+Exchange_Rate_Report DLinear_sl_96_pl_96  test
+mae:0.58963, rmse:1.7963, mse:3.2268, rmsle 0.014476 smape 1.3513
+
+Exchange_Rate_Report DLinear_sl_96_pl_96  test scaled
+mae:0.97346, rmse:1.3049, mse:1.7028
+
+Exchange_Rate_Report DLinear_sl_96_pl_96  test
+mae:0.58031, rmse:1.7805, mse:3.1701, rmsle 0.014263 smape 1.3206
+
+Exchange_Rate_Report DLinear_sl_96_pl_96  test scaled
+mae:0.985, rmse:1.3164, mse:1.733
+
+Exchange_Rate_Report DLinear_sl_96_pl_96  test
+mae:0.58673, rmse:1.7896, mse:3.2028, rmsle 0.014381 smape 1.3382
+
+Exchange_Rate_Report PatchTST_sl_96_pl_96  test scaled
+mae:0.91187, rmse:1.2584, mse:1.5836
+
+Exchange_Rate_Report PatchTST_sl_96_pl_96  test
+mae:0.57242, rmse:1.8024, mse:3.2485, rmsle 0.014093 smape 1.2386
+
+Exchange_Rate_Report PatchTST_sl_96_pl_96  test scaled
+mae:0.99069, rmse:1.3656, mse:1.8647
+
+Exchange_Rate_Report PatchTST_sl_96_pl_96  test
+mae:0.60809, rmse:1.9308, mse:3.7281, rmsle 0.01515 smape 1.3391
+
+Exchange_Rate_Report PatchTST_sl_96_pl_96  test scaled
+mae:0.98688, rmse:1.3619, mse:1.8549
+
+Exchange_Rate_Report PatchTST_sl_96_pl_96  test
+mae:0.60612, rmse:1.9317, mse:3.7316, rmsle 0.015192 smape 1.342
+
