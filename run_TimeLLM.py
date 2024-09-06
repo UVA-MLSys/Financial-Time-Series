@@ -21,12 +21,16 @@ def main(args):
     print(f'Args in experiment: {args}')
     if args.itrs == 1:
         exp = Exp_Long_Term_Forecast(args)
-        if not args.test:
-            print('>>>>>>> start training :>>>>>>>>>>')
-            exp.train()
+        
+        if os.path.exists(exp.best_model_path):
+            print(f'Checkpoint exists already. Skipping...')
+        else:
+            if not args.test:
+                print('>>>>>>> start training :>>>>>>>>>>')
+                exp.train()
 
-        print('\n>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<')
-        exp.test(flag='test')
+            print('\n>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<')
+            exp.test(flag='test')
     else:
         parent_seed = args.seed
         np.random.seed(parent_seed)
@@ -44,6 +48,9 @@ def main(args):
             args.itr_no = itr_no
             
             exp = Exp_Long_Term_Forecast(args)
+            
+            if os.path.exists(exp.best_model_path):
+                print(f'Checkpoint exists already. Skipping...')
 
             if not args.test:
                 print('>>>>>>> start training :>>>>>>>>>>')

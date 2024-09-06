@@ -42,7 +42,7 @@ python run_CALF.py\
     --n_features $n_features --features $features \
     --data_path $data_path\
     --itrs $itrs\
-    --model_id ori\
+    --model_id ori --d_model 768\
     --seq_len $seq_len --label_len $label_len --pred_len $pred_len\
     --target $target
 

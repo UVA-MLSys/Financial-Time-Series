@@ -1,1 +1,587 @@
 Running for model:DLinear
+Quadro RTX 4000
+Args in experiment: Namespace(test=False, seed=2024, result_path='results', disable_progress=True, root_path='./data', data_path='Financial_Aid.csv', features='MS', n_features=4, target='OFFER_BALANCE', freq='d', no_scale=False, seq_len=5, label_len=3, pred_len=1, top_k=5, num_kernels=6, d_model=64, n_heads=4, e_layers=2, d_layers=1, d_ff=128, moving_avg=3, factor=1, dropout=0.1, embed='timeF', activation='gelu', output_attention=False, channel_independence=1, decomp_method='moving_avg', use_norm=1, down_sampling_layers=0, down_sampling_window=1, down_sampling_method=None, seg_len=48, num_workers=10, itrs=3, itr_no=None, train_epochs=10, batch_size=32, patience=3, learning_rate=0.001, des=None, loss='MSE', lradj='type1', gpu=0, use_multi_gpu=False, devices='0,1,2,3', p_hidden_dims=[128, 128], p_hidden_layers=2, dry_run=False, percent=10, model='DLinear', use_gpu=True, enc_in=4, dec_in=4, c_out=4, task_name='long_term_forecast')
+
+>>>> itr_no: 1, seed: 648 <<<<<<
+Use GPU: cuda:0
+Experiments will be saved in results/Financial_Aid/DLinear_sl_5_pl_1_p_10/1
+
+Experiment begins at 2024-09-06 10:23:23
+
+>>>>>>> start training :>>>>>>>>>>
+Minimum year  2015
+Split years:
+                 Train: [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022]
+                 Validation: [2023]
+                 Test: [2024]
+
+Warning: Length 1 is less than 100. Chosing by groups.
+Selected 2912 groups among 29126.
+Scaling data.
+Categoricals or ID: [].
+Numericals: ['INST_NEED', 'FUNDED_PARTY', 'TOTAL_PARTY'].
+Time column Date, target OFFER_BALANCE.
+train 8736
+Scaling data.
+val 29126
+Epoch: 1 | Time: 35.6 s | Train Loss: 1.5928e+07 Vali Loss: 4.249e+07
+Validation loss decreased (inf --> 42490008.000000).  Saving model ...
+Epoch: 2 | Time: 34.8 s | Train Loss: 5.8616e+07 Vali Loss: 1.1849e+08
+EarlyStopping counter: 1 out of 3
+Epoch: 3 | Time: 44.6 s | Train Loss: 1.6086e+07 Vali Loss: 4.2489e+07
+Validation loss decreased (42490008.000000 --> 42488820.000000).  Saving model ...
+Epoch: 4 | Time: 43.8 s | Train Loss: 6.0191e+07 Vali Loss: 1.229e+08
+EarlyStopping counter: 1 out of 3
+Epoch: 5 | Time: 43.5 s | Train Loss: 1.6086e+07 Vali Loss: 4.2489e+07
+EarlyStopping counter: 2 out of 3
+Epoch: 6 | Time: 42 s | Train Loss: 6.0776e+07 Vali Loss: 1.2416e+08
+EarlyStopping counter: 3 out of 3
+Early stopping
+
+Training completed at 2024-09-06 10:27:55.
+Model parameters: 12
+Total memory: 7967.4 MB
+Allocated memory: 16.3 MB
+Max allocated memory: 16.3 MB
+Time per epoch: 41.1 sec.
+Memory usage: Available 7967.4 MB, Allocated 16.3 MB, Max allocated 16.3 MB
+
+Loading model from results/Financial_Aid/DLinear_sl_5_pl_1_p_10/1/checkpoint.pth
+
+>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<
+Scaling data.
+test 29126
+Preds and Trues shape: (29126, 1) (29126, 1)
+test scaled -- mse:2.858e+07, mae:772.86
+Upscaling data and removing negatives...
+test -- mse:5.4815e+09, mae:9544.5, rmsle: 5.9405 smape 170.18
+
+
+>>>> itr_no: 2, seed: 506 <<<<<<
+Use GPU: cuda:0
+Experiments will be saved in results/Financial_Aid/DLinear_sl_5_pl_1_p_10/2
+
+Experiment begins at 2024-09-06 10:28:56
+
+>>>>>>> start training :>>>>>>>>>>
+Minimum year  2015
+Split years:
+                 Train: [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022]
+                 Validation: [2023]
+                 Test: [2024]
+
+Warning: Length 1 is less than 100. Chosing by groups.
+Selected 2912 groups among 29126.
+Scaling data.
+Categoricals or ID: [].
+Numericals: ['INST_NEED', 'FUNDED_PARTY', 'TOTAL_PARTY'].
+Time column Date, target OFFER_BALANCE.
+train 8736
+Scaling data.
+val 29126
+Epoch: 1 | Time: 39.3 s | Train Loss: 1.4587e+07 Vali Loss: 4.2488e+07
+Validation loss decreased (inf --> 42488068.000000).  Saving model ...
+Epoch: 2 | Time: 45.5 s | Train Loss: 5.2838e+07 Vali Loss: 1.1845e+08
+EarlyStopping counter: 1 out of 3
+Epoch: 3 | Time: 43.6 s | Train Loss: 1.4586e+07 Vali Loss: 4.2487e+07
+Validation loss decreased (42488068.000000 --> 42486852.000000).  Saving model ...
+Epoch: 4 | Time: 43.3 s | Train Loss: 5.4679e+07 Vali Loss: 1.2277e+08
+EarlyStopping counter: 1 out of 3
+Epoch: 5 | Time: 41.2 s | Train Loss: 1.4586e+07 Vali Loss: 4.2487e+07
+EarlyStopping counter: 2 out of 3
+Epoch: 6 | Time: 43.5 s | Train Loss: 5.5308e+07 Vali Loss: 1.2402e+08
+EarlyStopping counter: 3 out of 3
+Early stopping
+
+Training completed at 2024-09-06 10:33:44.
+Model parameters: 12
+Total memory: 7967.4 MB
+Allocated memory: 16.3 MB
+Max allocated memory: 16.3 MB
+Time per epoch: 42.8 sec.
+Memory usage: Available 7967.4 MB, Allocated 16.3 MB, Max allocated 16.3 MB
+
+Loading model from results/Financial_Aid/DLinear_sl_5_pl_1_p_10/2/checkpoint.pth
+
+>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<
+Scaling data.
+test 29126
+Preds and Trues shape: (29126, 1) (29126, 1)
+test scaled -- mse:2.8579e+07, mae:773.47
+Upscaling data and removing negatives...
+test -- mse:4.6638e+09, mae:11814, rmsle: 6.3485 smape 168.06
+
+
+>>>> itr_no: 3, seed: 608 <<<<<<
+Use GPU: cuda:0
+Experiments will be saved in results/Financial_Aid/DLinear_sl_5_pl_1_p_10/3
+
+Experiment begins at 2024-09-06 10:34:45
+
+>>>>>>> start training :>>>>>>>>>>
+Minimum year  2015
+Split years:
+                 Train: [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022]
+                 Validation: [2023]
+                 Test: [2024]
+
+Warning: Length 1 is less than 100. Chosing by groups.
+Selected 2912 groups among 29126.
+Scaling data.
+Categoricals or ID: [].
+Numericals: ['INST_NEED', 'FUNDED_PARTY', 'TOTAL_PARTY'].
+Time column Date, target OFFER_BALANCE.
+train 8736
+Scaling data.
+val 29126
+Epoch: 1 | Time: 45.1 s | Train Loss: 1.8599e+07 Vali Loss: 4.2489e+07
+Validation loss decreased (inf --> 42489280.000000).  Saving model ...
+Epoch: 2 | Time: 43.5 s | Train Loss: 3.6639e+07 Vali Loss: 1.2081e+08
+EarlyStopping counter: 1 out of 3
+Epoch: 3 | Time: 43.3 s | Train Loss: 1.8598e+07 Vali Loss: 4.2488e+07
+Validation loss decreased (42489280.000000 --> 42487988.000000).  Saving model ...
+Epoch: 4 | Time: 41.3 s | Train Loss: 3.7413e+07 Vali Loss: 1.252e+08
+EarlyStopping counter: 1 out of 3
+Epoch: 5 | Time: 45.2 s | Train Loss: 1.8597e+07 Vali Loss: 4.2488e+07
+EarlyStopping counter: 2 out of 3
+Epoch: 6 | Time: 43.7 s | Train Loss: 3.7687e+07 Vali Loss: 1.2649e+08
+EarlyStopping counter: 3 out of 3
+Early stopping
+
+Training completed at 2024-09-06 10:39:34.
+Model parameters: 12
+Total memory: 7967.4 MB
+Allocated memory: 16.3 MB
+Max allocated memory: 16.3 MB
+Time per epoch: 43.8 sec.
+Memory usage: Available 7967.4 MB, Allocated 16.3 MB, Max allocated 16.3 MB
+
+Loading model from results/Financial_Aid/DLinear_sl_5_pl_1_p_10/3/checkpoint.pth
+
+>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<
+Scaling data.
+test 29126
+Preds and Trues shape: (29126, 1) (29126, 1)
+test scaled -- mse:2.8579e+07, mae:773.13
+Upscaling data and removing negatives...
+test -- mse:3.5473e+09, mae:10196, rmsle: 6.1842 smape 168.23
+
+Running for model:PatchTST
+Quadro RTX 4000
+Args in experiment: Namespace(test=False, seed=2024, result_path='results', disable_progress=True, root_path='./data', data_path='Financial_Aid.csv', features='MS', n_features=4, target='OFFER_BALANCE', freq='d', no_scale=False, seq_len=5, label_len=3, pred_len=1, top_k=5, num_kernels=6, d_model=64, n_heads=4, e_layers=2, d_layers=1, d_ff=128, moving_avg=3, factor=1, dropout=0.1, embed='timeF', activation='gelu', output_attention=False, channel_independence=1, decomp_method='moving_avg', use_norm=1, down_sampling_layers=0, down_sampling_window=1, down_sampling_method=None, seg_len=48, num_workers=10, itrs=3, itr_no=None, train_epochs=10, batch_size=32, patience=3, learning_rate=0.001, des=None, loss='MSE', lradj='type1', gpu=0, use_multi_gpu=False, devices='0,1,2,3', p_hidden_dims=[128, 128], p_hidden_layers=2, dry_run=False, percent=10, model='PatchTST', use_gpu=True, enc_in=4, dec_in=4, c_out=4, task_name='long_term_forecast')
+
+>>>> itr_no: 1, seed: 648 <<<<<<
+Use GPU: cuda:0
+Experiments will be saved in results/Financial_Aid/PatchTST_sl_5_pl_1_p_10/1
+
+Experiment begins at 2024-09-06 10:40:48
+
+>>>>>>> start training :>>>>>>>>>>
+Traceback (most recent call last):
+  File "/u/mi3se/projects/Financial-Time-Series/run.py", line 87, in <module>
+    main(args)
+  File "/u/mi3se/projects/Financial-Time-Series/run.py", line 60, in main
+    exp.train()
+  File "/u/mi3se/projects/Financial-Time-Series/exp/exp_long_term_forecasting.py", line 145, in train
+    _, train_loader = self.get_data(flag='train')
+  File "/u/mi3se/projects/Financial-Time-Series/exp/exp_basic.py", line 71, in get_data
+    self.dataset_map[flag] = data_provider(self.args, flag)
+  File "/u/mi3se/projects/Financial-Time-Series/data_provider/data_factory.py", line 12, in data_provider
+    dataset = MultiTimeSeries(args, flag=flag)
+  File "/u/mi3se/projects/Financial-Time-Series/data_provider/data_loader.py", line 175, in __init__
+    self.__read_data__()
+  File "/u/mi3se/projects/Financial-Time-Series/data_provider/data_loader.py", line 230, in __read_data__
+    df = pd.read_csv(os.path.join(self.args.root_path,self.args.data_path))
+  File "/u/mi3se/anaconda3/envs/ml/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/u/mi3se/anaconda3/envs/ml/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/u/mi3se/anaconda3/envs/ml/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "/u/mi3se/anaconda3/envs/ml/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+  File "/u/mi3se/anaconda3/envs/ml/lib/python3.10/site-packages/pandas/io/common.py", line 873, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: './data/Financial_Aid.csv'
+Running for model:TimesNet
+Quadro RTX 4000
+Args in experiment: Namespace(test=False, seed=2024, result_path='results', disable_progress=True, root_path='./data', data_path='Financial_Aid.csv', features='MS', n_features=4, target='OFFER_BALANCE', freq='d', no_scale=False, seq_len=5, label_len=3, pred_len=1, top_k=5, num_kernels=6, d_model=64, n_heads=4, e_layers=2, d_layers=1, d_ff=128, moving_avg=3, factor=1, dropout=0.1, embed='timeF', activation='gelu', output_attention=False, channel_independence=1, decomp_method='moving_avg', use_norm=1, down_sampling_layers=0, down_sampling_window=1, down_sampling_method=None, seg_len=48, num_workers=10, itrs=3, itr_no=None, train_epochs=10, batch_size=32, patience=3, learning_rate=0.001, des=None, loss='MSE', lradj='type1', gpu=0, use_multi_gpu=False, devices='0,1,2,3', p_hidden_dims=[128, 128], p_hidden_layers=2, dry_run=False, percent=10, model='TimesNet', use_gpu=True, enc_in=4, dec_in=4, c_out=4, task_name='long_term_forecast')
+
+>>>> itr_no: 1, seed: 648 <<<<<<
+Use GPU: cuda:0
+Experiments will be saved in results/Financial_Aid/TimesNet_sl_5_pl_1_p_10/1
+
+Experiment begins at 2024-09-06 10:40:54
+
+>>>>>>> start training :>>>>>>>>>>
+Traceback (most recent call last):
+  File "/u/mi3se/projects/Financial-Time-Series/run.py", line 87, in <module>
+    main(args)
+  File "/u/mi3se/projects/Financial-Time-Series/run.py", line 60, in main
+    exp.train()
+  File "/u/mi3se/projects/Financial-Time-Series/exp/exp_long_term_forecasting.py", line 145, in train
+    _, train_loader = self.get_data(flag='train')
+  File "/u/mi3se/projects/Financial-Time-Series/exp/exp_basic.py", line 71, in get_data
+    self.dataset_map[flag] = data_provider(self.args, flag)
+  File "/u/mi3se/projects/Financial-Time-Series/data_provider/data_factory.py", line 12, in data_provider
+    dataset = MultiTimeSeries(args, flag=flag)
+  File "/u/mi3se/projects/Financial-Time-Series/data_provider/data_loader.py", line 175, in __init__
+    self.__read_data__()
+  File "/u/mi3se/projects/Financial-Time-Series/data_provider/data_loader.py", line 230, in __read_data__
+    df = pd.read_csv(os.path.join(self.args.root_path,self.args.data_path))
+  File "/u/mi3se/anaconda3/envs/ml/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/u/mi3se/anaconda3/envs/ml/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/u/mi3se/anaconda3/envs/ml/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "/u/mi3se/anaconda3/envs/ml/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+  File "/u/mi3se/anaconda3/envs/ml/lib/python3.10/site-packages/pandas/io/common.py", line 873, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: './data/Financial_Aid.csv'
+Running for model:iTransformer
+Quadro RTX 4000
+Args in experiment: Namespace(test=False, seed=2024, result_path='results', disable_progress=True, root_path='./data', data_path='Financial_Aid.csv', features='MS', n_features=4, target='OFFER_BALANCE', freq='d', no_scale=False, seq_len=5, label_len=3, pred_len=1, top_k=5, num_kernels=6, d_model=64, n_heads=4, e_layers=2, d_layers=1, d_ff=128, moving_avg=3, factor=1, dropout=0.1, embed='timeF', activation='gelu', output_attention=False, channel_independence=1, decomp_method='moving_avg', use_norm=1, down_sampling_layers=0, down_sampling_window=1, down_sampling_method=None, seg_len=48, num_workers=10, itrs=3, itr_no=None, train_epochs=10, batch_size=32, patience=3, learning_rate=0.001, des=None, loss='MSE', lradj='type1', gpu=0, use_multi_gpu=False, devices='0,1,2,3', p_hidden_dims=[128, 128], p_hidden_layers=2, dry_run=False, percent=10, model='iTransformer', use_gpu=True, enc_in=4, dec_in=4, c_out=4, task_name='long_term_forecast')
+
+>>>> itr_no: 1, seed: 648 <<<<<<
+Use GPU: cuda:0
+Experiments will be saved in results/Financial_Aid/iTransformer_sl_5_pl_1_p_10/1
+
+Experiment begins at 2024-09-06 10:40:59
+
+>>>>>>> start training :>>>>>>>>>>
+Traceback (most recent call last):
+  File "/u/mi3se/projects/Financial-Time-Series/run.py", line 87, in <module>
+    main(args)
+  File "/u/mi3se/projects/Financial-Time-Series/run.py", line 60, in main
+    exp.train()
+  File "/u/mi3se/projects/Financial-Time-Series/exp/exp_long_term_forecasting.py", line 145, in train
+    _, train_loader = self.get_data(flag='train')
+  File "/u/mi3se/projects/Financial-Time-Series/exp/exp_basic.py", line 71, in get_data
+    self.dataset_map[flag] = data_provider(self.args, flag)
+  File "/u/mi3se/projects/Financial-Time-Series/data_provider/data_factory.py", line 12, in data_provider
+    dataset = MultiTimeSeries(args, flag=flag)
+  File "/u/mi3se/projects/Financial-Time-Series/data_provider/data_loader.py", line 175, in __init__
+    self.__read_data__()
+  File "/u/mi3se/projects/Financial-Time-Series/data_provider/data_loader.py", line 230, in __read_data__
+    df = pd.read_csv(os.path.join(self.args.root_path,self.args.data_path))
+  File "/u/mi3se/anaconda3/envs/ml/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/u/mi3se/anaconda3/envs/ml/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/u/mi3se/anaconda3/envs/ml/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "/u/mi3se/anaconda3/envs/ml/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+  File "/u/mi3se/anaconda3/envs/ml/lib/python3.10/site-packages/pandas/io/common.py", line 873, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: './data/Financial_Aid.csv'
+Quadro RTX 4000
+Args in experiment: Namespace(test=False, seed=2024, result_path='results', disable_progress=True, root_path='./data', data_path='Financial_Aid.csv', features='MS', n_features=4, target='OFFER_BALANCE', freq='d', no_scale=False, seq_len=5, label_len=5, pred_len=1, top_k=5, num_kernels=6, d_model=64, n_heads=4, e_layers=2, d_layers=1, d_ff=128, moving_avg=3, factor=1, dropout=0.1, embed='timeF', activation='gelu', output_attention=False, channel_independence=1, decomp_method='moving_avg', use_norm=1, down_sampling_layers=0, down_sampling_window=1, down_sampling_method=None, seg_len=48, num_workers=10, itrs=3, itr_no=None, train_epochs=10, batch_size=32, patience=3, learning_rate=0.001, des=None, loss='MSE', lradj='type1', gpu=0, use_multi_gpu=False, devices='0,1,2,3', p_hidden_dims=[128, 128], p_hidden_layers=2, dry_run=False, percent=10, model='MICN', use_gpu=True, enc_in=4, dec_in=4, c_out=4, task_name='long_term_forecast')
+
+>>>> itr_no: 1, seed: 648 <<<<<<
+Use GPU: cuda:0
+Experiments will be saved in results/Financial_Aid/MICN_sl_5_pl_1_p_10/1
+
+Experiment begins at 2024-09-06 10:41:04
+
+>>>>>>> start training :>>>>>>>>>>
+Traceback (most recent call last):
+  File "/u/mi3se/projects/Financial-Time-Series/run.py", line 87, in <module>
+    main(args)
+  File "/u/mi3se/projects/Financial-Time-Series/run.py", line 60, in main
+    exp.train()
+  File "/u/mi3se/projects/Financial-Time-Series/exp/exp_long_term_forecasting.py", line 145, in train
+    _, train_loader = self.get_data(flag='train')
+  File "/u/mi3se/projects/Financial-Time-Series/exp/exp_basic.py", line 71, in get_data
+    self.dataset_map[flag] = data_provider(self.args, flag)
+  File "/u/mi3se/projects/Financial-Time-Series/data_provider/data_factory.py", line 12, in data_provider
+    dataset = MultiTimeSeries(args, flag=flag)
+  File "/u/mi3se/projects/Financial-Time-Series/data_provider/data_loader.py", line 175, in __init__
+    self.__read_data__()
+  File "/u/mi3se/projects/Financial-Time-Series/data_provider/data_loader.py", line 230, in __read_data__
+    df = pd.read_csv(os.path.join(self.args.root_path,self.args.data_path))
+  File "/u/mi3se/anaconda3/envs/ml/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/u/mi3se/anaconda3/envs/ml/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/u/mi3se/anaconda3/envs/ml/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "/u/mi3se/anaconda3/envs/ml/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+  File "/u/mi3se/anaconda3/envs/ml/lib/python3.10/site-packages/pandas/io/common.py", line 873, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: './data/Financial_Aid.csv'
+Quadro RTX 4000
+Args in experiment: Namespace(test=False, seed=2024, result_path='results', disable_progress=True, root_path='./data', data_path='Financial_Aid.csv', features='MS', n_features=4, target='OFFER_BALANCE', freq='d', no_scale=False, seq_len=5, label_len=0, pred_len=1, top_k=5, num_kernels=6, d_model=16, n_heads=4, e_layers=3, d_layers=1, d_ff=32, moving_avg=3, factor=3, dropout=0.1, embed='timeF', activation='gelu', output_attention=False, channel_independence=1, decomp_method='moving_avg', use_norm=1, down_sampling_layers=3, down_sampling_window=2, down_sampling_method='avg', seg_len=48, num_workers=10, itrs=3, itr_no=None, train_epochs=10, batch_size=32, patience=3, learning_rate=0.001, des=None, loss='MSE', lradj='type1', gpu=0, use_multi_gpu=False, devices='0,1,2,3', p_hidden_dims=[128, 128], p_hidden_layers=2, dry_run=False, percent=10, model='TimeMixer', use_gpu=True, enc_in=4, dec_in=4, c_out=4, task_name='long_term_forecast')
+
+>>>> itr_no: 1, seed: 648 <<<<<<
+Use GPU: cuda:0
+Experiments will be saved in results/Financial_Aid/TimeMixer_sl_5_pl_1_p_10/1
+
+Experiment begins at 2024-09-06 10:41:08
+
+>>>>>>> start training :>>>>>>>>>>
+Traceback (most recent call last):
+  File "/u/mi3se/projects/Financial-Time-Series/run.py", line 87, in <module>
+    main(args)
+  File "/u/mi3se/projects/Financial-Time-Series/run.py", line 60, in main
+    exp.train()
+  File "/u/mi3se/projects/Financial-Time-Series/exp/exp_long_term_forecasting.py", line 145, in train
+    _, train_loader = self.get_data(flag='train')
+  File "/u/mi3se/projects/Financial-Time-Series/exp/exp_basic.py", line 71, in get_data
+    self.dataset_map[flag] = data_provider(self.args, flag)
+  File "/u/mi3se/projects/Financial-Time-Series/data_provider/data_factory.py", line 12, in data_provider
+    dataset = MultiTimeSeries(args, flag=flag)
+  File "/u/mi3se/projects/Financial-Time-Series/data_provider/data_loader.py", line 175, in __init__
+    self.__read_data__()
+  File "/u/mi3se/projects/Financial-Time-Series/data_provider/data_loader.py", line 230, in __read_data__
+    df = pd.read_csv(os.path.join(self.args.root_path,self.args.data_path))
+  File "/u/mi3se/anaconda3/envs/ml/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/u/mi3se/anaconda3/envs/ml/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/u/mi3se/anaconda3/envs/ml/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "/u/mi3se/anaconda3/envs/ml/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+  File "/u/mi3se/anaconda3/envs/ml/lib/python3.10/site-packages/pandas/io/common.py", line 873, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: './data/Financial_Aid.csv'
+Quadro RTX 4000
+Args in experiment: Namespace(test=False, seed=2024, result_path='results', disable_progress=True, root_path='./data', data_path='Financial_Aid.csv', features='MS', n_features=4, target='OFFER_BALANCE', freq='d', no_scale=False, seq_len=5, label_len=3, pred_len=1, top_k=5, num_kernels=6, d_model=64, n_heads=4, e_layers=2, d_layers=1, d_ff=128, moving_avg=3, factor=1, dropout=0.1, embed='timeF', activation='gelu', output_attention=False, num_workers=10, itrs=3, itr_no=None, train_epochs=10, batch_size=32, patience=3, learning_rate=0.001, des=None, loss='MSE', lradj='type1', gpu=0, use_multi_gpu=False, devices='0,1,2,3', dry_run=False, percent=10, model_id='ori', model='CALF', task_loss='l1', distill_loss='l1', logits_loss='l1', tmax=20, r=8, lora_alpha=32, lora_dropout=0.1, word_embedding_path='./utils/wte_pca_500.pt', task_w=1.0, feature_w=0.01, logits_w=1.0, gpt_layers=6, log_fine_name='CALF_result.txt', noise_scale=-100, bootstrap_eval=0, use_gpu=True, enc_in=4, dec_in=4, c_out=4, task_name='long_term_forecast')
+
+>>>> itr_no: 1, seed: 648 <<<<<<
+Use GPU: cuda:0
+model_id  ori
+Traceback (most recent call last):
+  File "/u/mi3se/projects/Financial-Time-Series/run_CALF.py", line 106, in <module>
+    main(args)
+  File "/u/mi3se/projects/Financial-Time-Series/run_CALF.py", line 37, in main
+    exp = Exp_Long_Term_Forecast(args)
+  File "/u/mi3se/projects/Financial-Time-Series/exp/exp_long_term_forecasting.py", line 20, in __init__
+    super(Exp_Long_Term_Forecast, self).__init__(args)
+  File "/u/mi3se/projects/Financial-Time-Series/exp/exp_basic.py", line 26, in __init__
+    self.model = self._build_model().to(self.device)
+  File "/u/mi3se/projects/Financial-Time-Series/exp/exp_basic.py", line 51, in _build_model
+    model = Model(self.args, self.device).float()
+  File "/u/mi3se/projects/Financial-Time-Series/models/CALF.py", line 227, in __init__
+    self.in_layer = Encoder_PCA(configs.seq_len, word_embedding, hidden_dim=configs.d_model)
+  File "/u/mi3se/projects/Financial-Time-Series/models/CALF.py", line 23, in __init__
+    encoder_layer = nn.TransformerEncoderLayer(d_model=hidden_dim, nhead=num_heads)
+  File "/u/mi3se/anaconda3/envs/ml/lib/python3.10/site-packages/torch/nn/modules/transformer.py", line 589, in __init__
+    self.self_attn = MultiheadAttention(d_model, nhead, dropout=dropout,
+  File "/u/mi3se/anaconda3/envs/ml/lib/python3.10/site-packages/torch/nn/modules/activation.py", line 1011, in __init__
+    assert self.head_dim * num_heads == self.embed_dim, "embed_dim must be divisible by num_heads"
+AssertionError: embed_dim must be divisible by num_heads
+Quadro RTX 4000
+Args in experiment: Namespace(test=False, seed=2024, result_path='results', disable_progress=True, root_path='./data', data_path='Financial_Aid.csv', features='MS', n_features=4, target='OFFER_BALANCE', freq='d', no_scale=False, seq_len=5, label_len=3, pred_len=1, top_k=5, num_kernels=6, d_model=768, n_heads=4, e_layers=2, d_layers=1, d_ff=128, moving_avg=3, factor=1, dropout=0.1, embed='timeF', activation='gelu', output_attention=False, num_workers=10, itrs=3, itr_no=None, train_epochs=10, batch_size=32, patience=3, learning_rate=0.001, des=None, loss='MSE', lradj='type1', gpu=0, use_multi_gpu=False, devices='0,1,2,3', dry_run=False, percent=10, model_id='ori', model='OFA', gpt_layers=6, is_gpt=1, patch_size=4, kernel_size=25, pretrain=1, freeze=1, stride=2, max_len=-1, hid_dim=16, tmax=20, n_scale=-1, use_gpu=True, enc_in=4, dec_in=4, c_out=4, task_name='long_term_forecast')
+
+>>>> itr_no: 1, seed: 648 <<<<<<
+Use GPU: cuda:0
+Experiments will be saved in results/Financial_Aid/OFA_sl_5_pl_1_id_ori_p_10/1
+
+Experiment begins at 2024-09-06 10:41:29
+
+>>>>>>> start training :>>>>>>>>>>
+Minimum year  2015
+Split years:
+                 Train: [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022]
+                 Validation: [2023]
+                 Test: [2024]
+
+Warning: Length 1 is less than 100. Chosing by groups.
+Selected 2912 groups among 29126.
+Scaling data.
+Categoricals or ID: [].
+Numericals: ['INST_NEED', 'FUNDED_PARTY', 'TOTAL_PARTY'].
+Time column Date, target OFFER_BALANCE.
+train 8736
+Scaling data.
+val 29126
+Epoch: 1 | Time: 58.7 s | Train Loss: 640.41 Vali Loss: 911.97
+Validation loss decreased (inf --> 911.967957).  Saving model ...
+Epoch: 2 | Time: 56.7 s | Train Loss: 1564.3 Vali Loss: 2137.8
+EarlyStopping counter: 1 out of 3
+Epoch: 3 | Time: 55.9 s | Train Loss: 643.86 Vali Loss: 912.64
+EarlyStopping counter: 2 out of 3
+Epoch: 4 | Time: 55.9 s | Train Loss: 1571.6 Vali Loss: 2091.1
+EarlyStopping counter: 3 out of 3
+Early stopping
+
+Training completed at 2024-09-06 10:45:52.
+Model parameters: 81917953
+Total memory: 7967.4 MB
+Allocated memory: 345.4 MB
+Max allocated memory: 462.3 MB
+Time per epoch: 58.1 sec.
+Memory usage: Available 7967.4 MB, Allocated 345.4 MB, Max allocated 462.3 MB
+
+Loading model from results/Financial_Aid/OFA_sl_5_pl_1_id_ori_p_10/1/llm.pth
+
+>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<
+Scaling data.
+test 29126
+Preds and Trues shape: (29126, 1) (29126, 1)
+test scaled -- mse:2.8581e+07, mae:772.4
+Upscaling data and removing negatives...
+test -- mse:5.8405e+09, mae:8642.8, rmsle: 4.4726 smape 109.95
+
+
+>>>> itr_no: 2, seed: 506 <<<<<<
+Use GPU: cuda:0
+Experiments will be saved in results/Financial_Aid/OFA_sl_5_pl_1_id_ori_p_10/2
+
+Experiment begins at 2024-09-06 10:47:01
+
+>>>>>>> start training :>>>>>>>>>>
+Minimum year  2015
+Split years:
+                 Train: [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022]
+                 Validation: [2023]
+                 Test: [2024]
+
+Warning: Length 1 is less than 100. Chosing by groups.
+Selected 2912 groups among 29126.
+Scaling data.
+Categoricals or ID: [].
+Numericals: ['INST_NEED', 'FUNDED_PARTY', 'TOTAL_PARTY'].
+Time column Date, target OFFER_BALANCE.
+train 8736
+Scaling data.
+val 29126
+Epoch: 1 | Time: 56 s | Train Loss: 576.46 Vali Loss: 911.96
+Validation loss decreased (inf --> 911.962219).  Saving model ...
+Epoch: 2 | Time: 59.1 s | Train Loss: 1533.6 Vali Loss: 2048.3
+EarlyStopping counter: 1 out of 3
+Epoch: 3 | Time: 56.4 s | Train Loss: 577.26 Vali Loss: 912.65
+EarlyStopping counter: 2 out of 3
+Epoch: 4 | Time: 58.5 s | Train Loss: 1525.4 Vali Loss: 2071.5
+EarlyStopping counter: 3 out of 3
+Early stopping
+
+Training completed at 2024-09-06 10:51:24.
+Model parameters: 81917953
+Total memory: 7967.4 MB
+Allocated memory: 345.9 MB
+Max allocated memory: 659.0 MB
+Time per epoch: 58.5 sec.
+Memory usage: Available 7967.4 MB, Allocated 345.9 MB, Max allocated 659.0 MB
+
+Loading model from results/Financial_Aid/OFA_sl_5_pl_1_id_ori_p_10/2/llm.pth
+
+>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<
+Scaling data.
+test 29126
+Preds and Trues shape: (29126, 1) (29126, 1)
+test scaled -- mse:2.8581e+07, mae:772.38
+Upscaling data and removing negatives...
+test -- mse:4.3042e+09, mae:8163.8, rmsle: 4.4377 smape 118.31
+
+
+>>>> itr_no: 3, seed: 608 <<<<<<
+Use GPU: cuda:0
+Experiments will be saved in results/Financial_Aid/OFA_sl_5_pl_1_id_ori_p_10/3
+
+Experiment begins at 2024-09-06 10:52:33
+
+>>>>>>> start training :>>>>>>>>>>
+Minimum year  2015
+Split years:
+                 Train: [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022]
+                 Validation: [2023]
+                 Test: [2024]
+
+Warning: Length 1 is less than 100. Chosing by groups.
+Selected 2912 groups among 29126.
+Scaling data.
+Categoricals or ID: [].
+Numericals: ['INST_NEED', 'FUNDED_PARTY', 'TOTAL_PARTY'].
+Time column Date, target OFFER_BALANCE.
+train 8736
+Scaling data.
+val 29126
+Epoch: 1 | Time: 55.7 s | Train Loss: 647.39 Vali Loss: 911.97
+Validation loss decreased (inf --> 911.970215).  Saving model ...
+Epoch: 2 | Time: 57.1 s | Train Loss: 1360 Vali Loss: 2056.4
+EarlyStopping counter: 1 out of 3
+Epoch: 3 | Time: 56.2 s | Train Loss: 648.02 Vali Loss: 912.64
+EarlyStopping counter: 2 out of 3
+Epoch: 4 | Time: 53.4 s | Train Loss: 1356.7 Vali Loss: 2098.5
+EarlyStopping counter: 3 out of 3
+Early stopping
+
+Training completed at 2024-09-06 10:56:51.
+Model parameters: 81917953
+Total memory: 7967.4 MB
+Allocated memory: 346.9 MB
+Max allocated memory: 659.9 MB
+Time per epoch: 56.5 sec.
+Memory usage: Available 7967.4 MB, Allocated 346.9 MB, Max allocated 659.9 MB
+
+Loading model from results/Financial_Aid/OFA_sl_5_pl_1_id_ori_p_10/3/llm.pth
+
+>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<
+Scaling data.
+test 29126
+Preds and Trues shape: (29126, 1) (29126, 1)
+test scaled -- mse:2.8581e+07, mae:772.41
+Upscaling data and removing negatives...
+test -- mse:5.7109e+09, mae:8609.1, rmsle: 4.4778 smape 118.85
+
+Quadro RTX 4000
+Args in experiment: Namespace(test=False, seed=2024, result_path='results', disable_progress=True, root_path='./data', data_path='Financial_Aid.csv', features='M', n_features=4, target='OT', freq='d', no_scale=False, seq_len=5, label_len=3, pred_len=1, top_k=5, num_kernels=6, d_model=16, n_heads=4, e_layers=2, d_layers=1, d_ff=128, moving_avg=3, factor=1, dropout=0.1, embed='timeF', activation='gelu', output_attention=False, num_workers=10, itrs=3, itr_no=None, train_epochs=10, batch_size=16, patience=3, learning_rate=0.001, des=None, loss='MSE', lradj='type1', gpu=0, use_multi_gpu=False, devices='0,1,2,3', dry_run=False, percent=10, model_id='ori', model='TimeLLM', patch_len=16, stride=8, prompt_domain=1, llm_model='GPT2', llm_dim=768, llm_layers=6, use_gpu=True, enc_in=4, dec_in=4, c_out=4, task_name='long_term_forecast', content='Financial Aid disbursed to students depending on their instritutional needs is a big factor in their continuing higher study.')
+
+>>>> itr_no: 1, seed: 648 <<<<<<
+Use GPU: cuda:0
+description: Financial Aid disbursed to students depending on their instritutional needs is a big factor in their continuing higher study.
+Experiments will be saved in results/Financial_Aid/TimeLLM_sl_5_pl_1_id_ori_p_10/1
+
+Experiment begins at 2024-09-06 10:58:21
+
+>>>>>>> start training :>>>>>>>>>>
+Minimum year  2015
+Split years:
+                 Train: [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022]
+                 Validation: [2023]
+                 Test: [2024]
+
+Warning: Length 1 is less than 100. Chosing by groups.
+Selected 2912 groups among 29126.
+Scaling data.
+Traceback (most recent call last):
+  File "/u/mi3se/anaconda3/envs/ml/lib/python3.10/site-packages/pandas/core/indexes/base.py", line 3805, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7081, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7089, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'OT'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/u/mi3se/projects/Financial-Time-Series/run_TimeLLM.py", line 102, in <module>
+    main(args)
+  File "/u/mi3se/projects/Financial-Time-Series/run_TimeLLM.py", line 57, in main
+    exp.train()
+  File "/u/mi3se/projects/Financial-Time-Series/exp/exp_long_term_forecasting.py", line 145, in train
+    _, train_loader = self.get_data(flag='train')
+  File "/u/mi3se/projects/Financial-Time-Series/exp/exp_basic.py", line 71, in get_data
+    self.dataset_map[flag] = data_provider(self.args, flag)
+  File "/u/mi3se/projects/Financial-Time-Series/data_provider/data_factory.py", line 12, in data_provider
+    dataset = MultiTimeSeries(args, flag=flag)
+  File "/u/mi3se/projects/Financial-Time-Series/data_provider/data_loader.py", line 175, in __init__
+    self.__read_data__()
+  File "/u/mi3se/projects/Financial-Time-Series/data_provider/data_loader.py", line 236, in __read_data__
+    df, selected_columns = self.scale_data(df)
+  File "/u/mi3se/projects/Financial-Time-Series/data_provider/data_loader.py", line 285, in scale_data
+    categorical_features = [
+  File "/u/mi3se/projects/Financial-Time-Series/data_provider/data_loader.py", line 286, in <listcomp>
+    col for col in selected_columns if df_raw[col].dtype == 'object' or col.endswith('_ID')
+  File "/u/mi3se/anaconda3/envs/ml/lib/python3.10/site-packages/pandas/core/frame.py", line 4102, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "/u/mi3se/anaconda3/envs/ml/lib/python3.10/site-packages/pandas/core/indexes/base.py", line 3812, in get_loc
+    raise KeyError(key) from err
+KeyError: 'OT'
