@@ -1,6 +1,6 @@
 models=(DLinear PatchTST TimesNet iTransformer)
 data_path=SPX500.csv
-n_features=5
+n_features=4
 itrs=3
 percent=10
 
