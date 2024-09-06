@@ -4702,3 +4702,9 @@ mae:1.7403, rmse:2.2465, mse:5.0468
 Natural_Gas OFA_sl_96_pl_96_id_ori  test
 mae:8203.8, rmse:23211, mse:5.3874e+08, rmsle 0.42238 smape 28.605
 
+Natural_Gas TimeLLM_sl_96_pl_96_id_ori  test scaled
+mae:1.8319, rmse:2.3862, mse:5.694
+
+Natural_Gas TimeLLM_sl_96_pl_96_id_ori  test
+mae:9567.9, rmse:27126, mse:7.3581e+08, rmsle 0.45516 smape 28.874
+
