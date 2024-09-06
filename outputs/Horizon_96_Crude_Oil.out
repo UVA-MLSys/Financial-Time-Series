@@ -955,3 +955,135 @@ test scaled -- mse:2.9731, mae:1.3133
 Upscaling data and removing negatives...
 test -- mse:1.6708e+09, mae:14209, rmsle: 0.32011 smape 15.543
 
+NVIDIA A16
+Args in experiment: Namespace(test=False, seed=2024, result_path='results', disable_progress=True, root_path='./data', data_path='Crude_Oil.csv', features='M', n_features=5, target='OT', freq='d', no_scale=False, seq_len=96, label_len=48, pred_len=96, top_k=5, num_kernels=6, d_model=16, n_heads=4, e_layers=2, d_layers=1, d_ff=128, moving_avg=3, factor=1, dropout=0.1, embed='timeF', activation='gelu', output_attention=False, num_workers=10, itrs=3, itr_no=None, train_epochs=10, batch_size=16, patience=3, learning_rate=0.001, des=None, loss='MSE', lradj='type1', gpu=0, use_multi_gpu=False, devices='0,1,2,3', dry_run=False, percent=100, model_id='ori', model='TimeLLM', patch_len=16, stride=8, prompt_domain=1, llm_model='GPT2', llm_dim=768, llm_layers=6, use_gpu=True, enc_in=5, dec_in=5, c_out=5, task_name='long_term_forecast', content='Crude Oil historical price per day in dollars')
+
+>>>> itr_no: 1, seed: 648 <<<<<<
+Use GPU: cuda:0
+description: Crude Oil historical price per day in dollars
+Experiments will be saved in results/Crude_Oil/TimeLLM_sl_96_pl_96_id_ori/1
+
+Experiment begins at 2024-09-06 09:51:04
+
+>>>>>>> start training :>>>>>>>>>>
+train 1832
+val 159
+Epoch: 1 | Time: 147 s | Train Loss: 9.4532 Vali Loss: 1.706
+Validation loss decreased (inf --> 1.705952).  Saving model ...
+Epoch: 2 | Time: 144 s | Train Loss: 9.1575 Vali Loss: 2.2647
+EarlyStopping counter: 1 out of 3
+Epoch: 3 | Time: 144 s | Train Loss: 9.2008 Vali Loss: 1.6086
+Validation loss decreased (1.705952 --> 1.608595).  Saving model ...
+Epoch: 4 | Time: 144 s | Train Loss: 8.9828 Vali Loss: 2.0887
+EarlyStopping counter: 1 out of 3
+Epoch: 5 | Time: 144 s | Train Loss: 8.7573 Vali Loss: 1.4573
+Validation loss decreased (1.608595 --> 1.457346).  Saving model ...
+Epoch: 6 | Time: 144 s | Train Loss: 8.7744 Vali Loss: 2.7687
+EarlyStopping counter: 1 out of 3
+Epoch: 7 | Time: 145 s | Train Loss: 8.8817 Vali Loss: 1.7902
+EarlyStopping counter: 2 out of 3
+Epoch: 8 | Time: 144 s | Train Loss: 8.7444 Vali Loss: 1.8832
+EarlyStopping counter: 3 out of 3
+Early stopping
+
+Training completed at 2024-09-06 10:10:40.
+Model parameters: 133508528
+Total memory: 14878.2 MB
+Allocated memory: 1128.0 MB
+Max allocated memory: 6468.9 MB
+Time per epoch: 146.9 sec.
+Memory usage: Available 14878.2 MB, Allocated 1128.0 MB, Max allocated 6468.9 MB
+
+Loading model from results/Crude_Oil/TimeLLM_sl_96_pl_96_id_ori/1/llm.pth
+
+>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<
+test 157
+Preds and Trues shape: (157, 96, 5) (157, 96, 5)
+test scaled -- mse:1.0248, mae:0.84045
+Upscaling data and removing negatives...
+test -- mse:2.6953e+09, mae:18211, rmsle: 0.37047 smape 13.397
+
+
+>>>> itr_no: 2, seed: 506 <<<<<<
+Use GPU: cuda:0
+description: Crude Oil historical price per day in dollars
+Experiments will be saved in results/Crude_Oil/TimeLLM_sl_96_pl_96_id_ori/2
+
+Experiment begins at 2024-09-06 10:10:47
+
+>>>>>>> start training :>>>>>>>>>>
+train 1832
+val 159
+Epoch: 1 | Time: 146 s | Train Loss: 9.3421 Vali Loss: 1.7988
+Validation loss decreased (inf --> 1.798809).  Saving model ...
+Epoch: 2 | Time: 144 s | Train Loss: 8.9555 Vali Loss: 1.2326
+Validation loss decreased (1.798809 --> 1.232597).  Saving model ...
+Epoch: 3 | Time: 144 s | Train Loss: 8.9368 Vali Loss: 1.9914
+EarlyStopping counter: 1 out of 3
+Epoch: 4 | Time: 145 s | Train Loss: 8.8603 Vali Loss: 2.0499
+EarlyStopping counter: 2 out of 3
+Epoch: 5 | Time: 144 s | Train Loss: 8.7487 Vali Loss: 1.6833
+EarlyStopping counter: 3 out of 3
+Early stopping
+
+Training completed at 2024-09-06 10:23:02.
+Model parameters: 133508528
+Total memory: 14878.2 MB
+Allocated memory: 1129.6 MB
+Max allocated memory: 6469.5 MB
+Time per epoch: 147.1 sec.
+Memory usage: Available 14878.2 MB, Allocated 1129.6 MB, Max allocated 6469.5 MB
+
+Loading model from results/Crude_Oil/TimeLLM_sl_96_pl_96_id_ori/2/llm.pth
+
+>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<
+test 157
+Preds and Trues shape: (157, 96, 5) (157, 96, 5)
+test scaled -- mse:1.3971, mae:0.99292
+Upscaling data and removing negatives...
+test -- mse:2.4178e+09, mae:17182, rmsle: 0.35107 smape 14.228
+
+
+>>>> itr_no: 3, seed: 608 <<<<<<
+Use GPU: cuda:0
+description: Crude Oil historical price per day in dollars
+Experiments will be saved in results/Crude_Oil/TimeLLM_sl_96_pl_96_id_ori/3
+
+Experiment begins at 2024-09-06 10:23:09
+
+>>>>>>> start training :>>>>>>>>>>
+train 1832
+val 159
+Epoch: 1 | Time: 145 s | Train Loss: 9.2482 Vali Loss: 1.9779
+Validation loss decreased (inf --> 1.977897).  Saving model ...
+Epoch: 2 | Time: 143 s | Train Loss: 9.1053 Vali Loss: 2.0622
+EarlyStopping counter: 1 out of 3
+Epoch: 3 | Time: 144 s | Train Loss: 8.9827 Vali Loss: 2.9163
+EarlyStopping counter: 2 out of 3
+Epoch: 4 | Time: 144 s | Train Loss: 8.9039 Vali Loss: 1.894
+Validation loss decreased (1.977897 --> 1.893984).  Saving model ...
+Epoch: 5 | Time: 144 s | Train Loss: 8.7173 Vali Loss: 2.0175
+EarlyStopping counter: 1 out of 3
+Epoch: 6 | Time: 144 s | Train Loss: 8.6112 Vali Loss: 2.184
+EarlyStopping counter: 2 out of 3
+Epoch: 7 | Time: 144 s | Train Loss: 8.5629 Vali Loss: 2.1049
+EarlyStopping counter: 3 out of 3
+Early stopping
+
+Training completed at 2024-09-06 10:40:09.
+Model parameters: 133508528
+Total memory: 14878.2 MB
+Allocated memory: 1130.0 MB
+Max allocated memory: 6470.9 MB
+Time per epoch: 145.8 sec.
+Memory usage: Available 14878.2 MB, Allocated 1130.0 MB, Max allocated 6470.9 MB
+
+Loading model from results/Crude_Oil/TimeLLM_sl_96_pl_96_id_ori/3/llm.pth
+
+>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<
+test 157
+Preds and Trues shape: (157, 96, 5) (157, 96, 5)
+test scaled -- mse:1.2363, mae:0.88819
+Upscaling data and removing negatives...
+test -- mse:3.5587e+09, mae:20029, rmsle: 0.38927 smape 13.633
+

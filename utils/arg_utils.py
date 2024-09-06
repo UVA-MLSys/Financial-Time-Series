@@ -21,8 +21,8 @@ def get_basic_parser(
     # parser.add_argument('--group_id', type=str, default='GROUP_ID', help='group id for multi-time series')
     parser.add_argument('--target', type=str, default='OT', help='target feature in S or MS task')
     parser.add_argument(
-        '--freq', type=str, default='d', choices=['s', 't', 'h', 'd', 'b', 'w', 'm'],
-        help='freq for time features encoding, options:[s:secondly, t:minutely, h:hourly, d:daily, b:business days, w:weekly, m:monthly], you can also use more detailed freq like 15min or 3h'
+        '--freq', type=str, default='d', choices=['s', 't', 'h', 'd', 'b', 'w', 'm', 'a'],
+        help='freq for time features encoding, options:[s:secondly, t:minutely, h:hourly, d:daily, b:business days, w:weekly, m:monthly, a:yearly], you can also use more detailed freq like 15min or 3h'
     )
     parser.add_argument('--no_scale', action='store_true', help='do not scale the dataset')
 
