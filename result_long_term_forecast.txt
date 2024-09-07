@@ -4708,3 +4708,177 @@ mae:1.8319, rmse:2.3862, mse:5.694
 Natural_Gas TimeLLM_sl_96_pl_96_id_ori  test
 mae:9567.9, rmse:27126, mse:7.3581e+08, rmsle 0.45516 smape 28.874
 
+Natural_Gas TimeLLM_sl_96_pl_96_id_ori  test scaled
+mae:1.9371, rmse:2.5818, mse:6.6657
+
+Natural_Gas TimeLLM_sl_96_pl_96_id_ori  test
+mae:9907.4, rmse:28876, mse:8.3382e+08, rmsle 0.47635 smape 29.034
+
+Natural_Gas TimeLLM_sl_96_pl_96_id_ori  test scaled
+mae:1.89, rmse:2.465, mse:6.0763
+
+Natural_Gas TimeLLM_sl_96_pl_96_id_ori  test
+mae:10125, rmse:28663, mse:8.2156e+08, rmsle 0.46344 smape 29.923
+
+SPX500 DLinear_sl_96_pl_96  test scaled
+mae:2.197, rmse:3.1322, mse:9.8104
+
+SPX500 DLinear_sl_96_pl_96  test
+mae:287.99, rmse:370.17, mse:1.3702e+05, rmsle 0.078202 smape 6.0306
+
+SPX500 DLinear_sl_96_pl_96  test scaled
+mae:2.2029, rmse:3.138, mse:9.8473
+
+SPX500 DLinear_sl_96_pl_96  test
+mae:289.43, rmse:371.59, mse:1.3808e+05, rmsle 0.078486 smape 6.0595
+
+SPX500 DLinear_sl_96_pl_96  test scaled
+mae:2.2149, rmse:3.1387, mse:9.8516
+
+SPX500 DLinear_sl_96_pl_96  test
+mae:292.27, rmse:372.63, mse:1.3885e+05, rmsle 0.078639 smape 6.1136
+
+SPX500 PatchTST_sl_96_pl_96  test scaled
+mae:1.6078, rmse:2.3011, mse:5.295
+
+SPX500 PatchTST_sl_96_pl_96  test
+mae:214.21, rmse:273.47, mse:74787, rmsle 0.057008 smape 4.4348
+
+SPX500 PatchTST_sl_96_pl_96  test scaled
+mae:1.6832, rmse:2.397, mse:5.7458
+
+SPX500 PatchTST_sl_96_pl_96  test
+mae:222.17, rmse:281.78, mse:79400, rmsle 0.058943 smape 4.6101
+
+SPX500 PatchTST_sl_96_pl_96  test scaled
+mae:1.6568, rmse:2.2108, mse:4.8874
+
+SPX500 PatchTST_sl_96_pl_96  test
+mae:237.71, rmse:290.67, mse:84490, rmsle 0.059691 smape 4.8769
+
+SPX500 TimesNet_sl_96_pl_96  test scaled
+mae:1.7393, rmse:2.3999, mse:5.7597
+
+SPX500 TimesNet_sl_96_pl_96  test
+mae:239.24, rmse:294.87, mse:86948, rmsle 0.06113 smape 4.9312
+
+SPX500 TimesNet_sl_96_pl_96  test scaled
+mae:1.8439, rmse:2.6609, mse:7.0805
+
+SPX500 TimesNet_sl_96_pl_96  test
+mae:246.59, rmse:317.76, mse:1.0097e+05, rmsle 0.066457 smape 5.1108
+
+SPX500 TimesNet_sl_96_pl_96  test scaled
+mae:1.7507, rmse:2.3834, mse:5.6808
+
+SPX500 TimesNet_sl_96_pl_96  test
+mae:239.29, rmse:292.19, mse:85377, rmsle 0.060601 smape 4.9373
+
+SPX500 iTransformer_sl_96_pl_96  test scaled
+mae:1.8054, rmse:2.4619, mse:6.0607
+
+SPX500 iTransformer_sl_96_pl_96  test
+mae:250.52, rmse:309.48, mse:95777, rmsle 0.064299 smape 5.1805
+
+SPX500 iTransformer_sl_96_pl_96  test scaled
+mae:1.9581, rmse:2.6952, mse:7.2642
+
+SPX500 iTransformer_sl_96_pl_96  test
+mae:265.98, rmse:327.7, mse:1.0739e+05, rmsle 0.068658 smape 5.5294
+
+SPX500 iTransformer_sl_96_pl_96  test scaled
+mae:1.8558, rmse:2.508, mse:6.2902
+
+SPX500 iTransformer_sl_96_pl_96  test
+mae:258.71, rmse:316.76, mse:1.0034e+05, rmsle 0.065795 smape 5.3503
+
+SPX500 MICN_sl_96_pl_96  test scaled
+mae:1.8377, rmse:2.525, mse:6.3757
+
+SPX500 MICN_sl_96_pl_96  test
+mae:249.19, rmse:307.16, mse:94344, rmsle 0.063705 smape 5.147
+
+SPX500 MICN_sl_96_pl_96  test scaled
+mae:1.6127, rmse:2.314, mse:5.3546
+
+SPX500 MICN_sl_96_pl_96  test
+mae:214.05, rmse:275.96, mse:76155, rmsle 0.057306 smape 4.4199
+
+SPX500 MICN_sl_96_pl_96  test scaled
+mae:1.6839, rmse:2.3912, mse:5.7177
+
+SPX500 MICN_sl_96_pl_96  test
+mae:223.63, rmse:285.16, mse:81316, rmsle 0.059233 smape 4.6241
+
+SPX500 TimeMixer_sl_96_pl_96  test scaled
+mae:1.6249, rmse:2.2509, mse:5.0666
+
+SPX500 TimeMixer_sl_96_pl_96  test
+mae:220.7, rmse:275.48, mse:75892, rmsle 0.056958 smape 4.5488
+
+SPX500 TimeMixer_sl_96_pl_96  test scaled
+mae:1.8699, rmse:2.554, mse:6.5231
+
+SPX500 TimeMixer_sl_96_pl_96  test
+mae:252.79, rmse:309.8, mse:95975, rmsle 0.064394 smape 5.2318
+
+SPX500 TimeMixer_sl_96_pl_96  test scaled
+mae:1.6475, rmse:2.3615, mse:5.5768
+
+SPX500 TimeMixer_sl_96_pl_96  test
+mae:217.86, rmse:281.37, mse:79167, rmsle 0.05852 smape 4.5099
+
+SPX500 CALF_sl_96_pl_96_id_ori  test scaled
+mae:1.7465, rmse:2.4824, mse:6.1622
+
+SPX500 CALF_sl_96_pl_96_id_ori  test
+mae:227.56, rmse:291.59, mse:85025, rmsle 0.061228 smape 4.7386
+
+SPX500 CALF_sl_96_pl_96_id_ori  test scaled
+mae:1.7825, rmse:2.456, mse:6.0317
+
+SPX500 CALF_sl_96_pl_96_id_ori  test
+mae:238.31, rmse:296.61, mse:87975, rmsle 0.061803 smape 4.9355
+
+SPX500 CALF_sl_96_pl_96_id_ori  test scaled
+mae:1.6701, rmse:2.3647, mse:5.5917
+
+SPX500 CALF_sl_96_pl_96_id_ori  test
+mae:222.16, rmse:284.1, mse:80714, rmsle 0.059334 smape 4.6046
+
+SPX500 OFA_sl_96_pl_96_id_ori  test scaled
+mae:1.4777, rmse:2.097, mse:4.3973
+
+SPX500 OFA_sl_96_pl_96_id_ori  test
+mae:201.26, rmse:255.31, mse:65184, rmsle 0.052686 smape 4.1242
+
+SPX500 OFA_sl_96_pl_96_id_ori  test scaled
+mae:1.3706, rmse:1.9564, mse:3.8274
+
+SPX500 OFA_sl_96_pl_96_id_ori  test
+mae:184.31, rmse:238.01, mse:56648, rmsle 0.049132 smape 3.7861
+
+SPX500 OFA_sl_96_pl_96_id_ori  test scaled
+mae:1.431, rmse:2.026, mse:4.1045
+
+SPX500 OFA_sl_96_pl_96_id_ori  test
+mae:190.56, rmse:242.35, mse:58734, rmsle 0.050219 smape 3.9317
+
+SPX500 TimeLLM_sl_96_pl_96_id_ori  test scaled
+mae:1.641, rmse:2.2908, mse:5.2478
+
+SPX500 TimeLLM_sl_96_pl_96_id_ori  test
+mae:218, rmse:273.82, mse:74976, rmsle 0.056832 smape 4.5064
+
+SPX500 TimeLLM_sl_96_pl_96_id_ori  test scaled
+mae:1.6975, rmse:2.3377, mse:5.4648
+
+SPX500 TimeLLM_sl_96_pl_96_id_ori  test
+mae:230.27, rmse:285.2, mse:81341, rmsle 0.059063 smape 4.7474
+
+SPX500 TimeLLM_sl_96_pl_96_id_ori  test scaled
+mae:1.6804, rmse:2.2465, mse:5.0466
+
+SPX500 TimeLLM_sl_96_pl_96_id_ori  test
+mae:231.42, rmse:280.93, mse:78924, rmsle 0.057843 smape 4.7587
+
