@@ -8,3 +8,6 @@ Memory usage: Available 11004.5 MB, Allocated 1474.8 MB, Max allocated 2606.6 MB
 test scaled -- mse:1.8208, mae:1.0081
 test -- mse:7.8697e+08, mae:9688.4, rmsle: 0.42709 smape 19.728
 
+
+Experiment begins at 2024-09-07 19:50:31
+
