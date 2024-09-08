@@ -4882,3 +4882,141 @@ mae:1.6804, rmse:2.2465, mse:5.0466
 SPX500 TimeLLM_sl_96_pl_96_id_ori  test
 mae:231.42, rmse:280.93, mse:78924, rmsle 0.057843 smape 4.7587
 
+Exchange_Rate_Report TimeLLM_sl_96_pl_48_id_ori  test scaled
+mae:0.94044, rmse:1.2323, mse:1.5187
+
+Exchange_Rate_Report TimeLLM_sl_96_pl_48_id_ori  test
+mae:0.54228, rmse:1.5438, mse:2.3832, rmsle 0.012757 smape 1.2444
+
+Gold TimeMixer_sl_96_pl_24  test scaled
+mae:1.0893, rmse:1.6346, mse:2.6719
+
+Gold TimeMixer_sl_96_pl_24  test
+mae:11109, rmse:30762, mse:9.4629e+08, rmsle 0.1571 smape 7.5911
+
+Gold TimeMixer_sl_96_pl_24  test scaled
+mae:1.0641, rmse:1.5825, mse:2.5042
+
+Gold TimeMixer_sl_96_pl_24  test
+mae:10374, rmse:28908, mse:8.3569e+08, rmsle 0.14575 smape 7.1704
+
+Gold TimeMixer_sl_96_pl_24  test scaled
+mae:1.0193, rmse:1.5109, mse:2.2829
+
+Gold TimeMixer_sl_96_pl_24  test
+mae:10186, rmse:28601, mse:8.1801e+08, rmsle 0.14405 smape 7.067
+
+Exchange_Rate_Report TimeLLM_sl_96_pl_48_id_ori  test scaled
+mae:0.97651, rmse:1.2838, mse:1.6481
+
+Exchange_Rate_Report TimeLLM_sl_96_pl_48_id_ori  test
+mae:0.52405, rmse:1.5032, mse:2.2595, rmsle 0.012858 smape 1.2804
+
+Natural_Gas DLinear_sl_96_pl_24_p_10  test scaled
+mae:1.1554, rmse:1.475, mse:2.1756
+
+Natural_Gas DLinear_sl_96_pl_24_p_10  test
+mae:8566.8, rmse:25190, mse:6.3453e+08, rmsle 0.43395 smape 20.988
+
+Natural_Gas DLinear_sl_96_pl_24_p_10  test scaled
+mae:1.1572, rmse:1.4748, mse:2.1751
+
+Natural_Gas DLinear_sl_96_pl_24_p_10  test
+mae:8621.8, rmse:25214, mse:6.3575e+08, rmsle 0.433 smape 21.062
+
+Natural_Gas DLinear_sl_96_pl_24_p_10  test scaled
+mae:1.1802, rmse:1.4975, mse:2.2425
+
+Natural_Gas DLinear_sl_96_pl_24_p_10  test
+mae:8544.2, rmse:25334, mse:6.418e+08, rmsle 0.43763 smape 21.491
+
+Natural_Gas PatchTST_sl_96_pl_24_p_10  test scaled
+mae:1.2434, rmse:1.5737, mse:2.4766
+
+Natural_Gas PatchTST_sl_96_pl_24_p_10  test
+mae:10172, rmse:29251, mse:8.556e+08, rmsle 0.46129 smape 22.927
+
+Natural_Gas PatchTST_sl_96_pl_24_p_10  test scaled
+mae:1.2085, rmse:1.5431, mse:2.3812
+
+Natural_Gas PatchTST_sl_96_pl_24_p_10  test
+mae:10062, rmse:29358, mse:8.6187e+08, rmsle 0.46242 smape 22.395
+
+Natural_Gas PatchTST_sl_96_pl_24_p_10  test scaled
+mae:1.2746, rmse:1.6068, mse:2.5817
+
+Natural_Gas PatchTST_sl_96_pl_24_p_10  test
+mae:10468, rmse:30231, mse:9.1391e+08, rmsle 0.46759 smape 23.251
+
+Exchange_Rate_Report TimeLLM_sl_96_pl_48_id_ori  test scaled
+mae:0.9588, rmse:1.2535, mse:1.5713
+
+Exchange_Rate_Report TimeLLM_sl_96_pl_48_id_ori  test
+mae:0.46328, rmse:1.4307, mse:2.047, rmsle 0.012362 smape 1.2338
+
+Natural_Gas TimesNet_sl_96_pl_24_p_10  test scaled
+mae:1.1925, rmse:1.5697, mse:2.4638
+
+Natural_Gas TimesNet_sl_96_pl_24_p_10  test
+mae:10471, rmse:29272, mse:8.5687e+08, rmsle 0.43972 smape 22.616
+
+Natural_Gas TimesNet_sl_96_pl_24_p_10  test scaled
+mae:1.2272, rmse:1.6104, mse:2.5934
+
+Natural_Gas TimesNet_sl_96_pl_24_p_10  test
+mae:9812.6, rmse:27402, mse:7.5088e+08, rmsle 0.43358 smape 22.72
+
+Natural_Gas TimesNet_sl_96_pl_24_p_10  test scaled
+mae:1.2691, rmse:1.6131, mse:2.602
+
+Natural_Gas TimesNet_sl_96_pl_24_p_10  test
+mae:9503.9, rmse:26625, mse:7.0892e+08, rmsle 0.42385 smape 23.714
+
+Natural_Gas iTransformer_sl_96_pl_24_p_10  test scaled
+mae:1.175, rmse:1.5193, mse:2.3083
+
+Natural_Gas iTransformer_sl_96_pl_24_p_10  test
+mae:9571.8, rmse:27809, mse:7.7334e+08, rmsle 0.45079 smape 22.093
+
+Natural_Gas iTransformer_sl_96_pl_24_p_10  test scaled
+mae:1.0847, rmse:1.4369, mse:2.0647
+
+Natural_Gas iTransformer_sl_96_pl_24_p_10  test
+mae:9533.4, rmse:27321, mse:7.4645e+08, rmsle 0.42999 smape 20.264
+
+Natural_Gas iTransformer_sl_96_pl_24_p_10  test scaled
+mae:1.0933, rmse:1.409, mse:1.9853
+
+Natural_Gas iTransformer_sl_96_pl_24_p_10  test
+mae:10080, rmse:28763, mse:8.273e+08, rmsle 0.43642 smape 20.936
+
+Apple TimeLLM_sl_96_pl_48_id_ori  test scaled
+mae:1.3354, rmse:1.7331, mse:3.0037
+
+Apple TimeLLM_sl_96_pl_48_id_ori  test
+mae:3.8444e+06, rmse:1.3458e+07, mse:1.8113e+14, rmsle 0.19019 smape 10.764
+
+Natural_Gas CALF_sl_96_pl_24_id_ori  test scaled
+mae:1.0119, rmse:1.3484, mse:1.8183
+
+Natural_Gas CALF_sl_96_pl_24_id_ori  test
+mae:9072.1, rmse:26036, mse:6.7786e+08, rmsle 0.42707 smape 19.677
+
+Apple TimeLLM_sl_96_pl_48_id_ori  test scaled
+mae:1.3495, rmse:1.7141, mse:2.9383
+
+Apple TimeLLM_sl_96_pl_48_id_ori  test
+mae:4.0145e+06, rmse:1.3213e+07, mse:1.7457e+14, rmsle 0.18836 smape 10.934
+
+Natural_Gas CALF_sl_96_pl_24_id_ori  test scaled
+mae:0.97778, rmse:1.2876, mse:1.6579
+
+Natural_Gas CALF_sl_96_pl_24_id_ori  test
+mae:9038.8, rmse:25536, mse:6.5209e+08, rmsle 0.4143 smape 19.548
+
+Apple TimeLLM_sl_96_pl_48_id_ori  test scaled
+mae:1.4354, rmse:1.8102, mse:3.2768
+
+Apple TimeLLM_sl_96_pl_48_id_ori  test
+mae:4.194e+06, rmse:1.374e+07, mse:1.888e+14, rmsle 0.19758 smape 11.56
+
