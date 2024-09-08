@@ -30,7 +30,7 @@ def main(args):
                 exp.train()
 
             print('\n>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<')
-            exp.test(flag='test')
+            exp.test(load_model=not args.zero_shot, flag='test')
     else:
         parent_seed = args.seed
         np.random.seed(parent_seed)
@@ -63,7 +63,7 @@ def main(args):
             # exp.test(flag='val')
 
             print('\n>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<')
-            exp.test(flag='test')
+            exp.test(load_model=not args.zero_shot, flag='test')
            
         data_name = args.data_path.split('.')[0] 
         config_filepath = os.path.join(
@@ -93,6 +93,7 @@ def get_parser():
     parser.add_argument('--llm_dim', type=int, default='768', 
         help='LLM model dimension. LLama7b:4096; GPT2-small:768; BERT-base:768')
     parser.add_argument('--llm_layers', type=int, default=6)
+    parser.add_argument('--zero_shot', action='store_true', help='use zero shot learning')
     
     return parser
 

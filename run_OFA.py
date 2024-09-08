@@ -24,7 +24,7 @@ def main(args):
                 exp.train()
 
             print('\n>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<')
-            exp.test(flag='test')
+            exp.test(load_model=not args.zero_shot, flag='test')
     else:
         parent_seed = args.seed
         np.random.seed(parent_seed)
@@ -57,7 +57,7 @@ def main(args):
             # exp.test(flag='val')
 
             print('\n>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<')
-            exp.test(flag='test')
+            exp.test(load_model=not args.zero_shot, flag='test')
            
         data_name = args.data_path.split('.')[0] 
         config_filepath = os.path.join(
@@ -90,6 +90,7 @@ def get_parser():
     parser.add_argument('--hid_dim', type=int, default=16)
     parser.add_argument('--tmax', type=int, default=20)
     parser.add_argument('--n_scale', type=float, default=-1)
+    parser.add_argument('--zero_shot', action='store_true', help='use zero shot learning')
     
     return parser
 
