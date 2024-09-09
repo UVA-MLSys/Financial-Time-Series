@@ -7,5 +7,5 @@ for root, dirs, files in os.walk(u"."):
     for file in files:
         # print(len(path) * '---', file)
         print(root, ' ', file)
-        if file == 'llm.pth':
+        if file in ['llm.pth', 'checkpoint.pth']:
             os.remove(os.path.join(root, file))

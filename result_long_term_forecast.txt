@@ -5416,3 +5416,471 @@ mae:1.6974, rmse:2.0571, mse:4.2315
 SPX500 TimeLLM_sl_96_pl_24_id_ori_zeroshot  test
 mae:276.85, rmse:344.03, mse:1.1835e+05, rmsle 0.071462 smape 5.7227
 
+Financial_Aid_State DLinear_sl_5_pl_1  test scaled
+mae:2.0409, rmse:3.5687, mse:12.736
+
+Financial_Aid_State DLinear_sl_5_pl_1  test
+mae:1.177e+07, rmse:2.3101e+07, mse:5.3367e+14, rmsle 1.4279 smape 15.869
+
+Financial_Aid_State DLinear_sl_5_pl_1  test scaled
+mae:1.9724, rmse:3.3268, mse:11.068
+
+Financial_Aid_State DLinear_sl_5_pl_1  test
+mae:9.6644e+06, rmse:1.8898e+07, mse:3.5713e+14, rmsle 1.5573 smape 30.809
+
+Financial_Aid_State DLinear_sl_5_pl_1  test scaled
+mae:1.9612, rmse:3.4467, mse:11.879
+
+Financial_Aid_State DLinear_sl_5_pl_1  test
+mae:1.0629e+07, rmse:2.0602e+07, mse:4.2443e+14, rmsle 1.4833 smape 31.446
+
+Financial_Aid_State DLinear_sl_10_pl_1  test scaled
+mae:1.2129, rmse:1.5765, mse:2.4852
+
+Financial_Aid_State DLinear_sl_10_pl_1  test
+mae:1.6654e+07, rmse:3.1356e+07, mse:9.8321e+14, rmsle 2.8973 smape 36.083
+
+Financial_Aid_State DLinear_sl_10_pl_1  test scaled
+mae:1.2006, rmse:1.539, mse:2.3684
+
+Financial_Aid_State DLinear_sl_10_pl_1  test
+mae:1.6422e+07, rmse:3.1826e+07, mse:1.0129e+15, rmsle 2.9379 smape 35.856
+
+Financial_Aid_State DLinear_sl_10_pl_1  test scaled
+mae:1.228, rmse:1.6234, mse:2.6353
+
+Financial_Aid_State DLinear_sl_10_pl_1  test
+mae:1.6856e+07, rmse:3.1289e+07, mse:9.7901e+14, rmsle 2.8374 smape 36.368
+
+Financial_Aid_State PatchTST_sl_10_pl_1  test scaled
+mae:0.82944, rmse:1.343, mse:1.8036
+
+Financial_Aid_State PatchTST_sl_10_pl_1  test
+mae:8.3128e+06, rmse:1.5323e+07, mse:2.3481e+14, rmsle 2.7166 smape 29.507
+
+Financial_Aid_State PatchTST_sl_10_pl_1  test scaled
+mae:1.2176, rmse:1.719, mse:2.9551
+
+Financial_Aid_State PatchTST_sl_10_pl_1  test
+mae:1.5062e+07, rmse:3.0106e+07, mse:9.0635e+14, rmsle 2.4668 smape 30.143
+
+Financial_Aid_State PatchTST_sl_10_pl_1  test scaled
+mae:0.80864, rmse:1.3931, mse:1.9408
+
+Financial_Aid_State PatchTST_sl_10_pl_1  test
+mae:7.8218e+06, rmse:1.5204e+07, mse:2.3115e+14, rmsle 1.8012 smape 30.298
+
+Financial_Aid_State iTransformer_sl_10_pl_1  test scaled
+mae:0.7461, rmse:1.2277, mse:1.5072
+
+Financial_Aid_State iTransformer_sl_10_pl_1  test
+mae:7.311e+06, rmse:1.4749e+07, mse:2.1753e+14, rmsle 2.4445 smape 26.477
+
+Financial_Aid_State iTransformer_sl_10_pl_1  test scaled
+mae:0.79848, rmse:1.328, mse:1.7636
+
+Financial_Aid_State iTransformer_sl_10_pl_1  test
+mae:7.2801e+06, rmse:1.4876e+07, mse:2.2128e+14, rmsle 1.5012 smape 29.629
+
+Financial_Aid_State iTransformer_sl_10_pl_1  test scaled
+mae:0.79488, rmse:1.2628, mse:1.5946
+
+Financial_Aid_State iTransformer_sl_10_pl_1  test
+mae:8.663e+06, rmse:1.68e+07, mse:2.8225e+14, rmsle 2.4227 smape 28.736
+
+Financial_Aid_State CALF_sl_10_pl_1_id_ori  test scaled
+mae:0.88415, rmse:1.3241, mse:1.7533
+
+Financial_Aid_State CALF_sl_10_pl_1_id_ori  test
+mae:1.0113e+07, rmse:2.0179e+07, mse:4.0719e+14, rmsle 2.9029 smape 32.175
+
+Financial_Aid_State CALF_sl_10_pl_1_id_ori  test scaled
+mae:0.83834, rmse:1.3032, mse:1.6984
+
+Financial_Aid_State CALF_sl_10_pl_1_id_ori  test
+mae:9.5305e+06, rmse:1.9095e+07, mse:3.6462e+14, rmsle 2.7271 smape 21.594
+
+Financial_Aid_State CALF_sl_10_pl_1_id_ori  test scaled
+mae:0.76708, rmse:1.2068, mse:1.4563
+
+Financial_Aid_State CALF_sl_10_pl_1_id_ori  test
+mae:8.4244e+06, rmse:1.9098e+07, mse:3.6475e+14, rmsle 2.9763 smape 23.339
+
+Financial_Aid_State OFA_sl_10_pl_1_id_ori  test scaled
+mae:0.7569, rmse:1.2993, mse:1.6881
+
+Financial_Aid_State OFA_sl_10_pl_1_id_ori  test
+mae:7.2145e+06, rmse:1.358e+07, mse:1.8442e+14, rmsle 1.5014 smape 20.796
+
+Financial_Aid_State OFA_sl_10_pl_1_id_ori  test scaled
+mae:0.70251, rmse:1.2152, mse:1.4768
+
+Financial_Aid_State OFA_sl_10_pl_1_id_ori  test
+mae:6.2035e+06, rmse:1.1704e+07, mse:1.3698e+14, rmsle 2.3054 smape 28.49
+
+Financial_Aid_State OFA_sl_10_pl_1_id_ori  test scaled
+mae:0.72674, rmse:1.2554, mse:1.576
+
+Financial_Aid_State OFA_sl_10_pl_1_id_ori  test
+mae:6.4665e+06, rmse:1.1922e+07, mse:1.4212e+14, rmsle 2.2469 smape 27.994
+
+Financial_Aid_State TimeLLM_sl_10_pl_1_id_ori  test scaled
+mae:0.80358, rmse:1.1977, mse:1.4345
+
+Financial_Aid_State TimeLLM_sl_10_pl_1_id_ori  test
+mae:5.4279e+06, rmse:1.3857e+07, mse:1.9201e+14, rmsle 2.2794 smape 32.132
+
+Financial_Aid_State TimeLLM_sl_10_pl_1_id_ori  test scaled
+mae:0.76831, rmse:1.1895, mse:1.4149
+
+Financial_Aid_State TimeLLM_sl_10_pl_1_id_ori  test
+mae:4.8345e+06, rmse:1.268e+07, mse:1.6079e+14, rmsle 2.4787 smape 31.721
+
+Financial_Aid_State TimeLLM_sl_10_pl_1_id_ori  test scaled
+mae:0.80531, rmse:1.1369, mse:1.2924
+
+Financial_Aid_State TimeLLM_sl_10_pl_1_id_ori  test
+mae:5.5438e+06, rmse:1.7414e+07, mse:3.0326e+14, rmsle 2.2443 smape 23.335
+
+Financial_Aid_State TimeLLM_sl_10_pl_1_id_ori  test scaled
+mae:0.80358, rmse:1.1977, mse:1.4345
+
+Financial_Aid_State TimeLLM_sl_10_pl_1_id_ori  test
+mae:5.4279e+06, rmse:1.3857e+07, mse:1.9201e+14, rmsle 2.2794 smape 32.132
+
+Financial_Aid_State TimeLLM_sl_10_pl_1_id_ori  test scaled
+mae:0.76831, rmse:1.1895, mse:1.4149
+
+Financial_Aid_State TimeLLM_sl_10_pl_1_id_ori  test
+mae:4.8345e+06, rmse:1.268e+07, mse:1.6079e+14, rmsle 2.4787 smape 31.721
+
+Financial_Aid_State TimeLLM_sl_10_pl_1_id_ori  test scaled
+mae:0.80531, rmse:1.1369, mse:1.2924
+
+Financial_Aid_State TimeLLM_sl_10_pl_1_id_ori  test
+mae:5.5438e+06, rmse:1.7414e+07, mse:3.0326e+14, rmsle 2.2443 smape 23.335
+
+Financial_Aid_State DLinear_sl_10_pl_1_p_10  test scaled
+mae:1.3542, rmse:1.7069, mse:2.9136
+
+Financial_Aid_State DLinear_sl_10_pl_1_p_10  test
+mae:1.9335e+07, rmse:3.6481e+07, mse:1.3309e+15, rmsle 2.927 smape 38.628
+
+Financial_Aid_State DLinear_sl_10_pl_1_p_10  test scaled
+mae:1.3316, rmse:1.654, mse:2.7357
+
+Financial_Aid_State DLinear_sl_10_pl_1_p_10  test
+mae:1.8831e+07, rmse:3.6704e+07, mse:1.3472e+15, rmsle 2.9717 smape 38.109
+
+Financial_Aid_State DLinear_sl_10_pl_1_p_10  test scaled
+mae:1.4065, rmse:1.7844, mse:3.1842
+
+Financial_Aid_State DLinear_sl_10_pl_1_p_10  test
+mae:2.0903e+07, rmse:3.8703e+07, mse:1.4979e+15, rmsle 2.8871 smape 39.843
+
+Financial_Aid_State PatchTST_sl_10_pl_1_p_10  test scaled
+mae:0.87197, rmse:1.3769, mse:1.8958
+
+Financial_Aid_State PatchTST_sl_10_pl_1_p_10  test
+mae:8.979e+06, rmse:1.7109e+07, mse:2.9273e+14, rmsle 2.2544 smape 30.114
+
+Financial_Aid_State PatchTST_sl_10_pl_1_p_10  test scaled
+mae:1.0547, rmse:1.5706, mse:2.4669
+
+Financial_Aid_State PatchTST_sl_10_pl_1_p_10  test
+mae:1.3118e+07, rmse:2.6235e+07, mse:6.8826e+14, rmsle 1.5167 smape 26.602
+
+Financial_Aid_State PatchTST_sl_10_pl_1_p_10  test scaled
+mae:0.91847, rmse:1.5267, mse:2.3308
+
+Financial_Aid_State PatchTST_sl_10_pl_1_p_10  test
+mae:1.0069e+07, rmse:2.0212e+07, mse:4.0851e+14, rmsle 2.9263 smape 33.48
+
+Financial_Aid_State iTransformer_sl_10_pl_1_p_10  test scaled
+mae:1.1574, rmse:1.5333, mse:2.3509
+
+Financial_Aid_State iTransformer_sl_10_pl_1_p_10  test
+mae:1.5297e+07, rmse:2.7205e+07, mse:7.401e+14, rmsle 2.8167 smape 35.161
+
+Financial_Aid_State iTransformer_sl_10_pl_1_p_10  test scaled
+mae:1.0381, rmse:1.3992, mse:1.9577
+
+Financial_Aid_State iTransformer_sl_10_pl_1_p_10  test
+mae:1.4895e+07, rmse:3.1687e+07, mse:1.0041e+15, rmsle 2.9367 smape 34.167
+
+Financial_Aid_State iTransformer_sl_10_pl_1_p_10  test scaled
+mae:1.2183, rmse:1.5379, mse:2.3652
+
+Financial_Aid_State iTransformer_sl_10_pl_1_p_10  test
+mae:1.8442e+07, rmse:4.0476e+07, mse:1.6383e+15, rmsle 3.0252 smape 37.232
+
+Financial_Aid_State CALF_sl_10_pl_1_id_ori_p_10  test scaled
+mae:0.89412, rmse:1.27, mse:1.6128
+
+Financial_Aid_State CALF_sl_10_pl_1_id_ori_p_10  test
+mae:1.0849e+07, rmse:2.3047e+07, mse:5.3118e+14, rmsle 2.923 smape 32.239
+
+Financial_Aid_State CALF_sl_10_pl_1_id_ori_p_10  test scaled
+mae:0.81236, rmse:1.2085, mse:1.4605
+
+Financial_Aid_State CALF_sl_10_pl_1_id_ori_p_10  test
+mae:1.0951e+07, rmse:2.7344e+07, mse:7.4771e+14, rmsle 2.9153 smape 31.737
+
+Financial_Aid_State CALF_sl_10_pl_1_id_ori_p_10  test scaled
+mae:0.97821, rmse:1.3583, mse:1.8449
+
+Financial_Aid_State CALF_sl_10_pl_1_id_ori_p_10  test
+mae:1.2639e+07, rmse:2.9725e+07, mse:8.8359e+14, rmsle 3.0042 smape 34.3
+
+Financial_Aid_State OFA_sl_10_pl_1_id_ori_p_10  test scaled
+mae:1.0768, rmse:1.42, mse:2.0164
+
+Financial_Aid_State OFA_sl_10_pl_1_id_ori_p_10  test
+mae:1.4716e+07, rmse:3.2468e+07, mse:1.0542e+15, rmsle 3.0001 smape 34.911
+
+Financial_Aid_State OFA_sl_10_pl_1_id_ori_p_10  test scaled
+mae:1.2758, rmse:1.6017, mse:2.5653
+
+Financial_Aid_State OFA_sl_10_pl_1_id_ori_p_10  test
+mae:1.8447e+07, rmse:3.8566e+07, mse:1.4873e+15, rmsle 3.0253 smape 37.571
+
+Financial_Aid_State OFA_sl_10_pl_1_id_ori_p_10  test scaled
+mae:1.2559, rmse:1.5803, mse:2.4973
+
+Financial_Aid_State OFA_sl_10_pl_1_id_ori_p_10  test
+mae:1.8464e+07, rmse:4.0126e+07, mse:1.6101e+15, rmsle 3.0461 smape 37.247
+
+Financial_Aid_State TimeLLM_sl_10_pl_1_id_ori_p_10  test scaled
+mae:1.2313, rmse:1.5845, mse:2.5108
+
+Financial_Aid_State TimeLLM_sl_10_pl_1_id_ori_p_10  test
+mae:1.0767e+07, rmse:2.8146e+07, mse:7.922e+14, rmsle 2.2867 smape 30.186
+
+Financial_Aid_State TimeLLM_sl_10_pl_1_id_ori_p_10  test scaled
+mae:1.2137, rmse:1.5167, mse:2.3003
+
+Financial_Aid_State TimeLLM_sl_10_pl_1_id_ori_p_10  test
+mae:9.7263e+06, rmse:2.6695e+07, mse:7.126e+14, rmsle 2.3777 smape 38.337
+
+Financial_Aid_State TimeLLM_sl_10_pl_1_id_ori_p_10  test scaled
+mae:0.784, rmse:1.1649, mse:1.3569
+
+Financial_Aid_State TimeLLM_sl_10_pl_1_id_ori_p_10  test
+mae:4.7581e+06, rmse:1.3649e+07, mse:1.863e+14, rmsle 1.6391 smape 24.247
+
+Financial_Aid_State TimesNet_sl_10_pl_1_p_10  test scaled
+mae:1.0868, rmse:1.5089, mse:2.2768
+
+Financial_Aid_State TimesNet_sl_10_pl_1_p_10  test
+mae:1.406e+07, rmse:2.5944e+07, mse:6.7308e+14, rmsle 2.7208 smape 34.108
+
+Financial_Aid_State TimesNet_sl_10_pl_1_p_10  test scaled
+mae:0.89311, rmse:1.3851, mse:1.9185
+
+Financial_Aid_State TimesNet_sl_10_pl_1_p_10  test
+mae:9.5363e+06, rmse:1.75e+07, mse:3.0624e+14, rmsle 2.0957 smape 22.428
+
+Financial_Aid_State TimesNet_sl_10_pl_1_p_10  test scaled
+mae:1.1419, rmse:1.5178, mse:2.3037
+
+Financial_Aid_State TimesNet_sl_10_pl_1_p_10  test
+mae:1.598e+07, rmse:3.0157e+07, mse:9.0945e+14, rmsle 2.8811 smape 35.871
+
+Financial_Aid_State TimesNet_sl_10_pl_1  test scaled
+mae:0.80643, rmse:1.3395, mse:1.7941
+
+Financial_Aid_State TimesNet_sl_10_pl_1  test
+mae:6.1985e+06, rmse:1.2125e+07, mse:1.4703e+14, rmsle 2.8736 smape 28.961
+
+Financial_Aid_State TimesNet_sl_10_pl_1  test scaled
+mae:0.81286, rmse:1.2319, mse:1.5176
+
+Financial_Aid_State TimesNet_sl_10_pl_1  test
+mae:1.0629e+07, rmse:2.3685e+07, mse:5.61e+14, rmsle 2.395 smape 29.872
+
+Financial_Aid_State TimesNet_sl_10_pl_1  test scaled
+mae:0.79037, rmse:1.2663, mse:1.6036
+
+Financial_Aid_State TimesNet_sl_10_pl_1  test
+mae:9.5108e+06, rmse:1.7753e+07, mse:3.1518e+14, rmsle 2.7259 smape 30.365
+
+Financial_Aid_State DLinear_sl_10_pl_1_zeroshot  test scaled
+mae:1.4041, rmse:1.7534, mse:3.0743
+
+Financial_Aid_State DLinear_sl_10_pl_1_zeroshot  test
+mae:2.054e+07, rmse:3.8661e+07, mse:1.4947e+15, rmsle 2.9375 smape 39.621
+
+Financial_Aid_State DLinear_sl_10_pl_1_zeroshot  test scaled
+mae:1.3768, rmse:1.6982, mse:2.884
+
+Financial_Aid_State DLinear_sl_10_pl_1_zeroshot  test
+mae:1.9688e+07, rmse:3.8386e+07, mse:1.4735e+15, rmsle 2.979 smape 38.96
+
+Financial_Aid_State DLinear_sl_10_pl_1_zeroshot  test scaled
+mae:1.435, rmse:1.8152, mse:3.2948
+
+Financial_Aid_State DLinear_sl_10_pl_1_zeroshot  test
+mae:2.1461e+07, rmse:3.9727e+07, mse:1.5782e+15, rmsle 2.8914 smape 40.32
+
+Financial_Aid_State PatchTST_sl_10_pl_1_zeroshot  test scaled
+mae:1.5649, rmse:1.9381, mse:3.7562
+
+Financial_Aid_State PatchTST_sl_10_pl_1_zeroshot  test
+mae:2.4378e+07, rmse:4.6294e+07, mse:2.1431e+15, rmsle 2.9591 smape 42.384
+
+Financial_Aid_State PatchTST_sl_10_pl_1_zeroshot  test scaled
+mae:1.4358, rmse:1.8795, mse:3.5326
+
+Financial_Aid_State PatchTST_sl_10_pl_1_zeroshot  test
+mae:2.2162e+07, rmse:4.1934e+07, mse:1.7584e+15, rmsle 2.2003 smape 32.416
+
+Financial_Aid_State PatchTST_sl_10_pl_1_zeroshot  test scaled
+mae:1.492, rmse:1.8604, mse:3.461
+
+Financial_Aid_State PatchTST_sl_10_pl_1_zeroshot  test
+mae:2.1976e+07, rmse:4.1153e+07, mse:1.6936e+15, rmsle 2.8639 smape 41.83
+
+Financial_Aid_State TimesNet_sl_10_pl_1_zeroshot  test scaled
+mae:1.2572, rmse:1.6956, mse:2.8752
+
+Financial_Aid_State TimesNet_sl_10_pl_1_zeroshot  test
+mae:1.8368e+07, rmse:3.5787e+07, mse:1.2807e+15, rmsle 2.2145 smape 37.889
+
+Financial_Aid_State TimesNet_sl_10_pl_1_zeroshot  test scaled
+mae:1.5338, rmse:1.9545, mse:3.8199
+
+Financial_Aid_State TimesNet_sl_10_pl_1_zeroshot  test
+mae:2.4042e+07, rmse:4.533e+07, mse:2.0548e+15, rmsle 2.7825 smape 33.555
+
+Financial_Aid_State TimesNet_sl_10_pl_1_zeroshot  test scaled
+mae:1.615, rmse:2.0397, mse:4.1605
+
+Financial_Aid_State TimesNet_sl_10_pl_1_zeroshot  test
+mae:2.567e+07, rmse:4.9229e+07, mse:2.4235e+15, rmsle 2.8511 smape 34.93
+
+Financial_Aid_State iTransformer_sl_10_pl_1_zeroshot  test scaled
+mae:1.6638, rmse:2.0026, mse:4.0102
+
+Financial_Aid_State iTransformer_sl_10_pl_1_zeroshot  test
+mae:2.727e+07, rmse:5.3954e+07, mse:2.911e+15, rmsle 2.9472 smape 41.152
+
+Financial_Aid_State iTransformer_sl_10_pl_1_zeroshot  test scaled
+mae:2.0165, rmse:2.5419, mse:6.4614
+
+Financial_Aid_State iTransformer_sl_10_pl_1_zeroshot  test
+mae:3.2989e+07, rmse:6.6889e+07, mse:4.4741e+15, rmsle 1.5272 smape 44.597
+
+Financial_Aid_State iTransformer_sl_10_pl_1_zeroshot  test scaled
+mae:1.8576, rmse:2.365, mse:5.5934
+
+Financial_Aid_State iTransformer_sl_10_pl_1_zeroshot  test
+mae:3.0388e+07, rmse:6.3919e+07, mse:4.0857e+15, rmsle 1.5426 smape 41.746
+
+Financial_Aid_State CALF_sl_10_pl_1_id_ori_zeroshot  test scaled
+mae:1.3872, rmse:1.7515, mse:3.0677
+
+Financial_Aid_State CALF_sl_10_pl_1_id_ori_zeroshot  test
+mae:2.1013e+07, rmse:4.0365e+07, mse:1.6294e+15, rmsle 2.9431 smape 39.918
+
+Financial_Aid_State CALF_sl_10_pl_1_id_ori_zeroshot  test scaled
+mae:1.6601, rmse:2.0118, mse:4.0474
+
+Financial_Aid_State CALF_sl_10_pl_1_id_ori_zeroshot  test
+mae:2.7877e+07, rmse:5.7725e+07, mse:3.3322e+15, rmsle 3.2561 smape 38.145
+
+Financial_Aid_State CALF_sl_10_pl_1_id_ori_zeroshot  test scaled
+mae:1.7177, rmse:2.0866, mse:4.3538
+
+Financial_Aid_State CALF_sl_10_pl_1_id_ori_zeroshot  test
+mae:2.6977e+07, rmse:5.0906e+07, mse:2.5914e+15, rmsle 2.9946 smape 36.406
+
+Financial_Aid_State OFA_sl_10_pl_1_id_ori_zeroshot  test scaled
+mae:1.4273, rmse:1.7968, mse:3.2286
+
+Financial_Aid_State OFA_sl_10_pl_1_id_ori_zeroshot  test
+mae:2.1153e+07, rmse:3.9266e+07, mse:1.5418e+15, rmsle 2.918 smape 40.176
+
+Financial_Aid_State OFA_sl_10_pl_1_id_ori_zeroshot  test scaled
+mae:1.4281, rmse:1.8034, mse:3.2521
+
+Financial_Aid_State OFA_sl_10_pl_1_id_ori_zeroshot  test
+mae:2.1361e+07, rmse:3.9597e+07, mse:1.5679e+15, rmsle 2.9071 smape 40.19
+
+Financial_Aid_State OFA_sl_10_pl_1_id_ori_zeroshot  test scaled
+mae:1.3821, rmse:1.7438, mse:3.0408
+
+Financial_Aid_State OFA_sl_10_pl_1_id_ori_zeroshot  test
+mae:2.0379e+07, rmse:3.8323e+07, mse:1.4686e+15, rmsle 2.9351 smape 39.382
+
+Financial_Aid_State TimeLLM_sl_10_pl_1_id_ori_zeroshot  test scaled
+mae:1.2892, rmse:1.7509, mse:3.0655
+
+Financial_Aid_State TimeLLM_sl_10_pl_1_id_ori_zeroshot  test
+mae:1.2784e+07, rmse:3.2894e+07, mse:1.082e+15, rmsle 1.9622 smape 32.358
+
+Financial_Aid_State TimeLLM_sl_10_pl_1_id_ori_zeroshot  test scaled
+mae:1.2593, rmse:1.6665, mse:2.7771
+
+Financial_Aid_State TimeLLM_sl_10_pl_1_id_ori_zeroshot  test
+mae:1.124e+07, rmse:2.878e+07, mse:8.2828e+14, rmsle 2.3423 smape 32.691
+
+Financial_Aid_State TimeLLM_sl_10_pl_1_id_ori_zeroshot  test scaled
+mae:1.3076, rmse:1.7667, mse:3.1213
+
+Financial_Aid_State TimeLLM_sl_10_pl_1_id_ori_zeroshot  test
+mae:1.244e+07, rmse:3.1474e+07, mse:9.9063e+14, rmsle 2.1624 smape 33.731
+
+Financial_Aid_State TimeMixer_sl_10_pl_1_zeroshot  test scaled
+mae:1.2896, rmse:1.6153, mse:2.6092
+
+Financial_Aid_State TimeMixer_sl_10_pl_1_zeroshot  test
+mae:1.9496e+07, rmse:4.2793e+07, mse:1.8312e+15, rmsle 3.0646 smape 37.741
+
+Financial_Aid_State TimeMixer_sl_10_pl_1_zeroshot  test scaled
+mae:2.009, rmse:2.5097, mse:6.2988
+
+Financial_Aid_State TimeMixer_sl_10_pl_1_zeroshot  test
+mae:2.9148e+07, rmse:5.3587e+07, mse:2.8716e+15, rmsle 2.0121 smape 45.478
+
+Financial_Aid_State TimeMixer_sl_10_pl_1_zeroshot  test scaled
+mae:1.6599, rmse:2.0019, mse:4.0078
+
+Financial_Aid_State TimeMixer_sl_10_pl_1_zeroshot  test
+mae:2.4257e+07, rmse:4.7041e+07, mse:2.2128e+15, rmsle 3.0443 smape 43.652
+
+Financial_Aid_State TimeMixer_sl_10_pl_1  test scaled
+mae:0.96951, rmse:1.413, mse:1.9967
+
+Financial_Aid_State TimeMixer_sl_10_pl_1  test
+mae:1.3123e+07, rmse:3.1594e+07, mse:9.9819e+14, rmsle 3.0035 smape 34.225
+
+Financial_Aid_State TimeMixer_sl_10_pl_1  test scaled
+mae:0.97986, rmse:1.5054, mse:2.2661
+
+Financial_Aid_State TimeMixer_sl_10_pl_1  test
+mae:1.1443e+07, rmse:2.2668e+07, mse:5.1384e+14, rmsle 1.5009 smape 23.067
+
+Financial_Aid_State TimeMixer_sl_10_pl_1  test scaled
+mae:1.0563, rmse:1.4213, mse:2.0202
+
+Financial_Aid_State TimeMixer_sl_10_pl_1  test
+mae:1.4473e+07, rmse:3.1952e+07, mse:1.0209e+15, rmsle 3.0357 smape 34.459
+
+Financial_Aid_State TimeMixer_sl_10_pl_1_p_10  test scaled
+mae:1.142, rmse:1.4762, mse:2.1791
+
+Financial_Aid_State TimeMixer_sl_10_pl_1_p_10  test
+mae:1.6152e+07, rmse:3.3952e+07, mse:1.1528e+15, rmsle 3.0058 smape 35.412
+
+Financial_Aid_State TimeMixer_sl_10_pl_1_p_10  test scaled
+mae:1.3237, rmse:1.7957, mse:3.2247
+
+Financial_Aid_State TimeMixer_sl_10_pl_1_p_10  test
+mae:1.7762e+07, rmse:3.2091e+07, mse:1.0298e+15, rmsle 1.5281 smape 30.804
+
+Financial_Aid_State TimeMixer_sl_10_pl_1_p_10  test scaled
+mae:1.6293, rmse:1.9297, mse:3.7239
+
+Financial_Aid_State TimeMixer_sl_10_pl_1_p_10  test
+mae:2.4343e+07, rmse:5.0594e+07, mse:2.5597e+15, rmsle 3.1143 smape 42.843
+

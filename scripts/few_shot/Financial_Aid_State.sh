@@ -1,5 +1,5 @@
-# models=(DLinear PatchTST TimesNet iTransformer)
-models=(TimesNet)
+models=(DLinear PatchTST TimesNet iTransformer)
+# models=(TimesNet)
 data_path=Financial_Aid_State.csv
 n_features=1
 features=S
@@ -11,6 +11,7 @@ itrs=3
 top_k=2
 patch_len=4
 stride=2
+percent=10
 
 for model in ${models[@]}
 do 
@@ -21,7 +22,7 @@ python run.py \
     --data_path $data_path --group_id GROUP_ID\
     --model $model --itrs $itrs\
     --seq_len $seq_len --label_len $label_len --pred_len $pred_len\
-    --top_k $top_k --freq a --target $target 
+    --top_k $top_k --freq a --target $target --percent $percent --channel_independence 0
 done
 
 # MICN requires label_len to be equal to seq_len
@@ -39,21 +40,21 @@ python run.py\
     --d_model 16 --d_ff 32\
     --seq_len $seq_len --label_len 0 --pred_len $pred_len\
     --down_sampling_method avg --e_layers 3 --freq a\
-    --factor 3 --channel_independence 1 --itrs $itrs  --features $features --target $target
+    --factor 3 --channel_independence 0 --itrs $itrs  --features $features --target $target --percent $percent
 
 python run_CALF.py\
     --n_features $n_features --features $features \
     --data_path $data_path --group_id GROUP_ID\
     --itrs $itrs\
     --model_id ori --freq a --d_model 768\
-    --seq_len $seq_len --label_len $label_len --pred_len $pred_len --target $target
+    --seq_len $seq_len --label_len $label_len --pred_len $pred_len --target $target --percent $percent
 
 python run_OFA.py\
     --n_features $n_features --features $features \
     --data_path $data_path --group_id GROUP_ID\
     --itrs $itrs --d_model 768\
     --model_id ori --patch_size $patch_len --stride $stride\
-    --seq_len $seq_len --label_len $label_len --pred_len $pred_len --target $target
+    --seq_len $seq_len --label_len $label_len --pred_len $pred_len --target $target --percent $percent
 
 python run_TimeLLM.py\
     --n_features $n_features --d_model 16\
@@ -61,4 +62,4 @@ python run_TimeLLM.py\
     --batch_size 16 --itrs $itrs --disable_progress\
     --seq_len $seq_len --label_len $label_len --pred_len $pred_len\
     --model_id ori --top_k $top_k\
-    --patch_len $patch_len --stride $stride --target $target
+    --patch_len $patch_len --stride $stride --target $target --percent $percent
