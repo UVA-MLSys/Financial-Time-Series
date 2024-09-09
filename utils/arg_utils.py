@@ -18,7 +18,7 @@ def get_basic_parser(
     parser.add_argument('--features', type=str, default='M', choices=['M', 'S', 'MS'],
         help='forecasting task, options:[M, S, MS]; M:multivariate predict multivariate, S:univariate predict univariate, MS:multivariate predict univariate')
     parser.add_argument('--n_features', type=int, required=True, help='Number of input features')
-    # parser.add_argument('--group_id', type=str, default='GROUP_ID', help='group id for multi-time series')
+    parser.add_argument('--group_id', type=str, default=None, help='group id for multi-time series')
     parser.add_argument('--target', type=str, default='OT', help='target feature in S or MS task')
     parser.add_argument(
         '--freq', type=str, default='d', choices=['s', 't', 'h', 'd', 'b', 'w', 'm', 'a'],
@@ -89,5 +89,6 @@ def get_basic_parser(
         parser.add_argument('--p_hidden_layers', type=int, default=2, help='number of hidden layers in projector')
         
     parser.add_argument('--dry_run', action='store_true', help='run only one batch for test')
-    parser.add_argument('--percent', type=int, default=100, help='Percent of recent examples to keep for training, 0<= percent <= 100')
+    parser.add_argument('--percent', type=int, default=100, help='Percent of recent examples (0 to 100) to keep for training. percent = 0 means no training or zeroshot.')
+    
     return parser

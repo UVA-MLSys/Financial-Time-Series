@@ -134,7 +134,10 @@ class Dataset_Custom(Dataset):
             print('Error ! The scaler is None.')
             return data
         
-        if len(data.shape)>2:
+        if len(data.shape)==1:
+            data = scaler.inverse_transform(data.reshape(-1, 1))
+            return data.flatten()
+        elif len(data.shape)>2:
             prev_shape = data.shape
             data = data.reshape(-1, data.shape[-1])
             data = scaler.inverse_transform(data)
@@ -168,7 +171,7 @@ class MultiTimeSeries(Dataset):
         self.args = args
         self.ranges = None
         
-        self.group_id = 'GROUP_ID'
+        self.group_id = args.group_id
         self.time_col = time_column
         self.time_steps = self.seq_len + self.pred_len
         self.scaler = {}

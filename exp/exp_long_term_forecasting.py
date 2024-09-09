@@ -142,6 +142,10 @@ class Exp_Long_Term_Forecast(Exp_Basic):
         return total_loss
 
     def train(self):
+        if self.args.percent == 0:
+            print('Zero shot learning, no need to train')
+            return
+        
         _, train_loader = self.get_data(flag='train')
         _, vali_loader = self.get_data(flag='val')
 

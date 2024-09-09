@@ -32,7 +32,7 @@ echo "Running for model:$model"
 
 python run.py \
     --n_features $n_features --features $features\
-    --data_path $data_path\
+    --data_path $data_path --group_id GROUP_ID\
     --model $model --itrs $itrs\
     --seq_len $seq_len --label_len $label_len --pred_len $pred_len\
     --target $target --disable_progress
@@ -41,14 +41,14 @@ done
 # MICN requires label_len to be equal to seq_len
 python run.py \
     --n_features $n_features --features $features\
-    --data_path $data_path\
+    --data_path $data_path --group_id GROUP_ID\
     --model MICN --disable_progress --itrs $itrs\
     --seq_len $seq_len --label_len $seq_len --pred_len $pred_len\
     --target $target
 
 python run.py\
     --model TimeMixer\
-    --n_features $n_features --data_path $data_path\
+    --n_features $n_features --data_path $data_path --group_id GROUP_ID\
     --down_sampling_layers 3 --down_sampling_window 2\
     --d_model 16 --d_ff 32 --disable_progress\
     --seq_len $seq_len --label_len 0 --pred_len $pred_len\
@@ -58,7 +58,7 @@ python run.py\
 
 python run_CALF.py\
     --n_features $n_features --features $features \
-    --data_path $data_path\
+    --data_path $data_path --group_id GROUP_ID\
     --itrs $itrs\
     --model_id ori --disable_progress\
     --seq_len $seq_len --label_len $label_len --pred_len $pred_len\
@@ -66,7 +66,7 @@ python run_CALF.py\
 
 python run_OFA.py\
     --n_features $n_features --features $features \
-    --data_path $data_path\
+    --data_path $data_path --group_id GROUP_ID\
     --itrs $itrs --d_model 768\
     --model_id ori --disable_progress --patch_size 4 --stride 2\
     --seq_len $seq_len --label_len $label_len --pred_len $pred_len\

@@ -8,7 +8,7 @@ def data_provider(
     shuffle_flag = flag == 'train'
     drop_last = False
     
-    if args.data_path == 'Financial_Aid.csv':
+    if 'group_id' in args:
         dataset = MultiTimeSeries(args, flag=flag)
     else:
         dataset = Dataset_Custom(args, flag=flag)
