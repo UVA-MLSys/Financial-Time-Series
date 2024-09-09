@@ -19,9 +19,10 @@ def stringify_setting(args, complete=False):
         if 'model_id' in args:
             setting += '_id_' + args.model_id
         if args.percent != 100:
-            setting += f'_p_{args.percent}'
-        if 'zero_shot' in args:
-            setting += '_zeroshot'
+            if args.percent > 0:
+                setting += f'_p_{args.percent}'
+            else:
+                setting += '_zeroshot'
             
         return setting
     

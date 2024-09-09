@@ -17,18 +17,18 @@ do
         --n_features $n_features --d_model 768\
         --data_path $data_path --disable_progress\
         --itrs $itrs\
-        --model_id ori --zero_shot --test
+        --model_id ori --percent 0 --test
 
     python run_OFA.py\
         --n_features $n_features \
         --data_path $data_path\
         --itrs $itrs --d_model 768 --disable_progress\
-        --model_id ori --zero_shot --test
+        --model_id ori --percent 0 --test
 
     python run_TimeLLM.py\
         --n_features $n_features --d_model 16\
         --data_path $data_path\
         --batch_size 16 --itrs $itrs --disable_progress\
-        --model_id ori --zero_shot --test
+        --model_id ori --percent 0 --test
 
 done 

@@ -21,7 +21,7 @@ def main(args):
                 exp.train()
 
             print('\n>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<')
-            exp.test(load_model=not args.zero_shot, flag='test')
+            exp.test(load_model=not args.percent == 0, flag='test')
     else:
         parent_seed = args.seed
         np.random.seed(parent_seed)
@@ -54,7 +54,7 @@ def main(args):
             # exp.test(flag='val')
 
             print('\n>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<')
-            exp.test(load_model=not args.zero_shot, flag='test')
+            exp.test(load_model=not args.percent == 0, flag='test')
            
         data_name = args.data_path.split('.')[0] 
         config_filepath = os.path.join(
@@ -104,7 +104,6 @@ def get_parser():
     # Add nosise to wordEmb or Posi
     parser.add_argument('--noise_scale',required=False , type=float, default=-100)
     parser.add_argument('--bootstrap_eval',required=False , type=int, default=0)
-    parser.add_argument('--zero_shot', action='store_true', help='use zero shot learning')
     
     return parser
 
