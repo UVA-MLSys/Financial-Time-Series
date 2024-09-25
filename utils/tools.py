@@ -64,6 +64,23 @@ def align_predictions(
     # if type(group_ids) == list and len(group_ids) == 1: 
     #     group_ids = group_ids[0]
     
+    # this is the extension of the original dataframe
+    if data_set.args.freq == 'd':
+        new_df = DataFrame({
+            time_index : [
+                time_index_max + pd.to_timedelta(t, unit='d') 
+                    for t in range (1, data_set.pred_len)
+            ]
+        })
+    else:
+        new_df = DataFrame({
+            time_index : [
+                time_index_max + t for t in range (1, data_set.pred_len)
+            ]
+        })
+        
+    new_df.loc[:, horizons] = None
+    
     all_outputs = None 
     for target_index, target in enumerate(targets):
         # N x pred_len x targets
@@ -74,53 +91,45 @@ def align_predictions(
         pred_df = DataFrame(preds, columns=horizons)
         pred_df = pd.concat([predictions_index, pred_df], axis=1)
         
-        new_df = DataFrame({
-            time_index : [
-                time_index_max + pd.to_timedelta(t, unit='d') 
-                    for t in range (1, data_set.pred_len)
-            ]
-        })
-        new_df.loc[:, horizons] = None
-        new_df = new_df[pred_df.columns]
-        pred_df = pd.concat([pred_df, new_df], axis=0).reset_index(drop=True)
+        # no group ids
+        if type(data_set) == Dataset_Custom:
+            pred_df = pd.concat(
+                [pred_df, new_df[pred_df.columns]], axis=0
+            ).reset_index(drop=True)
 
-        for horizon in horizons:
-            pred_df[horizon] = pred_df[horizon].shift(periods=horizon, axis=0)
-            
-        pred_df[target] = pred_df[horizons].mean(axis=1, skipna=True)
-        
-        # fill the values which are still None
-        pred_df.fillna(0, inplace=True)
-        outputs = pred_df.drop(columns=horizons)    
-        
-        # outputs = []
-
-        # for group_id, group_df in tqdm(
-        #     pred_df.groupby(group_ids), disable=disable_progress, 
-        #     desc=f'Aligning {target}'
-        # ):
-        #     group_df = group_df.sort_values(
-        #         by=time_index
-        #     ).reset_index(drop=True)
-
-        #     new_df = DataFrame({
-        #         time_index : [t + time_index_max for t in range (1, data_set.pred_len)]
-        #     })
-        #     new_df[group_ids] = group_id
-        #     new_df.loc[:, horizons] = None
-        #     new_df = new_df[group_df.columns]
-        #     group_df = pd.concat([group_df, new_df], axis=0).reset_index(drop=True)
-
-        #     for horizon in horizons:
-        #         group_df[horizon] = group_df[horizon].shift(periods=horizon, axis=0)
+            for horizon in horizons:
+                pred_df[horizon] = pred_df[horizon].shift(periods=horizon, axis=0)
                 
-        #     group_df[target] = group_df[horizons].mean(axis=1, skipna=True)
+            pred_df[target] = pred_df[horizons].mean(axis=1, skipna=True)
             
-        #     # fill the values which are still None
-        #     group_df.fillna(0, inplace=True)
-        #     outputs.append(group_df.drop(columns=horizons))
+            # fill the values which are still None
+            pred_df.fillna(0, inplace=True)
+            outputs = pred_df.drop(columns=horizons)
+        else:    
+            outputs = []
+            group_ids = data_set.group_id
 
-        # outputs = pd.concat(outputs, axis=0)
+            for group_id, group_df in pred_df.groupby(group_ids):
+                group_df = group_df.sort_values(
+                    by=time_index
+                ).reset_index(drop=True)
+
+                new_df[group_ids] = group_id
+                
+                group_df = pd.concat(
+                    [group_df, new_df[group_df.columns]], axis=0
+                ).reset_index(drop=True)
+
+                for horizon in horizons:
+                    group_df[horizon] = group_df[horizon].shift(periods=horizon, axis=0)
+                    
+                group_df[target] = group_df[horizons].mean(axis=1, skipna=True)
+                
+                # fill the values which are still None
+                group_df.fillna(0, inplace=True)
+                outputs.append(group_df.drop(columns=horizons))
+
+            outputs = pd.concat(outputs, axis=0)
         
         if all_outputs is None: all_outputs = outputs
         else: 
