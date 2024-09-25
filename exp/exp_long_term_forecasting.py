@@ -261,11 +261,17 @@ class Exp_Long_Term_Forecast(Exp_Basic):
     
     def test(
         self, load_model:bool=False, flag='test', 
-        evaluate=True, dump_output=False
+        evaluate=True, dump_output=False, 
+        remove_negative=True
     ):
         test_data, test_loader = self.get_data(flag)
-        if load_model:
+        
+        # percent 0 is for zero-shot learning, no need to load model
+        if (load_model or self.args.test) and self.args.percent > 0:
             self.load_best_model()
+        else:
+            print('No need to load model')
+            
         disable_progress = self.args.disable_progress
 
         preds = []
@@ -332,7 +338,9 @@ class Exp_Long_Term_Forecast(Exp_Basic):
             preds[i] = test_data.inverse_transform(scaler, preds[i])
             trues[i] = test_data.inverse_transform(scaler, trues[i])
     
-        preds[preds<0] = 0
+        if remove_negative:
+            print("Removing negatives...")
+            preds[preds<0] = 0
         # print('Trues ', trues)
         # print('Preds ', preds)
         

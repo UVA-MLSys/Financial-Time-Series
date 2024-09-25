@@ -53,8 +53,6 @@ def align_predictions(
     remove_negative:bool=True, upscale:bool=True, 
     disable_progress:bool=False
 ):
-    print('Aligning predictions with ground truth...')
-
     horizons = range(data_set.pred_len)
     predictions_index = data_set.index
     time_index_max = predictions_index[data_set.time_col].max()
