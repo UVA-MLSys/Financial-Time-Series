@@ -32,15 +32,15 @@ def main(args):
     if args.itrs == 1:
         exp = Exp_Long_Term_Forecast(args)
         
-        if os.path.exists(exp.best_model_path):
-            print(f'Checkpoint exists already. Skipping...')
-        else:
-            if not args.test:
+        if not args.test:
+            if os.path.exists(exp.best_model_path):
+                print(f'Checkpoint exists already. Skipping...')
+            else:
                 print('>>>>>>> start training :>>>>>>>>>>')
                 exp.train()
-
+        else:
             print('\n>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<')
-            exp.test(flag='test')
+            exp.test(flag='test', dump_output=True)
     else:
         parent_seed = args.seed
         np.random.seed(parent_seed)
@@ -59,22 +59,15 @@ def main(args):
             
             exp = Exp_Long_Term_Forecast(args)
             
-            if os.path.exists(exp.best_model_path):
-                print(f'Checkpoint exists already. Skipping...')
-                continue
-
             if not args.test:
-                print('>>>>>>> start training :>>>>>>>>>>')
-                exp.train()
-            
-            # print('\n>>>>>>> Evaluate train data :  <<<<<<<<<<<<<<<')
-            # exp.test(load_model=True, flag='train')
-
-            # print('\n>>>>>>> validating :  <<<<<<<<<<<<<<<')
-            # exp.test(flag='val')
-
-            print('\n>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<')
-            exp.test(flag='test')
+                if os.path.exists(exp.best_model_path):
+                    print(f'Checkpoint exists already. Skipping...')
+                else:
+                    print('>>>>>>> start training :>>>>>>>>>>')
+                    exp.train()
+            else:
+                print('\n>>>>>>> testing :  <<<<<<<<<<<<<<<<<<<')
+                exp.test(flag='test')
            
         data_name = args.data_path.split('.')[0] 
         config_filepath = os.path.join(
