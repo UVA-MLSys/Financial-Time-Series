@@ -9,10 +9,55 @@ import warnings
 
 warnings.filterwarnings('ignore')
 
+def fill_missing_timesteps(df, time_col, freq, set_type):
+    df[time_col] = pd.to_datetime(df[time_col])
+    df.sort_values(by=time_col, inplace=True)
+    
+    first_timestep = df[time_col].iloc[0]
+    last_timestep = df[time_col].iloc[-1]
+    
+    if freq == 'd': # days
+        duration =(last_timestep - first_timestep).days
+    elif freq == 'h': # hours
+        duration =(last_timestep - first_timestep).days * 24
+    elif freq == 'a': # years
+        duration =np.ceil((last_timestep - first_timestep).days / 365)
+    elif freq == 'm': # months
+        duration =np.ceil((last_timestep - first_timestep).days / 30)
+    elif freq == 'w': # weeks
+        duration =np.ceil((last_timestep - first_timestep).days / 7)
+    elif freq == 't': # minutes
+        duration =np.ceil((last_timestep - first_timestep).seconds / 60)
+    else:
+        print(f'Error: freq {freq} is not supported.')
+        raise NotImplementedError
+    
+    # return if no missing timesteps
+    if duration == df.shape[0]: return
+    
+    # verbose only for train data 
+    if set_type == 0:
+        print(f'Data from {first_timestep} to {last_timestep}.')
+        
+        print(f'{duration} timesteps are present from {df.shape[0]}.')
+
+    # fill missing timesteps
+    complete_index = pd.date_range(
+        first_timestep, end=last_timestep, 
+        # note that the freq is different from self.freq
+        # TODO: generalize this
+        freq=freq,
+        name=time_col
+    )
+    complete_index = pd.DataFrame(complete_index, columns=[time_col])
+    df = df.merge(complete_index, on=time_col, how='right').fillna(method='ffill')
+    
+    return df
+
 class Dataset_Custom(Dataset):
     def __init__(
         self, args, flag='train', 
-        time_column='Date'
+        time_col='Date'
     ):
         # size [seq_len, label_len, pred_len]
         self.args = args
@@ -33,7 +78,7 @@ class Dataset_Custom(Dataset):
 
         self.root_path = args.root_path
         self.data_path = args.data_path
-        self.time_column = time_column
+        self.time_col = time_col
         self.scaler = {}
         self.percent = args.percent
         assert 0<=self.percent<=100, f'Error: percent {self.percent} is not within [0, 100].'
@@ -45,9 +90,13 @@ class Dataset_Custom(Dataset):
         df_raw = pd.read_csv(
             os.path.join(self.root_path, self.data_path)
         )
-        df_raw.rename(columns={self.time_column: 'date'}, inplace=True)
-        df_raw['date'] = pd.to_datetime(df_raw.date)
-        df_raw.sort_values(by=['date'], inplace=True)
+        time_col = self.time_col
+        df_raw[time_col] = pd.to_datetime(df_raw[time_col])
+        df_raw.sort_values(by=time_col, inplace=True)
+
+        df_raw = fill_missing_timesteps(
+            df_raw, time_col, self.freq, self.set_type
+        )
         
         # some files have $ in values
         object_columns = df_raw.select_dtypes(include=['object']).columns
@@ -57,16 +106,19 @@ class Dataset_Custom(Dataset):
         df_raw = df_raw.fillna(method='ffill').fillna(method='bfill')
 
         '''
-        df_raw.columns: ['date', ...(other features), target feature]
+        df_raw.columns: [time_col, ...(other features), target feature]
         '''
         cols = list(df_raw.columns)
-        cols.remove('date')
+        cols.remove(time_col)
         
         if self.features != 'M':
+            # only the last input is target
             cols.remove(self.target)
-            df_raw = df_raw[['date'] + cols + [self.target]]
+            df_raw = df_raw[[time_col] + cols + [self.target]]
         else:
-            df_raw = df_raw[['date'] + cols]
+            # all inputs are targets
+            self.target = cols
+            df_raw = df_raw[[time_col] + cols]
             
         num_train = int(len(df_raw) * 0.8)
         num_test = int(len(df_raw) * 0.1)
@@ -89,20 +141,26 @@ class Dataset_Custom(Dataset):
         elif self.features == 'S':
             df_data = df_raw[[self.target]]
         
-        self.index = df_stamp = df_raw[['date']][border1:border2].reset_index(drop=True)
-        df_stamp['date'] = pd.to_datetime(df_stamp.date)
+        df_stamp = df_raw[[time_col]][border1:border2].reset_index(drop=True)
+        df_stamp[time_col] = pd.to_datetime(df_stamp[time_col])
+        
         if self.timeenc == 0:
-            df_stamp['month'] = df_stamp.date.apply(lambda row: row.month, 1)
-            df_stamp['day'] = df_stamp.date.apply(lambda row: row.day, 1)
-            df_stamp['weekday'] = df_stamp.date.apply(lambda row: row.weekday(), 1)
-            df_stamp['hour'] = df_stamp.date.apply(lambda row: row.hour, 1)
-            data_stamp = df_stamp.drop(['date'], 1).values
+            df_stamp['month'] = df_stamp[time_col].apply(lambda row: row.month, 1)
+            df_stamp['day'] = df_stamp[time_col].apply(lambda row: row.day, 1)
+            df_stamp['weekday'] = df_stamp[time_col].apply(lambda row: row.weekday(), 1)
+            df_stamp['hour'] = df_stamp[time_col].apply(lambda row: row.hour, 1)
+            data_stamp = df_stamp.drop([time_col], 1).values
         elif self.timeenc == 1:
-            data_stamp = time_features(pd.to_datetime(df_stamp['date'].values), freq=self.freq)
+            data_stamp = time_features(pd.to_datetime(df_stamp[time_col].values), freq=self.freq)
             data_stamp = data_stamp.transpose(1, 0)
 
         self.data_x = self.data_y = df_data[border1:border2].values
         self.data_stamp = data_stamp
+        
+        # time index of predicted values
+        self.index = df_stamp[[time_col]][
+            self.seq_len - 1: -self.pred_len
+        ].reset_index(drop=True)
 
     def __getitem__(self, index):
         s_begin = index
@@ -147,7 +205,7 @@ class Dataset_Custom(Dataset):
     
 class MultiTimeSeries(Dataset):
     def __init__(
-        self, args, flag='train', time_column='Date'
+        self, args, flag='train', time_col='Date'
     ):
         # size [seq_len, label_len, pred_len]
         # info
@@ -172,7 +230,7 @@ class MultiTimeSeries(Dataset):
         self.ranges = None
         
         self.group_id = args.group_id
-        self.time_col = time_column
+        self.time_col = time_col
         self.time_steps = self.seq_len + self.pred_len
         self.scaler = {}
         self.__read_data__()

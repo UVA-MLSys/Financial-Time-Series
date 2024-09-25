@@ -49,70 +49,80 @@ def stringify_setting(args, complete=False):
 
 def align_predictions(
     ground_truth:DataFrame,
-    predictions, data_set:Dataset_Custom,
+    predictions, data_set,
     remove_negative:bool=True, upscale:bool=True, 
     disable_progress:bool=False
 ):
     print('Aligning predictions with ground truth...')
-    if type(predictions) != list:
-        # shape: N x pred_len x tagets
-        if len(predictions.shape) == 3:
-            pred_list = [
-                predictions[:, :, target] for target in range(predictions.shape[-1])
-            ]
-        # shape: N x pred_len
-        else:
-            pred_list = [predictions]
-        
-        # make it a list of predictions
-        predictions = pred_list
 
     horizons = range(data_set.pred_len)
     predictions_index = data_set.index
-    time_index_max = predictions_index[data_set.time_column].max()
+    time_index_max = predictions_index[data_set.time_col].max()
 
-    targets, time_index, group_ids = [data_set.target], data_set.time_column, data_set.group_id
-    # a groupby with a groupength 1 throws warning later
+    targets, time_index = data_set.target, data_set.time_col #, data_set.group_id
+    if type(targets) != list:
+        targets = [targets]
+    # a groupby with a group length 1 throws warning later
     # if type(group_ids) == list and len(group_ids) == 1: 
     #     group_ids = group_ids[0]
     
     all_outputs = None 
     for target_index, target in enumerate(targets):
-        if type(predictions[target_index]) == Tensor:
-            predictions[target_index] = predictions[target_index].numpy()
+        # N x pred_len x targets
+        preds = predictions[:, :, target_index]
+        
+        if type(preds) == Tensor: preds = preds.numpy()
 
-        pred_df = DataFrame(
-            predictions[target_index], columns=horizons
-        )
+        pred_df = DataFrame(preds, columns=horizons)
         pred_df = pd.concat([predictions_index, pred_df], axis=1)
-        outputs = []
+        
+        new_df = DataFrame({
+            time_index : [
+                time_index_max + pd.to_timedelta(t, unit='d') 
+                    for t in range (1, data_set.pred_len)
+            ]
+        })
+        new_df.loc[:, horizons] = None
+        new_df = new_df[pred_df.columns]
+        pred_df = pd.concat([pred_df, new_df], axis=0).reset_index(drop=True)
 
-        for group_id, group_df in tqdm(
-            pred_df.groupby(group_ids), disable=disable_progress, 
-            desc=f'Aligning {target}'
-        ):
-            group_df = group_df.sort_values(
-                by=time_index
-            ).reset_index(drop=True)
-
-            new_df = DataFrame({
-                time_index : [t + time_index_max for t in range (1, data_set.pred_len)]
-            })
-            new_df[group_ids] = group_id
-            new_df.loc[:, horizons] = None
-            new_df = new_df[group_df.columns]
-            group_df = pd.concat([group_df, new_df], axis=0).reset_index(drop=True)
-
-            for horizon in horizons:
-                group_df[horizon] = group_df[horizon].shift(periods=horizon, axis=0)
-                
-            group_df[target] = group_df[horizons].mean(axis=1, skipna=True)
+        for horizon in horizons:
+            pred_df[horizon] = pred_df[horizon].shift(periods=horizon, axis=0)
             
-            # fill the values which are still None
-            group_df.fillna(0, inplace=True)
-            outputs.append(group_df.drop(columns=horizons))
+        pred_df[target] = pred_df[horizons].mean(axis=1, skipna=True)
+        
+        # fill the values which are still None
+        pred_df.fillna(0, inplace=True)
+        outputs = pred_df.drop(columns=horizons)    
+        
+        # outputs = []
 
-        outputs = pd.concat(outputs, axis=0)
+        # for group_id, group_df in tqdm(
+        #     pred_df.groupby(group_ids), disable=disable_progress, 
+        #     desc=f'Aligning {target}'
+        # ):
+        #     group_df = group_df.sort_values(
+        #         by=time_index
+        #     ).reset_index(drop=True)
+
+        #     new_df = DataFrame({
+        #         time_index : [t + time_index_max for t in range (1, data_set.pred_len)]
+        #     })
+        #     new_df[group_ids] = group_id
+        #     new_df.loc[:, horizons] = None
+        #     new_df = new_df[group_df.columns]
+        #     group_df = pd.concat([group_df, new_df], axis=0).reset_index(drop=True)
+
+        #     for horizon in horizons:
+        #         group_df[horizon] = group_df[horizon].shift(periods=horizon, axis=0)
+                
+        #     group_df[target] = group_df[horizons].mean(axis=1, skipna=True)
+            
+        #     # fill the values which are still None
+        #     group_df.fillna(0, inplace=True)
+        #     outputs.append(group_df.drop(columns=horizons))
+
+        # outputs = pd.concat(outputs, axis=0)
         
         if all_outputs is None: all_outputs = outputs
         else: 

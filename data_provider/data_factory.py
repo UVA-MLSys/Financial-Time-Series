@@ -8,7 +8,7 @@ def data_provider(
     shuffle_flag = flag == 'train'
     drop_last = False
     
-    if 'group_id' in args:
+    if 'group_id' in args and args.group_id: 
         dataset = MultiTimeSeries(args, flag=flag)
     else:
         dataset = Dataset_Custom(args, flag=flag)

@@ -298,8 +298,8 @@ class Exp_Long_Term_Forecast(Exp_Basic):
                     
                     if self.args.output_attention: outputs = outputs[0]
 
-                outputs = outputs[:, -self.args.pred_len:, f_dim:].squeeze(-1).detach().cpu().numpy()
-                batch_y = batch_y[:, -self.args.pred_len:, f_dim:].squeeze(-1).detach().cpu().numpy()
+                outputs = outputs[:, -self.args.pred_len:, f_dim:].detach().cpu().numpy()
+                batch_y = batch_y[:, -self.args.pred_len:, f_dim:].detach().cpu().numpy()
 
                 preds.append(outputs)
                 trues.append(batch_y)
@@ -351,17 +351,28 @@ class Exp_Long_Term_Forecast(Exp_Basic):
                 
         if dump_output:
             # get ground truth
-            target, time_col, group_id = test_data.target, test_data.time_col, test_data.group_id
-            ground_truth = pd.read_csv(os.path.join(self.args.root_path, self.args.data_path))[
-                [time_col, group_id, target]
-            ]
+            target, time_col = test_data.target, test_data.time_col
+            selected_columns = [time_col]
             
+            if type(test_data) == MultiTimeSeries: 
+                selected_columns.append(test_data.group_id)
+            
+            if type(target) == list: selected_columns += target
+            else: selected_columns.append(target)
+            
+            filepath = os.path.join(self.args.root_path, self.args.data_path)
+            ground_truth = pd.read_csv(filepath)[selected_columns]
+            
+            if ground_truth[test_data.time_col].dtype == 'object':
+                ground_truth[test_data.time_col] = pd.to_datetime(ground_truth[test_data.time_col])
+                
             # output prediction into a csv file
             merged = align_predictions(
                 ground_truth, preds, test_data, 
-                upscale=False, disable_progress=self.args.disable_progress
+                remove_negative=False, upscale=False, 
+                disable_progress=self.args.disable_progress
             )
-            merged.round(2).to_csv(
+            merged.round(4).to_csv(
                 os.path.join(self.output_folder, f'{flag}.csv'), 
                 index=False
             )
