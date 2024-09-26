@@ -6,5 +6,5 @@ Financial_Aid,"Financial Aid disbursed to students depending on their instrituti
 Gold,"Gold historical price per day in dollars"
 MSFT,"Microsoft Corporation stock prices.Microsoft develops and licenses consumer and enterprise software."
 Natural_Gas,"Natural gas historical price per day in dollars"
-SPX500, "S&P 500 stock prices"
-Financial_Aid_State, "Designed to support education affordability and accessibility in each USA state."
+SPX500,"S&P 500 stock prices"
+Financial_Aid_State,"Yearly funding Aid to each USA state to support undergraduate education."
