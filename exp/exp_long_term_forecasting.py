@@ -260,7 +260,7 @@ class Exp_Long_Term_Forecast(Exp_Basic):
         self.log(f"Memory usage: Available {total_memory:.1f} MB, Allocated {allocated_memory:.1f} MB, Max allocated {max_allocated_memory:.1f} MB\n")
     
     def test(
-        self, load_model:bool=False, flag='test', 
+        self, load_model:bool=True, flag='test', 
         evaluate=True, dump_output=False, 
         remove_negative=True
     ):
