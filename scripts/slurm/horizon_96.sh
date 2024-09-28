@@ -15,8 +15,7 @@ conda deactivate
 conda activate ml
 
 models=(DLinear PatchTST TimesNet iTransformer)
-# data_paths=('Apple.csv' 'Crude_Oil.csv' 'Exchange_Rate_Report.csv' 'Gold.csv' 'MSFT.csv' 'Natural_Gas.csv' 'SPX500.csv')
-data_paths=('Crude_Oil.csv')
+data_paths=('Apple.csv' 'Crude_Oil.csv' 'Exchange_Rate_Report.csv' 'Gold.csv' 'MSFT.csv' 'Natural_Gas.csv' 'SPX500.csv')
 itrs=3
 pred_len=96
 
