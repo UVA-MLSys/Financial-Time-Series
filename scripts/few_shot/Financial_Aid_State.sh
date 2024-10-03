@@ -24,7 +24,8 @@ python run.py \
     --data_path $data_path --group_id $group_id\
     --model $model --itrs $itrs\
     --seq_len $seq_len --label_len $label_len --pred_len $pred_len\
-    --top_k $top_k --freq $freq --target $target --percent $percent --channel_independence 0
+    --top_k $top_k --freq $freq --target $target\
+    --percent $percent --channel_independence 0
 done
 
 # MICN requires label_len to be equal to seq_len
@@ -42,21 +43,24 @@ python run.py\
     --d_model 16 --d_ff 32\
     --seq_len $seq_len --label_len 0 --pred_len $pred_len\
     --down_sampling_method avg --e_layers 3 --freq $freq\
-    --factor 3 --channel_independence 0 --itrs $itrs  --features $features --target $target --percent $percent
+    --factor 3 --channel_independence 0 --itrs $itrs \
+    --features $features --target $target --percent $percent
 
 python run_CALF.py\
     --n_features $n_features --features $features \
     --data_path $data_path --group_id $group_id\
     --itrs $itrs\
     --model_id ori --freq $freq --d_model 768\
-    --seq_len $seq_len --label_len $label_len --pred_len $pred_len --target $target --percent $percent
+    --seq_len $seq_len --label_len $label_len\
+    --pred_len $pred_len --target $target --percent $percent
 
 python run_OFA.py\
     --n_features $n_features --features $features \
     --data_path $data_path --group_id $group_id\
     --itrs $itrs --d_model 768\
     --model_id ori --patch_size $patch_len --stride $stride\
-    --seq_len $seq_len --label_len $label_len --pred_len $pred_len --target $target --percent $percent
+    --seq_len $seq_len --label_len $label_len --freq $freq\
+    --pred_len $pred_len --target $target --percent $percent
 
 python run_TimeLLM.py\
     --n_features $n_features --d_model 16\
@@ -64,4 +68,5 @@ python run_TimeLLM.py\
     --batch_size 16 --itrs $itrs --disable_progress\
     --seq_len $seq_len --label_len $label_len --pred_len $pred_len\
     --model_id ori --top_k $top_k\
-    --patch_len $patch_len --stride $stride --target $target --percent $percent
+    --patch_len $patch_len --stride $stride\
+    --target $target --percent $percent
