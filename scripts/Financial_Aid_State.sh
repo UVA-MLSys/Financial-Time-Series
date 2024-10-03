@@ -54,7 +54,8 @@ python run_OFA.py\
     --data_path $data_path --group_id $group_id\
     --itrs $itrs --d_model 768\
     --model_id ori --patch_size $patch_len --stride $stride\
-    --seq_len $seq_len --label_len $label_len --pred_len $pred_len --target $target
+    --seq_len $seq_len --label_len $label_len --freq $freq \
+    --pred_len $pred_len --target $target
 
 python run_TimeLLM.py\
     --n_features $n_features --d_model 16\
