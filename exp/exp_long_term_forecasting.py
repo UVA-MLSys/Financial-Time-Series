@@ -74,7 +74,7 @@ class Exp_Long_Term_Forecast(Exp_Basic):
                 verbose=True, min_lr=5e-6
             )
 
-    def vali(self, vali_loader, criterion):
+    def vali(self, vali_data, vali_loader, criterion):
         total_loss = []
         
         if self.args.model == 'CALF':
@@ -89,7 +89,10 @@ class Exp_Long_Term_Forecast(Exp_Basic):
             self.model.out_layer.eval()
         else:
             self.model.eval()
-        f_dim = -1 if self.args.features == 'MS' else 0
+            
+        if type(vali_data) == MultiTimeSeriesMultiTarget:
+            f_dim = - len(vali_data.target)
+        else: f_dim = -1 if self.args.features == 'MS' else 0
         
         progress_bar =tqdm(
             vali_loader, desc=f'Validation', 
@@ -147,7 +150,7 @@ class Exp_Long_Term_Forecast(Exp_Basic):
             return
         
         _, train_loader = self.get_data(flag='train')
-        _, vali_loader = self.get_data(flag='val')
+        vali_data, vali_loader = self.get_data(flag='val')
 
         time_now = time.time()
 
@@ -165,7 +168,9 @@ class Exp_Long_Term_Forecast(Exp_Basic):
         criterion = self._select_criterion()
         lr_scheduler = self._select_lr_scheduler(model_optim)
         
-        f_dim = -1 if self.args.features == 'MS' else 0
+        if type(vali_data) == MultiTimeSeriesMultiTarget:
+            f_dim = - len(vali_data.target)
+        else: f_dim = -1 if self.args.features == 'MS' else 0
         
         for epoch in range(self.args.train_epochs):
             iter_count = 0
@@ -221,7 +226,7 @@ class Exp_Long_Term_Forecast(Exp_Basic):
             
             train_loss = np.average(train_loss)
             
-            val_loss = self.vali(vali_loader, criterion)
+            val_loss = self.vali(vali_data,vali_loader, criterion)
 
             print(f"Epoch: {epoch + 1} | Time: {time.time() - epoch_time:0.3g} s | Train Loss: {train_loss:.5g} Vali Loss: {val_loss:.5g}")
             early_stopping(val_loss, self.model)
@@ -276,7 +281,9 @@ class Exp_Long_Term_Forecast(Exp_Basic):
 
         preds = []
         trues = []
-        f_dim = -1 if self.args.features == 'MS' else 0
+        if type(test_data) == MultiTimeSeriesMultiTarget:
+            f_dim = - len(test_data.target)
+        else: f_dim = -1 if self.args.features == 'MS' else 0
 
         self.model.eval()
         with torch.no_grad():
@@ -362,7 +369,7 @@ class Exp_Long_Term_Forecast(Exp_Basic):
             target, time_col = test_data.target, test_data.time_col
             selected_columns = [time_col]
             
-            if type(test_data) == MultiTimeSeries: 
+            if type(test_data) == MultiTimeSeries or type(test_data) == MultiTimeSeriesMultiTarget: 
                 selected_columns.append(test_data.group_id)
             
             if type(target) == list: selected_columns += target

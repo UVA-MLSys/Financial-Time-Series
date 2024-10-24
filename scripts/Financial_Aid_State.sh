@@ -10,8 +10,10 @@ itrs=3
 top_k=2
 patch_len=4
 stride=2
-freq=q
+freq=a
 group_id=GROUP_ID
+
+# python run.py --n_features 42 --features MS --data_path Financial_Aid_State.csv --group_id stateid --seq_len 3 --pred_len 1 --freq a --result_path scratch
 
 for model in ${models[@]}
 do 
