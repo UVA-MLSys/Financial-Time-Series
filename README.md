@@ -1,6 +1,6 @@
 # Financial-Time-Series
 
-Time series models (Transformer,  Foundation Models) for Financial data.
+Transformer, Foundation Models for Financial Time Series Forecasting (FTSF).
 
 <h3> High-level overview</h3>
 Of pre-training an LLM and fine-tuning on a custom dataset (e.g. the Financial Aid dataset) for downstream tasks.
@@ -87,7 +87,17 @@ Time Series LLM models
 
 ## Results
 
-### 
+### Which models are better as few-shot learners?
+
+Few-shot learning performance with 10% training data. TimeLLM and PatchTST outperform the other models. The best and the second best results are in bold and underlined.
+
+<img src='images/rq1.jpg' width='100%'/>
+
+### Can LLMs perform zero-shot learning in FTSF?
+
+GPT4TS performs the best in zero shot performance. The best and the second best results are in bold and underlined. The traditional models are excluded here since they are not pre-trained.
+
+<img src='images/rq2.jpg' width='60%'/>
 
 ## Reproduce
 
@@ -97,4 +107,4 @@ Install the required libraries using
 pip install -r requirements.txt
 ```
 
-Use the `run.py` script for the traditional models. The `run_CALF`, `run_OFA` and `run_TimeLLM` are for the `CALF`, `GPT4TS` and `TimeLLM` respectively.
+Use the `run.py` script for the traditional models. The `run_CALF`, `run_OFA` and `run_TimeLLM` are for the `CALF`, `GPT4TS` and `TimeLLM` respectively. The sample scripts are available in [`scripts`](/scripts/) folder.
