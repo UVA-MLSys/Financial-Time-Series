@@ -6634,3 +6634,102 @@ mae:0.77897, rmse:1.1122, mse:1.2369
 Exchange_Rate_Report TimeLLM_sl_96_pl_24_id_ori_p_50  test
 mae:0.27136, rmse:0.8348, mse:0.69689, rmsle 0.007223 smape 0.7325
 
+Financial_Aid_State DLinear_sl_3_pl_1  test scaled
+mae:26.563, rmse:48.763, mse:2377.8
+
+Financial_Aid_State DLinear_sl_3_pl_1  test
+mae:48.614, rmse:73.716, mse:5434.1, rmsle 2.2331 smape 118.62
+
+Financial_Aid_State DLinear_sl_3_pl_1  test scaled
+mae:5.9776, rmse:22.577, mse:509.7
+
+Financial_Aid_State DLinear_sl_3_pl_1  test scaled
+mae:20.134, rmse:37.595, mse:1413.4
+
+Financial_Aid_State DLinear_sl_3_pl_1  test scaled
+mae:20.164, rmse:37.647, mse:1417.3
+
+Financial_Aid_State DLinear_sl_3_pl_1  test scaled
+mae:26.6, rmse:48.829, mse:2384.3
+
+Financial_Aid_State DLinear_sl_3_pl_1  test
+mae:48.678, rmse:73.814, mse:5448.6, rmsle 2.2495 smape 118.9
+
+Financial_Aid_State DLinear_sl_3_pl_1  test scaled
+mae:26.563, rmse:48.763, mse:2377.8
+
+Financial_Aid_State DLinear_sl_3_pl_1  test
+mae:48.614, rmse:73.716, mse:5434.1, rmsle 2.2331 smape 118.62
+
+Financial_Aid_State DLinear_sl_3_pl_1  test scaled
+mae:26.563, rmse:48.763, mse:2377.8
+
+Financial_Aid_State DLinear_sl_3_pl_1  test
+mae:48.614, rmse:73.716, mse:5434.1, rmsle 2.2331 smape 118.62
+
+Financial_Aid_State DLinear_sl_3_pl_1  test scaled
+mae:5450.6, rmse:80471, mse:6.4755e+09
+
+Financial_Aid_State DLinear_sl_3_pl_1  test
+mae:2.7483e+07, rmse:1.4567e+08, mse:2.122e+16, rmsle 5.7454 smape 126.23
+
+Financial_Aid_State DLinear_sl_3_pl_1  test scaled
+mae:5450.6, rmse:80471, mse:6.4755e+09
+
+Financial_Aid_State DLinear_sl_3_pl_1  test
+mae:2.7483e+07, rmse:1.4567e+08, mse:2.122e+16, rmsle 5.7454 smape 126.23
+
+Financial_Aid_State DLinear_sl_5_pl_1  test scaled
+mae:3504.8, rmse:58758, mse:3.4525e+09
+
+Financial_Aid_State DLinear_sl_5_pl_1  test
+mae:2.6826e+07, rmse:1.4216e+08, mse:2.021e+16, rmsle 3.1645 smape 123.49
+
+Financial_Aid_State DLinear_sl_5_pl_1  test scaled
+mae:3645.2, rmse:61113, mse:3.7348e+09
+
+Financial_Aid_State DLinear_sl_5_pl_1  test
+mae:2.7729e+07, rmse:1.4697e+08, mse:2.16e+16, rmsle 8.2844 smape 131.41
+
+Financial_Aid_State iTransformer_sl_5_pl_1  test scaled
+mae:3660.8, rmse:61375, mse:3.7669e+09
+
+Financial_Aid_State iTransformer_sl_5_pl_1  test
+mae:2.7737e+07, rmse:1.4699e+08, mse:2.1606e+16, rmsle 5.9998 smape 199.72
+
+Financial_Aid_State iTransformer_sl_5_pl_1  test scaled
+mae:3660.8, rmse:61375, mse:3.7669e+09
+
+Financial_Aid_State iTransformer_sl_5_pl_1  test
+mae:2.7739e+07, rmse:1.47e+08, mse:2.1608e+16, rmsle 6.0922 smape 199.76
+
+Financial_Aid_State iTransformer_sl_5_pl_1  test scaled
+mae:3660.8, rmse:61375, mse:3.7669e+09
+
+Financial_Aid_State iTransformer_sl_5_pl_1  test
+mae:2.7746e+07, rmse:1.4703e+08, mse:2.1619e+16, rmsle 9.2901 smape 134.65
+
+Financial_Aid_State iTransformer_sl_5_pl_1  test scaled
+mae:3660.8, rmse:61375, mse:3.7669e+09
+
+Financial_Aid_State iTransformer_sl_5_pl_1  test
+mae:2.7746e+07, rmse:1.4703e+08, mse:2.1619e+16, rmsle 9.2485 smape 132.73
+
+Financial_Aid_State iTransformer_sl_5_pl_1  test scaled
+mae:3660.8, rmse:61375, mse:3.7669e+09
+
+Financial_Aid_State iTransformer_sl_5_pl_1  test
+mae:2.7742e+07, rmse:1.4701e+08, mse:2.1613e+16, rmsle 6.3939 smape 198.82
+
+Financial_Aid_State iTransformer_sl_5_pl_1  test scaled
+mae:3660.8, rmse:61375, mse:3.7669e+09
+
+Financial_Aid_State iTransformer_sl_5_pl_1  test
+mae:2.7746e+07, rmse:1.4703e+08, mse:2.1619e+16, rmsle 9.2901 smape 134.65
+
+Financial_Aid_State iTransformer_sl_5_pl_1  test scaled
+mae:3660.8, rmse:61375, mse:3.7669e+09
+
+Financial_Aid_State iTransformer_sl_5_pl_1  test
+mae:2.7746e+07, rmse:1.4703e+08, mse:2.1619e+16, rmsle 9.2901 smape 134.65
+

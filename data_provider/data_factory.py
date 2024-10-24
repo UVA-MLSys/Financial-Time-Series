@@ -1,4 +1,4 @@
-from data_provider.data_loader import Dataset_Custom, MultiTimeSeries
+from data_provider.data_loader import Dataset_Custom, MultiTimeSeries, MultiTimeSeriesMultiTarget
 from torch.utils.data import DataLoader
 from typing import Union
 
@@ -8,7 +8,9 @@ def data_provider(
     shuffle_flag = flag == 'train'
     drop_last = False
     
-    if 'group_id' in args and args.group_id: 
+    if args.data_path == 'Financial_Aid_State.csv':
+        dataset = MultiTimeSeriesMultiTarget(args, flag=flag)
+    elif 'group_id' in args and args.group_id: 
         dataset = MultiTimeSeries(args, flag=flag)
     else:
         dataset = Dataset_Custom(args, flag=flag)
