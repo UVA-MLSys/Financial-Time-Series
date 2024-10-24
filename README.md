@@ -3,6 +3,22 @@ Time series models (Transformer,  Foundation Models) for Financial data
 
 ## Dataset
 
+### Financial Aid by US States
+
+Financial aid distributed to each US state by the Government to support student education and collected from years 2004 to 2020 from [InformedStaets.org](https://informedstates.org/state-financial-aid-dataset-download). Details of the available features are in the following Table. Aid is given based on financial needs, academic merit, or both. The sub-categories are simplified and describe multiple features.
+
+| Category | Sub-category | Description |
+|:---|:---|:---|
+| | Identifier | State id and name abbreviation.|
+| | Number | Total students receiving the award. |
+| | Public/Private | Whether the funds can be used for public or private sectors and how long (2 or 4 years).|
+| Need, Merit, both| Flags | 0 or 1 based on whether the aid falls in a particular category. |
+| | Program | Aid program with the most generous eligibility criteria. |
+| | Notes | Related text. | 
+| | Threshold | GPA, SAT, income, and other academic or financial limits to qualify for the aid. |
+| Time | Year | Fiscal or academic year.|
+| Target | Amount | Aid amount received by the students. |
+
 ### Currency Exchange Rate
 
 Representative rates of US dollar for the period August 01, 2014 - August 01, 2024.  
