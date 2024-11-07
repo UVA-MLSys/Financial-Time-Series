@@ -7,6 +7,19 @@ Of pre-training an LLM and fine-tuning on a custom dataset (e.g. the Financial A
 
 <img src='images/workflow.jpg' width='50%' />
 
+## Citation 
+
+This [short-paper](https://arxiv.org/pdf/2410.19025) is published in [IEEE International Workshop on Large Language Models for Finance](https://intelligentfinance.github.io/IEEE-LLM-finance-2024/index.html).
+
+```bash
+@article{islam2024large,
+  title={Large Language Models for Financial Aid in Financial Time-series Forecasting},
+  author={Islam, Md Khairul and Karmacharya, Ayush and Sue, Timothy and Fox, Judy},
+  journal={arXiv preprint arXiv:2410.19025},
+  year={2024}
+}
+```
+
 ## Dataset
 
 ### Financial Aid by US States
