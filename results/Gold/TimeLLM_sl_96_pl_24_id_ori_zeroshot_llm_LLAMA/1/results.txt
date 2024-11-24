@@ -1,0 +1,6 @@
+
+Experiment begins at 2024-11-23 21:24:48
+
+test scaled -- mse:5.3194, mae:1.7285
+test -- mse:1.2908e+09, mae:12634, rmsle: 0.18491 smape 9.6407
+

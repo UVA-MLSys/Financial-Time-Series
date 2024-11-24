@@ -23,6 +23,8 @@ def stringify_setting(args, complete=False):
                 setting += f'_p_{args.percent}'
             else:
                 setting += '_zeroshot'
+        if 'llm_model' in args and args.llm_model != 'GPT2':
+            setting += f'_llm_{args.llm_model}'
             
         return setting
     

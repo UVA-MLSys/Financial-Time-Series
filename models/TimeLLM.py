@@ -92,7 +92,7 @@ class Model(nn.Module):
                         'huggyllama/llama-7b',
                         # self.llama_model_path, 
                         trust_remote_code=True,
-                        local_files_only=True,
+                        local_files_only=False,
                         config=self.llama_config,
                         # load_in_4bit=True
                     )
@@ -103,10 +103,11 @@ class Model(nn.Module):
                 try:   
                     self.tokenizer = LlamaTokenizer.from_pretrained(
                         # "/mnt/alps/modelhub/pretrained_model/LLaMA/7B_hf/tokenizer.model",
-                        # 'huggyllama/llama-7b',
-                        self.llama_model_path , 
+                        'huggyllama/llama-7b',
+                        # self.llama_model_path , 
                         trust_remote_code=True,
-                        local_files_only=True
+                        local_files_only=False,
+                        # force_download=True
                     )
                 except EnvironmentError:  # downloads the tokenizer from HF if not already done
                     print("Local tokenizer files not found. Atempting to download them..")

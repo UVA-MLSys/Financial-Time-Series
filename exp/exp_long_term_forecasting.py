@@ -167,14 +167,20 @@ class Exp_Long_Term_Forecast(Exp_Basic):
         
         f_dim = -1 if self.args.features == 'MS' else 0
         
+        
         for epoch in range(self.args.train_epochs):
+            progress_bar =tqdm(
+                train_loader, desc=f'Training: Epoch {epoch+1}: ', 
+                disable=self.args.disable_progress
+            )
+
             iter_count = 0
             train_loss = []
 
             self.model.train()
             epoch_time = time.time()
             
-            for i, (batch_x, batch_y, batch_x_mark, batch_y_mark) in enumerate(train_loader):
+            for i, (batch_x, batch_y, batch_x_mark, batch_y_mark) in enumerate(progress_bar):
                 iter_count += 1
                 model_optim.zero_grad()
                 if self.args.model == 'CALF': 
