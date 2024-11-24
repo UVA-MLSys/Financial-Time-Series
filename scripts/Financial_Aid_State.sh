@@ -10,7 +10,7 @@ itrs=3
 top_k=2
 patch_len=4
 stride=2
-freq=q
+freq=a
 group_id=GROUP_ID
 
 for model in ${models[@]}

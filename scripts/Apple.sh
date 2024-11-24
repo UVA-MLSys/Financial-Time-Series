@@ -42,5 +42,5 @@ python run_OFA.py\
 python run_TimeLLM.py\
     --n_features $n_features --d_model 16\
     --data_path $data_path \
-    --batch_size 16 --itrs $itrs\
-    --model_id ori
+    --batch_size 32 --itrs $itrs\
+    --model_id ori --llm_model LLAMA --result_path scratch --llm_dim 4096
