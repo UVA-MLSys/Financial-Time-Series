@@ -56,8 +56,6 @@ class Exp_Long_Term_Forecast(Exp_Basic):
                 self.args.features, 
                 self.args.pred_len
             )
-        elif self.args.model == 'OFA':
-            criterion = nn.L1Loss()
         else: criterion = nn.MSELoss()
         
         return criterion
