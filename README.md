@@ -120,4 +120,22 @@ Install the required libraries using
 pip install -r requirements.txt
 ```
 
-Use the `run.py` script for the traditional models. The `run_CALF`, `run_OFA` and `run_TimeLLM` are for the `CALF`, `GPT4TS` and `TimeLLM` respectively. The sample scripts are available in [`scripts`](/scripts/) folder.
+Use the `run.py` script for the traditional models. The `run_CALF`, `run_OFA` and `run_TimeLLM` are for the `CALF`, `GPT4TS` and `TimeLLM` respectively. The sample scripts are available in [`scripts`](/scripts/) folder. Run those commands from the project root folder.
+
+For example, to train on the Apple stock dataset using DLinear model run the following from the project root. Apple.csv has 5 feature columns and this whole experiment will be repeated 3 times. You can test the trained model later with `--test`. 
+
+```bash
+python run.py --n_features 5 --data_path Apple.csv --model DLinear --itrs 3
+```
+
+To run a pretrained LLM on the financial aid data run the following.
+
+```bash
+python run_OFA.py\
+    --n_features 1 --features S \
+    --data_path Financial_Aid_State.csv --group_id GROUP_ID\
+    --itrs 3 --d_model 768\
+    --model_id ori --patch_size 1 --stride 2\
+    --seq_len 10 --label_len 5 --freq a \
+    --pred_len 1 --target need_amt
+```
