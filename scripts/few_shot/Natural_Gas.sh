@@ -11,7 +11,7 @@ echo "Running for model:$model"
 python run.py \
     --n_features $n_features \
     --data_path $data_path\
-    --model $model --itrs $itrs --disable_progress
+    --model $model --itrs $itrs --disable_progress --percent $percent
 done
 
 # MICN requires label_len to be equal to seq_len

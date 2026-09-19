@@ -34,7 +34,7 @@
     "down_sampling_window": 1,
     "down_sampling_method": null,
     "seg_len": 48,
-    "num_workers": 10,
+    "num_workers": 2,
     "itrs": 3,
     "itr_no": 3,
     "train_epochs": 10,

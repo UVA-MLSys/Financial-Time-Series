@@ -54,6 +54,7 @@
     "p_hidden_layers": 2,
     "dry_run": false,
     "percent": 10,
+    "dump_output": false,
     "model": "TimeMixer",
     "use_gpu": true,
     "enc_in": 1,
