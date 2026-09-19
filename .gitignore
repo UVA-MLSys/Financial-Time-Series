@@ -1,6 +1,5 @@
 scratch
-llm.pth
-checkpoint.pth
+*.pth
 Financial_Aid.csv
 outputs
 
