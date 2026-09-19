@@ -63,13 +63,13 @@ class Exp_Long_Term_Forecast(Exp_Basic):
     def _select_lr_scheduler(self, optimizer):
         if self.args.model in ['CALF', 'OFA']:
             return torch.optim.lr_scheduler.CosineAnnealingLR(
-                optimizer, T_max=self.args.tmax, 
-                eta_min=1e-8, verbose=True
+                optimizer, T_max=self.args.tmax,
+                eta_min=1e-8
             )
         else:
             return torch.optim.lr_scheduler.ReduceLROnPlateau(
-                optimizer, patience=1, factor=0.1, 
-                verbose=True, min_lr=5e-6
+                optimizer, patience=1, factor=0.1,
+                min_lr=5e-6
             )
 
     def vali(self, vali_loader, criterion):
@@ -249,11 +249,14 @@ class Exp_Long_Term_Forecast(Exp_Basic):
         total_params = sum(p.numel() for p in self.model.parameters()) 
         self.log(f"Model parameters: {total_params}")
         
-        total_memory = torch.cuda.get_device_properties(0).total_memory / 1024**2
-        # Get the current memory allocated by PyTorch on the GPU
-        allocated_memory = torch.cuda.memory_allocated(0) / 1024**2
-        # Get the maximum memory allocated by PyTorch on the GPU
-        max_allocated_memory = torch.cuda.max_memory_allocated(0) / 1024**2
+        if torch.cuda.is_available():
+            total_memory = torch.cuda.get_device_properties(0).total_memory / 1024**2
+            # Get the current memory allocated by PyTorch on the GPU
+            allocated_memory = torch.cuda.memory_allocated(0) / 1024**2
+            # Get the maximum memory allocated by PyTorch on the GPU
+            max_allocated_memory = torch.cuda.max_memory_allocated(0) / 1024**2
+        else:
+            total_memory = allocated_memory = max_allocated_memory = 0.0
 
         print(f"Total memory: {total_memory:.1f} MB")
         print(f"Allocated memory: {allocated_memory:.1f} MB")

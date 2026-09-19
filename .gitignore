@@ -2,6 +2,7 @@ scratch
 llm.pth
 checkpoint.pth
 Financial_Aid.csv
+outputs
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

@@ -50,7 +50,7 @@ def fill_missing_timesteps(df, time_col, freq, set_type):
         name=time_col
     )
     complete_index = pd.DataFrame(complete_index, columns=[time_col])
-    df = df.merge(complete_index, on=time_col, how='right').fillna(method='ffill')
+    df = df.merge(complete_index, on=time_col, how='right').ffill()
     
     return df
 
@@ -103,7 +103,7 @@ class Dataset_Custom(Dataset):
         df_raw[object_columns] = df_raw[object_columns].apply(
             lambda x: x.str.replace('$', '')
         )
-        df_raw = df_raw.fillna(method='ffill').fillna(method='bfill')
+        df_raw = df_raw.ffill().bfill()
 
         '''
         df_raw.columns: [time_col, ...(other features), target feature]

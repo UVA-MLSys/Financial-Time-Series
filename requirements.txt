@@ -1,11 +1,15 @@
-matplotlib
-numpy
-pandas
-pyunpack
-scikit-learn
-sympy
-tqdm
-einops
-transformers
-peft
-# install pytorch and cuda following readme
+matplotlib>=3.10.9
+numpy>=1.26.4,<2
+pandas>=2.3.3
+pyunpack>=0.3
+scikit-learn>=1.7.2
+sympy>=1.13.1
+tqdm>=4.70.1
+einops>=0.8.2
+# transformers and peft are pinned: models/GPT2_arch.py forks GPT2Model
+# internals (get_head_mask, tuple-indexed block outputs) that break under
+# newer transformers; tokenizers==0.19.1 (transformers' pin) has no wheels
+# past cp312, which caps the supported Python version at 3.12.
+transformers==4.44.2
+peft==0.12.0
+# install pytorch (>=2.6, for the cu13x wheels matching the driver) following the README

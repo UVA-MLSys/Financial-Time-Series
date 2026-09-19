@@ -8,13 +8,8 @@
 #SBATCH --mem=16GB
 #---SBATCH --mem-per-gpu=11GB
 
-source /etc/profile.d/modules.sh
-source ~/.bashrc
-
-module load cuda-toolkit cudnn-8.9.5_cuda12.x anaconda3
-
-conda deactivate
-conda activate ml
+cd "$SLURM_SUBMIT_DIR"
+source .venv/bin/activate
 
 models=(DLinear PatchTST TimesNet iTransformer)
 data_path=Financial_Aid.csv

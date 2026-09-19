@@ -96,7 +96,7 @@ class Exp_Basic(object):
     def load_best_model(self):
         print(f'Loading model from {self.best_model_path}')
         if self.model:
-            self.model.load_state_dict(torch.load(self.best_model_path))
+            self.model.load_state_dict(torch.load(self.best_model_path, weights_only=False))
         else:
             self.model = self._build_model()
             

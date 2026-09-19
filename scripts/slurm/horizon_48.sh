@@ -6,13 +6,8 @@
 #SBATCH --gres=gpu:1
 #SBATCH --mem=32GB
 
-source /etc/profile.d/modules.sh
-source ~/.bashrc
-
-module load cuda-toolkit cudnn-8.9.5_cuda12.x anaconda3
-
-conda deactivate
-conda activate ml
+cd "$SLURM_SUBMIT_DIR"
+source .venv/bin/activate
 
 models=(DLinear PatchTST TimesNet iTransformer)
 data_paths=('Apple.csv' 'Crude_Oil.csv' 'Exchange_Rate_Report.csv' 'Gold.csv' 'MSFT.csv' 'Natural_Gas.csv' 'SPX500.csv')

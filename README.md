@@ -114,10 +114,13 @@ GPT4TS performs the best in zero shot performance. The best and the second best 
 
 ## Reproduce
 
-Install the required libraries using
+Create the environment with [uv](https://docs.astral.sh/uv/) (Python 3.12; `transformers`/`peft` are pinned in `requirements.txt` for compatibility with the forked GPT2 code in `models/GPT2_arch.py`, and that pin caps the Python version at 3.12 since its `tokenizers` dependency has no wheels past `cp312`):
 
 ```bash
-pip install -r requirements.txt
+uv venv --python 3.12 .venv
+source .venv/bin/activate
+uv pip install torch  # picks the CUDA build matching your driver
+uv pip install -r requirements.txt
 ```
 
 Use the `run.py` script for the traditional models. The `run_CALF`, `run_OFA` and `run_TimeLLM` are for the `CALF`, `GPT4TS` and `TimeLLM` respectively. The sample scripts are available in [`scripts`](/scripts/) folder. Run those commands from the project root folder.
